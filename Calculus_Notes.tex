@@ -129,6 +129,16 @@
 
 \noindent Peter E. Francis
 
+\vspace*{3em}
+
+\noindent Draft: \today
+
+\vfill
+
+\begin{small}
+% \noindent I would like to thank the following people who have offered suggestions and help putting this together: Samira Arfaee, Eunice Ng, Santiago Cordero-Misteli.
+\end{small}
+
 \vfill
 
 \noindent Department of Mathematics \\
@@ -166,7 +176,7 @@ You might be thinking: ``What the \&@\#\$ is calculus?!''.
 Well, let me save you a trip to Wikipedia. At its core, calculus is the study of change. Its name comes from the Latin word for ``pebbles'' because the main idea of calculus is that to study things that are changing in non-linear ways, we can break them up into small pieces (like pebbles) that can be thought of as linear, and then put them back together.
 
 \section*{P.P.S}
-Ok... I lied. The pebbles actually refer to the beads on an abacus, but a professor of mine once told me the small pieces version, and I like that better!
+Ok... I lied. The pebbles actually refer to the beads on an abacus, but a professor of mine once told me the other version, and I like that better!
 
 
 
@@ -188,7 +198,9 @@ You should think about trigonometry in two ways:
 \subsection{Basic Definitions}
 The \textbf{unit circle} is the circle with (unit) radius 1, centered at the origin. When we draw a radius of the unit circle, it forms an angle $\theta$ with the positive $x$ axis.
 
-\begin{center}
+\begin{figure}[h!]
+\label{sin-cos-coordinates}
+\centering
 \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
 %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
 
@@ -215,7 +227,8 @@ The \textbf{unit circle} is the circle with (unit) radius 1, centered at the ori
 % Text Node
 \draw (385,98) node [anchor=north west][inner sep=0.75pt]    {$1$};
 \end{tikzpicture}
-\end{center}
+\caption{$\sin\theta$ and $\cos\theta$ are coordinates}
+\end{figure}
 
 This line segment always has length 1, and connects the origin to some point on the circle. We define $\cos\theta$ and $\sin\theta$ to be the $x$ and $y$ coordinates of this point. In other words, $\cos\theta$ is defined to be the (signed) length of the horizontal leg of the right triangle and similarly, $\sin\theta$ is defined to be the (signed) length of the vertical leg.
 
@@ -235,9 +248,12 @@ Below is a diagram of all of the angles whose $\sin$ and $\cos$ you should be fa
 
 \vspace{1em}
 
-\begin{center}
+\begin{figure}[h!]
+\label{the-unit-circle}
+\centering
 \fbox{\includegraphics[width=4in]{unit-circle.png}}
-\end{center}
+\caption{The Unit Circle}
+\end{figure}
 
 \vspace{1em}
 
@@ -258,7 +274,7 @@ $\pi/2$ & $\sqrt{0}/2$ & $\sqrt{4}/2$ \\\bottomrule[0.4mm]
 \end{tabular}
 \end{center}
 
-In this table, I wrote the numbers in an ``un-simplified'' way so you can see the pattern: their numerators change by 1 under a square-root, and as one goes up, they other goes down.
+In this table, I wrote the numbers in an ``un-simplified'' way so you can see the pattern: their numerators change by 1 under a square-root, and as one goes up, the other goes down.
 
 You can also see that the values for other angles are the same number, but with a different sign (according to the quadrant they are in), and that the unit circle is symmetric, reflecting over the $x$ and $y$ axis.
 
@@ -275,14 +291,13 @@ $(\sin(\theta))^2$ & $(\sin\theta)^2$ \\
 \end{tabular}
 \end{center}
 }
-Dividing this equation by $\sin^2\theta$ and $\cos^2\theta$, we get
+Dividing this equation by $\sin^2\theta$ or $\cos^2\theta$, we get
 $$\cot^2\theta + 1 = \csc^2\theta\quad\quad\text{and}\quad\quad 1+\tan^2\theta = \sec^2\theta.$$
 
-Since $\sin\theta$ and $\cos\theta$ are the leg lengths of a right triangle with hypotenuse 1, there is some nice symmetry between the two quantities. The leg opposite the angle is $\theta$ is $\sin\theta$. Since the internal angles of a triangle sum to $\pi$, the other acute angle is $\frac{\pi}{2} - \theta$. \mar{Label the angle $\frac{\pi}{2}-\theta$ on the picture above.} Then, the leg opposite $\frac{\pi}{2} - \theta$ has length $\sin\left(\frac{\pi}{2} - \theta\right)$, but is also $\cos\theta$. Therefore,
+There is some nice symmetry between $\sin\theta$ and $\cos\theta$. The leg opposite the angle is $\theta$ is $\sin\theta$. Since the internal angles of a triangle sum to $\pi$, the other acute angle is $\frac{\pi}{2} - \theta$. \mar{Label the angle $\frac{\pi}{2}-\theta$ on Figure \ref{sin-cos-coordinates}.} Then, the leg opposite $\frac{\pi}{2} - \theta$ has length $\sin\left(\frac{\pi}{2} - \theta\right)$, but is also $\cos\theta$. Therefore,
 $$\sin\left(\frac{\pi}{2} - \theta\right) = \cos(\theta).$$
 Similarly,
 $$\cos\left(\frac{\pi}{2} - \theta\right) = \sin(\theta).$$
-
 Looking at the picture of the unit circle, we can also see that
 $$\sin(-\theta) = -\sin(\theta)\quad\text{and}\quad \cos(-\theta)=\cos(\theta).$$
 
@@ -293,7 +308,7 @@ $$\cos(A\pm B)=\cos A \cos B \mp \sin A \sin B.$$
 These are called the \textbf{angle sum formulas}, and they are long but if you read them out loud, they make a little song! Try it while clapping on each word:
 \begin{center}
 ``SINE-COSINE-COSINE-SINE. COSINE-COSINE-SINE-SINE.''
-\end{center}
+\end{center}\mar{No seriously, sing the song. Now do it again.}
 Once you remember the order of the functions, you just have to remember that the $A$s and $B$s alternate and that the sign in the second equation flips ($\pm$ becomes $\mp$).
 
 These simplify if $A$ and $B$ are the same angle $\theta$ to what are called the \textbf{double angle formulas}. In this case,
@@ -310,67 +325,56 @@ and
 
 So, how do we use trigonometry to help solve problems? The main way that trigonometry is useful for you as a calculus student is two-fold. One is as a source of nice function examples to play around with (once we start taking limits and derivatives). The other is as a means to fill in missing information (this is the ``SOH-CAH-TOA'' you might remember).
 
-Let's say you have the following right triangle.
-
-\begin{center}
+Let's say you have a right triangle with hypotenuse 8 and one a $30\degree$ angle.
 
 
+\begin{figure}[h!]
+\centering
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-
-\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+\fbox{\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
 %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
 
 %Shape: Right Triangle [id:dp06753223391248242] 
-\draw   (426,75) -- (252.56,186.5) -- (426,186.5) -- cycle ;
+\draw   (236,78) -- (62.56,189.5) -- (236,189.5) -- cycle ;
 %Shape: Arc [id:dp8301261755391214] 
-\draw  [draw opacity=0] (274.77,172.15) .. controls (277.45,176.28) and (279,181.21) .. (279,186.5) -- (252.56,186.5) -- cycle ; \draw   (274.77,172.15) .. controls (277.45,176.28) and (279,181.21) .. (279,186.5) ;  
+\draw  [draw opacity=0] (84.77,175.15) .. controls (87.45,179.28) and (89,184.21) .. (89,189.5) -- (62.56,189.5) -- cycle ; \draw   (84.77,175.15) .. controls (87.45,179.28) and (89,184.21) .. (89,189.5) ;  
 %Shape: Rectangle [id:dp7819843676440785] 
-\draw   (412.88,173.38) -- (426,173.38) -- (426,186.5) -- (412.88,186.5) -- cycle ;
+\draw   (222.88,176.38) -- (236,176.38) -- (236,189.5) -- (222.88,189.5) -- cycle ;
+%Shape: Right Triangle [id:dp36110349096513206] 
+\draw   (460.53,102) -- (358.65,167.49) -- (460.53,167.49) -- cycle ;
+%Shape: Arc [id:dp10101111854625855] 
+\draw  [draw opacity=0] (371.7,159.07) .. controls (373.27,161.49) and (374.18,164.39) .. (374.18,167.49) -- (358.65,167.49) -- cycle ; \draw   (371.7,159.07) .. controls (373.27,161.49) and (374.18,164.39) .. (374.18,167.49) ;  
+%Shape: Rectangle [id:dp8285259686836064] 
+\draw   (452.83,159.79) -- (460.53,159.79) -- (460.53,167.49) -- (452.83,167.49) -- cycle ;
+%Curve Lines [id:da345399705785322] 
+\draw    (268,78) .. controls (303.46,52.98) and (335.04,54.55) .. (366.56,76.96) ;
+\draw [shift={(368,78)}, rotate = 216.18] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
 
 % Text Node
-\draw (280.25,170) node [anchor=north west][inner sep=0.75pt]    {$30\degree $};
+\draw (90.25,173) node [anchor=north west][inner sep=0.75pt]    {$30\degree $};
 % Text Node
-\draw (323,120) node [anchor=north west][inner sep=0.75pt]    {$8$};
+\draw (136,124.4) node [anchor=north west][inner sep=0.75pt]    {$8$};
 % Text Node
-\draw (345,190) node [anchor=north west][inner sep=0.75pt]    {$x$};
+\draw (144,192) node [anchor=north west][inner sep=0.75pt]    {$x$};
 % Text Node
-\draw (430,130) node [anchor=north west][inner sep=0.75pt]    {$y$};
-
-\end{tikzpicture}
-
-\end{center}
-
-If you want to know what the other side lengths are, this is how you can use trigonometry to do it! First, scale the triangle down by the side length that you know (in this case $8$).
-
-\begin{center}
-
-
-\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-
-\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
-
-%Shape: Right Triangle [id:dp06753223391248242] 
-\draw   (426,75) -- (252.56,186.5) -- (426,186.5) -- cycle ;
-%Shape: Arc [id:dp8301261755391214] 
-\draw  [draw opacity=0] (274.77,172.15) .. controls (277.45,176.28) and (279,181.21) .. (279,186.5) -- (252.56,186.5) -- cycle ; \draw   (274.77,172.15) .. controls (277.45,176.28) and (279,181.21) .. (279,186.5) ;  
-%Shape: Rectangle [id:dp7819843676440785] 
-\draw   (412.88,173.38) -- (426,173.38) -- (426,186.5) -- (412.88,186.5) -- cycle ;
-
+\draw (238,130) node [anchor=north west][inner sep=0.75pt]    {$y$};
 % Text Node
-\draw (280.25,170) node [anchor=north west][inner sep=0.75pt]    {$30\degree $};
+\draw (377,154) node [anchor=north west][inner sep=0.75pt]    {$30\degree $};
 % Text Node
-\draw (323,120) node [anchor=north west][inner sep=0.75pt]    {$1$};
+\draw (398,125) node [anchor=north west][inner sep=0.75pt]    {$1$};
 % Text Node
-\draw (345,190) node [anchor=north west][inner sep=0.75pt]    {$x/8$};
+\draw (401,169) node [anchor=north west][inner sep=0.75pt]    {$x/8$};
 % Text Node
-\draw (430,130) node [anchor=north west][inner sep=0.75pt]    {$y/8$};
+\draw (461,125) node [anchor=north west][inner sep=0.75pt]    {$y/8$};
+% Text Node
+\draw (301,42) node [anchor=north west][inner sep=0.75pt]    {$\div 8$};
 
-\end{tikzpicture}
 
-\end{center}
+\end{tikzpicture}}
+\caption{Similar Triangles}
+\end{figure}
 
-This doesn't change the angles, so we now have a right triangle with hypotenuse 1. By definition of $\sin$ and $\cos$,
+If you want to know what the other side lengths are, this is how you can use trigonometry to do it! First, scale the triangle down by the side length that you know (in this case $8$). This doesn't change the angles, so we now have a right triangle with hypotenuse 1. By definition of $\sin$ and $\cos$,
 $$\sin 30\degree = \frac{y}{8}\quad\quad\text{and}\quad\quad\cos 30\degree=\frac{x}{8},$$
 so we can solve for $x$ and $y$:
 $$y = 8\sin 30\degree = 4\quad\quad\text{and}\quad\quad x= 8\cos 30\degree= 4\sqrt{3}.$$
@@ -401,7 +405,9 @@ Trigonometry dates back to the 3rd century BCE and needless to say it has change
 
 The two very common laws of trigonometry that involve non-right triangles are the Law of Sines and the Law of Cosines. I will state them here (for culture).
 
-\begin{center}
+\begin{figure}[h!]
+\centering
+\label{circumscribed-triangle}
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
 
 \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
@@ -431,10 +437,10 @@ The two very common laws of trigonometry that involve non-right triangles are th
 
 
 \end{tikzpicture}
+\caption{Circumscribed Triangle}
+\end{figure}
 
-\end{center}
-
-The above picture shows a triangle with internal angles $A$, $B$, and $C$, with respective opposite side lengths $a$, $b$, and $c$. The triangle is \textbf{circumscribed} in a circle, meaning its vertices lie on the circle's boundary. It turns out that the circle has radius
+Figure \ref{circumscribed-triangle} shows a triangle with internal angles $A$, $B$, and $C$, and respective opposite side lengths $a$, $b$, and $c$. The triangle is \textbf{circumscribed} in a circle, meaning its vertices lie on the circle's boundary. It turns out that the circle has radius
 $$R=\frac{abc}{\sqrt{(a+b+c)(a-b+c)(a+b-c)(-a+b+c)}}.$$
 
 
@@ -449,7 +455,7 @@ where $R$ is the radius of the circumscribed circle and $\Delta$ is the area of 
 If a triangle has sides and angles as above, then
 $$a^2+b^2=c^2+2ab\cos C.$$
 \end{theorem}
-\mar{Looks almost familiar, doesn't it?}
+\mar{Almost looks familiar, doesn't it?}
 
 When you use these formulas, keep in mind that solving for an angle can be tricky: if $\sin\theta=1/2$, then $\theta$ could be $30\degree$, $150\degree$, $390\degree$, etc..
 
@@ -459,7 +465,7 @@ When you use these formulas, keep in mind that solving for an angle can be trick
 
 \subsection{Real Numbers}
 
-The set of real numbers ($\R$) is an uncountably infinite set, meaning I can not even begin to exhaustively list all of its members. However, here are some: $3$, $2/5$, $4.11$, $\sqrt{37}$, $\pi$. Real numbers include the rationals and irrationals. \mar{Do you know any numbers that aren't real?}
+The set of real numbers ($\R$) is an uncountably infinite set, meaning I can not even begin to exhaustively list all of its members. However, here are some of my favorites: $3$, $2/5$, $4.11$, $713$, $\sqrt{37}$, $\pi$. Real numbers include both the rationals and irrationals. \mar{Do you know any numbers that aren't real?}
 
 The real numbers can be thought of as a continuum that has no beginning and no end: real numbers can get infinitely small and infinitely large.
 
@@ -495,7 +501,14 @@ Interval notation is easy to write and read, once you get a hang of what the dif
 
 The set-builder notation is read as follows:
 
-$$\{\underbrace{x}_x\underbrace{\in}_\text{in}\underbrace{\R}_{\text{the real}\atop \text{numbers}}\ \underbrace{:}_\text{such that}\ \underbrace{a < x < b}_{\text{$x$ is strictly}\atop\text{between $a$ and $b$}}\}.$$
+% \vspace*{1em}
+
+\begin{Large}
+$$\{\underbrace{x}_x\underbrace{\in}_\text{in}\underbrace{\R}_{\text{the real}\atop \text{numbers}}\ \underbrace{:}_\text{such that}\ \underbrace{a < x < b}_{x\text{ is strictly}\atop\text{between }a\text{ and }b}}\}.$$
+\end{Large}
+
+% \vspace*{1em}
+
 
 All of the subsets of $\R$ that you'll want to use in this course can be written using intervals. There are two ways to do this:
 \begin{itemize}
@@ -519,7 +532,7 @@ All of the subsets of $\R$ that you'll want to use in this course can be written
 \end{enumerate}
 \end{itemize}
 
-\mar{Draw a picture of each of these examples. Does Venn diagram ring any bells?}
+\mar{Draw a picture of each of these examples. Does \textit{Venn diagram} ring any bells?}
 
 \subsection{Defining Functions}
 
@@ -537,7 +550,7 @@ From now on, when I say ``function'' I mean ``real-function''. However, distingu
 
 \subsection{Domain and Range}
 
-The \textbf{domain} of a function is the set of possible inputs. The \textbf{range} of a function is the set of possible outputs. Not all real functions have $\R$ as their domain and range. The following table domains and ranges for some common functions.
+The \textbf{domain} of a function is the set of possible inputs. The \textbf{range} of a function is the set of outputs. Not all real functions have $\R$ as their domain and range. The following table domains and ranges for some common functions.
 
 \begin{center}
 \renewcommand{\arraystretch}{1.3}
@@ -554,10 +567,10 @@ Rational & $\frac{p(x)}{q(x)}$ \hspace{3in} ($p$, $q$ are polynomials) & $\{x\in
 \end{center}
 
 
-Let's do some more concrete examples:
+Let's do some concrete examples:
 \begin{itemize}
-\item The function $f$ given by $f(x)=\frac{1}{x}$ does not have 0 in its domain, since we can't divide by 0. Also, $f$ does not have 0 in its range, since there is no real number $x$ for which $\frac{1}{x}=0$. Therefore the domain and range are both $(-\infty,0)\cap(0,\infty)$.
-\item Similarly, $\tan$ does not have $2n\pi+\pi/2$ in its domain for any integer $n$, since $\cos(2n\pi+\pi/2)=0$ (we can write the domain of $\tan$ as $\{x\in\R\ :\ x\neq 2n\pi + \pi/2\text{ for some integer }n\}$).  The domain of $\tan$ is all of $\R$.
+\item The function $f$ given by $f(x)=\frac{1}{x}$ does not have 0 in its domain, since we can't divide by 0. Also, $f$ does not have 0 in its range, since there is no real number $x$ for which $\frac{1}{x}=0$. Therefore the domain and range are both $(-\infty,0)\cup(0,\infty)$.
+\item Similarly, $\tan$ does not have $2n\pi+\pi/2$ in its domain for any integer $n$, since $\cos(2n\pi+\pi/2)=0$ (we can write the domain of $\tan$ as $\{x\in\R\ :\ x\neq 2n\pi + \pi/2\text{ for some integer }n\}$).  The range of $\tan$ is all of $\R$.
 \item The function $f$ given by $f(x)=x^2$ has domain $\R$ and range $[0,\infty)$.
 \end{itemize}
 
@@ -566,8 +579,39 @@ Let's do some more concrete examples:
 
 
 \subsection{Inverses}
+Most simply, a function has an \textbf{inverse} (and is called \textbf{invertible}) if it is reversible as a mapping. In other words, if $f$ maps $x$ to $y:=f(x)$, then its inverse $f^{-1}$ must map $y$ to $x$. The immediate problem we encounter is if $f$ maps---say---both $2$ and $-2$ to $4$, then where should $f^{-1}$ map $4$? It can't map $4$ to both $2$ and $-2$, so $f$ must not be invertible. \mar{Can you think of such a function $f$?}
 
-\textsc{In progress.}
+Formally, the \textbf{inverse} of $f$ is the function $f^{-1}$ such that $$f(f^{-1}(y))=y\quad \text{and}\quad f^{-1}(f(x))=x$$
+for all $x$ in the domain of $f$ and $y$ in the range of $f$.
+
+So the question is: when is a function invertible? In order to find an answer, we'll have to make a few more definitions:
+\begin{itemize}
+\item A function is called \textbf{injective} (or \textbf{one-to-one}) if every distinct input gets mapped to a distinct output. In other words, $f$ is injective if $f(a)=f(b)$ only happens when $a=b$.
+\item A function is called \textbf{surjective} (or \textbf{onto}) if every possible output gets mapped to. In other words, $f$ is surjective if for every $b$ in $\R$, there is some $a$ in $\R$ such that $f(a)=b$.
+\item If a function is both injective and surjective, it is called \textbf{bijective}.
+\end{itemize}
+\mar{Think of functions that are (1) injective but not surjective, (2) surjective but not injective, (3) neither injective nor surjective, (4) bijective.}
+
+
+Following our example from above, it seems like $f$ needs to be injective in order to be invertible. This is sometimes the \textbf{horizontal line test}: the graph of an invertible function cannot intersect any horizontal line more than once.\mar{Draw the graph of a non-invertible function failing the horizontal line test.}
+
+Invertible functions must also be surjective: otherwise there is some possible output of $f$ that does not have somewhere to be sent by $f^{-1}$.
+
+It turns out that a function is invertible \underline{exactly} when it is bijective. If a function is not bijective, we can ``fix'' it by making its domain smaller.
+
+The general strategy for finding a functions inverse is to switch the place of $x$ and $y$ in the equation, and then solve for $y$. The result, if it exists, will give you an inverse for the original function (on a possibly smaller domain). Graphically, the inverse of a function is a reflection of the function across the line $y=x$.
+
+Here are some examples:
+
+\begin{itemize}
+\item The function $f$ defined by $f(x)=x^2$ has domain $\R$, but is not invertible: the line $y=4$ intersects the graph in two places, $(-2,4)$ and $(2,4)$. However, we can can change the domain of $f$ to be $[0,\infty)$. To find its inverse, solve the equation $x=y^2$ for $y$. We get $y=\pm\sqrt{x}$, but since we are changing the domain of $f$ to only the non-negative real numbers, we forget about the negative square root. Then the inverse of $f$ is given by $f^{-1}=\sqrt{x}$, and for any non-negative $x$ and $y$ ($x,y\in[0,\infty)$),
+$$f^{-1}(f(y))=f(x^2)=\sqrt{(x)^2})=x$$
+and
+$$f(f^{-1}(y))=f(\sqrt{y})=(\sqrt{y})^2=y.$$
+\item The function $\sin$ has domain $\R$ and range $[-1,1]$ but is \textbf{periodic} (meaning its values cyclicly repeat) so cannot be invertible without an adjustment to its domain. The 
+\end{itemize}
+
+
 
 
 
@@ -579,13 +623,13 @@ Let's do some more concrete examples:
 
 \section{Limits}
 
-Limits are important in Calculus since we need very small quantities to effectively study change. Yeah, that's pretty vague, but hopefully it'll clear up in a few pages.
+Limits are important in calculus since we need very small quantities to effectively study change. Yeah, that's pretty vague, but hopefully it'll clear up in a few pages.
 
 We study limits for many reasons. One of them is to study functions at points where they are only ``close'' to being defined. For example, the function $f$ given by $f(x)=\frac{x(x+1)}{x}$ is not defined at $0$, but looks like the line $x+1$ everywhere else.
 
 \subsection{Intuitive Limits}
 
-The intuitive idea of a \textbf{limit} is to examine what the output of a function does as the input moves close to a specific value. Since the functions that we will be studying are from $\R$ to $\R$, and there are two ways that you can approach a number on the real line (from the left and right) we will talk about left- and right-sided limits.
+The intuitive idea of a \textbf{limit} is to examine what the output of a function does as the input moves close to a specific value. Since the functions we care about take real numbers as inputs, there are two ways you can approach a number on the real line (from the left and from the right). We will talk about left- and right-sided limits.
 
 Before getting into the actual definition, we'll start intuitively. If a function is     ``continuous''\footnote{I put this word in quotes because I haven't defined it yet, but you should have an intuitive idea of what this means: being able to draw it without lifting your pencil. Just wait for a few pages.} and is defined at $a$, then as $x$ moves closer to $a$, $f(x)$ moves closer to $f(a)$, so the limit of $f$ as $x$ approaches $a$ is $f(a)$.
 
@@ -593,7 +637,7 @@ Before getting into the actual definition, we'll start intuitively. If a functio
 Let's get a little more general: suppose a function $f$ is defined on open intervals on either side of $a$.
 
 \begin{center}
-\def\arraystretch{1.1}
+\def\arraystretch{1.3}
 \begin{tabular}{| p{2in} | p{2in} |} \hline
 If $f$ is defined on an interval to the \textbf{left} of $a$ and the values of $f(x)$ approach $L$ as $x$ approaches $a$ from the \textbf{left}, we say that the ``\textbf{left}-sided limit of $f$ as $x$ approaches $a$ is $L$'' and we write $$\lim_{x\to a^-}f(x)=L.$$ & If $f$ is defined on an interval to the \textbf{right} of $a$ and the values of $f(x)$ approach $L$ as $x$ approaches $a$ from the \textbf{right}, we say that the ``\textbf{right}-sided limit of $f$ as $x$ approaches $a$ is $L$'' and we write
 $$\lim_{x\to a^+}f(x)=L.$$
@@ -602,24 +646,27 @@ $$\lim_{x\to a^+}f(x)=L.$$
 \end{tabular}
 \end{center}
 
-\noindent Note: $f$ need not be defined at $a$ to evaluate the limit of $f$ as $x$ approaches $a$.
+\noindent Note: $f$ need not be defined at $a$ to find the limit of $f$ as $x$ approaches $a$.
 
 \vspace{1em}
 
 One can compute $f(x)$ for values of $x$ that get closer and closer to either side of $a$. If the values approach $L$, then you have good reason to believe that $L$ is the (right- and/or left-sided) limit.
 
 \begin{center}
-\begin{tabular}{| c | c |}
-\hline
-   $x$        & $f(x)$        \\\hline\hline
-   $a-0.1$    & $f(a-0.1)$    \\\hline
-   $a-0.01$   & $f(a-0.01)$   \\\hline
-   $a-0.001$  & $f(a-0.001)$  \\\hline
-   $a-0.0001$ & $f(a-0.0001)$ \\\hline\hline
-   $a+0.0001$ & $f(a+0.0001)$ \\\hline
-   $a+0.001$  & $f(a+0.001)$  \\\hline
-   $a+0.01$   & $f(a+0.01)$   \\\hline
-   $a+0.1$    & $f(a+0.1)$    \\\hline
+\begin{tabular}{@{}ll@{}}
+\toprule[0.4mm]
+   $x$        & $f(x)$        \\
+\midrule
+   $a-0.1$    & $f(a-0.1)$    \\
+   $a-0.01$   & $f(a-0.01)$   \\
+   $a-0.001$  & $f(a-0.001)$  \\
+   $a-0.0001$ & $f(a-0.0001)$ \\
+\midrule
+   $a+0.0001$ & $f(a+0.0001)$ \\
+   $a+0.001$  & $f(a+0.001)$  \\
+   $a+0.01$   & $f(a+0.01)$   \\
+   $a+0.1$    & $f(a+0.1)$    \\
+\bottomrule[0.4mm]
 \end{tabular}
 \end{center}
 
@@ -636,9 +683,9 @@ Similarly for $x$ approaching $a$ from the right.
 
 
 
-\subsection{The $\epsilon-\delta$ Definition}
+\subsection{Optional: The $\epsilon-\delta$ Definition}
 
-You may be dissatisfied with the intuitive approach to limits, so we'll make the definition more rigorous. The main idea that needs to be captured by a formal definition is \textit{arbitrary precision}. That is, we need a way to say formally that ``$f(x)$ approaches $L$ as $x$ approaches $a$.''
+You may be dissatisfied with the intuitive approach to limits, so we can make the definition more rigorous. The main idea that needs to be captured by a formal definition is \textit{arbitrary precision}. That is, we need a way to say formally that ``$f(x)$ approaches $L$ as $x$ approaches $a$.''
 
 By controlling the input $x$, we must be able to make the distance $|f(x)-L|$ between the output $f(x)$ and $L$ to be as small as we want (``arbitrarily small''). In other words, if $\epsilon>0$ is any small positive number, we must be able to ensure (by controlling $x$) that $|f(x)-L| < \epsilon$. To control $x$, we can make the distance $|x-a|$ between $x$ and $a$ smaller than some positive number $\delta > 0$ (that may depend on $\epsilon$).
 
@@ -660,25 +707,26 @@ For simple examples, it is pretty easy to work backwards and figure out what $\d
 
 \subsection{Limit Laws}
 
-So far we have used the $\epsilon-\delta$ definition to prove that a limit of a function is a certain value, we estimated limits using computation, and we might be able to eye-ball a limit of a ``continuous'' function, but we still need a more sophisticated way to figure out what the limit of a function is at a certain point. There are several \textit{limit laws} that make computing limits easier. We also have two basic facts that should be obvious: for any $a,b\in \R$,
+% So far we have used the $\epsilon-\delta$ definition to prove that a limit of a function is a certain value, we estimated limits using computation, and we might be able to eye-ball a limit of a ``continuous'' function, but 
+We still need a more sophisticated way to figure out what the limit of a function is at a certain point. There are several \textit{limit laws} that make computing limits easier. We also have two basic facts that should be obvious: for any $a,b\in \R$,
 
 $$\lim_{x\to a} b = b \quad\text{ and }\quad \lim_{x\to a}x=a.$$
 
-Together with the following laws, you'll be able to evaluate the limits of many functions. Suppose $\displaystyle\lim _{x \to a} f(x)=L$ and $\displaystyle\lim _{x \to a} g(x)=M$, and let $c$ be a constant. Then the following hold.
+Together with the following laws, you'll be able to evaluate the limits of many functions. Suppose $\displaystyle\lim _{x \to a} f(x)=L$ and $\displaystyle\lim _{x \to a} g(x)=M$, let $c$ be a constant, and let $n$ be a positive integer.
 
 
 \begin{center}
-\def\arraystretch{2.5}
-\begin{tabular}{| p{1in} | p{3.1in} |}
-\hline
-\textbf{Sum law} & $\displaystyle\lim _{x \rightarrow a}(f(x)+g(x))=\lim _{x \rightarrow a} f(x)+\lim _{x \rightarrow a} g(x)=L+M$ \\ \hline
-\textbf{Difference law} & $\displaystyle\lim _{x \rightarrow a}(f(x)-g(x))=\lim _{x \rightarrow a} f(x)-\lim _{x \rightarrow a} g(x)=L-M$ \\ \hline
-\textbf{Constant multiple law} & $\displaystyle\lim _{x \rightarrow a} c f(x)=c \cdot \lim _{x \rightarrow a} f(x)=c L$ \\ \hline
-\textbf{Product law} & $\displaystyle\lim _{x \rightarrow a}(f(x) \cdot g(x))=\lim _{x \rightarrow a} f(x) \cdot \lim _{x \rightarrow a} g(x)=L \cdot M$ \\ \hline
-\textbf{Quotient law} & $\displaystyle\lim _{x \rightarrow a} \frac{f(x)}{g(x)}=\frac{\displaystyle\lim _{x \rightarrow a} f(x)}{\displaystyle\lim _{x \rightarrow a} g(x)}=\frac{L}{M}$ for $M \neq 0$ \\ \hline
-\textbf{Power law} & $\displaystyle\lim _{x \rightarrow a}(f(x))^{n}=\left(\lim _{x \rightarrow a} f(x)\right)^{n}=L^{n}$ for every positive integer $n$. \\ \hline
-\textbf{Root law} & $\displaystyle\lim _{x \rightarrow a} \sqrt[n]{f(x)}=\sqrt[n]{\lim _{x \rightarrow a} f(x)}=\sqrt[n]{L}$ for all $L$ if $n$ is odd and for $L \geq 0$ if $n$ is even and $f(x) \geq 0 .$
-\\\hline
+\def\arraystretch{2}
+\begin{tabular}{@{}ll@{}}
+\toprule[0.4mm]
+\textbf{Sum law} & $\displaystyle\lim _{x \rightarrow a}(f(x)+g(x))=\lim _{x \rightarrow a} f(x)+\lim _{x \rightarrow a} g(x)=L+M$ \\
+\textbf{Difference law} & $\displaystyle\lim _{x \rightarrow a}(f(x)-g(x))=\lim _{x \rightarrow a} f(x)-\lim _{x \rightarrow a} g(x)=L-M$ \\
+\textbf{Constant Multiple law} & $\displaystyle\lim _{x \rightarrow a} c f(x)=c \cdot \lim _{x \rightarrow a} f(x)=c L$ \\
+\textbf{Product law} & $\displaystyle\lim _{x \rightarrow a}(f(x) \cdot g(x))=\lim _{x \rightarrow a} f(x) \cdot \lim _{x \rightarrow a} g(x)=L \cdot M$ \\
+\textbf{Quotient law} & $\displaystyle\lim _{x \rightarrow a} \frac{f(x)}{g(x)}=\frac{\displaystyle\lim _{x \rightarrow a} f(x)}{\displaystyle\lim _{x \rightarrow a} g(x)}=\frac{L}{M}$ for $M \neq 0$ \\
+\textbf{Power law} & $\displaystyle\lim _{x \rightarrow a}(f(x))^{n}=\left(\lim _{x \rightarrow a} f(x)\right)^{n}=L^{n}$\\
+\textbf{Root law} & $\displaystyle\lim _{x \rightarrow a} \sqrt[n]{f(x)}=\sqrt[n]{\lim _{x \rightarrow a} f(x)}=\sqrt[n]{L}$ for all $L$ if $n$ is odd, and for $L \geq 0$ if $n$ is even and $f(x) \geq 0 .$ \\
+\bottomrule[0.4mm]
 \end{tabular}
 
 \end{center}
@@ -702,7 +750,7 @@ There are some other tricks that will help you evaluate limits. Try these things
 
 \subsection{Definitions}
 
-A function $f:\R\to\R$ is \textbf{continuous at $a$} if three conditions are satisfied:
+A function $f$ is \textbf{continuous at $a$} if three conditions are satisfied:
 \begin{enumerate}[(a)]
 \item $f$ is defined at $a$ (i.e. $f(a)$ makes sense)
 \item $\displaystyle\lim_{x\to a^+} f(x)= f(a)$
@@ -771,7 +819,7 @@ $$y=f(a)+f'(a)(x-a).$$
 
 \columnbreak
 
-\resizebox{2.4in}{!}{
+\resizebox{3.25in}{!}{
 
 \tikzset{every picture/.style={line width=0.75pt}}
 
@@ -829,7 +877,7 @@ $$y=f(a)+f'(a)(x-a).$$
 
 \vspace{4em}
 
-\resizebox{2.4in}{!}{
+\resizebox{3.25in}{!}{
 
 \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
 %uncomment if require: \path (0,441); %set diagram left start at 0, and has height of 441
@@ -897,37 +945,40 @@ Note that this definition of the derivative only makes sense if $f$ is defined o
 
 \subsection{The Two Part ``Program'' for Finding Derivatives}
 
-So now we have a goal: find derivatives of functions. The problem is that the limit definition is difficult to use (that pesky $h\to 0$ in the denominator). So instead, we will do the following two steps (let $a$ be a real number):
+So now we have a goal: find derivatives of functions. The problem is that the limit definition is difficult to use (that pesky $h\to 0$ in the denominator). So instead, we will do the following two steps (let $a$ be a real number and $f$ and $g$ be functions):
 \begin{enumerate}
 \item ``break functions up into simpler ones''
 
 \begin{center}
 \def\arraystretch{1.5}
-\begin{tabular}{| l | l |}
-\hline
-\textbf{The Scalar Multiple Rule} & $(au)' = au'$. \\ \hline
-\textbf{The Sum Rule} & $(u + v)' = u' + v'$ \\ \hline
-\textbf{The Product Rule} & $(uv)' = u'v + uv'$ \\ \hline
-\textbf{The Quotient Rule} & $\left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2}$ \\ \hline
+\begin{tabular}{@{}ll@{}}
+\toprule[0.4mm]
+\textbf{The Scalar Multiple Rule} & $(af)' = af'$. \\
+\textbf{The Sum Rule} & $(f + g)' = f' + g'$ \\
+\textbf{The Product Rule} & $(fg)' = f'g + fg'$ \\
+\textbf{The Quotient Rule} & $\left(\frac{f}{g}\right)' = \frac{f'g - fg'}{g^2}$ \\
+\bottomrule[0.4mm]
 \end{tabular}
 \end{center}
 
 \item find derivatives of ``simple'' functions:
 
+\end{enumerate}
+
+
 \begin{center}
 \def\arraystretch{1.5}
-\begin{tabular}{| l | l |}
-\hline
-\textbf{The Constant Rule}     & $\frac{d}{dx}[a] = 0$ \\ \hline
-\textbf{The Power Rule}        & $\frac{d}{dx}[x^a] = ax^{a-1}$ \\ \hline
-\textbf{Basic Trig Functions}  & $\frac{d}{dx}[\sin(x)] = \cos(x)$ and $\frac{d}{dx}[\cos(x)] = -\sin(x)$ \\ \hline
-\textbf{Exponential Functions} & $\frac{d}{dx}[a^x] = \ln(a)a^x$ \\ \hline
+\begin{tabular}{@{}ll@{}}
+\toprule[0.4mm]
+\textbf{The Constant Rule}     & $\frac{d}{dx}[a] = 0$ \\
+\textbf{The Power Rule}        & $\frac{d}{dx}[x^a] = ax^{a-1}$ \\
+\textbf{Basic Trig Functions}  & $\frac{d}{dx}[\sin(x)] = \cos(x)$ and $\frac{d}{dx}[\cos(x)] = -\sin(x)$ \\
+\textbf{Exponential Functions} & $\frac{d}{dx}[a^x] = \ln(a)a^x$ \\
 \textbf{Logarithmic Functions} & $\frac{d}{dx}[\log_a(x)] = \frac{1}{x\ln(a)}$ \\
-\hline
+\bottomrule[0.4mm]
 \end{tabular}
 \end{center}
 
-\end{enumerate}
 
 Most of the time, you will be able to find the derivatives using a combination of these rules. For instance, the derivatives of the other 4 trig functions can be found using the quotient rule and the derivatives of $\sin$ and $\cos$:
 $$\frac{d}{dx}[\tan(x)] = \sec^2(x)
@@ -951,22 +1002,22 @@ $$\frac{d}{dx}[\cot(x)] = -\csc^2(x)
 
 
 \subsection{Comparing the Graphs of $f$, $f'$, and $f''$}
-\textsc{In progress.}
-
+It is helpful to be able to look at a graph of a function and understand what it means for its first and second derivative. The table below summarizes:
 
 \begin{center}
-\def\arraystretch{1.5}
-\begin{tabular}{| c | c | c |}
-\hline
-$f$ & $f'$ & $f''$ \\ \hline\hline
-
-increasing & positive & \\ \hline
-constant & 0 & \\ \hline
-decreasing & negative & \\ \hline \hline
-
-concave up & increasing & positive \\ \hline
-linear & constant & 0 \\ \hline
-concave down & decreasing & negative \\ \hline \hline
+\def\arraystretch{1.3}
+\begin{tabular}{@{}lll@{}}
+\toprule[0.4mm]
+$f$ & $f'$ & $f''$ \\
+\midrule
+increasing & positive & \\
+constant & 0 & \\
+decreasing & negative & \\
+\midrule
+concave up & increasing & positive \\
+linear & constant & 0 \\
+concave down & decreasing & negative \\
+\bottomrule[0.4mm]
 
 % Inflection point & constant & 0 \\ \hline
 % local extrema & 0 & \\ \hline
