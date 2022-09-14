@@ -2005,4 +2005,87 @@ remote: This repository moved. Please use the new location:[K
 remote:   https://github.com/PeterEFrancis/calculus.git[K
 To https://github.com/PeterEFrancis/calculus-resources.git
    5776653..aa87c3b  main -> main
-]0;~/Calculus Resources[01;34m~/Calculus Resources[00m$ git push
+]0;~/Calculus Resources[01;34m~/Calculus Resources[00m$ git pushp[C[C[C[C[C[C[Cgit commit -m "add index"add .[K
+]0;~/Calculus Resources[01;34m~/Calculus Resources[00m$ git add .[1Ppushp[C[C[C[C[C[C[Cgit commit -m "add index"[1Pindex"[1Pindex"[1Pindex"[1Pindex"[1Pndex"[1Pdex"[1Pex"[1Px"[1P"c"h"a"n"g"e" "a"n"m"e"[1P"[1P"[1P"[1P"n"a"m"e"
+[main b8a4b56] change name
+ 5 files changed, 31 insertions(+), 3 deletions(-)
+ rename Calculus_Notes.pdf => Calculus.pdf (99%)
+ rename Calculus_Notes.tex => Calculus.tex (100%)
+]0;~/Calculus Resources[01;34m~/Calculus Resources[00m$ git commit -m "change name"add .[K[1Ppushp[C[C[C[C[C[C[Cg[C[C[C[C[C[C[C
+Username for 'https://github.com': peterefrancis
+Password for 'https://peterefrancis@github.com': 
+To https://github.com/PeterEFrancis/calculus-resources.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/PeterEFrancis/calculus-resources.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+]0;~/Calculus Resources[01;34m~/Calculus Resources[00m$ git pull
+remote: Enumerating objects: 3, done.[K
+remote: Counting objects:  33% (1/3)[Kremote: Counting objects:  66% (2/3)[Kremote: Counting objects: 100% (3/3)[Kremote: Counting objects: 100% (3/3), done.[K
+remote: Compressing objects:  50% (1/2)[Kremote: Compressing objects: 100% (2/2)[Kremote: Compressing objects: 100% (2/2), done.[K
+remote: Total 2 (delta 1), reused 0 (delta 0), pack-reused 0[K
+Unpacking objects:  50% (1/2)   Unpacking objects: 100% (2/2)   Unpacking objects: 100% (2/2), done.
+From https://github.com/PeterEFrancis/calculus-resources
+   aa87c3b..f32acce  main       -> origin/main
+error: Your local changes to the following files would be overwritten by merge:
+	.terminal.term-0.term
+Please commit your changes or stash them before you merge.
+Aborting
+]0;~/Calculus Resources[01;34m~/Calculus Resources[00m$ git [K[K[K[Kgit stash
+Saved working directory and index state WIP on main: b8a4b56 change name
+]0;~/Calculus Resources[01;34m~/Calculus Resources[00m$ git stash[1Ppull
+CONFLICT (modify/delete): .terminal.term-0.term deleted in f32acce6604b003bc042b0b9cd8b10cb4c807223 and modified in HEAD. Version HEAD of .terminal.term-0.term left in tree.
+Automatic merge failed; fix conflicts and then commit the result.
+]0;~/Calculus Resources[01;34m~/Calculus Resources[00m$ git push --override
+error: unknown option `override'
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    -d, --delete          delete refs
+    --tags                push tags (can't be used with --all or --mirror)
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --recurse-submodules[=<check|on-demand|no>]
+                          control recursive pushing of submodules
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+    --signed[=<yes|no|if-asked>]
+                          GPG sign the push
+    --atomic              request atomic transaction on remote side
+    -o, --push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+]0;~/Calculus Resources[01;34m~/Calculus Resources[00m$ git push --override[K[K[K[K[K[K[K[K[Kf
+Username for 'https://github.com': peterefrancis
+Password for 'https://peterefrancis@github.com': 
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects:  16% (1/6)   Compressing objects:  33% (2/6)   Compressing objects:  50% (3/6)   Compressing objects:  66% (4/6)   Compressing objects:  83% (5/6)   Compressing objects: 100% (6/6)   Compressing objects: 100% (6/6), done.
+Writing objects:  16% (1/6)   Writing objects:  33% (2/6)   Writing objects:  50% (3/6)   Writing objects:  66% (4/6)   Writing objects:  83% (5/6)   Writing objects: 100% (6/6)   Writing objects: 100% (6/6), 451.41 KiB | 23.76 MiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+remote: This repository moved. Please use the new location:[K
+remote:   https://github.com/PeterEFrancis/calculus.git[K
+To https://github.com/PeterEFrancis/calculus-resources.git
+ + f32acce...b8a4b56 main -> main (forced update)
+]0;~/Calculus Resources[01;34m~/Calculus Resources[00m$ g

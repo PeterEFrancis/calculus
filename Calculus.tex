@@ -106,7 +106,13 @@
 \newtheorem*{question}{Question}
 
 
-
+\newenvironment{thm}[1][]{
+\begin{tcolorbox}[colback=white!97!black, arc=0in]
+\begin{theorem}[#1]
+}{
+\end{theorem}
+\end{tcolorbox}
+}
 
 
 
@@ -597,7 +603,7 @@ Following our example from above, it seems like $f$ needs to be injective in ord
 
 Invertible functions must also be surjective: otherwise there is some possible output of $f$ that does not have somewhere to be sent by $f^{-1}$.
 
-It turns out that a function is invertible \underline{exactly} when it is bijective. If a function is not bijective, we can ``fix'' it by making its domain smaller.
+It turns out that a function is invertible \underline{exactly} when it is bijective. If a function is not bijective, we can ``fix'' it by making its domain smaller. For any function there are several ways to do this, but there are agreed upon conventions.
 
 The general strategy for finding a functions inverse is to switch the place of $x$ and $y$ in the equation, and then solve for $y$. The result, if it exists, will give you an inverse for the original function (on a possibly smaller domain). Graphically, the inverse of a function is a reflection of the function across the line $y=x$.
 
@@ -608,7 +614,8 @@ Here are some examples:
 $$f^{-1}(f(y))=f(x^2)=\sqrt{(x)^2})=x$$
 and
 $$f(f^{-1}(y))=f(\sqrt{y})=(\sqrt{y})^2=y.$$
-\item The function $\sin$ has domain $\R$ and range $[-1,1]$ but is \textbf{periodic} (meaning its values cyclicly repeat) so cannot be invertible without an adjustment to its domain. The 
+\item The function $\sin$ has domain $\R$ and range $[-1,1]$ but is \textbf{periodic} (meaning its values cyclically repeat) so cannot be invertible without an adjustment to its domain. The smaller domain we choose is $[-\pi/2,\pi/2]$. The inverse of $\sin$ is called $\arcsin$ or $\sin^{-1}$ and has domain $[-1,1]$ and range $[-\pi/2,\pi/2]$. \mar{Look up the modified domains for the other inverse trig functions.}
+\item The function $f(x)=e^x$ has domain $\R$ and range $(0,\infty)$, so its inverse given by $f^{-f}(x)=\ln(x)$ has domain $(0,\infty)$ and range $\R$. No adjustments to the domain of $f$ needed here!
 \end{itemize}
 
 
@@ -740,10 +747,15 @@ There are some other tricks that will help you evaluate limits. Try these things
 \item $\displaystyle\lim_{x\to 0}\frac{\sin(x)}{x} = 1$.
 \item $\displaystyle\lim_{x\to 0}\frac{\cos(x) - 1}{x} = 0$.
 \item $\displaystyle\lim_{x\to\infty}\left(1+\frac{1}{x}\right)^x = e$.
+
+\item Use the Squeeze Theorem:
+
+\begin{thm}[Squeeze Theorem]
+Let $f$, $g$, and $h$ be functions with $g(x)\leq f(x)\leq h(x)$ for all $x$ in some interval around $a$ (except possibly at $a$). If $$\lim_{x\to a}g(x)=L=\lim_{x\to a} h(x),$$ then $$\lim_{x\to a} f(x)=L$$
+as well.
+\end{thm}
+The most common application of squeeze theorem is squeezing $$-1\leq \sin\theta \leq 1.$$
 \end{itemize}
-
-
-
 
 
 \section{Continuity}
@@ -780,16 +792,16 @@ Therefore, if you want to evaluate a limit of any of these functions $f$ at a po
 
 \noindent Here's another limit law, now that you know about continuous functions:
 
-\begin{theorem*}[Composite Function Theorem]
+\begin{thm}[Composite Function Theorem]
 If $f(x)$ is continuous at $L$ and $\displaystyle\lim _{x \to a} g(x)=L$, then
 $$\lim _{x \to a} f(g(x))=f\left(\lim _{x \to a} g(x)\right)=f(L).$$
-\end{theorem*}
+\end{thm}
 
 \noindent To finish off the section, a very useful theorem:
 
-\begin{theorem*}[The Intermediate Value Theorem]
+\begin{thm}[The Intermediate Value Theorem]
 Let $f$ be continuous over a closed, bounded interval $[a, b]$. If $z$ is any real number between $f(a)$ and $f(b)$, then there is a number $c$ in $[a, b]$ satisfying $f(c)=z$.
-\end{theorem*}
+\end{thm}
 
 
 
