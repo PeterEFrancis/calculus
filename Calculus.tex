@@ -18,6 +18,8 @@
 
 \usepackage{pgf, latexsym, float, soul, array, booktabs, dsfont, gensymb, wasysym, multicol, tcolorbox, tabularx, enumitem}
 
+\usepackage[useregional]{datetime2}
+
 % \renewcommand{\familydefault}{\sfdefault}
 
 
@@ -135,9 +137,11 @@
 
 \noindent Peter E. Francis
 
-\vspace*{3em}
+\vspace*{5em}
 
-\noindent Draft: \today
+\begin{footnotesize}
+\noindent Draft: \DTMnow
+\end{footnotesize}
 
 \vfill
 
@@ -179,7 +183,7 @@ When you begin learning calculus, it is OK not to understand everything right aw
 \section*{P.S.}
 You might be thinking: ``What the \&@\#\$ is calculus?!''.
 
-Well, let me save you a trip to Wikipedia. At its core, calculus is the study of change. Its name comes from the Latin word for ``pebbles'' because the main idea of calculus is that to study things that are changing in non-linear ways, we can break them up into small pieces (like pebbles) that can be thought of as linear, and then put them back together.
+Well, let me save you a trip to Wikipedia. At its core, calculus is the study of change. Its name comes from the Latin word for ``pebbles'' because the main idea of calculus is studying things that are changing in non-linear ways by breaking them up into small pieces (like pebbles) that can be thought of as linear, and then putting them back together.
 
 \section*{P.P.S}
 Ok... I lied. The pebbles actually refer to the beads on an abacus, but a professor of mine once told me the other version, and I like that better!
@@ -198,11 +202,11 @@ The word ``trigonometry'' comes from the ancient Greek words for ``triangle'' an
 You should think about trigonometry in two ways:
 \begin{enumerate}
 \item pragmatically (it is a useful tool for solving problems, and there are some things you should memorize)
-\item abstractly (it is really just a different way to talk about similar right triangles)
+\item abstractly (it is really just a way to talk about similar triangles)
 \end{enumerate}
 
 \subsection{Basic Definitions}
-The \textbf{unit circle} is the circle with (unit) radius 1, centered at the origin. When we draw a radius of the unit circle, it forms an angle $\theta$ with the positive $x$ axis.
+The \textbf{unit circle} is the circle with (unit) radius 1, centered at the origin, $(0,0)$. When we draw a radius of the unit circle, it forms an angle $\theta$ with the positive side of the horizontal axis.
 
 \begin{figure}[h!]
 \label{sin-cos-coordinates}
