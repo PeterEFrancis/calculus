@@ -1,5 +1,3 @@
-# Calculus
-
 [Peter E. Francis](https://PeterEFrancis.com)
 
 Click [here](Calculus.pdf) for the most recent PDF, and click [here](https://github.com/PeterEFrancis/calculus) for the source code.
