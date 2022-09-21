@@ -261,7 +261,7 @@ Below is a diagram of all of the angles whose $\sin$ and $\cos$ you should be fa
 \begin{figure}[h!]
 \label{the-unit-circle}
 \centering
-\fbox{\includegraphics[width=4in]{unit-circle.png}}
+\fbox{\includegraphics[width=4in]{img/unit-circle.png}}
 \caption{The Unit Circle}
 \end{figure}
 
@@ -415,7 +415,7 @@ Trigonometry dates back to the 3rd century BCE and needless to say it has change
 
 The two very common laws of trigonometry that involve non-right triangles are the Law of Sines and the Law of Cosines. I will state them here (for culture).
 
-\begin{figure}[h!]
+\begin{figure}[!h]
 \centering
 \label{circumscribed-triangle}
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
@@ -520,9 +520,9 @@ $$\{\underbrace{x}_x\underbrace{\in}_\text{in}\underbrace{\R}_{\text{the real}\a
 % \vspace*{1em}
 
 
-All of the subsets of $\R$ that you'll want to use in this course can be written using intervals. There are two ways to do this:
+All of the subsets of $\R$ that you'll want to use in this course can be written using combinations of intervals. There are two ways to do this:
 \begin{itemize}
-\item The \textbf{union} of two sets is the set that contains all of the elements in either set and is denoted with the cup symbol, $\cup$. Here are some examples:
+\item The \textbf{union} of two sets is the set that contains all of the elements in either set and is denoted with the ``cup'' symbol, $\cup$. Here are some examples:
 \begin{enumerate}
 \item $\{1, 2, 3\}\cup\{3, 4, 5\} = \{1,2,3,4,5\}$
 \item $(3,4]\cup[4,5) = (3,5)$
@@ -531,7 +531,7 @@ All of the subsets of $\R$ that you'll want to use in this course can be written
 \item $(1,5)\cup(3, 7) = (1,7)$
 \item $(1,8)\cup(3, 4) = (1,8)$
 \end{enumerate}
-\item The \textbf{intersection} of two sets is the set that contains the elements in both sets and is denoted with the cap symbol, $\cap$. Here are some examples:
+\item The \textbf{intersection} of two sets is the set that contains the elements in both sets and is denoted with the ``cap'' symbol, $\cap$. Here are some examples:
 \begin{enumerate}
 \item $\{1, 2, 3\}\cap\{3, 4, 5\} = \{3\}$
 \item $(3,4]\cap[4,5) = \{4\}$
@@ -546,7 +546,33 @@ All of the subsets of $\R$ that you'll want to use in this course can be written
 
 \subsection{Defining Functions}
 
-The functions that we'll use are all \textbf{real functions}, so we can think about a function as a map that takes real numbers as inputs and also outputs real numbers. A real function must map each input to \textit{exactly one} output. Since a real function can be graphed on a Cartesian grid, with inputs on the horizontal axis and outputs on the vertical axis, this condition can be restated as the \textbf{vertical line test}: every vertical line must intersect a graph of a real function at most once. \mar{Draw a non-function that fails the vertical line test.}\mar{Is $f$ defined by $$f(x)=\begin{cases}x+1 & x > 0 \\ x^2 & x < 1\end{cases}$$ a function?}
+We will start with quite a few new (and abstract) definitions, but we will make things concrete very soon.
+
+A \textbf{function} $f$ is a map from a set $A$ to another set $B$ such that each element of $A$ is mapped to exactly one element of $B$. In other words, for each $a$ in $A$ that we input to $f$, we get exactly one output in $B$, which we denote as $f(a)$. 
+The set $A$ is called the \textbf{domain} of $f$, and $B$ is called the \textbf{codomain} of $f$. When defining a function we write $$f:A\to B\quad\quad\text{ or }\quad\quad A\overset{f}{\to} B$$
+to show the domain and codomain of $f$. The \textbf{range} of $f$ is the set of all outputs of $f$ and is denoted $f(A)$. The range is always a subset of the codomain, but they are not always equal sets. The relationship between the codomain and the range are an important one:
+\begin{itemize}
+\item A function is called \textbf{surjective} (or \textbf{onto}) if $f(A)=B$. In other words, a function is surjective if every possible output of $f$ is actually an output. \mar{What does the word ``sur'' mean in French?}
+\item A function is called \textbf{injective} (or \textbf{one-to-one}) if each element of the codomain is mapped to by at most one element of the domain. In other words, if $f(x_1)=f(x_2)$, then $x_1=x_2$.
+\item If a function is both surjective and injective, then it is called \textbf{bijective}.
+\end{itemize}
+
+The figure below is a cartoon of three functions. From left to right, (1) a surjection that is not injective, (2) a bijection, and (3) an injection that is not surjective.
+
+
+\begin{figure}[H]
+\label{three-functions}
+\centering
+\fbox{\includegraphics[width=4in]{img/three-functions.png}}
+\caption{A Surjection, a Bijection, and an Injection}
+\end{figure}
+
+\mar{Write down the domain, codomain, and range of each of these functions.}
+
+We will only use \textbf{real functions}, which are functions whose domain and codomain are subsets of $\R$. These functions take real numbers as inputs and give real numbers as outputs, so they can be graphed on a Cartesian grid, with the inputs on the horizontal axis and outputs on the vertical axis.
+
+To check that a curve drawn on a plot is a function, you can use the \textbf{vertical line test}: any vertical line must intersect a graph of a real function at most once (i.e. if a vertical line intersects a curve more than once, then the curve cannot be the graph of a real function). \mar{Draw a non-function that fails the vertical line test.}\mar{Is $f$ defined by $$f(x)=\begin{cases}x+1 & x > 0 \\ x^2 & x < 1\end{cases}$$ a function?}
+
 
 Some people may get sloppy and say things like
 \begin{center}
@@ -556,11 +582,12 @@ but what they really mean is
 \begin{center}
 ``the real function $f$, defined by $f(x)=x^2$''.
 \end{center}
-From now on, when I say ``function'' I mean ``real-function''. However, distinguishing between a function and the formula defining it will eventually make things easier to understand.
+Distinguishing between a function and the formula defining it will eventually make things easier to understand. However, from now on, I might say ``function'' and mean ``real-function'' (use context clues). \mar{Think of real functions that are (1) injective but not surjective, (2) surjective but not injective, (3) neither injective nor surjective, (4) bijective.}
 
-\subsection{Domain and Range}
 
-The \textbf{domain} of a function is the set of possible inputs. The \textbf{range} of a function is the set of outputs. Not all real functions have $\R$ as their domain and range. The following table domains and ranges for some common functions.
+\subsection{More Domains and Ranges}
+
+All real functions can have $\R$ as their codomain, but not all real functions have $\R$ as their domain and range. The following table lists domains and ranges for some common functions.
 
 \begin{center}
 \renewcommand{\arraystretch}{1.3}
@@ -577,11 +604,12 @@ Rational & $\frac{p(x)}{q(x)}$ \hspace{3in} ($p$, $q$ are polynomials) & $\{x\in
 \end{center}
 
 
+
 Let's do some concrete examples:
 \begin{itemize}
-\item The function $f$ given by $f(x)=\frac{1}{x}$ does not have 0 in its domain, since we can't divide by 0. Also, $f$ does not have 0 in its range, since there is no real number $x$ for which $\frac{1}{x}=0$. Therefore the domain and range are both $(-\infty,0)\cup(0,\infty)$.
-\item Similarly, $\tan$ does not have $2n\pi+\pi/2$ in its domain for any integer $n$, since $\cos(2n\pi+\pi/2)=0$ (we can write the domain of $\tan$ as $\{x\in\R\ :\ x\neq 2n\pi + \pi/2\text{ for some integer }n\}$).  The range of $\tan$ is all of $\R$.
-\item The function $f$ given by $f(x)=x^2$ has domain $\R$ and range $[0,\infty)$.
+\item The function $f$ given by $f(x)=\frac{1}{x}$ does not have 0 in its domain, since we can't divide by 0. Also, $f$ does not have 0 in its range, since there is no real number $x$ for which $\frac{1}{x}=0$. Therefore the domain and range of $f$ are both $(-\infty,0)\cup(0,\infty)$.
+\item Similarly, $\tan$ does not have $2n\pi+\pi/2$ in its domain for any integer $n$, since $\cos(2n\pi+\pi/2)=0$ (we can write the domain of $\tan$ as $\{x\in\R\ :\ x\neq 2n\pi + \pi/2\text{ for any integer }n\}$).  The range of $\tan$ is all of $\R$.
+\item The function $f$ given by $f(x)=x^2$ has domain $\R$ and range $[0,\infty)$. \mar{What is the domain and range of $f$ given by $f(x)=n^n$ where $n$ is a positive integer ($n=1, 2, 3, \dots$)?}
 \end{itemize}
 
 
@@ -589,29 +617,24 @@ Let's do some concrete examples:
 
 
 \subsection{Inverses}
-Most simply, a function has an \textbf{inverse} (and is called \textbf{invertible}) if it is reversible as a mapping. In other words, if $f$ maps $x$ to $y:=f(x)$, then its inverse $f^{-1}$ must map $y$ to $x$. The immediate problem we encounter is if $f$ maps---say---both $2$ and $-2$ to $4$, then where should $f^{-1}$ map $4$? It can't map $4$ to both $2$ and $-2$, so $f$ must not be invertible. \mar{Can you think of such a function $f$?}
+A function $f:A\to B$ is \textbf{invertible} if there is some function $g:B\to A$ such that two conditions hold:
+\begin{enumerate}
+\item[(i)] for all $a$ in $A$, $g(f(a))=a$;
+\item[(ii)] for all $b$ in $B$, $f(g(b))=b$.
+\end{enumerate}
+In this case, we call $g$ the \textbf{inverse} of $f$ and write $f^{-1}=g$. In other words, a function is \textbf{invertible} if it is reversible as a mapping: if $f$ maps $x$ to $y:=f(x)$, then its inverse $f^{-1}$ must map $y$ to $x$. \mar{Look abck at Figure \ref{three-functions}. Which of these functions are invertible? On any function that is invertible, draw the arrows for the inverse function.}
 
-Formally, the \textbf{inverse} of $f$ is the function $f^{-1}$ such that $$f(f^{-1}(y))=y\quad \text{and}\quad f^{-1}(f(x))=x$$
-for all $x$ in the domain of $f$ and $y$ in the range of $f$.
+You might wonder: \textit{when is a function invertible?} It turns out that we already understand exactly what we want:
+\begin{thm}
+A function is invertible exactly when it is bijective.
+\end{thm}
+Lets think through this: looking back at Figure \ref{three-functions}, the first function is not invertible because it is not injective. Both 1 and 3 map to 6, but condition (i) says that we must have $f^{-1}(f(1))=1$ and $f^{-1}(f(3))=3$. Since $f(1)$ and $f(3)$ are both equal to $6$, we must have that $1=f^{-1}(6)=3$, crazy talk!
 
-So the question is: when is a function invertible? In order to find an answer, we'll have to make a few more definitions:
-\begin{itemize}
-\item A function is called \textbf{injective} (or \textbf{one-to-one}) if every distinct input gets mapped to a distinct output. In other words, $f$ is injective if $f(a)=f(b)$ only happens when $a=b$.
-\item A function is called \textbf{surjective} (or \textbf{onto}) if every possible output gets mapped to. In other words, $f$ is surjective if for every $b$ in $\R$, there is some $a$ in $\R$ such that $f(a)=b$.
-\item If a function is both injective and surjective, it is called \textbf{bijective}.
-\end{itemize}
-\mar{Think of functions that are (1) injective but not surjective, (2) surjective but not injective, (3) neither injective nor surjective, (4) bijective.}
+The third function in Figure \ref{three-functions} is not invertible because it is not surjective. This is a problem: since the element 4 in the codomain is not mapped to by eny element of the domain, no matter what we might chose $f^{-1}(4)$ to be, $f(f^{-1}(4))\neq 4$, which violates condition (ii).
 
+The condition that invertible functions must be injective is sometimes called the \textbf{horizontal line test} for real functions: the graph of an invertible real function cannot intersect any horizontal line more than once (i.e. if a horizontal line intersects the graph of a function more than once, then the function cannot be invertible). \mar{Draw the graph of a non-invertible function failing the horizontal line test.}
 
-Following our example from above, it seems like $f$ needs to be injective in order to be invertible. This is sometimes the \textbf{horizontal line test}: the graph of an invertible function cannot intersect any horizontal line more than once.\mar{Draw the graph of a non-invertible function failing the horizontal line test.}
-
-Invertible functions must also be surjective: otherwise there is some possible output of $f$ that does not have somewhere to be sent by $f^{-1}$.
-
-It turns out that a function is invertible \underline{exactly} when it is bijective. If a function is not bijective, we can ``fix'' it by making its domain smaller. For any function there are several ways to do this, but there are agreed upon conventions.
-
-The general strategy for finding a functions inverse is to switch the place of $x$ and $y$ in the equation, and then solve for $y$. The result, if it exists, will give you an inverse for the original function (on a possibly smaller domain). Graphically, the inverse of a function is a reflection of the function across the line $y=x$.
-
-Here are some examples:
+The general strategy for finding a functions inverse is to switch the place of $x$ and $y$ in the equation, and then solve for $y$. The result, if it exists, will give you an inverse for the original function (on a possibly smaller domain). Graphically, the inverse of a function is a reflection of the function across the line $y=x$. If a function is not bijective, we can ``fix'' it by making its domain or codomain smaller. For any function there are several ways to do this, but there are some agreed upon conventions that I'll outline below.
 
 \begin{itemize}
 \item The function $f$ defined by $f(x)=x^2$ has domain $\R$, but is not invertible: the line $y=4$ intersects the graph in two places, $(-2,4)$ and $(2,4)$. However, we can can change the domain of $f$ to be $[0,\infty)$. To find its inverse, solve the equation $x=y^2$ for $y$. We get $y=\pm\sqrt{x}$, but since we are changing the domain of $f$ to only the non-negative real numbers, we forget about the negative square root. Then the inverse of $f$ is given by $f^{-1}=\sqrt{x}$, and for any non-negative $x$ and $y$ ($x,y\in[0,\infty)$),
@@ -767,13 +790,16 @@ The most common application of squeeze theorem is squeezing $$-1\leq \sin\theta 
 \subsection{Definitions}
 
 A function $f$ is \textbf{continuous at $a$} if three conditions are satisfied:
-\begin{enumerate}[(a)]
-\item $f$ is defined at $a$ (i.e. $f(a)$ makes sense)
-\item $\displaystyle\lim_{x\to a^+} f(x)= f(a)$
-\item $\displaystyle\lim_{x\to a^-} f(x)= f(a)$
+\begin{enumerate}
+\item[(a)] $f$ is defined at $a$ (i.e. $f(a)$ makes sense)
+\item[(b)] $\displaystyle\lim_{x\to a^+} f(x)= f(a)$
+\item[(c)] $\displaystyle\lim_{x\to a^-} f(x)= f(a)$
 \end{enumerate}
-If (a), (b), or (c) are not true, then $f$ is \textbf{discontinuous at $a$}. There are three types of discontinuities: if $f$ is discontinuous at $a$, then
-\begin{enumerate}[1.]
+
+If $U$ is a subset of $\R$ and $f$ is continuous at every point in $U$, then we say that $f$ is \textbf{continuous on $U$}.
+
+In the definition above, if any of (a), (b), or (c) are not true, then $f$ is \textbf{discontinuous at $a$}. There are three types of discontinuities: if $f$ is discontinuous at $a$, then
+\begin{enumerate}
 \item $f$ has a \textbf{removable discontinuity} at $a$ if $\displaystyle\lim _{x \to a} f(x)$ exists and is a real number.
 \item $f$ has a \textbf{jump discontinuity} at $a$ if $\displaystyle\lim _{x \to a^{-}} f(x)$ and $\displaystyle\lim _{x \to a^{+}} f(x)$ both exist and are real numbers, but are different.
 \item $f$ has an \textbf{infinite discontinuity} at $a$ if $\displaystyle\lim _{x \to a^{-}} f(x)=\pm \infty$ or $\displaystyle\lim _{x \to a^{+}} f(x)=\pm \infty$.
