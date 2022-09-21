@@ -1,0 +1,109 @@
+\documentclass{article}
+
+% set font encoding for PDFLaTeX, XeLaTeX, or LuaTeX
+\usepackage{ifxetex,ifluatex}
+\if\ifxetex T\else\ifluatex T\else F\fi\fi T%
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+\usepackage{hyperref, amssymb, amsmath}
+
+\usepackage[margin=1in]{geometry}
+
+\pagenumbering{gobble}
+
+
+\newcommand{\R}{\mathbb{R}}
+
+
+\begin{document}
+
+
+\begin{center}
+\begin{Huge}Limits and Derivatives Practice Problems\end{Huge}
+\end{center}
+
+
+\subsection*{A. Are the following true or false? If true, explain why. If false, give a counter-example.}
+\begin{enumerate}
+\item If $\displaystyle\lim_{x\to a} f(x)$ does not exist, then $f$ is undefined at the point $x=a$.
+\item If $f$ and $g$ are continuous on their domains which contain $a$, then $\displaystyle\lim_{x\to a} f(x) + g(x) = f(a) + g(a).$
+\item If a function is continuous at $a$, then $f'(a)$ exists.
+\end{enumerate}
+
+
+\subsection*{B. Evaluate the following limits (or say that the limit DNE):}
+
+\begin{enumerate}
+\item $\displaystyle\lim_{x\to 3}\frac{x^2-9}{x+3}$
+\item $\displaystyle\lim_{x\to 3}\frac{x^2-9
+   }{x-3}$
+\item $\displaystyle\lim_{x\to \pi/2}\frac{\cot(x)}{\cos(x)}$
+\item $\displaystyle\lim_{x\to 0}\frac{(\cos^2(x) - 1)(x+3)}{x}$
+\end{enumerate}
+
+\subsection*{C. For each function $f$, find a value of $c$ so that $f$ is continuous on $\mathbb{R}$:}
+
+\begin{enumerate}
+\item $f(x)=\begin{cases}2x & x \leq c \\ x^2+1 & x > c.\end{cases}$
+\item $f(x)=\begin{cases}2x+c & x < 2 \\ x^2 + cx +1 & x \geq 2.\end{cases}$
+\end{enumerate}
+
+\subsection*{D. For each $f$, find $f'$ using the limit definition of the derivative.}
+
+\begin{enumerate}
+\item $f(x)=\sqrt{x+4}$
+\item $f(x)=2x^2 + 3x$
+\end{enumerate}
+
+\subsection*{E. For each $f$, find $f'$ and $f''$ using any method you want.}
+
+\begin{enumerate}
+\item $f(x)=3x^3-\frac{4}{x^2}$
+\item $f(x)=x\sin(x)$
+\item $f(x)=\frac{x^2+3}{x-4}$
+\item $f(x)=x^2\cos(x)+x\tan(x)$
+\item $f(x)=\sin(x)\cos(x)e^x$
+\end{enumerate}
+
+\subsection*{F. When are the following functions increasing/decreasing? When are they concave up/down?}
+
+\begin{enumerate}
+\item $f(x)=2x^2+3x$
+\item $f(x)=x^3+17x^2+2$
+\end{enumerate}
+
+\hline
+
+\subsection*{Answers (in no particular order)}
+
+\begin{itemize}
+\item $f'(x)=e^{x}(\cos^{2}(x)+\sin(x)\cos(x)-\sin^{2}(x))$, $f''(x)=f'(x)+e^{x}\left(-4\cos\left(x\right)\sin\left(x\right)+\cos^{2}\left(x\right)-\sin^{2}\left(x\right)\right)$
+\item 0
+\item $f'(x)=4x + 3$
+\item 6
+\item increasing: $x>\frac{-3}{4}$, decreasing: $x<\frac{-3}{4}$, concave up: all of $\R$, concave down: nowhere
+\item $f'(x)=\frac{1}{2}(x+4)^{-1/2}$
+\item False (e.g. $f(x)=\frac{x^2}{x}$ is not defined at 0, but $\lim_{x\to 0}f(x) = 0$)
+\item $f'(x)=\sin(x) + x\cos(x)$, $f''(x)=\cos(x) + \cos(x) -x\sin(x)$
+\item 1
+\item True (Since $f$ and $g$ are continuous, so is $f+g$. Then by the def. of continuity, $\lim_{x\to a} f(x)+g(x)=f(a) + g(a)$)
+\item $f'(x)=9x^2+8x^{-3}$, $f''(x)=18x-24x^{-4}$
+\item 0
+\item $-1$
+\item False ($f(x)=|x|$ is continuous at $0$, but $f'(0)$ DNE)
+\item $f'(x)=\frac{(2x)(x-4)-(x^2+3)}{(x-4)^2}$, $f''(x)=\frac{(2x-8)(x^2-8x+16)-(x^2-8x-3)(2x-8)}{(x^2-8x+16)^2}$
+\item 1
+\item increasing: $x>0$ or $x<\frac{-3}{4}$, decreasing: $\frac{-3}{4}<x<0$, concave up: $x>\frac{-17}{3}$, concave down: $x<\frac{-17}{3}$
+\item $f'(x)=2x\cos(x)-x^2\sin(x)+\tan(x)+x\sec^2(x)$, $f''(x)=\left(2-x^{2}\right)\cos\left(x\right)-4x\sin\left(x\right)+\sec^{2}\left(x\right)\left(2+2x\tan\left(x\right)\right)$
+\end{itemize}
+
+
+
+
+
+\end{document}
