@@ -12,7 +12,7 @@
 
 \usepackage{hyperref, amssymb, amsmath, multicol, graphicx, paracol}
 
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=0.8in]{geometry}
 
 \pagenumbering{gobble}
 
@@ -33,6 +33,7 @@
 \item If $\displaystyle\lim_{x\to a} f(x)$ does not exist, then $f$ is undefined at the point $x=a$.
 \item If a function is not defined at $x=a$, then $\displaystyle\lim_{x\to a} f(x)$ does not exist.
 \item If $f$ and $g$ are continuous on their domains which contain $a$, then $\displaystyle\lim_{x\to a} f(x) + g(x) = f(a) + g(a).$
+\item If $\displaystyle\lim_{x\to a} f(x)$ exists, then $f$ is continuous at $a$.
 \end{enumerate}
 
 
@@ -121,6 +122,7 @@ t+4 & t>1
 \item 1
 \item $-3$, $2$
 \item DNE
+\item False ($f(x)=\frac{|x|}{x}$ is not continuous at 0, but $\lim_{x\to 0}f(x) = 0$)
 \item $-\infty$
 \item 1
 \item $125+e^5\sin(5)$
