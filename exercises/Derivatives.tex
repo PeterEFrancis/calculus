@@ -10,7 +10,7 @@
   \usepackage{lmodern}
 \fi
 
-\usepackage{hyperref, amssymb, amsmath}
+\usepackage{hyperref, amssymb, amsmath, multicol}
 
 \usepackage[margin=1in]{geometry}
 
@@ -35,25 +35,28 @@
 \end{enumerate}
 
 \subsection*{B. For each $f$, find $f'$ using the limit definition of the derivative.}
-
+\begin{multicols}{4}
 \begin{enumerate}
 \item $f(x)=3$
 \item $f(x)=\sqrt{x+4}$
 \item $f(x)=2x^2 + 3x$
 \item $f(x)=\sin(x)$
 \end{enumerate}
+\end{multicols}
 
 \subsection*{C. Which functions' derivative is given by the following limits?}
+\begin{multicols}{2}
 \begin{enumerate}
 \item $\displaystyle\lim_{h\to 0}\frac{\tan(x+h)-\tan(x)}{h}$
 \item $\displaystyle\lim_{h\to 0}\frac{\sqrt{2x+2h-3}-\sqrt{2x-3}}{h}$
 \item $\displaystyle\lim_{h\to 0}\frac{3x^2+6xh+3h^2-1-3x^2-1}{h}$
 \end{enumerate}
+\end{multicols}
 
 
 
 \subsection*{D. For each $f$, find $f'$ and $f''$ using any method you want.}
-
+\begin{multicols}{3}
 \begin{enumerate}
 \item $f(x)=3x^3-\frac{4}{x^2}$
 \item $f(x)=x\sin(x)$
@@ -61,13 +64,8 @@
 \item $f(x)=x^2\cos(x)+x\tan(x)$
 \item $f(x)=\sin(x)\cos(x)e^x$
 \end{enumerate}
+\end{multicols}
 
-\subsection*{E. When are the following functions increasing/decreasing? When are they concave up/down?}
-
-\begin{enumerate}
-\item $f(x)=2x^2+3x$
-\item $f(x)=x^3+17x^2+2$
-\end{enumerate}
 
 
 \subsection*{F. Find the 100th derivative of each function.}
@@ -75,7 +73,6 @@
 \item $f(x)=x^{70}$
 \item $f(x)=xe^{x}$
 \end{enumerate}
-
 
 
 \newpage
@@ -86,20 +83,19 @@
 
 \begin{itemize}
 \item $f'(x)=\frac{1}{2}(x+4)^{-1/2}$
-\item increasing: $x>\frac{-3}{4}$, decreasing: $x<\frac{-3}{4}$, concave up: all of $\R$, concave down: nowhere
 \item $f(x)=3x^2-1$
 \item $f'(x)=4x + 3$
 \item $f'(x)=0$
 \item False ($f(x)=\frac{\left|x\right|^{3}}{2x}$ is differentiable and has derivative $f'(x)=|x|$, which is not differentiable)
 \item $f'(x)=\cos(x)$
 \item $f(x)=\tan(x)$
-\item $f'(x)=2x\cos(x)-x^2\sin(x)+\tan(x)+x\sec^2(x)$, $f''(x)=\left(2-x^{2}\right)\cos\left(x\right)-4x\sin\left(x\right)+\sec^{2}\left(x\right)\left(2+2x\tan\left(x\right)\right)$
+\item $f'(x)=2x\cos(x)-x^2\sin(x)+\tan(x)+x\sec^2(x)$, \\
+$f''(x)=\left(2-x^{2}\right)\cos\left(x\right)-4x\sin\left(x\right)+\sec^{2}\left(x\right)\left(2+2x\tan\left(x\right)\right)$
 \item $f'(x)=\sin(x) + x\cos(x)$, $f''(x)=\cos(x) + \cos(x) -x\sin(x)$
 \item $f^{(100)}(x)=0$
 \item $f(x)=\sqrt{2x-3}$
 \item False ($f(x)=|x|$ is continuous at $0$, but $f'(0)$ DNE)
-\item $f'(x)=e^{x}(\cos^{2}(x)+\sin(x)\cos(x)-\sin^{2}(x))$, $f''(x)=f'(x)+e^{x}\left(-4\cos\left(x\right)\sin\left(x\right)+\cos^{2}\left(x\right)-\sin^{2}\left(x\right)\right)$
-\item increasing: $x>0$ and $x<\frac{-3}{4}$, decreasing: $\frac{-3}{4}<x<0$, concave up: $x>\frac{-17}{3}$, concave down: $x<\frac{-17}{3}$
+\item $f'(x)=e^{x}(\cos^{2}(x)+\sin(x)\cos(x)-\sin^{2}(x))$, \\$f''(x)=f'(x)+e^{x}\left(-4\cos\left(x\right)\sin\left(x\right)+\cos^{2}\left(x\right)-\sin^{2}\left(x\right)\right)$
 \item $f'(x)=9x^2+8x^{-3}$, $f''(x)=18x-24x^{-4}$
 \item $f^{(100)}(x)=100e^x+xe^x$
 \item $f'(x)=\frac{(2x)(x-4)-(x^2+3)}{(x-4)^2}$, $f''(x)=\frac{(2x-8)(x^2-8x+16)-(x^2-8x-3)(2x-8)}{(x^2-8x+16)^2}$

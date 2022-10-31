@@ -18,6 +18,9 @@
 
 \usepackage{pgf, latexsym, float, soul, array, booktabs, dsfont, gensymb, wasysym, multicol, tcolorbox, tabularx, enumitem}
 
+\usepackage{ marvosym }
+
+
 \usepackage[useregional]{datetime2}
 
 % \renewcommand{\familydefault}{\sfdefault}
@@ -146,7 +149,8 @@
 \vfill
 
 \begin{small}
-% \noindent I would like to thank the following people who have offered suggestions and help putting this together: Samira Arfaee, Eunice Ng, Santiago Cordero-Misteli.
+\noindent I would like to thank the following people who have offered suggestions and help putting this together: Keir Lockridge.
+% , Samira Arfaee, Eunice Ng, Santiago Cordero-Misteli.
 \end{small}
 
 \vfill
@@ -246,8 +250,70 @@ We measure angles in either degrees or radians. The angle $\theta$ can be any re
 
 The two functions $\sin$ and $\cos$ are the basic building blocks, but there are four other commonly used trig functions. They are defined as follows:
 $$\sec \theta = \frac{1}{\cos\theta}, \quad \quad \csc\theta=\frac{1}{\sin\theta}, \quad \quad \tan\theta=\frac{\sin\theta}{\cos\theta}, \quad \quad \cot\theta=\frac{\cos\theta}{\sin\theta}.$$
+These functions also have interesting visual representations on the unit circle.
+\begin{figure}[h!]
+\centering
+\fbox{
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,434); %set diagram left start at 0, and has height of 434
 
-These functions also have interesting visual representations on the unit circle. To explore these functions, check out \href{https://www.desmos.com/calculator/fdr54f2jh3}{this graph on Desmos}.
+%Shape: Circle [id:dp8118961016990287] 
+\draw   (214,254.2) .. controls (214,195.11) and (261.91,147.2) .. (321,147.2) .. controls (380.09,147.2) and (428,195.11) .. (428,254.2) .. controls (428,313.29) and (380.09,361.2) .. (321,361.2) .. controls (261.91,361.2) and (214,313.29) .. (214,254.2) -- cycle ;
+%Straight Lines [id:da6733376051381585] 
+\draw    (143,254.5) -- (499,253.9) ;
+%Straight Lines [id:da24708595669358502] 
+\draw    (321,31.7) -- (321,397.7) ;
+%Straight Lines [id:da2369525758798794] 
+\draw    (404,186.8) -- (321,254.2) ;
+%Straight Lines [id:da6269364989299404] 
+\draw    (459,253.8) -- (321,82.8) ;
+%Shape: Arc [id:dp8953631465255683] 
+\draw  [draw opacity=0] (335.11,243.48) .. controls (337.38,246.45) and (338.72,250.17) .. (338.72,254.2) .. controls (338.72,254.26) and (338.72,254.32) .. (338.72,254.39) -- (321,254.2) -- cycle ; \draw   (335.11,243.48) .. controls (337.38,246.45) and (338.72,250.17) .. (338.72,254.2) .. controls (338.72,254.26) and (338.72,254.32) .. (338.72,254.39) ;  
+%Straight Lines [id:da9446390224381691] 
+\draw    (404,186.8) -- (404,253.8) ;
+%Curve Lines [id:da6889044659660293] 
+\draw    (321,254.85) .. controls (321,303.53) and (369.22,243.72) .. (387.51,292.4) ;
+%Curve Lines [id:da7744827450838345] 
+\draw    (387.51,292.4) .. controls (404.13,243.72) and (459,302.6) .. (459,253.92) ;
+%Curve Lines [id:da7475604962570235] 
+\draw    (320.73,82.66) .. controls (295.65,82.31) and (326.19,164.99) .. (301,187.4) ;
+%Curve Lines [id:da536698622904964] 
+\draw    (301,187.4) .. controls (325.99,208.44) and (295.33,254.05) .. (320.41,254.4) ;
+%Curve Lines [id:da3819978579463683] 
+\draw    (405.09,186.4) .. controls (426.34,170.03) and (371.15,153.75) .. (381.37,123.57) ;
+%Curve Lines [id:da6758383716021474] 
+\draw    (381.37,123.57) .. controls (350.09,127.39) and (342.7,66.17) .. (321.45,82.55) ;
+%Curve Lines [id:da9285330284788131] 
+\draw    (458.84,254.4) .. controls (476,241.4) and (439,225.4) .. (447,208.4) ;
+%Curve Lines [id:da5181742767873634] 
+\draw    (447,208.4) .. controls (426.87,210.91) and (418.68,175.48) .. (405,186.23) ;
+
+% Text Node
+\draw (342,238) node [anchor=north west][inner sep=0.75pt]    {$\theta $};
+% Text Node
+\draw (372,292) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \sec \theta $};
+% Text Node
+\draw (268,180) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \csc \theta $};
+% Text Node
+\draw (385,110) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \cot \theta $};
+% Text Node
+\draw (450,193) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \tan \theta $};
+% Text Node
+\draw (353,255) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \cos \theta $};
+% Text Node
+\draw (405,244) node [anchor=north west][inner sep=0.75pt]  [rotate=-270] [align=left] {$\displaystyle \sin \theta $};
+% Text Node
+\draw (354,204) node [anchor=north west][inner sep=0.75pt]   [align=left] {$1$};
+
+
+\end{tikzpicture}
+}
+\caption{The six common trig functions on the unit circle}
+\label{6trig}
+\end{figure}
+
+
+To explore these functions, check out \href{https://www.desmos.com/calculator/fdr54f2jh3}{this graph on Desmos}.
 
 
 \subsection{Values on the Unit Circle}
@@ -548,12 +614,13 @@ All of the subsets of $\R$ that you'll want to use in this course can be written
 
 We will start with quite a few new (and abstract) definitions, but we will make things concrete very soon.
 
-A \textbf{function} $f$ is a map from a set $A$ to another set $B$ such that each element of $A$ is mapped to exactly one element of $B$. In other words, for each $a$ in $A$ that we input to $f$, we get exactly one output in $B$, which we denote as $f(a)$. 
-The set $A$ is called the \textbf{domain} of $f$, and $B$ is called the \textbf{codomain} of $f$. When defining a function we write $$f:A\to B\quad\quad\text{ or }\quad\quad A\overset{f}{\to} B$$
-to show the domain and codomain of $f$. The \textbf{range} of $f$ is the set of all outputs of $f$ and is denoted $f(A)$. The range is always a subset of the codomain, but they are not always equal sets. The relationship between the codomain and the range are an important one:
+If $A$ and $B$ are two sets, a \textbf{function} $f$ from $A$ to $B$ is an assignment of each element of $A$ to a unique element of $B$. In other words, for each input $a$ in $A$, $f$ outputs exactly one $b$ in $B$, which we denote as $f(a)$. The set $A$ is called the \textbf{domain} of $f$, the set $B$ is called the \textbf{codomain} of $f$, and we write $$f:A\to B\quad\quad\text{ or }\quad\quad A\overset{f}{\to} B.$$
+Please remember that a function has three pieces of information: the domain, the codomain, and the rule of assignment. If one of these pieces is changed, the resulting function is different.
+
+The \textbf{range} of $f$ is the set of all outputs of $f$ and is denoted $f(A)$. The range is always a subset of the codomain, but they are not always equal sets. The relationship between the domain, codomain, and the range are an important one:
 \begin{itemize}
-\item A function is called \textbf{surjective} (or \textbf{onto}) if $f(A)=B$. In other words, a function is surjective if every possible output of $f$ is actually an output. \mar{What does the word ``sur'' mean in French?}
-\item A function is called \textbf{injective} (or \textbf{one-to-one}) if each element of the codomain is mapped to by at most one element of the domain. In other words, if $f(x_1)=f(x_2)$, then $x_1=x_2$.
+\item A function is called \textbf{surjective} (or \textbf{onto}) if its range and codomain are the same (i.e. $f(A)=B$). In other words, a function is surjective if every element of the codomain is an output of $f$. \mar{What does the word ``sur'' mean in French?}
+\item A function is called \textbf{injective} (or \textbf{one-to-one}) if each element of the range is the output of exactly one element of the domain. In other words, if $f(x_1)=f(x_2)$, then $x_1=x_2$.
 \item If a function is both surjective and injective, then it is called \textbf{bijective}.
 \end{itemize}
 
@@ -670,15 +737,10 @@ Before getting into the actual definition, we'll start intuitively. If a functio
 
 Let's get a little more general: suppose a function $f$ is defined on open intervals on either side of $a$.
 
-\begin{center}
-\def\arraystretch{1.3}
-\begin{tabular}{| p{2in} | p{2in} |} \hline
-If $f$ is defined on an interval to the \textit{left} of $a$ and the values of $f(x)$ approach $L$ as $x$ approaches $a$ from the \textit{left}, we say that the ``\textbf{left-sided limit of $f$ as $x$ approaches $a$} is $L$'' and we write $$\lim_{x\to a^-}f(x)=L.$$ & If $f$ is defined on an interval to the \textit{right} of $a$ and the values of $f(x)$ approach $L$ as $x$ approaches $a$ from the \textit{right}, we say that the \textbf{right-sided limit of $f$ as $x$ approaches $a$} is $L$'' and we write
+If $f$ is defined on an interval to the \textit{left} of $a$ and the values of $f(x)$ approach $L$ as $x$ approaches $a$ from the \textit{left}, we say that the ``\textbf{left-sided limit of $f$ as $x$ approaches $a$} is $L$'' and we write $$\lim_{x\to a^-}f(x)=L.$$
+If $f$ is defined on an interval to the \textit{right} of $a$ and the values of $f(x)$ approach $L$ as $x$ approaches $a$ from the \textit{right}, we say that the \textbf{right-sided limit of $f$ as $x$ approaches $a$} is $L$'' and we write
 $$\lim_{x\to a^+}f(x)=L.$$
-\\\hline
-\multicolumn{2}{| p{4in} |}{If the right and left sided limits match, then we say that the \textbf{limit of $f$ as $x$ approaches $a$ is $L$} and write $$\lim_{x\to a}f(x)=L.$$} \\\hline
-\end{tabular}
-\end{center}
+If the right and left sided limits match, then we say that the \textbf{limit of $f$ as $x$ approaches $a$ is $L$} and write $$\lim_{x\to a}f(x)=L.$$
 
 \noindent Note: $f$ need not be defined at $a$ to find the limit of $f$ as $x$ approaches $a$.
 
@@ -804,6 +866,7 @@ In the definition above, if any of (a), (b), or (c) are not true, then $f$ is \t
 \item $f$ has a \textbf{jump discontinuity} at $a$ if $\displaystyle\lim _{x \to a^{-}} f(x)$ and $\displaystyle\lim _{x \to a^{+}} f(x)$ both exist and are real numbers, but are different.
 \item $f$ has an \textbf{infinite discontinuity} at $a$ if $\displaystyle\lim _{x \to a^{-}} f(x)=\pm \infty$ or $\displaystyle\lim _{x \to a^{+}} f(x)=\pm \infty$.
 \end{enumerate}
+\mar{Draw a picture of each kind of discontinuity.}
 
 \subsection{Using Continuity}
 
@@ -982,28 +1045,29 @@ $$y=f(a)+f'(a)(x-a).$$
 
 You'll notice that the tangent line captures some \textit{local information} about $f$ at $a$. In other words, it is a good approximation of $f$ at $a$; that is, $f$ and its tangent line are ``similar'' at $a$. Intuitively, you should think about the tangent line at $a$ to be the line that ``hugs $f$ the best.''
 
-Note that this definition of the derivative only makes sense if $f$ is defined on an open interval containing $a$. We can view the derivative as a function, and write $f'(x)$. The derivative of $f'(x)$ is called the \textbf{second derivative} and is denoted $f''(x)$. In general, the $n$th derivative $f^{(n)}(x)$ is defined to be the derivative of $f^{(n-1)}(x)$. Other notation is sometimes used: if $y=f(x)$, $\frac{dy}{dx}=\frac{d}{dx}[f(x)]$ is the derivative of $f$, and $\frac{d^ny}{dx^n}=\frac{d^n}{dx^n}[f(x)]$ is the $n$th derivative of $f$.
-
+Note that this definition of the derivative only makes sense if $f$ is defined on an open interval containing $a$. We can view the derivative as a function, and write $[f(x)]'$ or $f'(x)$. The derivative of $f'(x)$ is called the \textbf{second derivative} and is denoted $f''(x)$. In general, the $n$th derivative $f^{(n)}(x)$ is defined to be the derivative of $f^{(n-1)}(x)$.
 
 \subsection{The Two Part ``Program'' for Finding Derivatives}
 
 So now we have a goal: find derivatives of functions. The problem is that the limit definition is difficult to use (that pesky $h\to 0$ in the denominator). So instead, we will do the following two steps (let $a$ be a real number and $f$ and $g$ be functions):
 \begin{enumerate}
-\item ``break functions up into simpler ones''
+\item rules to break functions up and reassemble
 
 \begin{center}
 \def\arraystretch{1.5}
 \begin{tabular}{@{}ll@{}}
 \toprule[0.4mm]
-\textbf{The Scalar Multiple Rule} & $(af)' = af'$. \\
-\textbf{The Sum Rule} & $(f + g)' = f' + g'$ \\
-\textbf{The Product Rule} & $(fg)' = f'g + fg'$ \\
-\textbf{The Quotient Rule} & $\left(\frac{f}{g}\right)' = \frac{f'g - fg'}{g^2}$ \\
+\textbf{The Scalar Multiple Rule} & $[af]' = af'$. \\
+\textbf{The Sum Rule} & $[f + g]' = f' + g'$ \\
+\textbf{The Product Rule} & $[fg]' = f'g + fg'$ \\
+\textbf{The Quotient Rule} & $\left[\frac{f}{g}\right]' = \frac{f'g - fg'}{g^2}$ \\
+\textbf{The Chain Rule} & $[f(g(x))]' = f'(g(x))g'(x)$ \\
+\textbf{The Inverse Rule} & $[f^{-1}(x)]' = \frac{1}{f'(f^{-1}(x))}$ \\
 \bottomrule[0.4mm]
 \end{tabular}
 \end{center}
 
-\item find derivatives of ``simple'' functions:
+\item find derivatives of ``basic'' functions:
 
 \end{enumerate}
 
@@ -1012,101 +1076,159 @@ So now we have a goal: find derivatives of functions. The problem is that the li
 \def\arraystretch{1.5}
 \begin{tabular}{@{}ll@{}}
 \toprule[0.4mm]
-\textbf{The Constant Rule}     & $\frac{d}{dx}[a] = 0$ \\
-\textbf{The Power Rule}        & $\frac{d}{dx}[x^a] = ax^{a-1}$ \\
-\textbf{Basic Trig Functions}  & $\frac{d}{dx}[\sin(x)] = \cos(x)$ and $\frac{d}{dx}[\cos(x)] = -\sin(x)$ \\
-\textbf{Exponential Functions} & $\frac{d}{dx}[a^x] = \ln(a)a^x$ \\
-\textbf{Logarithmic Functions} & $\frac{d}{dx}[\log_a(x)] = \frac{1}{x\ln(a)}$ \\
+\textbf{The Constant Rule}     & $[a]' = 0$ \\
+\textbf{The Power Rule}        & $[x^a]' = ax^{a-1}$ \\
+\textbf{Basic Trig Functions}  & $[\sin(x)]' = \cos(x)$ and $[\cos(x)]' = -\sin(x)$ \\
+\textbf{Exponential Functions} & $[a^x]' = \ln(a)a^x$ \\
+\textbf{Logarithmic Functions} & $[\log_a(x)]' = \frac{1}{x\ln(a)}$ \\
 \bottomrule[0.4mm]
 \end{tabular}
 \end{center}
 
 
 Most of the time, you will be able to find the derivatives using a combination of these rules. For instance, the derivatives of the other 4 trig functions can be found using the quotient rule and the derivatives of $\sin$ and $\cos$:
-$$\frac{d}{dx}[\tan(x)] = \sec^2(x)
+$$[\tan(x)]' = \sec^2(x)
 \quad\quad\quad\quad\quad
-\frac{d}{dx}[\sec(x)] = \sec(x)\tan(x)$$
+[\sec(x)]' = \sec(x)\tan(x)$$
 
-$$\frac{d}{dx}[\cot(x)] = -\csc^2(x)
+$$[\cot(x)]' = -\csc^2(x)
 \quad\quad\quad\quad\quad
-\frac{d}{dx}[\csc(x)] = -\csc(x)\cot(x)$$
-
-% \begin{itemize}
-% \item
-% \end{itemize}
+[\csc(x)]' = -\csc(x)\cot(x)$$
+\mar{See if you can find the pattern with these four derivatives. Hint: ``pSST''}
 
 
+\subsection{Implicit Differentiation}
+
+We'll refer to the set of points that satisfy an equation of two variables as a \textbf{curve in the plane}. Some examples you might have seen before are circles and ellipses. The circle with center $(h,k)$ and radius $r$ is the set of points $(x,y)$ in the plane that satisfy the equation
+$$(x-h)^2+(y-k)^2=r^2.$$
+\mar{Look up the similar equation for an ellipse.}
+
+In general, curves are not functions (they might not pass the vertical line test), but they can have still have tangent lines, so we should be able to describe their slope at a point. We do this by ``zooming in'' on a point of the curve, and forgetting about the other parts of the curve. Now (locally), it looks like a function, so we can treat the $y$ variable as a function of $x$. This process is called ``implicit'' differentiation, and consists of two steps:
+\begin{enumerate}
+\item differentiate both sides of the equation (keeping in mind that since $y$ is a function of $x$, the derivative of $f(y)$ is $f'(y)\cdot y'$ by the chain rule).
+\item solve for $y'$.
+\end{enumerate}
+
+Other notation is sometimes used: if $y=f(x)$, $\frac{dy}{dx}=\frac{d}{dx}[f(x)]$ is the derivative of $f$, and $\frac{d^ny}{dx^n}=\frac{d^n}{dx^n}[f(x)]$ is the $n$th derivative of $f$.
+
+When you solve for $y'$, it is possible that the expression will consist of both $y$ and $x$ variables. That is because the formula for $y'$ is not a function of just $x$, it is a function of both $x$ and $y$!
+
+Let's do an example:
+\begin{itemize}
+\item The curve of points satisfying the equation $y^{3}=x^{2}-xy-1$ is not a function, since it does not pass the vertical line test: both $(-1,-1)$ and $(-1,1)$ are solutions. However, we can still find the derivative at each point on this curve! Start by taking the ($x$) derivative of both sides.
+
+On the left, the $x$ derivative of $y^3$ is $3y^2y'$, by the power rule (and the chain rule). The derivative of $x^2$ is $2x$, the derivative of $xy$ is $y+xy'$ by the product rule (and chain rule), and the derivative of $1$ is 0, of course. Comparing the derivatives of each side of the equation, we get
+$$3y^2y'=2x-(y+xy'),$$
+so solving for $y'$,
+$$y'=\frac{2x-y}{3y^2+x}.$$
+At $(-1,1)$, $y'=\frac{-3}{2}$, and at $(-1,-1)$, $y'=\frac{-1}{2}$. The tangent line to the curve at the point $(-1,1)$ is $y=\frac{-3}{2}(x+1)+1$
+
+\end{itemize}
+
+
+\subsection{Logarithmic Differentiation}
+
+Sometimes you will be faced with a function whose formula includes an expression involving $x$ raised to a power that also involves $x$. Finding the derivative of such a function has a specific procedure: suppose $y=f(x)^{g(x)}$ and we want to find $y'$. First apply the $\ln$ function to both sides of the equation and use the log property $\ln(a^b)=b\ln(a)$:
+$$\ln(y)=\ln(f(x)^{g(x)}=g(x)\ln(f(x)).$$
+Then implicit differentiation yields
+$$\frac{1}{y}y'=g'(x)\ln(f(x))+g(x)\frac{f'(x)}{f(x)},$$
+and solving for $y'$ and substituting $y=f(x)^{g(x)}$ we get
+$$y'=f(x)^{g(x)}\left(g'(x)\ln(f(x))+g(x)\frac{f'(x)}{f(x)}\right).$$
+Here are some examples:
+\begin{itemize}
+\item $[x^x]'=x^x(\ln(x)+1)=\ln(x^{x^x})+x^x$. (Here $f(x)=g(x)=x$).
+\item $[\sin(x)^x]'=\sin(x)^x(\ln(\sin(x))+x\cot(x))$. (Here $f(x)=\sin(x)$ and $g(x)=x$). \mar{Work these examples out.}
+\end{itemize}
+
+I don't recommend that you memorize the formula for $[f(x)^{g(x)}]'$. Instead, remember the procedure (called \textbf{Logarithmic Differentiation}) and re-create when you need it.
+
+
+\subsection{Using The Inverse Rule}
+
+When we want to find the derivative of an inverse of a function $f$, the inverse rule tells us that
+$$[f^{-1}(x)]'=\frac{1}{f'(f^{-1}(x))},$$
+but how is this helpful? It is actually very easy to see why this rule is true:
+\begin{align*}
+         & f(f^{-1}(x)) = x & & \text{(definition of inverse)}\\
+\implies & f'(f^{-1}(x))[f^{-1}(x)]'=1 & &\text{(chain rule)}\\
+\implies & [f^{-1}(x)]' = \frac{1}{f'(y)} & & \text{(solve for $[f^{-1}(x)]'$)}\\
+\implies & [f^{-1}(x)]' =\frac{1}{f'(f^{-1}(x))} & & \text{(substitute)}
+\end{align*}
+
+Let's use this rule to find the derivative of inverse trig functions:
+\begin{itemize}
+\item The rule says that $[\sin^{-1}(x)]'=\frac{1}{\cos(\sin^{-1}(x))}$, but we should be able to simplify this expression using the unit circle.
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,479); %set diagram left start at 0, and has height of 479
+
+%Straight Lines [id:da021711983663396772] 
+\draw    (216.29,266.83) -- (389.5,266) ;
+%Straight Lines [id:da1995895124000051] 
+\draw    (387.76,126) -- (216.29,266.83) ;
+%Shape: Arc [id:dp31180800912218465] 
+\draw  [draw opacity=0] (239.51,247.26) .. controls (244.36,252.47) and (247.3,259.32) .. (247.3,266.83) .. controls (247.3,266.94) and (247.3,267.05) .. (247.3,267.16) -- (216.29,266.83) -- cycle ; \draw   (239.51,247.26) .. controls (244.36,252.47) and (247.3,259.32) .. (247.3,266.83) .. controls (247.3,266.94) and (247.3,267.05) .. (247.3,267.16) ;  
+%Straight Lines [id:da12311387270862384] 
+\draw    (387.76,126) -- (389.5,266) ;
+%Shape: Square [id:dp5026691075905794] 
+\draw   (376.5,253) -- (389.5,253) -- (389.5,266) -- (376.5,266) -- cycle ;
+
+% Text Node
+\draw (247,242) node [anchor=north west][inner sep=0.75pt]    {$\sin^{-1}( x)$};
+% Text Node
+\draw (263.9,269) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \cos\left(\sin^{-1}(x)\right)$};
+% Text Node
+\draw (285.15,183.17) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle 1$};
+% Text Node
+\draw (394.13,203) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle x$};
+
+
+\end{tikzpicture}
+\end{figure}
+if a (non-right) angle of a right triangle (with hypotenuse 1) is $\sin^{-1}(x)$, the leg opposite $\sin^{-1}(x)$ has length $x$. Then $\cos(\sin^{-1}(x))$ is the length of the other leg of the triangle, so $\cos(\sin^{-1}(x))=\sqrt{1-x^2}$ by the Pythagorean theorem. Therefore,
+$$[\sin^{-1}(x)]'=\frac{1}{\cos(\sin^{-1}(x))}=\frac{1}{\sqrt{1-x^2}}.$$
+\item The other derivatives of inverse trig functions are
+$$[\cos^{-1}(x)]'=\frac{-1}{\sqrt{1-x^2}}$$
+$$[\csc^{-1}(x)]'=\frac{-1}{|x|\sqrt{x^2-1}}\quad\quad [\sec^{-1}(x)]'=\frac{1}{|x|\sqrt{x^2-1}}$$
+$$[\tan^{-1}(x)]'=\frac{1}{1+x^2}\quad\quad [\cot^{-1}(x)]'=\frac{1}{1+x^2}$$
+\mar{Figure these equations out by yourself using the same method as for $\sin^{-1}$. Hint: refer to Figure \ref{6trig}}
+\end{itemize}
 
 
 
-\subsection{The Chain Rule}
+
+\subsection{L'Hopital's Rule}
 \textsc{In progress.}
 
 
-\subsection{Comparing the Graphs of $f$, $f'$, and $f''$}
-It is helpful to be able to look at a graph of a function and understand what it means for its first and second derivative. The table below summarizes:
 
-\begin{center}
-\def\arraystretch{1.3}
-\begin{tabular}{@{}lll@{}}
-\toprule[0.4mm]
-$f$ & $f'$ & $f''$ \\
-\midrule
-increasing & positive & \\
-constant & 0 & \\
-decreasing & negative & \\
-\midrule
-concave up & increasing & positive \\
-linear & constant & 0 \\
-concave down & decreasing & negative \\
-\bottomrule[0.4mm]
+\subsection{Comparing the Graphs of $f$, $f'$, and $f''$}
+\textsc{In progress.}
+
+% It is helpful to be able to look at a graph of a function and understand what it means for its first and second derivative. The table below summarizes:
+
+% \begin{center}
+% \def\arraystretch{1.3}
+% \begin{tabular}{@{}lll@{}}
+% \toprule[0.4mm]
+% $f$ & $f'$ & $f''$ \\
+% \midrule
+% increasing & positive & \\
+% constant & 0 & \\
+% decreasing & negative & \\
+% \midrule
+% concave up & increasing & positive \\
+% linear & constant & 0 \\
+% concave down & decreasing & negative \\
+% \bottomrule[0.4mm]
 
 % Inflection point & constant & 0 \\ \hline
 % local extrema & 0 & \\ \hline
 % \hline
 
-\end{tabular}
-\end{center}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\subsection{Implicit Differentiation}
-\textsc{In progress.}
+% \end{tabular}
+% \end{center}
 
 
 \subsection{Related Rates}
@@ -1117,6 +1239,53 @@ concave down & decreasing & negative \\
 \textsc{In progress.}
 
 
+\subsection{Newton's Method for Finding Roots}
+
+Imagine that you have an function $f$ and you want to find the zeros (or roots) of $f$. That is, you want to find the values of $x$ such that $f(x)=0$. \textbf{Newton's Method} is a computational algorithm that can sometimes be used to approximate such a value. First, we'll describe the algorithm, and then we'll show how to do use your TI calculator to implement it.
+
+Imagine that $x_0$ is an initial guess of a root of the function $f$. If we can take the derivative of $f$, then we know that the tangent line of $f$ at $x_0$ is
+$$y-f(x_0)=f'(x_0)(x-x_0)$$
+and so we find (setting $y=0$ and solving for $x$) this tangent line intersects the $x$-axis at the point $(x_1,0)$, where
+$$x_1=x_0-\frac{f(x_0)}{f'(x_0)}.$$
+We continue this, setting
+$$x_2=x_1-\frac{f(x_1)}{f'(x_1)},$$
+and so on:
+$$x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}.$$
+
+In many cases, this sequence of numbers should approach a zero of $f$. Here is the intuitive reason why: (1) if $x_n$ is not a zero of $f$, then $x_{n+1}$ moves in the direction of a zero, and (2) if $x_n$ is a zero of $f$, then $x_{n+1}=x_n$.
+
+The second point is obvious, but let's look into the first point. If $f(x_n)$ is not 0, then we have two cases:
+\begin{itemize}
+\item $x_{n+1}>x_n$ (move to the right).  Algebraically, this occurs exactly when $f(x_n)$ and $f'(x_n)$ have opposite sign (when $f$ is increasing below the $x$-axis, or decreasing above the $x$-axis).\mar{Draw a picture showing how in both of these sub-cases, the root of $f$ can be to the right of $x_n$.}
+\item $x_{n+1}<x_n$ (move to the left). Similarly, this occurs exactly when $f(x_n)$ and $f'(x_n)$ have the same sign (when $f$ is increasing above the $x$-axis, or decreasing below the $x$-axis).\mar{Draw a picture showing how in both of these sub-cases, the root of $f$ can be to the left of $x_n$.}
+\end{itemize}
+
+Seems reasonable, right? In either case we try to move in the direction of  a root.
+
+Now, how do we use Newton's method? Get out your TI calculator, and type the function $f$ into \texttt{Y$_\text{1}$=}, and $f'$ into \texttt{Y$_\text{2}$=}. Then return to the main calculator screen and type
+\begin{center}
+\texttt{0 \MVRightarrow \ A}
+\end{center}
+(or replace the 0 with a different initial guess $x_0$) and click \texttt{ENTER}. Then type
+\begin{center}
+\texttt{A - Y$_\text{1}$(A)/Y$_\text{2}$(A) \MVRightarrow \ A}
+\end{center}
+and click \texttt{ENTER}. The variable \texttt{A} is now set as $x_1$, and this value should be displayed. Click \texttt{ENTER} again and \texttt{A} is now $x_2$. Continue clicking \texttt{ENTER} to find $x_n$ for higher $n$ (clicking 100 times will show you $x_{100}$).
+
+Although Newton's method is generally an easy algorithm to implement and use, it does not always work.\mar{Consider $f(x)=x^3$ and try to use Newtons method to detect the root $0$ with the initial guess $x_0=1$.}
+
 
 
 \end{document}
+
+
+
+
+
+
+
+
+
+
+
+

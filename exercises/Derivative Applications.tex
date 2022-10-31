@@ -1,0 +1,55 @@
+\documentclass{article}
+
+% set font encoding for PDFLaTeX, XeLaTeX, or LuaTeX
+\usepackage{ifxetex,ifluatex}
+\if\ifxetex T\else\ifluatex T\else F\fi\fi T%
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+\usepackage{hyperref, amssymb, amsmath, multicol}
+
+\usepackage[margin=1in]{geometry}
+
+\pagenumbering{gobble}
+
+
+\newcommand{\R}{\mathbb{R}}
+
+
+\begin{document}
+
+
+\begin{center}
+\begin{Huge}Derivative Application Exercises\end{Huge}
+\end{center}
+
+
+\subsection*{A. When are the following functions increasing/decreasing? When are they concave up/down?}
+
+\begin{enumerate}
+\item $f(x)=2x^2+3x$
+\item $f(x)=x^3+17x^2+2$
+\end{enumerate}
+
+
+
+\newpage
+
+
+
+\subsection*{Answers (in no particular order)}
+
+\begin{itemize}
+\item increasing: $x>\frac{-3}{4}$, decreasing: $x<\frac{-3}{4}$, concave up: all of $\R$, concave down: nowhere
+\item increasing: $x>0$ and $x<\frac{-3}{4}$, decreasing: $\frac{-3}{4}<x<0$, concave up: $x>\frac{-17}{3}$, concave down: $x<\frac{-17}{3}$
+\end{itemize}
+
+
+
+
+
+\end{document}
