@@ -1378,7 +1378,7 @@ At $(-1,1)$, $y'=\frac{-3}{2}$, and at $(-1,-1)$, $y'=\frac{-1}{2}$. The tangent
 \subsection{Logarithmic Differentiation}
 
 Sometimes you will be faced with a function whose formula includes an expression involving $x$ raised to a power that also involves $x$. Finding the derivative of such a function has a specific procedure: suppose $y=f(x)^{g(x)}$ and we want to find $y'$. First apply the $\ln$ function to both sides of the equation and use the log property $\ln(a^b)=b\ln(a)$:
-$$\ln(y)=\ln(f(x)^{g(x)}=g(x)\ln(f(x)).$$
+$$\ln(y)=\ln(f(x)^{g(x)})=g(x)\ln(f(x)).$$
 Then implicit differentiation yields
 $$\frac{1}{y}y'=g'(x)\ln(f(x))+g(x)\frac{f'(x)}{f(x)},$$
 and solving for $y'$ and substituting $y=f(x)^{g(x)}$ we get
@@ -1456,6 +1456,63 @@ The main idea is that if we have a function $f$ and we know $f(a)$ and $f'(a)$ f
 $$f(b)\approx f(a)+f'(a)(b-a).$$\mar{When is this approximation an overestimate? Underestimate?}
 The right side of this approximation is exactly the tangent line of $f$ at $a$, evaluated at $b$.
 
+\begin{figure}[h!]
+\centering
+\fbox{
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+%Straight Lines [id:da290856484859926] 
+\draw    (189,231) -- (547,231.2) ;
+%Straight Lines [id:da7357645784694884] 
+\draw    (210,10) -- (210,272.2) ;
+%Curve Lines [id:da5579528590630709] 
+\draw    (210,231) .. controls (396,38) and (419,51) .. (540,226) ;
+%Straight Lines [id:da4409257410178691] 
+\draw    (205,170) -- (521,27.2) ;
+%Straight Lines [id:da8838372850567859] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (363,98.6) -- (363,232.2) ;
+%Straight Lines [id:da5277023069496161] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (407,79) -- (406,231) ;
+%Straight Lines [id:da42915482489298684] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (407,91.6) -- (210,93) ;
+%Straight Lines [id:da3902230699344138] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (407,79) -- (210.5,79) ;
+%Straight Lines [id:da5116345937274027] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (363,98.6) -- (210,100) ;
+%Curve Lines [id:da33167985133818645] 
+\draw    (169.75,48) .. controls (191.42,48) and (175.98,78.08) .. (208.96,78.98) ;
+\draw [shift={(210.5,79)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Curve Lines [id:da3661693241843025] 
+\draw    (170.75,131) .. controls (193.16,131) and (175.55,100.92) .. (208.46,100.02) ;
+\draw [shift={(210,100)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da2376462542003681] 
+\draw    (170.75,93) -- (208,93) ;
+\draw [shift={(210,93)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+
+% Text Node
+\draw (357,235) node [anchor=north west][inner sep=0.75pt]    {$a$};
+% Text Node
+\draw (137,120) node [anchor=north west][inner sep=0.75pt]    {$f(a)$};
+% Text Node
+\draw (401,235.4) node [anchor=north west][inner sep=0.75pt]    {$b$};
+% Text Node
+\draw (140,85) node [anchor=north west][inner sep=0.75pt]    {$f( b)$};
+% Text Node
+\draw (125,40) node [anchor=north west][inner sep=0.75pt]    {$\approx f( b)$};
+
+
+\end{tikzpicture}
+}
+\caption{Linear Approximation}
+\end{figure}
+
+Let's pretend we don't have a calculator, and try to estimate $\sqrt{4.1}$. In this case $f(x)=\sqrt{x}$, and we should set $a=4$, since $4.1\approx 4$ and we can figure out $f(4)$ and $f'(4)$. By the power rule, $f'(x)=\frac{1}{2}x^{-1/2}$, so $f'(4)=\frac12(4^{-1/2})=\frac14$, and of course $f(4)=\sqrt{4}=2$. Using the formula above,
+$$\sqrt{4.1}=f(4.1)\approx f(4)+f'(4)(4.1-4)=2+\frac14(0.1)=2.025.$$
+If we check a calculator for a better approximation, we find that
+$$\sqrt{4.1}\approx 2.02484567313,$$
+so we weren't that far off! \mar{Estimate $\sqrt{3.9}$ and compare to the actual value.}
 
 \subsection{L'H\^opital's Rule}
 
