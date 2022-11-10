@@ -1,7 +1,7 @@
 \documentclass{article}
 
 \usepackage{libertine}
-% \usepackage[libertine]{newtxmath}
+\usepackage[libertine]{newtxmath}
 
 \usepackage{amsmath}
 \usepackage{amsthm}
@@ -38,16 +38,14 @@
 \usepackage[margin=1in, right=3in, marginpar=1.9in]{geometry}
 
 % set font encoding for PDFLaTeX, XeLaTeX, or LuaTeX
-\usepackage{ifxetex,ifluatex}
-\if\ifxetex T\else\ifluatex T\else F\fi\fi T%
-  \usepackage{fontspec}
-\else
-  \usepackage[T1]{fontenc}
-  \usepackage[utf8]{inputenc}
-  \usepackage{lmodern}
-\fi
-
-\usepackage{hyperref}
+% \usepackage{ifxetex,ifluatex}
+% \if\ifxetex T\else\ifluatex T\else F\fi\fi T%
+%   \usepackage{fontspec}
+% \else
+%   \usepackage[T1]{fontenc}
+%   \usepackage[utf8]{inputenc}
+%   \usepackage{lmodern}
+% \fi
 
 
 \newcommand{\N}{\mathbb{N}}
@@ -250,7 +248,7 @@ We measure angles in either degrees or radians. The angle $\theta$ can be any re
 
 The two functions $\sin$ and $\cos$ are the basic building blocks, but there are four other commonly used trig functions. They are defined as follows:
 $$\sec \theta = \frac{1}{\cos\theta}, \quad \quad \csc\theta=\frac{1}{\sin\theta}, \quad \quad \tan\theta=\frac{\sin\theta}{\cos\theta}, \quad \quad \cot\theta=\frac{\cos\theta}{\sin\theta}.$$
-These functions also have interesting visual representations on the unit circle.
+These functions also have visual representations on the unit circle.
 \begin{figure}[h!]
 \centering
 \fbox{
@@ -322,16 +320,12 @@ There are several angles $\theta$ for which you should be able to compute $\sin\
 
 Below is a diagram of all of the angles whose $\sin$ and $\cos$ you should be familiar with.
 
-\vspace{1em}
-
 \begin{figure}[h!]
 \label{the-unit-circle}
 \centering
 \fbox{\includegraphics[width=4in]{img/unit-circle.png}}
 \caption{The Unit Circle}
 \end{figure}
-
-\vspace{1em}
 
 
 It might seem intimidating, but just focus on the first (upper-right) quadrant and the first five angles there:
@@ -772,9 +766,10 @@ Such calculations, however, cannot prove that a function limits to a specific va
 
 We can extend the idea of limits outside of the real numbers to include positive and negative infinity in place of both $a$ and $L$.
 \begin{itemize}
-\item If $f(x)$ grows (in the $\pm$ direction) without bound as $x$ approaches $a$ from the left, then we write $$\lim_{x\to a^-}f(x)=\pm\infty.$$
-Similarly for $x$ approaching $a$ from the right.
-\item We denote the value (if such a value exists) that $f(x)$ approaches as $x$ approaches $\pm\infty$ as $$\lim_{x\to\pm\infty} f(x).$$
+\item If $f(x)$ grows without bound as $x$ approaches $a$ from the left, then we write $$\lim_{x\to a^-}f(x)=\infty.$$
+(Similarly for $x$ approaching $a$ from the right, and also if $f(x)$ becomes increasingly negative without bound).
+\item We denote the value (if such a value exists) that $f(x)$ approaches as $x$ approaches $\infty$ as $$\lim_{x\to\infty} f(x).$$
+(Similarly if $x$ approaches $-\infty$).
 \end{itemize}
 
 
@@ -786,7 +781,7 @@ You may be dissatisfied with the intuitive approach to limits, so we can make th
 By controlling the input $x$, we must be able to make the distance $|f(x)-L|$ between the output $f(x)$ and $L$ to be as small as we want (``arbitrarily small''). In other words, if $\varepsilon>0$ is any small positive number, we must be able to ensure (by controlling $x$) that $|f(x)-L| < \varepsilon$. To control $x$, we can make the distance $|x-a|$ between $x$ and $a$ smaller than some positive number $\delta > 0$ (that may depend on $\varepsilon$).
 
 Now we're ready for the real ``$\varepsilon-\delta$'' definition of a limit: we say that \textbf{$L$ is the limit of $f$ as $x$ approaches $a$} if
-$$\text{for all } \epsilon > 0, \text{ there is some } \delta > 0, \text{ such that } |x - a| < \delta \implies |f(x) - L| <\varepsilon.$$
+$$\text{for all } \varepsilon > 0, \text{ there is some } \delta > 0, \text{ such that } |x - a| < \delta \implies |f(x) - L| <\varepsilon.$$
 
 Read that last line a few times, because statements with multiple quantifiers can be tricky!
 
@@ -1035,7 +1030,7 @@ Figure \ref{epsilon-cartoon} is the classic picture you should try to commit to 
 \item Choose $\delta$ small enough so that when the reverse action is done (trace the $\delta$ interval up with the dotted squiggly line to the function and then left with the dashed line to the $y$-axis), the resulting interval is contained within the $\varepsilon$ interval.
 \end{enumerate}
 
-While the function graphed in the top two plots is continuous at $a$, the function that is graphed in the bottom two plots is not. For this function the first value of $\varepsilon$ (graph on the left) is not small enough to detect the discontinuity, but on the second (graph on the right), $\varepsilon$ is so small that no value of $\delta$ can be small enough.
+While the function graphed in the top two plots has a limit at $a$, the function that is graphed in the bottom two plots does not. For this function the first value of $\varepsilon$ (graph on the left) is not small enough to detect the jump discontinuity, but on the second (graph on the right), the $\varepsilon$ given is so small that no value of $\delta$ can be big enough to ignore jump.
 
 It may be helpful to think about the definition of a limit as a game/conversation between two people, Alex and Blake. Alex is trying to claim that the limit of $f$ as $x\to a$ is L, and Blake is doing their best job to contest it. Here is how their conversation might go:
 \begin{itemize}
@@ -1573,10 +1568,10 @@ In many cases, this sequence of numbers should approach a zero of $f$. Here is t
 
 The second point is obvious, but let's look into the first point. If $f(x_n)$ is not 0, then we have two cases:
 \begin{itemize}
-\item $x_{n+1}>x_n$ (move to the right).  Algebraically, this occurs exactly when $f(x_n)$ and $f'(x_n)$ have opposite sign (when $f$ is increasing below the $x$-axis, or decreasing above the $x$-axis).\mar{Draw a picture showing how in both of these sub-cases, the root of $f$ can be to the right of $x_n$.}
-\item $x_{n+1}<x_n$ (move to the left). Similarly, this occurs exactly when $f(x_n)$ and $f'(x_n)$ have the same sign (when $f$ is increasing above the $x$-axis, or decreasing below the $x$-axis).\mar{Draw a picture showing how in both of these sub-cases, the root of $f$ can be to the left of $x_n$.}
+\item $x_{n+1}>x_n$ (move to the right).  Algebraically, this occurs exactly when $f(x_n)$ and $f'(x_n)$ have opposite sign (when $f$ is increasing below the $x$-axis, or decreasing above the $x$-axis).
+\item $x_{n+1}<x_n$ (move to the left). Similarly, this occurs exactly when $f(x_n)$ and $f'(x_n)$ have the same sign (when $f$ is increasing above the $x$-axis, or decreasing below the $x$-axis).
 \end{itemize}
-
+\mar{Draw a picture showing the four cases.}
 Seems reasonable, right? In either case we try to move in the direction of  a root.
 
 Now, how do we use Newton's method? Get out your TI calculator, and type the function $f$ into \texttt{Y$_\text{1}$=}, and $f'$ into \texttt{Y$_\text{2}$=}. Then return to the main calculator screen and type
