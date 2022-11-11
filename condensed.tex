@@ -121,12 +121,12 @@ $$\lim_{x\to 0}\frac{\sin(x)}{x} = 1\quad\quad\lim_{x\to\infty}\left(1+\frac{1}{
 \textbf{Definition:} $f$ is \textit{continuous} at $x=a$ if $\displaystyle\lim_{x\to a}f(x)=f(a)$.
 
 \begin{itemize}
-\setlength\itemsep{-0.5em}
+\setlength\itemsep{-0.25em}
 \item The following functions are \textbf{continuous on their domains}: polynomials, rational functions, trig and inverse trig functions, exponential functions, logarithms.
 \item The sum, product, and composition of continuous functions is continuous.
 \end{itemize}
 
-\vspace{0.75em}
+\vspace{0.5em}
 
 \begin{tabular}{p{1.9in} | p{3in}}
 \textbf{Composite Function Theorem}:
@@ -163,6 +163,8 @@ $$L(x)=f(a) + f'(a)(x-a)$$
 If $\displaystyle \lim_{x\to a} f(x)= \lim_{x\to a} g(x)= 0$ or $\infty$, then
 $$\lim_{x\to a}\frac{f(x)}{g(x)}=\lim_{x\to a}\frac{f'(x)}{g'(x)}.$$
 
+\vspace{0.25em}
+
 \begin{center}
 \def\arraystretch{1.5}
 \begin{tabular}{ll}
@@ -178,13 +180,14 @@ $$\lim_{x\to a}\frac{f(x)}{g(x)}=\lim_{x\to a}\frac{f'(x)}{g'(x)}.$$
 \end{center}
 
 &
-\phantom{}
 
-\vspace{2em}
+% \vspace{2em}
 
 \textbf{Logarithmic Differentiation:}
 
-To find the derivative of $y=f(x)^{g(x)}$, take $\ln()$ of both sides, bring $g(x)$ down using the log rule ($\ln(a^b)=b\ln(a)$), implicitly differentiate, and solve for $y'$:
+To find the derivative of $y=f(x)^{g(x)}$, take $\ln()$ of both sides, bring $g(x)$ down using the log rule ($\ln(a^b)=b\ln(a)$):
+$$\ln(y)=\ln(f(x)^g(x))=g(x)\ln(f(x))$$
+Then implicitly differentiate and solve for $y'$:
 $$y'=f(x)^{g(x)}\left(g'(x)\ln(f(x))+g(x)\frac{f'(x)}{f(x)}\right).$$
 
 
