@@ -609,7 +609,7 @@ All of the subsets of $\R$ that you'll want to use in this course can be written
 We will start with quite a few new (and abstract) definitions, but we will make things concrete very soon.
 
 If $A$ and $B$ are two sets, a \textbf{function} $f$ from $A$ to $B$ is an assignment of each element of $A$ to a unique element of $B$. In other words, for each input $a$ in $A$, $f$ outputs exactly one $b$ in $B$, which we denote as $f(a)$. The set $A$ is called the \textbf{domain} of $f$, the set $B$ is called the \textbf{codomain} of $f$, and we write $$f:A\to B\quad\quad\text{ or }\quad\quad A\overset{f}{\to} B.$$
-Please remember that a function has three pieces of information: the domain, the codomain, and the rule of assignment. If one of these pieces is changed, the resulting function is different.
+Please remember that a function has three pieces of information: the domain, the codomain, and the rule of assignment. If one of these pieces is changed, the resulting function is different. \mar{Is $f$ defined by $$f(x)=\begin{cases}x+1 & x > 0 \\ x^2 & x < 1\end{cases}$$ a function?}
 
 The \textbf{range} of $f$ is the set of all outputs of $f$ and is denoted $f(A)$. The range is always a subset of the codomain, but they are not always equal sets. The relationship between the domain, codomain, and the range are an important one:
 \begin{itemize}
@@ -618,7 +618,8 @@ The \textbf{range} of $f$ is the set of all outputs of $f$ and is denoted $f(A)$
 \item If a function is both surjective and injective, then it is called \textbf{bijective}.
 \end{itemize}
 
-The figure below is a cartoon of three functions. From left to right, (1) a surjection that is not injective, (2) a bijection, and (3) an injection that is not surjective.
+The figure below is a cartoon of three functions. From left to right, (1) a surjection that is not injective, (2) a bijection, and (3) an injection that is not surjective. \mar{Write down the domain, codomain, and range of each of these functions.}
+
 
 
 \begin{figure}[H]
@@ -628,11 +629,10 @@ The figure below is a cartoon of three functions. From left to right, (1) a surj
 \caption{A Surjection, a Bijection, and an Injection}
 \end{figure}
 
-\mar{Write down the domain, codomain, and range of each of these functions.}
 
 We will only use \textbf{real functions}, which are functions whose domain and codomain are subsets of $\R$. These functions take real numbers as inputs and give real numbers as outputs, so they can be graphed on a Cartesian grid, with the inputs on the horizontal axis and outputs on the vertical axis.
 
-To check that a curve drawn on a plot is a function, you can use the \textbf{vertical line test}: any vertical line must intersect a graph of a real function at most once (i.e. if a vertical line intersects a curve more than once, then the curve cannot be the graph of a real function). \mar{Draw a non-function that fails the vertical line test.}\mar{Is $f$ defined by $$f(x)=\begin{cases}x+1 & x > 0 \\ x^2 & x < 1\end{cases}$$ a function?}
+To check that a curve drawn on a plot is a function, you can use the \textbf{vertical line test}: \mar{Draw a non-function that fails the vertical line test.} any vertical line must intersect a graph of a real function at most once (i.e. if a vertical line intersects a curve more than once, then the curve cannot be the graph of a real function).
 
 
 Some people may get sloppy and say things like
