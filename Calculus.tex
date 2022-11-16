@@ -582,27 +582,26 @@ $$\{\underbrace{x}_x\underbrace{\in}_\text{in}\underbrace{\R}_{\text{the real}\a
 
 All of the subsets of $\R$ that you'll want to use in this course can be written using combinations of intervals. There are two ways to do this:
 \begin{itemize}
-\item The \textbf{union} of two sets is the set that contains all of the elements in either set and is denoted with the ``cup'' symbol, $\cup$. Here are some examples:
-\begin{enumerate}
-\item $\{1, 2, 3\}\cup\{3, 4, 5\} = \{1,2,3,4,5\}$
-\item $(3,4]\cup[4,5) = (3,5)$
-\item $(-\infty,5)\cup[5,\infty) = (-\infty,\infty)=\R$
-\item $(-3,0)\cup(2,6)$
-\item $(1,5)\cup(3, 7) = (1,7)$
-\item $(1,8)\cup(3, 4) = (1,8)$
-\end{enumerate}
-\item The \textbf{intersection} of two sets is the set that contains the elements in both sets and is denoted with the ``cap'' symbol, $\cap$. Here are some examples:
-\begin{enumerate}
-\item $\{1, 2, 3\}\cap\{3, 4, 5\} = \{3\}$
-\item $(3,4]\cap[4,5) = \{4\}$
-\item $(-\infty,5)\cap[5,\infty) = \emptyset$
-\item $(-3,0)\cap(2,6)=\emptyset$
-\item $(1,5)\cap(3, 7) = (3,5)$
-\item $(1,8)\cap(3,4) = (3,4)$
-\end{enumerate}
+\item The \textbf{union} of two sets is the set that contains all of the elements in either set and is denoted with the ``cup'' symbol, $\cup$.
+\item The \textbf{intersection} of two sets is the set that contains the elements in both sets and is denoted with the ``cap'' symbol, $\cap$.
 \end{itemize}
-
+Here are some examples:
+\begin{center}
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{@{}l l l l @{}}
+\toprule[0.4mm]
+$A$ & $B$ & $A\cup B$ & $A\cap B$\\
+\midrule
+$\{1, 2, 3\}$ & $\{3, 4, 5\}$ & $\{1,2,3,4,5\}$ & $\{3\}$ \\
+$(3,4]$ & $[4,5)$ & $(3,5)$ & $\{4\}$ \\
+$(-\infty,5)$ & $[5,\infty)$ & $(-\infty,\infty)=\R$ & $\emptyset$ \\
+$(-3,0)$ & $(2,6)$ & $(-3,0) \cup (2,6)$ & $\emptyset$ \\
+$(1,5)$ & $(3, 7)$ & $(1,7)$ & $(3,5)$ \\
+$(1,8)$ & $(3, 4)$ & $(1,8)$ & $(3,4)$ \\
+\bottomrule
+\end{tabular}
 \mar{Draw a picture of each of these examples. Does \textit{Venn diagram} ring any bells?}
+\end{center}
 
 \subsection{Defining Functions}
 
@@ -1065,7 +1064,8 @@ Together with the following laws, you'll be able to evaluate the limits of many 
 \textbf{Product law} & $\displaystyle\lim _{x \rightarrow a}(f(x) \cdot g(x))=\lim _{x \rightarrow a} f(x) \cdot \lim _{x \rightarrow a} g(x)=L \cdot M$ \\
 \textbf{Quotient law} & $\displaystyle\lim _{x \rightarrow a} \frac{f(x)}{g(x)}=\frac{\displaystyle\lim _{x \rightarrow a} f(x)}{\displaystyle\lim _{x \rightarrow a} g(x)}=\frac{L}{M}$ for $M \neq 0$ \\
 \textbf{Power law} & $\displaystyle\lim _{x \rightarrow a}(f(x))^{n}=\left(\lim _{x \rightarrow a} f(x)\right)^{n}=L^{n}$\\
-\textbf{Root law} & $\displaystyle\lim _{x \rightarrow a} \sqrt[n]{f(x)}=\sqrt[n]{\lim _{x \rightarrow a} f(x)}=\sqrt[n]{L}$ for all $L$ if $n$ is odd, and for $L \geq 0$ if $n$ is even and $f(x) \geq 0 .$ \\
+\textbf{Root law} & $\displaystyle\lim _{x \rightarrow a} \sqrt[n]{f(x)}=\sqrt[n]{\lim _{x \rightarrow a} f(x)}=\sqrt[n]{L}$ for all $L$ if $n$ is odd,\\
+& and for $L \geq 0$ if $n$ is even and $f(x) \geq 0 .$ \\
 \bottomrule[0.4mm]
 \end{tabular}
 
@@ -1114,7 +1114,7 @@ In the definition above, if any of (a), (b), or (c) are not true (or one of the 
 
 \subsection{Using Continuity}
 
-The following functions are continuous at every point in their domains:
+The following types of functions are continuous at every point in their domains:
 \begin{itemize}
 \item polynomials
 \item rational functions
@@ -1123,7 +1123,7 @@ The following functions are continuous at every point in their domains:
 \item logarithms
 \end{itemize}
 
-Therefore, if you want to evaluate a limit of any of these functions $f$ at a point $a$ in its domain, the limit is equal to $f(a)$ since $f$ is continuous.
+It is a fact (easily verifiable from the definition of continuity and the limit laws) that the sum, product, and composition of continuous functions is continuous. Therefore, if you want to take a limit of any continuous function $f$ at a point $a$ in its domain, the limit is equal to $f(a)$ by definition of continuity.
 
 \vspace{1em}
 
@@ -1432,10 +1432,14 @@ Let's use this rule to find the derivative of inverse trig functions:
 \end{figure}
 if a (non-right) angle of a right triangle (with hypotenuse 1) is $\sin^{-1}(x)$, the leg opposite $\sin^{-1}(x)$ has length $x$. Then $\cos(\sin^{-1}(x))$ is the length of the other leg of the triangle, so $\cos(\sin^{-1}(x))=\sqrt{1-x^2}$ by the Pythagorean theorem. Therefore,
 $$[\sin^{-1}(x)]'=\frac{1}{\cos(\sin^{-1}(x))}=\frac{1}{\sqrt{1-x^2}}.$$
-\item The other derivatives of inverse trig functions are
-$$[\cos^{-1}(x)]'=\frac{-1}{\sqrt{1-x^2}}$$
-$$[\csc^{-1}(x)]'=\frac{-1}{|x|\sqrt{x^2-1}}\quad\quad [\sec^{-1}(x)]'=\frac{1}{|x|\sqrt{x^2-1}}$$
-$$[\tan^{-1}(x)]'=\frac{1}{1+x^2}\quad\quad [\cot^{-1}(x)]'=\frac{1}{1+x^2}$$
+\item The derivatives of the other inverse trig functions are
+\begin{align*}
+[\cos^{-1}(x)]' & =\frac{-1}{\sqrt{1-x^2}} \\
+[\csc^{-1}(x)]' & =\frac{-1}{|x|\sqrt{x^2-1}} \\
+[\sec^{-1}(x)]' & =\frac{1}{|x|\sqrt{x^2-1}} \\
+[\tan^{-1}(x)]' & =\frac{1}{1+x^2} \\
+[\cot^{-1}(x)]' & =\frac{1}{1+x^2}
+\end{align*}
 \mar{Figure these equations out by yourself using the same method as for $\sin^{-1}$. Hint: refer to Figure \ref{6trig}}
 \end{itemize}
 
@@ -1510,6 +1514,26 @@ $$\sqrt{4.1}\approx 2.02484567313,$$
 so we weren't that far off! \mar{Estimate $\sqrt{3.9}$ and compare to the actual value.}
 
 \subsection{L'H\^opital's Rule}
+
+L'H\^opital's Rule is a way to easily tackle some of those limit problems that were in an indeterminate form, namely $\frac{0}{0}$ and $\frac{\infty}{\infty}$.
+
+\begin{thm}
+If $\displaystyle \lim_{x\to a} f(x)= \lim_{x\to a} g(x)= 0$ or $\infty$, then
+$$\lim_{x\to a}\frac{f(x)}{g(x)}=\lim_{x\to a}\frac{f'(x)}{g'(x)},$$
+as long as all of these limits are defined.
+\end{thm}
+
+What this means for you: if you are trying to take the limit of a rational function and after plugging in you get $\frac{0}{0}$ or $\frac{\infty}{\infty}$, then take the derivative of the numerator and the denominator, and try to evaluate the limit again. 
+
+It is possible that one use of L'H\^optial's rule won't be enough: you may have to use it multiple times. Here are some example:
+\begin{itemize}
+\item $\displaystyle \lim_{x\to 0}\frac{\sin(x)}{x}\overset{\text{LH}}{=}\lim_{x\to 0}\frac{\cos(x)}{1}=1.$
+\item $\displaystyle \lim_{x\to \infty}\frac{3x^2+1}{4x^2+3x}\overset{\text{LH}}{=}\lim_{x\to\infty}\frac{6x}{8x+3}\overset{\text{LH}}{=}\lim_{x\to\infty}\frac{6}{8}=\frac{3}{4}$.
+\end{itemize}
+
+
+
+\subsection{Kinematics}
 
 \textsc{In progress.}
 
