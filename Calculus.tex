@@ -515,16 +515,16 @@ $$R=\frac{abc}{\sqrt{(a+b+c)(a-b+c)(a+b-c)(-a+b+c)}}.$$
 
 
 
-\begin{theorem}[Law of Sines]
+\begin{thm}[Law of Sines]
 If a triangle has sides and angles as above, then
 $$\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}=2R=\frac{abc}{2\Delta},$$
 where $R$ is the radius of the circumscribed circle and $\Delta$ is the area of the triangle.
-\end{theorem}
+\end{thm}
 
-\begin{theorem}[Law of Cosines]
+\begin{thm}[Law of Cosines]
 If a triangle has sides and angles as above, then
 $$a^2+b^2=c^2+2ab\cos C.$$
-\end{theorem}
+\end{thm}
 \mar{Almost looks familiar, doesn't it?}
 
 When you use these formulas, keep in mind that solving for an angle can be tricky: if $\sin\theta=1/2$, then $\theta$ could be $30\degree$, $150\degree$, $390\degree$, etc..
@@ -593,6 +593,7 @@ Here are some examples:
 $A$ & $B$ & $A\cup B$ & $A\cap B$\\
 \midrule
 $\{1, 2, 3\}$ & $\{3, 4, 5\}$ & $\{1,2,3,4,5\}$ & $\{3\}$ \\
+$\{0, 2, 3\}$ & $(1,3)$ & $\{0\}\cup(1,3]$ & $\{2\}$\\
 $(3,4]$ & $[4,5)$ & $(3,5)$ & $\{4\}$ \\
 $(-\infty,5)$ & $[5,\infty)$ & $(-\infty,\infty)=\R$ & $\emptyset$ \\
 $(-3,0)$ & $(2,6)$ & $(-3,0) \cup (2,6)$ & $\emptyset$ \\
@@ -1139,6 +1140,54 @@ $$\lim _{x \to a} f(g(x))=f\left(\lim _{x \to a} g(x)\right)=f(L).$$
 \begin{thm}[The Intermediate Value Theorem]
 Let $f$ be continuous over a closed, bounded interval $[a, b]$. If $z$ is any real number between $f(a)$ and $f(b)$, then there is a number $c$ in $[a, b]$ satisfying $f(c)=z$.
 \end{thm}
+
+\begin{figure}[h!]
+\centering
+\fbox{
+\tikzset{every picture/.style={line width=0.75pt}}
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,374); %set diagram left start at 0, and has height of 374
+
+%Straight Lines [id:da38498324007722995] 
+\draw    (159,287) -- (517,287.2) ;
+%Straight Lines [id:da5792876353049934] 
+\draw    (180,98.33) -- (180,328.2) ;
+%Curve Lines [id:da7286746857142028] 
+\draw    (180,287) .. controls (366,94) and (463,235.33) .. (496,98.33) ;
+%Straight Lines [id:da23865898502362382] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (254,223.67) -- (254,288.2) ;
+%Straight Lines [id:da15690973094077898] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (429,167.67) -- (429,287) ;
+%Straight Lines [id:da0889210997343266] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (429,167.67) -- (179,167.67) ;
+%Straight Lines [id:da7783842106309002] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (254,223.67) -- (181,223.67) ;
+%Straight Lines [id:da6580337268340255] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (303,197.1) -- (180,197.1) ;
+%Straight Lines [id:da012629362538391309] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (303,286.33) -- (303,197.1) ;
+
+% Text Node
+\draw (248,289.4) node [anchor=north west][inner sep=0.75pt]    {$a$};
+% Text Node
+\draw (424,291.4) node [anchor=north west][inner sep=0.75pt]    {$b$};
+% Text Node
+\draw (140,216.4) node [anchor=north west][inner sep=0.75pt]    {$f( a)$};
+% Text Node
+\draw (139,156.4) node [anchor=north west][inner sep=0.75pt]    {$f( b)$};
+% Text Node
+\draw (163,186.4) node [anchor=north west][inner sep=0.75pt]    {$z$};
+% Text Node
+\draw (297,289.4) node [anchor=north west][inner sep=0.75pt]    {$c$};
+
+
+\end{tikzpicture}
+}
+\caption{A Cartoon of the Intermediate Value Theorem}
+\end{figure}
+
+Phrased properly, the Intermediate Value Theorem is very intuitive. If you imagine the $x$-axis is time and the $y$-axis is position, the theorem says if you start at location $f(a)$ and end at location $f(b)$, then for any location $z$ between $f(a)$ and $f(b)$, there must have been some time that you were at $z$ (as long as you can't teleport!).
+
 
 
 
