@@ -8,5 +8,6 @@
 - [ ] add problems in derivatives with trig simplification first
 - [ ] Split question about finding where derivative is a certain value up with easier prompts
 - [ ] Move LH rule to derivatives applications section on condensed
+- [ ] Make the condensed tables and the text tables match
 
 

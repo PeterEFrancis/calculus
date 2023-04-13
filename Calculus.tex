@@ -118,6 +118,15 @@
 }
 
 
+\newenvironment{strat}[1][]{
+\begin{tcolorbox}[colback=white!97!black, arc=0in, title={Strategy: #1}]
+}{
+\end{tcolorbox}
+}
+
+
+
+
 
 \title{C$\alpha$lculus}
 \author{Peter E. Francis}
@@ -703,7 +712,7 @@ $$f^{-1}(f(y))=f(x^2)=\sqrt{(x)^2})=x$$
 and
 $$f(f^{-1}(y))=f(\sqrt{y})=(\sqrt{y})^2=y.$$
 \item The function $\sin$ has domain $\R$ and range $[-1,1]$ but is \textbf{periodic} (meaning its values cyclically repeat) so cannot be invertible without an adjustment to its domain. The smaller domain we choose is $[-\pi/2,\pi/2]$ and the modified codomain is its range, $[-1,1]$. The inverse of $\sin$ is called $\arcsin$ or $\sin^{-1}$ and has domain $[-1,1]$ and range $[-\pi/2,\pi/2]$. \mar{Look up the modified domains and codomains for the other inverse trig functions.}
-\item The function $f(x)=e^x$ has domain $\R$ and range $(0,\infty)$. If we shrink the codomain $\R$ to be equal to the range, then its inverse is given by $f^{-f}(x)=\ln(x)$ and domain $(0,\infty)$ and range $\R$.
+\item The function $f(x)=e^x$ has domain $\R$ and range $(0,\infty)$. If we shrink the codomain $\R$ to be equal to the range, then its inverse is given by $f^{-1}(x)=\ln(x)$ and domain $(0,\infty)$ and range $\R$.
 \end{itemize}
 
 
@@ -1394,7 +1403,7 @@ $$[\cot(x)]' = -\csc^2(x)
 
 We'll refer to the set of points that satisfy an equation of two variables as a \textbf{curve in the plane}. Some examples you might have seen before are circles and ellipses. The circle with center $(h,k)$ and radius $r$ is the set of points $(x,y)$ in the plane that satisfy the equation
 $$(x-h)^2+(y-k)^2=r^2.$$
-\mar{Look up the similar equation for an ellipse.}
+\mar{Look up the similar equation for an ellipse and write it down here.}
 
 In general, curves are not functions (they might not pass the vertical line test), but they can have still have tangent lines, so we should be able to describe their slope at a point. We do this by ``zooming in'' on a point of the curve, and forgetting about the other parts of the curve. Now (locally), it looks like a function, so we can treat the $y$ variable as a function of $x$. This process is called ``implicit'' differentiation, and consists of two steps:
 \begin{enumerate}
@@ -1421,19 +1430,23 @@ At $(-1,1)$, $y'=\frac{-3}{2}$, and at $(-1,-1)$, $y'=\frac{-1}{2}$. The tangent
 
 \subsection{Logarithmic Differentiation}
 
-Sometimes you will be faced with a function whose formula includes an expression involving $x$ raised to a power that also involves $x$. Finding the derivative of such a function has a specific procedure: suppose $y=f(x)^{g(x)}$ and we want to find $y'$. First apply the $\ln$ function to both sides of the equation and use the log property $\ln(a^b)=b\ln(a)$:
+Sometimes you will be faced with a function whose formula includes an expression involving $x$ raised to a power that also involves $x$. Finding the derivative of such a function has a specific procedure:
+\begin{strat}[Logarithmic Differentiation]
+Suppose $y=f(x)^{g(x)}$ and we want to find $y'$. First apply the $\ln$ function to both sides of the equation and use the log property $\ln(a^b)=b\ln(a)$:
 $$\ln(y)=\ln(f(x)^{g(x)})=g(x)\ln(f(x)).$$
 Then implicit differentiation yields
 $$\frac{1}{y}y'=g'(x)\ln(f(x))+g(x)\frac{f'(x)}{f(x)},$$
 and solving for $y'$ and substituting $y=f(x)^{g(x)}$ we get
 $$y'=f(x)^{g(x)}\left(g'(x)\ln(f(x))+g(x)\frac{f'(x)}{f(x)}\right).$$
+\end{strat}
+
 Here are some examples:
 \begin{itemize}
 \item $[x^x]'=x^x(\ln(x)+1)=\ln(x^{x^x})+x^x$. (Here $f(x)=g(x)=x$).
 \item $[\sin(x)^x]'=\sin(x)^x(\ln(\sin(x))+x\cot(x))$. (Here $f(x)=\sin(x)$ and $g(x)=x$). \mar{Work these examples out.}
 \end{itemize}
 
-I don't recommend that you memorize the formula for $[f(x)^{g(x)}]'$. Instead, remember the procedure (called \textbf{Logarithmic Differentiation}) and re-create when you need it.
+I don't recommend that you memorize the formula for $[f(x)^{g(x)}]'$. Instead, remember the procedure and re-create when you need it.
 
 
 \subsection{Using The Inverse Rule}
@@ -1491,6 +1504,16 @@ $$[\sin^{-1}(x)]'=\frac{1}{\cos(\sin^{-1}(x))}=\frac{1}{\sqrt{1-x^2}}.$$
 \end{align*}
 \mar{Figure these equations out by yourself using the same method as for $\sin^{-1}$. Hint: refer to Figure \ref{6trig}}
 \end{itemize}
+
+% \subsection{Summary}
+
+% \begin{strat}[Finding the Derivative of a Function]
+% \begin{enumerate}
+% \item 
+% \end{enumerate}
+
+% \end{strat}
+
 
 
 \section{Applications}
@@ -1572,21 +1595,27 @@ $$\lim_{x\to a}\frac{f(x)}{g(x)}=\lim_{x\to a}\frac{f'(x)}{g'(x)},$$
 as long as all of these limits are defined.
 \end{thm}
 
-What this means for you: if you are trying to take the limit of a rational function and after plugging in you get $\frac{0}{0}$ or $\frac{\infty}{\infty}$, then take the derivative of the numerator and the denominator, and try to evaluate the limit again. 
+What this means for you: if you are trying to take the limit of a rational function and after plugging in you get $\frac{0}{0}$ or $\frac{\infty}{\infty}$, then take the derivative of the numerator and the denominator, and try to evaluate the limit again.
 
-It is possible that one use of L'H\^optial's rule won't be enough: you may have to use it multiple times. Here are some example:
+It is possible that one use of L'H\^optial's rule won't be enough: you may have to use it multiple times. Here are some examples:
 \begin{itemize}
 \item $\displaystyle \lim_{x\to 0}\frac{\sin(x)}{x}\overset{\text{LH}}{=}\lim_{x\to 0}\frac{\cos(x)}{1}=1.$
 \item $\displaystyle \lim_{x\to \infty}\frac{3x^2+1}{4x^2+3x}\overset{\text{LH}}{=}\lim_{x\to\infty}\frac{6x}{8x+3}\overset{\text{LH}}{=}\lim_{x\to\infty}\frac{6}{8}=\frac{3}{4}$.
 \end{itemize}
 
+Sometimes you will encounter an indeterminant form that is not $\frac00$ or $\frac\infty\infty$. Sometimes it is simple to transform one of these cases into the form $\frac00$ or $\frac\infty\infty$ and then use L'H\^optial's rule.
 
 
 \subsection{Kinematics}
 
-\textsc{In progress.}
+Kinematics is the study of motion. In this section, we'll concern ourselves with only one basic situation: an object moving in a straight path (only forwards and backwards).
+
+Suppose the position of an object at time $t$ is given by $x(t)$. The object's \textbf{velocity} at time $t$ is given by $$v(t)=x'(t)$$ since velocity is the rate at which position is changing. Similarly, the object's \textbf{acceleration} at time $t$ is given by $$a(t)=v'(t)=x''(t),$$ since accelerations is the rate at which velocity is changing.
+
+How do we interpret these quantities? One way is to think about \textbf{speed}, which is the absolute value of velocity. In other words, if you are moving backward at 2 m/s, then your velocity is $-$2 m/s and you speed is 2 m/s, but if you are moving forward at the speed 2 m/s, then your speed and velocity are both 2 m/s.
 
 
+\mar{What is an example of a function whose velocity is positive}
 
 \subsection{Comparing the Graphs of $f$, $f'$, and $f''$}
 \textsc{In progress.}
@@ -1617,7 +1646,26 @@ It is possible that one use of L'H\^optial's rule won't be enough: you may have 
 
 
 \subsection{Related Rates}
-\textsc{In progress.}
+
+As we saw in kinematics, the time-derivative of a function tells us the rate at which the function is changing. So, if we have two related quantities $A$ and $B$ that are changing over time, we can find the rate at which $A$ is changing at time $T$ if we know the rate at which $B$ is changing at time $T$.
+
+Note: sometimes the following different notations are used for the time derivative of $A$ at time $T$:
+
+$$A'(T)\quad =\quad \frac{dA}{dt}\biggm\lvert_{t=T}\quad=\quad\dot{A}(T)$$
+
+Here is the general problem-solving strategy:
+
+\begin{strat}[Related Rates]
+\begin{enumerate}[leftmargin=1em]
+\item Draw a picture.
+\item Label the relevant quantities (including $A$ and $B$).
+\item Find an equation that relates $A$ and $B$ (and nothing else).
+\item Implicitly differentiate the equation with respect to time $t$. (Remember that $A$ and $B$ are functions of $t$, so use the chain rule!)
+\item Solve for $A'(t)$ in terms of $A(t)$, $B(t)$, and $B'(t)$
+\item Plug in $t=T$.
+\end{enumerate}
+\end{strat}
+
 
 
 \subsection{Optimization}
@@ -1641,7 +1689,7 @@ In many cases, this sequence of numbers should approach a zero of $f$. Here is t
 
 The second point is obvious, but let's look into the first point. If $f(x_n)$ is not 0, then we have two cases:
 \begin{itemize}
-\item $x_{n+1}>x_n$ (move to the right).  Algebraically, this occurs exactly when $f(x_n)$ and $f'(x_n)$ have opposite sign (when $f$ is increasing below the $x$-axis, or decreasing above the $x$-axis).
+\item $x_n<x_{n+1}$ (move to the right).  Algebraically, this occurs exactly when $f(x_n)$ and $f'(x_n)$ have opposite sign (when $f$ is increasing below the $x$-axis, or decreasing above the $x$-axis).
 \item $x_{n+1}<x_n$ (move to the left). Similarly, this occurs exactly when $f(x_n)$ and $f'(x_n)$ have the same sign (when $f$ is increasing above the $x$-axis, or decreasing below the $x$-axis).
 \end{itemize}
 \mar{Draw a picture showing the four cases.}
