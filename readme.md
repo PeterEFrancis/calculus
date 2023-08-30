@@ -9,4 +9,4 @@ Here are some exercises:
 - [Derivatives](exercises/Derivatives.pdf)
 - [Derivative Applications](exercises/Derivative%20Applications.pdf)
 
-[Maybe clicking On this liNk will bEnifit You](https://drive.google.com/file/d/1XqBYn5BtpmJSzlKFJKeFJmHlo0MJ4PcY/view?usp=sharing)
+[Maybe clicking On this liNk will bEnefit You](https://drive.google.com/file/d/1XqBYn5BtpmJSzlKFJKeFJmHlo0MJ4PcY/view?usp=sharing)
