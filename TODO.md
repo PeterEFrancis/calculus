@@ -12,4 +12,10 @@
 - [ ] add more inverse trig to exercises
 - [ ] logrithmic examples like $\sin(x^x)$
 - [ ] implicit differentiation by parametric curves
+- [ ] limit matching to make continuous
+- [ ] lim x->infty sqrt(poly)/poly
+- [ ] lim x-> infty (e^x-1)/x = 1
+- [ ] Average rate of change
+- [ ] look at graphs and draw derivatives (and sketching graphs)
+- [ ] lim x -> 0 sin(x^2) / x
 
