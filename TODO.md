@@ -9,5 +9,6 @@
 - [ ] Split question about finding where derivative is a certain value up with easier prompts
 - [ ] Move LH rule to derivatives applications section on condensed
 - [ ] Make the condensed tables and the text tables match
-
+- [ ] add more inverse trig to exercises
+- [ ]
 
