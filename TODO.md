@@ -10,5 +10,6 @@
 - [ ] Move LH rule to derivatives applications section on condensed
 - [ ] Make the condensed tables and the text tables match
 - [ ] add more inverse trig to exercises
-- [ ]
+- [ ] logrithmic examples like $\sin(x^x)$
+- [ ] implicit differentiation by parametric curves
 
