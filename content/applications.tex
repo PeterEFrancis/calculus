@@ -1,0 +1,309 @@
+
+\section{Applications}
+
+
+\subsection{Linear Approximation}
+
+This first application of derivatives is nothing too new! We first described the tangent line of a function $f$ as the line that ``hugs $f$ the best at $a$'' and now we are going to take of advantage of that fact.
+
+The main idea is that if we have a function $f$ and we know $f(a)$ and $f'(a)$ for some $a$, then we can use the tangent line of $f$ at $a$ to estimate values of a function near $a$. That is, if $a\approx b$, then
+$$f(b)\approx f(a)+f'(a)(b-a).$$\mar{When is this approximation an overestimate? Underestimate?}
+The right side of this approximation is exactly the tangent line of $f$ at $a$, evaluated at $b$.
+
+\begin{figure}[h!]
+\centering
+\fbox{
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+%Straight Lines [id:da290856484859926]
+\draw    (189,231) -- (547,231.2) ;
+%Straight Lines [id:da7357645784694884]
+\draw    (210,10) -- (210,272.2) ;
+%Curve Lines [id:da5579528590630709]
+\draw    (210,231) .. controls (396,38) and (419,51) .. (540,226) ;
+%Straight Lines [id:da4409257410178691]
+\draw    (205,170) -- (521,27.2) ;
+%Straight Lines [id:da8838372850567859]
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (363,98.6) -- (363,232.2) ;
+%Straight Lines [id:da5277023069496161]
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (407,79) -- (406,231) ;
+%Straight Lines [id:da42915482489298684]
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (407,91.6) -- (210,93) ;
+%Straight Lines [id:da3902230699344138]
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (407,79) -- (210.5,79) ;
+%Straight Lines [id:da5116345937274027]
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (363,98.6) -- (210,100) ;
+%Curve Lines [id:da33167985133818645]
+\draw    (169.75,48) .. controls (191.42,48) and (175.98,78.08) .. (208.96,78.98) ;
+\draw [shift={(210.5,79)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Curve Lines [id:da3661693241843025]
+\draw    (170.75,131) .. controls (193.16,131) and (175.55,100.92) .. (208.46,100.02) ;
+\draw [shift={(210,100)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da2376462542003681]
+\draw    (170.75,93) -- (208,93) ;
+\draw [shift={(210,93)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+
+% Text Node
+\draw (357,235) node [anchor=north west][inner sep=0.75pt]    {$a$};
+% Text Node
+\draw (137,120) node [anchor=north west][inner sep=0.75pt]    {$f(a)$};
+% Text Node
+\draw (401,235.4) node [anchor=north west][inner sep=0.75pt]    {$b$};
+% Text Node
+\draw (140,85) node [anchor=north west][inner sep=0.75pt]    {$f( b)$};
+% Text Node
+\draw (125,40) node [anchor=north west][inner sep=0.75pt]    {$\approx f( b)$};
+
+
+\end{tikzpicture}
+}
+\caption{Linear Approximation}
+\end{figure}
+
+Let's pretend we don't have a calculator, and try to estimate $\sqrt{4.1}$. In this case $f(x)=\sqrt{x}$, and we should set $a=4$, since $4.1\approx 4$ and we can figure out $f(4)$ and $f'(4)$. By the power rule, $f'(x)=\frac{1}{2}x^{-1/2}$, so $f'(4)=\frac12(4^{-1/2})=\frac14$, and of course $f(4)=\sqrt{4}=2$. Using the formula above,
+$$\sqrt{4.1}=f(4.1)\approx f(4)+f'(4)(4.1-4)=2+\frac14(0.1)=2.025.$$
+If we check a calculator for a better approximation, we find that
+$$\sqrt{4.1}\approx 2.02484567313,$$
+so we weren't that far off! \mar{Estimate $\sqrt{3.9}$ and compare to the actual value.}
+
+\subsection{L'H\^opital's Rule}
+
+L'H\^opital's Rule is a way to easily tackle some of those limit problems that were in an indeterminate form, namely $\frac{0}{0}$ and $\frac{\infty}{\infty}$.
+
+\begin{thm}
+If $\displaystyle \lim_{x\to a} f(x)= \lim_{x\to a} g(x)= 0$ or $\infty$, then
+$$\lim_{x\to a}\frac{f(x)}{g(x)}=\lim_{x\to a}\frac{f'(x)}{g'(x)},$$
+as long as all of these limits are defined.
+\end{thm}
+
+What this means for you: if you are trying to take the limit of a rational function and after plugging in you get $\frac{0}{0}$ or $\frac{\infty}{\infty}$, then take the derivative of the numerator and the denominator, and try to evaluate the limit again.
+
+It is possible that one use of L'H\^optial's rule won't be enough: you may have to use it multiple times. Here are some examples:
+\begin{itemize}
+\item $\displaystyle \lim_{x\to 0}\frac{\sin(x)}{x}\overset{\text{LH}}{=}\lim_{x\to 0}\frac{\cos(x)}{1}=1.$
+\item $\displaystyle \lim_{x\to \infty}\frac{3x^2+1}{4x^2+3x}\overset{\text{LH}}{=}\lim_{x\to\infty}\frac{6x}{8x+3}\overset{\text{LH}}{=}\lim_{x\to\infty}\frac{6}{8}=\frac{3}{4}$.
+\end{itemize}
+
+Sometimes you will encounter an indeterminant form that is not $\frac00$ or $\frac\infty\infty$, and in these cases, we can transform it into the form $\frac00$ or $\frac\infty\infty$ and then use L'H\^optial's rule. Here are some illustriative examples:
+
+\begin{itemize}
+
+\item
+$\displaystyle \lim_{x\to1} \frac{1}{x-1} - \frac{1}{\ln(x)}
+= \lim_{x\to1} \frac{\ln\left(x\right)-x+1}{(x-1)\ln\left(x\right)}
+\overset{\text{LH}}{=} \lim_{x\to1}\frac{{1}/{x}-1}{\ln\left(x\right)+1-\frac{1}{x}}$\\
+\phantom{} \hspace{1.01in}$\overset{\text{LH}}{=}\lim_{x\to1} \frac{-{1}/{x^{2}}}{{1}/{x}+{1}/{x^{2}}}
+=-\frac12$.
+
+\item
+$\displaystyle \lim_{x\to 0^+} x\ln(x) =\lim_{x\to 0^+} \frac{\ln(x)}{1/x} \overset{\text{LH}}{=}\lim_{x\to0^+}\frac{1/x}{-1/x^2}=\lim_{x\to0^+}-x=0$.
+
+\item $\displaystyle\lim_{x\to 0^+} x^x =\lim_{x\to0^+}e^{\ln(x^x)}=e^{\displaystyle\lim_{x\to0^+}\ln(x^x)}=e^{\displaystyle\lim_{x\to 0^+}x\ln(x)} = e^0 = 1.$
+
+
+\mar{Label each of these examples with original and trasnsformed type of indeterminant forms they demonstrate.}
+
+
+% \item $\displaystyle\lim_{x\to\infty}\left(1+\frac{1}{x}\right)^x = e^{\displaystyle\lim_{x\to\infty}\textstyle\frac{\ln\left(1+\frac{1}{x}\right)}{1/x}}\overset{\text{LH}}{=}e^{\displaystyle\lim_{x\to\infty}\textstyle \frac{(-1/x^2)/(1+1/x)}{-1/x^2}}=e^{\displaystyle\lim_{x\to\infty}\textstyle \frac{1}{1+1/x}}= e$.
+
+% \item ($\infty ^ 0$)
+
+\end{itemize}
+
+
+
+
+
+\subsection{Kinematics}
+
+Kinematics is the study of motion. In this section, we'll concern ourselves with only one basic situation: an object moving in a straight path (only forwards and backwards).
+
+Suppose the position of an object at time $t$ is given by $x(t)$. The object's \textbf{velocity} at time $t$ is given by $$v(t)=x'(t)$$ since velocity is the rate at which position is changing. Similarly, the object's \textbf{acceleration} at time $t$ is given by $$a(t)=v'(t)=x''(t),$$ since acceleration is the rate at which velocity is changing.
+
+How do we interpret these quantities? One way is to think about \textbf{speed}, which is the absolute value of velocity. In other words, if you are moving backward at 2 m/s, then your velocity is $-$2 m/s and you speed is 2 m/s, but if you are moving forward at the speed 2 m/s, then your speed and velocity are both 2 m/s.
+
+
+\mar{What is an example of a function whose velocity is positive}
+
+
+\subsection{Related Rates}
+
+As we saw in kinematics, the time-derivative of a function tells us the rate at which the function is changing. So, if we have two related quantities $A$ and $B$ that are changing over time, we can find the rate at which $A$ is changing at time $T$ if we know the rate at which $B$ is changing at time $T$.
+
+Note: sometimes the following different notations are used for the time derivative of $A$ at time $T$:
+
+$$A'(T)\quad =\quad \frac{dA}{dt}\biggm\lvert_{t=T}\quad=\quad\dot{A}(T)$$
+
+Here is the general problem-solving strategy:
+
+\begin{strat}[Related Rates]
+\begin{enumerate}[leftmargin=1em]
+\item Draw a picture.
+\item Label the relevant quantities (including $A$ and $B$).
+\item Find an equation that relates $A$ and $B$ (and nothing else).
+\item Implicitly differentiate the equation with respect to time $t$. (Remember that $A$ and $B$ are functions of $t$, so use the chain rule!)
+\item Solve for $A'(t)$ in terms of $A(t)$, $B(t)$, and $B'(t)$
+\item Plug in $t=T$.
+\end{enumerate}
+\end{strat}
+
+
+
+\subsection{Qualities of Graphs}
+
+In this section we will understand how derivatives tell us qualitative information about of graphs of functions. To start,
+$$f \text{ is }
+\begin{cases}\text{increasing at }x &\text{ if } f'(x)>0 \\ \text{decreasing at }x &\text{ if } f'(x)<0\end{cases}
+$$
+and
+$$
+f \text{ is }\begin{cases}\text{concave up at }x &\text{ if } f''(x)>0 \\ \text{concave down at }x &\text{ if } f''(x)<0.\end{cases}
+$$
+You already know what \textbf{increasing} and \textbf{decreasing} mean. The graph of a function that is \textbf{concave up at $x$} looks like a bowl near $x$, and the graph of a function that is \textbf{concave down at $x$} looks like a hill near $x$. Points on a graph where concavity changes (from up to down, or down to up) are called \textbf{inflection points}. \mar{Draw a sketch of an inflection point.}
+
+\begin{thm}[The Mean Value Theorem]
+If $f$ is continuous on $[a,b]$ and differentiable on $(a,b)$, then there is some $c\in (a,b)$ for which $f'(c)=\frac{f(b)-f(a)}{b-a}$.
+\end{thm}
+
+In plain English, the mean value theorem says that the average value of the slope on an interval is always attained on that interval.
+
+
+
+
+
+
+
+
+
+
+% \textsc{In progress.}
+
+% It is helpful to be able to look at a graph of a function and understand what it means for its first and second derivative. The table below summarizes:
+
+% \begin{center}
+% \def\arraystretch{1.3}
+% \begin{tabular}{@{}lll@{}}
+% \toprule[0.4mm]
+% $f$ & $f'$ & $f''$ \\
+% \midrule
+% increasing & positive & \\
+% constant & 0 & \\
+% decreasing & negative & \\
+% \midrule
+% concave up & increasing & positive \\
+% linear & constant & 0 \\
+% concave down & decreasing & negative \\
+% \bottomrule[0.4mm]
+
+% Inflection point & constant & 0 \\ \hline
+% local extrema & 0 & \\ \hline
+% \hline
+
+% \end{tabular}
+% \end{center}
+
+
+
+\subsection{Extremal Points}
+
+\noindent A function $f$ has a
+$$\textbf{local} \begin{cases}\textbf{maximum}\\\textbf{minimum}\end{cases}\text{at }a \text{ if }\begin{cases}f(a)\geq f(x)\\f(a)\leq f(x)\end{cases} \text{for all $x$ in some open $I\ni a$};$$
+
+$$\textbf{global} \begin{cases}\textbf{maximum}\\\textbf{minimum}\end{cases}\text{at }a \text{ if }\begin{cases}f(a)\geq f(x)\\f(a)\leq f(x)\end{cases} \text{for all $x$ in the domain of $f$}.$$
+Any such point is called an \textbf{extremal point} of $f$.
+
+Global maximum \textit{values} are unique, but points at which they occur might not be. For example, $\sin(x)$ has global maximum value of $1$, even though this value occurs infinitely many times on the domain of $\sin(x)$. All global extremal points are local extremal points.
+
+
+The point $a$ is called a \textbf{critical point} of $f$ if $f'(a)=0$ or $f$ is not differentiable at $a$ ($f'(a)$ doesn't exist). The following theorem tells us how find extremal points using critical points.
+
+\begin{thm}
+If $a$ is an extremal point of $f$, $a$ is a critical point of $f$.
+\end{thm}
+
+\noindent WARNING: The converse is not true! (i.e. not all critical points are extremal!)\mar{Name and draw a function with a non-extremal critical point.}
+
+\begin{thm}[First Derivative Test]
+Suppose $a$ is a critical point of $f$.
+$$\text{If $f'$ } \begin{cases}
+\text{changes from $(+)$ to $(-)$}\\
+\text{changes from $(-)$ to $(+)$}\\
+\text{doesn't change sign}\\
+\end{cases}
+\text{at $a$, then $a$ is}
+\begin{cases}
+\text{a local maximum of $f$}.\\
+\text{a local minimum of $f$}.\\
+\text{not a extremal point}.\\
+\end{cases}$$
+\end{thm}
+
+
+\begin{thm}[Second Derivative Test]
+Suppose $f'(a)=0$ and $f''$ is continuous at $a$.
+$$\text{If } \begin{cases}
+f''(a)>0\\
+f''(a)<0
+\end{cases}
+\text{then $a$ is a}
+\begin{cases}
+\text{local minimum}\\
+\text{local maximum}
+\end{cases} \text{of $f$}.$$
+\end{thm}
+
+
+\begin{strat}[Finding Extremal Points]
+\begin{enumerate}[leftmargin=1em]
+\item Solve $f'(x)=0$ for $x$.
+\item Find other critical points (points of non-differentiability such as endpoints of the domain, cusps, peaks, and points of discontinuity).
+\item If you are looking for \textit{local} extremal points, use the first or second derivative tests as necessary to classify points the critical points you found.
+\item If you are looking for \textit{global} extremal points, evaluate $f$ at each critical points to find the largest and smallest.
+\end{enumerate}
+\end{strat}
+
+
+
+
+
+
+
+
+
+\subsection{Newton's Method for Finding Roots}
+
+Imagine that you have an function $f$ and you want to find the zeros (or roots) of $f$. That is, you want to find the values of $x$ such that $f(x)=0$. \textbf{Newton's Method} is a computational algorithm that can sometimes be used to approximate such a value. First, we'll describe the algorithm, and then we'll show how to do use your TI calculator to implement it.
+
+Imagine that $x_0$ is an initial guess of a root of the function $f$. If we can take the derivative of $f$, then we know that the tangent line of $f$ at $x_0$ is
+$$y-f(x_0)=f'(x_0)(x-x_0)$$
+and so we find (setting $y=0$ and solving for $x$) this tangent line intersects the $x$-axis at the point $(x_1,0)$, where
+$$x_1=x_0-\frac{f(x_0)}{f'(x_0)}.$$
+We continue this, setting
+$$x_2=x_1-\frac{f(x_1)}{f'(x_1)},$$
+and so on:
+$$x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}.$$
+
+In many cases, this sequence of numbers should approach a zero of $f$. Here is the intuitive reason why: (1) if $x_n$ is not a zero of $f$, then $x_{n+1}$ moves in the direction of a zero, and (2) if $x_n$ is a zero of $f$, then $x_{n+1}=x_n$.
+
+The second point is obvious, but let's look into the first point. If $f(x_n)$ is not 0, then we have two cases:
+\begin{itemize}
+\item $x_n<x_{n+1}$ (move to the right).  Algebraically, this occurs exactly when $f(x_n)$ and $f'(x_n)$ have opposite sign (when $f$ is increasing below the $x$-axis, or decreasing above the $x$-axis).
+\item $x_{n+1}<x_n$ (move to the left). Similarly, this occurs exactly when $f(x_n)$ and $f'(x_n)$ have the same sign (when $f$ is increasing above the $x$-axis, or decreasing below the $x$-axis).
+\end{itemize}
+\mar{Draw a picture showing the four cases.}
+Seems reasonable, right? In either case we try to move in the direction of  a root.
+
+Now, how do we use Newton's method? Get out your TI calculator, and type the function $f$ into \texttt{Y$_\text{1}$=}, and $f'$ into \texttt{Y$_\text{2}$=}. Then return to the main calculator screen and type
+\begin{center}
+\texttt{0 \MVRightarrow \ A}
+\end{center}
+(or replace the 0 with a different initial guess $x_0$) and click \texttt{ENTER}. Then type
+\begin{center}
+\texttt{A - Y$_\text{1}$(A)/Y$_\text{2}$(A) \MVRightarrow \ A}
+\end{center}
+and click \texttt{ENTER}. The variable \texttt{A} is now set as $x_1$, and this value should be displayed. Click \texttt{ENTER} again and \texttt{A} is now $x_2$. Continue clicking \texttt{ENTER} to find $x_n$ for higher $n$ (clicking 100 times will show you $x_{100}$).
+
+Although Newton's method is generally an easy algorithm to implement and use, it does not always work.\mar{Consider $f(x)=x^3$ and try to use Newtons method to detect the root $0$ with the initial guess $x_0=1$.}
+

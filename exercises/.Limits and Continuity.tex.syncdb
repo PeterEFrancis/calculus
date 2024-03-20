@@ -1,0 +1,1 @@
+{"key":"build_command","value":["latexmk","-pdf","-f","-g","-bibtex","-deps","-synctex=1","-interaction=nonstopmode","-output-directory=/tmp/a13f7e16c8681503326eea600d7d3de6d4c5fbd8","Limits and Continuity.tex"]}

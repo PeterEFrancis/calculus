@@ -1,0 +1,174 @@
+\section{Functions on the Real Line}
+
+\subsection{Real Numbers}
+
+The set of real numbers ($\R$) is an uncountably infinite set, meaning I can not even begin to exhaustively list all of its members. However, here are some of my favorites: $3$, $2/5$, $4.11$, $713$, $\sqrt{37}$, $\pi$. Real numbers include both the rationals and irrationals. \mar{Do you know any numbers that aren't real?}
+
+The real numbers can be thought of as a continuum that has no beginning and no end: real numbers can get infinitely small and infinitely large.
+
+More concretely, imagine you are standing on a road that goes on forever, both in front of you and behind you. If you drop a traffic cone where you are standing, and call it ``the origin'', then any distance you walk on this road away from the cone is a real number. If you walk forward, it is positive, and if you walk backwards, it is negative. You can keep walking forever and reach any number you would like, but you will never reach an ``end of the road'' because it doesn't exist.
+
+\subsection{Subsets of the Real Line}
+
+A \textbf{subset} is a subcollection. There are a few ways we notate subsets of $\R$, so this section is mostly dedicated to notation. The first two examples of a subset are kind of stupid: the \textbf{empty set} $\emptyset$ (the set with no elements), and all of $\R$ are both subsets of $\R$.
+
+You can define a \textbf{literal} subset of $\R$ by listing the elements it contains. For example, $\{1,2,3\}$ is the set containing 1, 2, and 3.
+
+\textbf{Intervals} are---in my opinion---the most important kind of subset of $\R$. The following table shows the 8 kinds of intervals and the two ways we write them ($a\leq b$ are real numbers).
+
+\begin{center}
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{p{3.5in} p{1.25in} p{1.3in}}
+\toprule[0.4mm]
+The set of real numbers that are... & \textbf{Interval Notation} & \textbf{Set-Builder Notation} \\ \midrule
+greater than $a$ and less than $b$ & $(a,b)$ & $\{x\in\R\ :\ a < x < b\}$ \\
+greater than or equal to $a$ and less than $b$ & $[a,b)$ & $\{x\in\R\ :\ a \leq x < b\}$ \\
+greater than $a$ and less than or equal to $b$ & $(a,b]$ & $\{x\in\R\ :\ a < x \leq b\}$ \\
+greater than or equal to $a$ and less than or equal to $b$ & $[a,b]$ & $\{x\in\R\ :\ a \leq x \leq b\}$ \\
+greater than $a$ & $(a,\infty)$ & $\{x\in\R\ :\ a < x\}$ \\
+greater than or equal to $a$ & $[a,\infty)$ & $\{x\in\R\ :\ a \leq x\}$ \\
+less than $b$ & $(-\infty,b)$ & $\{x\in\R\ :\ x < b\}$ \\
+less than or equal to $b$ & $(-\infty,b]$ & $\{x\in\R\ :\ x \leq b\}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+
+Interval notation is easy to write and read, once you get a hang of what the different parentheses mean. The regular parentheses $()$ are called ``open'' and mean that the particular endpoint of the interval is not included. The $[]$ brackets are called ``closed'' and indicate that the endpoint \textit{is} included. \mar{Why aren't $(a,\infty]$, $(a,\infty]$, $[-\infty,b)$, and $[-\infty,b]$ included in the table?}
+
+The set-builder notation is read as follows:
+
+% \vspace*{1em}
+
+\begin{Large}
+$$\{\underbrace{x}_x\underbrace{\in}_\text{in}\underbrace{\R}_{\text{the real}\atop \text{numbers}}\ \underbrace{:}_\text{such that}\ \underbrace{a < x < b}_{x\text{ is strictly}\atop\text{between }a\text{ and }b}}\}.$$
+\end{Large}
+
+% \vspace*{1em}
+
+
+All of the subsets of $\R$ that you'll want to use in this course can be written using combinations of intervals. There are two ways to do this:
+\begin{itemize}
+\item The \textbf{union} of two sets is the set that contains all of the elements in either set and is denoted with the ``cup'' symbol, $\cup$.
+\item The \textbf{intersection} of two sets is the set that contains the elements in both sets and is denoted with the ``cap'' symbol, $\cap$.
+\end{itemize}
+Here are some examples:
+\begin{center}
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{@{}l l l l @{}}
+\toprule[0.4mm]
+$A$ & $B$ & $A\cup B$ & $A\cap B$\\
+\midrule
+$\{1, 2, 3\}$ & $\{3, 4, 5\}$ & $\{1,2,3,4,5\}$ & $\{3\}$ \\
+$\{0, 2, 3\}$ & $(1,3)$ & $\{0\}\cup(1,3]$ & $\{2\}$\\
+$(3,4]$ & $[4,5)$ & $(3,5)$ & $\{4\}$ \\
+$(-\infty,5)$ & $[5,\infty)$ & $(-\infty,\infty)=\R$ & $\emptyset$ \\
+$(-3,0)$ & $(2,6)$ & $(-3,0) \cup (2,6)$ & $\emptyset$ \\
+$(1,5)$ & $(3, 7)$ & $(1,7)$ & $(3,5)$ \\
+$(1,8)$ & $(3, 4)$ & $(1,8)$ & $(3,4)$ \\
+\bottomrule
+\end{tabular}
+\mar{Draw a picture of each of these examples. Does \textit{Venn diagram} ring any bells?}
+\end{center}
+
+\subsection{Defining Functions}
+
+We will start with quite a few new (and abstract) definitions, but we will make things concrete very soon.
+
+If $A$ and $B$ are two sets, a \textbf{function} $f$ from $A$ to $B$ is an assignment of each element of $A$ to a unique element of $B$. In other words, for each input $a$ in $A$, $f$ outputs exactly one $b$ in $B$, which we denote as $f(a)$. The set $A$ is called the \textbf{domain} of $f$, the set $B$ is called the \textbf{codomain} of $f$, and we write $$f:A\to B\quad\quad\text{ or }\quad\quad A\overset{f}{\to} B.$$
+Please remember that a function has three pieces of information: the domain, the codomain, and the rule of assignment. If one of these pieces is changed, the resulting function is different. \mar{Is $f$ defined by $$f(x)=\begin{cases}x+1 & x > 0 \\ x^2 & x < 1\end{cases}$$ a function?}
+
+The \textbf{range} of $f$ is the set of all outputs of $f$ and is denoted $f(A)$. The range is always a subset of the codomain, but they are not always equal sets. The relationship between the domain, codomain, and the range are an important one:
+\begin{itemize}
+\item A function is called \textbf{surjective} (or \textbf{onto}) if its range and codomain are the same (i.e. $f(A)=B$). In other words, a function is surjective if every element of the codomain is an output of $f$. \mar{What does the word ``sur'' mean in French?}
+\item A function is called \textbf{injective} (or \textbf{one-to-one}) if each element of the range is the output of exactly one element of the domain. In other words, if $f(x_1)=f(x_2)$, then $x_1=x_2$.
+\item If a function is both surjective and injective, then it is called \textbf{bijective}.
+\end{itemize}
+
+The figure below is a cartoon of three functions. From left to right, (1) a surjection that is not injective, (2) a bijection, and (3) an injection that is not surjective. \mar{Write down the domain, codomain, and range of each of these functions.}
+
+
+
+\begin{figure}[H]
+\label{three-functions}
+\centering
+\fbox{\includegraphics[width=4in]{img/three-functions.png}}
+\caption{A Surjection, a Bijection, and an Injection}
+\end{figure}
+
+
+We will only use \textbf{real functions}, which are functions whose domain and codomain are subsets of $\R$. These functions take real numbers as inputs and give real numbers as outputs, so they can be graphed on a Cartesian grid, with the inputs on the horizontal axis and outputs on the vertical axis.
+
+To check that a curve drawn on a plot is a function, you can use the \textbf{vertical line test}: \mar{Draw a non-function that fails the vertical line test.} any vertical line must intersect a graph of a real function at most once (i.e. if a vertical line intersects a curve more than once, then the curve cannot be the graph of a real function).
+
+
+Some people may get sloppy and say things like
+\begin{center}
+``the function $f(x)=x^2$''
+\end{center}
+but what they really mean is
+\begin{center}
+``the real function $f$, defined by $f(x)=x^2$''.
+\end{center}
+Distinguishing between a function and the formula defining it will eventually make things easier to understand. However, from now on, I might say ``function'' and mean ``real-function'' (use context clues). \mar{Think of real functions that are (1) injective but not surjective, (2) surjective but not injective, (3) neither injective nor surjective, (4) bijective.}
+
+
+\subsection{More Domains and Ranges}
+
+All real functions can have $\R$ as their codomain, but not all real functions have $\R$ as their domain and range. The following table lists domains and ranges for some common functions.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{@{}p{1in}p{1.6in}lp{2.25in}@{}}
+\toprule[0.4mm]
+Function type & & Domain & Range \\
+\hline
+Polynomial & $a_nx^n+\cdots+a_1x+a_0$ & $\R$ & If the highest power is odd, $\R$. If the highest power is even and positive, then $[b,\infty)$, and $(-\infty,b)$ otherwise (for some $b$).\\
+Exponential & $a^x$ & $\R$ & $(0,\infty)$\\
+Logarithm & $\log_a(x)$ & $(0,\infty)$ & $\R$\\
+Rational & $\frac{p(x)}{q(x)}$ \hspace{3in} ($p$, $q$ are polynomials) & $\{x\in\R\ :\ q(x)\neq 0\}$ & It depends\\
+\bottomrule[0.4mm]
+\end{tabular}
+\end{center}
+
+
+
+Let's do some concrete examples:
+\begin{itemize}
+\item The function $f$ given by $f(x)=\frac{1}{x}$ does not have 0 in its domain, since we can't divide by 0. Also, $f$ does not have 0 in its range, since there is no real number $x$ for which $\frac{1}{x}=0$. Therefore the domain and range of $f$ are both $(-\infty,0)\cup(0,\infty)$.
+\item Similarly, $\tan$ does not have $2n\pi+\pi/2$ in its domain for any integer $n$, since $\cos(2n\pi+\pi/2)=0$ (we can write the domain of $\tan$ as $\{x\in\R\ :\ x\neq 2n\pi + \pi/2\text{ for any integer }n\}$).  The range of $\tan$ is all of $\R$.
+\item The function $f$ given by $f(x)=x^2$ has domain $\R$ and range $[0,\infty)$. \mar{What is the domain and range of $f$ given by $f(x)=n^n$ where $n$ is a positive integer ($n=1, 2, 3, \dots$)?}
+\end{itemize}
+
+
+
+
+
+\subsection{Inverses}
+A function $f:A\to B$ is \textbf{invertible} if there is some function $g:B\to A$ such that two conditions hold:
+\begin{enumerate}
+\item[(i)] for all $a$ in $A$, $g(f(a))=a$;
+\item[(ii)] for all $b$ in $B$, $f(g(b))=b$.
+\end{enumerate}
+In this case, we call $g$ the \textbf{inverse} of $f$ and write $f^{-1}=g$. In other words, a function is \textbf{invertible} if it is reversible as a mapping: if $f$ maps $x$ to $y:=f(x)$, then its inverse $f^{-1}$ must map $y$ to $x$. \mar{Look abck at Figure \ref{three-functions}. Which of these functions are invertible? On any function that is invertible, draw the arrows for the inverse function.}
+
+You might wonder: \textit{when is a function invertible?} It turns out that we already understand exactly what we want:
+\begin{thm}
+A function is invertible exactly when it is bijective.
+\end{thm}
+Lets think through this: looking back at Figure \ref{three-functions}, the first function is not invertible because it is not injective. Both 1 and 3 map to 6, but condition (i) says that we must have $f^{-1}(f(1))=1$ and $f^{-1}(f(3))=3$. Since $f(1)$ and $f(3)$ are both equal to $6$, we must have that $1=f^{-1}(6)=3$, crazy talk!
+
+The third function in Figure \ref{three-functions} is not invertible because it is not surjective. This is a problem: since the element 4 in the codomain is not mapped to by eny element of the domain, no matter what we might chose $f^{-1}(4)$ to be, $f(f^{-1}(4))\neq 4$, which violates condition (ii).
+
+The condition that invertible functions must be injective is sometimes called the \textbf{horizontal line test} for real functions: the graph of an invertible real function cannot intersect any horizontal line more than once (i.e. if a horizontal line intersects the graph of a function more than once, then the function cannot be invertible). \mar{Draw the graph of a non-invertible function failing the horizontal line test.}
+
+The general strategy for finding a functions inverse is to switch the place of $x$ and $y$ in the equation, and then solve for $y$. The result, if it exists, will give you an inverse for the original function (on a possibly smaller domain). Graphically, the inverse of a function is a reflection of the function across the line $y=x$. If a function is not bijective, we can ``fix'' it by making its domain or codomain smaller. For any function there are several ways to do this, but there are some agreed upon conventions that I'll outline below.
+
+\begin{itemize}
+\item The function $f$ defined by $f(x)=x^2$ has domain $\R$, but is not invertible: the line $y=4$ intersects the graph in two places, $(-2,4)$ and $(2,4)$. However, we can can change both its domain and codomain to be $[0,\infty)$. To find its inverse, solve the equation $x=y^2$ for $y$. We get $y=\pm\sqrt{x}$, but since we are changing the domain of $f$ to only the non-negative real numbers, we forget about the negative square root. Then the inverse of $f$ is given by $f^{-1}=\sqrt{x}$, and for any non-negative $x$ and $y$ ($x,y\in[0,\infty)$),
+$$f^{-1}(f(y))=f(x^2)=\sqrt{(x)^2})=x$$
+and
+$$f(f^{-1}(y))=f(\sqrt{y})=(\sqrt{y})^2=y.$$
+\item The function $\sin$ has domain $\R$ and range $[-1,1]$ but is \textbf{periodic} (meaning its values cyclically repeat) so cannot be invertible without an adjustment to its domain. The smaller domain we choose is $[-\pi/2,\pi/2]$ and the modified codomain is its range, $[-1,1]$. The inverse of $\sin$ is called $\arcsin$ or $\sin^{-1}$ and has domain $[-1,1]$ and range $[-\pi/2,\pi/2]$. \mar{Look up the modified domains and codomains for the other inverse trig functions.}
+\item The function $f(x)=e^x$ has domain $\R$ and range $(0,\infty)$. If we shrink the codomain $\R$ to be equal to the range, then its inverse is given by $f^{-1}(x)=\ln(x)$ and domain $(0,\infty)$ and range $\R$.
+\end{itemize}

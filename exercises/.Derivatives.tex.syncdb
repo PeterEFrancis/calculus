@@ -1,0 +1,1 @@
+{"key":"build_command","value":["latexmk","-pdf","-f","-g","-bibtex","-deps","-synctex=1","-interaction=nonstopmode","-output-directory=/tmp/a5793b45abebaccbc77e7077dab80e61f8b565c7","Derivatives.tex"]}
