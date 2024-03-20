@@ -4,3 +4,12 @@ terminal.term
 .Limits and Derivatives Practice Problems.tex.syncdb
 **/scrap.ipynb
 
+Calculus.aux
+Calculus.fbd_latexmk
+Calculus.log
+Calculus.out
+Calculus.pdf
+Calculus.syctex.gz
+Calculus.toc
+
+.DS_Store
