@@ -212,12 +212,24 @@ Let's do an example:
 
 On the left, the $x$ derivative of $y^3$ is $3y^2y'$, by the power rule (and the chain rule). The derivative of $x^2$ is $2x$, the derivative of $xy$ is $y+xy'$ by the product rule (and chain rule), and the derivative of $1$ is 0, of course. Comparing the derivatives of each side of the equation, we get
 $$3y^2y'=2x-(y+xy'),$$
-so solving for $y'$,
+so solving for $y'$, we have
 $$y'=\frac{2x-y}{3y^2+x}.$$
 At $(-1,1)$, $y'=\frac{-3}{2}$, and at $(-1,-1)$, $y'=\frac{-1}{2}$. The tangent line to the curve at the point $(-1,1)$ is $y=\frac{-3}{2}(x+1)+1$
 
 \end{itemize}
 
+\subsection{Parametric Curves}
+
+A \textbf{parametric curve} is a curve defined by two coordinate functions $(x(t), y(t))$. You should think of $(x,y)$ as the position of some particle and the particle's coordinates $x(t)$ and $y(t)$ are functions of time.
+
+To find the slope (AKA derivative) of a parametric curve at time $t$, simply compute
+$$\frac{dy}{dx}=\frac{y'(t)}{x'(t)}.$$
+An example:
+\begin{itemize}
+    \item The derivative of the curve $(x,y)=(\sin(t), t^2)$ is
+    $$\frac{y'(t)}{x'(t)}=\frac{2t}{\cos(t)}.$$
+    The equation of the tangent line at $t=\pi$ is $y=\pi^2+\frac{2\pi}{-1}(x-0).$
+\end{itemize}
 
 \subsection{Logarithmic Differentiation}
 
