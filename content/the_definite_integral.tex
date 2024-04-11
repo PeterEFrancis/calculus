@@ -1,4 +1,4 @@
-\section{Integration}
+\section{The Definite Integral}
 
 For reasons that will not be immediately obvious, integration is opposite differentiation on the `calculus coin.'
 
@@ -178,28 +178,15 @@ Let's cut right to the chase:
     where $F'=f$.
 \end{thm}
 
-This theorem is the connection between differentiation and integration! It is also how we can evaluate many more definite integrals:
+This theorem is the connection between differentiation and integration! It is also how we will compute definite integrals from now on:
 \begin{enumerate}
     \item Find a function $F$ for which $F'=f$.
-    \item Compute $F(b)-F(a).$
+    \item Evaluate $F(b)-F(a).$
 \end{enumerate}
 
-The first point is called \textbf{anti-differentiation}, and is the harder step. Before we get to that, let's try to understand this theorem a little better. If we take the $b$-derivative of the equation in the theorem, we get
+The first point is called \textbf{anti-differentiation}, and is the harder step. Before we get to that, let's try to understand how this theorem agrees with our intuition about Riemann Sums. If we take the $b$-derivative of the equation in the theorem, we get
 $$\frac{d}{db}\left[\int_a^{b}f(x)\ dx\right] = \frac{d}{db}\left[F(b)-F(a)\right] = f(b).$$
-This means that the rate at which the area is changing is $f(b)$. This agrees with our intuition from Riemann sums: if we increase $b$ by a small amount $\Delta b$, the area will change by about $f(b) \Delta b$. Thus the derivative of the area is $f(b)\Delta b/\Delta b =f(b)$.
-
-\subsection{Anti-differentiation}
-
-% So now the big question remains: given $f$, how can we find a function $F$ for which $F'=f$ (an \textbf{anti-derivative})?
-
-
-
-
-\subsection{The Indefinite Integral}
-
-
-\subsection{Improper integrals}
-
+This means that the rate at which the area is changing is $f(b)$. This makes sense in terms of Riemann sums: if we increase $b$ by a small amount $\Delta b$, the area will change by about $f(b) \Delta b$. Thus the derivative of the area is $f(b)\Delta b/\Delta b = f(b)$. \mar{Draw a picture of $b$ increasing by $\Delta b$. Then sit and really think about this until it makes sense.}
 
 
 

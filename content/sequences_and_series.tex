@@ -1,0 +1,57 @@
+Let $\{a_n\}$ be a sequence, and define a new sequence $\{s_n\}$ of ``partial sums'' by
+$$s_n=\sum_{i=1}^n a_i = a_1 + \cdots + a_n.$$
+We write 
+$$\lim _{n \to \infty} s_{n}=\lim _{n \to \infty} \sum_{i=1}^{n} a_{i}=\sum_{i=1}^{\infty} a_{i}=\sum a_n$$
+and call $\sum a_n$ an \textit{infinite series}. We are interested in when this quantity is finite.
+\begin{itemize}
+    \item If $\displaystyle\lim _{n \to \infty} s_{n}$ is finite, we say that $\sum a_n$ is \textit{convergent} (or that $\sum a_n$ converges).
+    \item  When $\displaystyle\lim _{n \to \infty} s_{n}$ is infinite, we say that $\sum a_n$ is \textit{divergent} (or that $\sum a_n$ diverges).
+\end{itemize}
+
+\vspace{.5em}
+
+\begin{multicols}{2}
+
+\begin{tcolorbox}
+\textbf{Divergence Test.}
+\begin{itemize}
+    \item If $\displaystyle \lim_{n\to\infty}a_n\neq 0$, then $\sum a_n$ will diverge.
+    \item If $\sum a_n$ converges, then $\displaystyle \lim_{n\to\infty}a_n=0$.
+\end{itemize}
+\end{tcolorbox}
+
+
+\begin{tcolorbox}
+\textbf{Alternating Series Test.}\newline
+Suppose that we have a series $\sum a_{n}$ and either $$a_{n}=(-1)^{n} b_{n}\quad\text{ or }\quad  a_{n}=(-1)^{n+1} b_{n}$$ where $b_{n} \geq 0$ for all $n .$ Then if,
+\begin{enumerate}
+    \item $\displaystyle\lim _{n \to \infty} b_{n}=0$ and
+    \item $\left\{b_{n}\right\}$ is a decreasing sequence
+\end{enumerate}
+the series $\sum a_{n}$ is convergent.
+\end{tcolorbox}
+
+\begin{tcolorbox}
+\textbf{Limit Comparison Test.}\newline
+Suppose that we have two series $\sum a_n$ and $\sum b_n$ with $a_n\geq 0$ and $b_n > 0$ for all $n$. Let 
+$$c=\lim_{n\to\infty}\frac{a_n}{b_n}.$$
+If $c$ is positive and finite, then either both series converge or both series diverge.
+\end{tcolorbox}
+
+
+\begin{tcolorbox}
+\textbf{Comparison Test.}\newline
+Suppose $0\leq a_n\leq b_n$ for all $n$. Then
+$$\sum b_n\text{ converges}\implies \sum a_n\text{ converges}$$
+and (by contraposition)
+$$\sum a_n\text{ diverges}\implies \sum b_n\text{ diverges}.$$
+\end{tcolorbox}
+
+
+\end{multicols}
+
+\begin{tcolorbox}
+\textbf{Integral Test.}\newline
+Suppose that $f(x)$ is a continuous, positive, and decreasing function on the interval $[k,\infty)$ and that $f(n)=a_n$. Then
+$$\int_k^\infty f(x)\ dx\text{ is convergent} \iff \sum_{n=k}^\infty a_n\text{ is convergent}.$$
+\end{tcolorbox}

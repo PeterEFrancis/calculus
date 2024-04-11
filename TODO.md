@@ -19,3 +19,4 @@
 - [ ] look at graphs and draw derivatives (and sketching graphs)
 - [ ] lim x -> 0 sin(x^2) / x
 - [ ] parametrically defined curves in exercises
+- [ ] bela style squeeze theorem examples (Math 112H Fall 2020)
