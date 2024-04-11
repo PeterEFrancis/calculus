@@ -18,4 +18,4 @@
 - [ ] Average rate of change
 - [ ] look at graphs and draw derivatives (and sketching graphs)
 - [ ] lim x -> 0 sin(x^2) / x
-
+- [ ] parametrically defined curves
