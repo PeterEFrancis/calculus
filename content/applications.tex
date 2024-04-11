@@ -209,7 +209,7 @@ In plain English, the mean value theorem says that the average value of the slop
 \subsection{Extremal Points}
 
 \noindent A function $f$ has a
-$$\textbf{local} \begin{cases}\textbf{maximum}\\\textbf{minimum}\end{cases}\text{at }a \text{ if }\begin{cases}f(a)\geq f(x)\\f(a)\leq f(x)\end{cases} \text{for all $x$ in some open $I\ni a$};$$
+$$\textbf{local} \begin{cases}\textbf{maximum}\\\textbf{minimum}\end{cases}\text{at }a \text{ if }\begin{cases}f(a)\geq f(x)\\f(a)\leq f(x)\end{cases} \text{for all $x$ in some interval $I\ni a$};$$
 
 $$\textbf{global} \begin{cases}\textbf{maximum}\\\textbf{minimum}\end{cases}\text{at }a \text{ if }\begin{cases}f(a)\geq f(x)\\f(a)\leq f(x)\end{cases} \text{for all $x$ in the domain of $f$}.$$
 Any such point is called an \textbf{extremal point} of $f$.
@@ -265,11 +265,20 @@ f''(a)<0
 \end{strat}
 
 
+\subsection{Optimization}
 
+``Optimization''-style questions will ask you to optimize (maximize or minimize) a certain quantity $A$ under specified constraints. The constraints will still allow one variable $x$ of change. This means you will need to find the value of $x$ for which $A$ is maximal or minimal. 
 
+The strategy for optimization problems is very similar to the strategy for related rates, but uses the theory of extremal points from the previous section.
 
-
-
+\begin{strat}[Optimization]
+\begin{enumerate}[leftmargin=1em]
+\item Draw a picture.
+\item Label the relevant quantities.
+\item Find an equation for the quantity that you want to optimize $A$ in terms of the thing that you can change $x$ (and note the domain of $A$).
+\item Find the extremal points of $A$.
+\end{enumerate}
+\end{strat}
 
 
 \subsection{Newton's Method for Finding Roots}
@@ -289,10 +298,10 @@ In many cases, this sequence of numbers should approach a zero of $f$. Here is t
 
 The second point is obvious, but let's look into the first point. If $f(x_n)$ is not 0, then we have two cases:
 \begin{itemize}
-\item $x_n<x_{n+1}$ (move to the right).  Algebraically, this occurs exactly when $f(x_n)$ and $f'(x_n)$ have opposite sign (when $f$ is increasing below the $x$-axis, or decreasing above the $x$-axis).
+\item $x_n<x_{n+1}$ (move to the right).  Algebraically, this occurs exactly when $f(x_n)$ and $f'(x_n)$ have opposite sign (when $f$ is increasing below the $x$-axis, or decreasing above the $x$-axis). \mar{Draw a picture showing the four cases.}
 \item $x_{n+1}<x_n$ (move to the left). Similarly, this occurs exactly when $f(x_n)$ and $f'(x_n)$ have the same sign (when $f$ is increasing above the $x$-axis, or decreasing below the $x$-axis).
 \end{itemize}
-\mar{Draw a picture showing the four cases.}
+
 Seems reasonable, right? In either case we try to move in the direction of  a root.
 
 Now, how do we use Newton's method? Get out your TI calculator, and type the function $f$ into \texttt{Y$_\text{1}$=}, and $f'$ into \texttt{Y$_\text{2}$=}. Then return to the main calculator screen and type

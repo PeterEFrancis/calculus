@@ -187,7 +187,7 @@ $$[\tan(x)]' = \sec^2(x)
 $$[\cot(x)]' = -\csc^2(x)
 \quad\quad\quad\quad\quad
 [\csc(x)]' = -\csc(x)\cot(x)$$
-\mar{See if you can find the pattern with these four derivatives. Hint: ``pSST''}
+\mar{Try to find the pattern with these four derivatives.}
 
 
 \subsection{Implicit Differentiation}
@@ -283,9 +283,12 @@ Let's use this rule to find the derivative of inverse trig functions:
 
 \end{tikzpicture}
 \end{figure}
+
+\mar{Argue this using the Pythagorean identitiy ($\sin^2\theta+\cos^2\theta = 1$) instead.}
+
 if a (non-right) angle of a right triangle (with hypotenuse 1) is $\sin^{-1}(x)$, the leg opposite $\sin^{-1}(x)$ has length $x$. Then $\cos(\sin^{-1}(x))$ is the length of the other leg of the triangle, so $\cos(\sin^{-1}(x))=\sqrt{1-x^2}$ by the Pythagorean theorem. Therefore,
-$$[\sin^{-1}(x)]'=\frac{1}{\cos(\sin^{-1}(x))}=\frac{1}{\sqrt{1-x^2}}.$$
-\item The derivatives of the other inverse trig functions are
+$$[\sin^{-1}(x)]'=\frac{1}{\cos(\sin^{-1}(x))}=\frac{1}{\sqrt{1-x^2}}.$$\item The derivatives of the other inverse trig functions are
+\mar{Figure these equations out by yourself using the same method as for $\sin^{-1}$. Hint: refer to Figure \ref{6trig}}
 \begin{align*}
 [\cos^{-1}(x)]' & =\frac{-1}{\sqrt{1-x^2}} \\
 [\csc^{-1}(x)]' & =\frac{-1}{|x|\sqrt{x^2-1}} \\
@@ -293,7 +296,6 @@ $$[\sin^{-1}(x)]'=\frac{1}{\cos(\sin^{-1}(x))}=\frac{1}{\sqrt{1-x^2}}.$$
 [\tan^{-1}(x)]' & =\frac{1}{1+x^2} \\
 [\cot^{-1}(x)]' & =\frac{-1}{1+x^2}
 \end{align*}
-\mar{Figure these equations out by yourself using the same method as for $\sin^{-1}$. Hint: refer to Figure \ref{6trig}}
 \end{itemize}
 
 % \subsection{Summary}
