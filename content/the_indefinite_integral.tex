@@ -2,27 +2,103 @@
 
 Since the Fundamental Theorem of Calculus tells us that we have to understand anti-derivatives in order to compute definite integrals, this chapter will focus on this task.
 
+
 \subsection{Anti-differentiation}
 
-So given a function $f$, how can we find a function $F$ for which $F'=f$ (an \textbf{anti-derivative} of $f$)? Unfortunately, contrary to differentiation, it is not always possible. \mar{Check out this \href{https://xkcd.com/2117}{XKCD Comic}.}
 
-When it is possible to anti-differentiate, we write
-$$F=\int f(x)\ dx$$
-and call $F$ an anti-derivative of $f$. The
-
-
-\subsection{Improper integrals}
+If $F'=f$, we call $F$ an \textbf{anti-derivative} (or \textbf{indefinite integral}) of $f$ and write
+$$F(x)=\int f(x)\ dx \quad\text{or}\quad F=\int f.$$ 
+Unfortunately, such a function $F$ does not always exist. \mar{Check out this \href{https://xkcd.com/2117}{XKCD Comic}.}
 
 
 
+The first thing to understand is that unlike derivatives, anti-derivatives are not unique! This is because constant terms are always killed by differentiation. For example, the derivative of $x^2$ and $x^2+1$ are both $2x$, so both are worthy anti-derivatives for $2x$. To solve this problem, we consider \textit{the} anti-derivative of $f$ to be the collection of \textit{all} functions whose derivative is $f$. These functions only differ by a constant so we write ``$+C$'' at the end of \textit{an} anti-derivative to denote \textit{the} anti-derivative. For example, $\int 2x\ dx = x^2+C$.
+
+Similarly to differentiation, we will build up a two-part collection of tools to tackle integration problems.
+
+\begin{enumerate}
+\item rules to break functions up and reassemble
+
+\begin{center}
+\def\arraystretch{1.5}
+\begin{tabular}{@{}ll@{}}
+\toprule[0.4mm]
+\textbf{Scalar Multiplication} & $\int a f = a \int f$. \\
+\textbf{Sum} & $\int f + \int g= \int f + \int g$ \\
+\textbf{Integration by Parts} & $\int f'g = fg - \int fg' $ \\
+\textbf{$u$-substitution} & $\int f'(g(x))g'(x)\ dx =  f(g(x))$ \\
+% \textbf{$u$-substitution} & $\int (f'\circ g)g' =  f\circ g$ \\
+\bottomrule[0.4mm]
+\end{tabular}
+\end{center}
+
+\item anti-derivatives of ``basic'' functions:
+
+\end{enumerate}
+
+
+\begin{center}
+\def\arraystretch{1.5}
+\begin{tabular}{@{}ll@{}}
+\toprule[0.4mm]
+\textbf{Power Rule}
+ & $\int x^a \ dx = \begin{cases}
+\frac{1}{a+1}x^{a+1} + C & a \neq -1\\
+\ln|x| + C & a = -1
+\end{cases}$ \\
+\textbf{Trig Rules}  & $\int \sin(x)\ dx = -\cos(x)+C$\\
+                     & $\int \cos(x)\ dx = \sin(x)+C$ \\
+\textbf{Exponential Rules} & $\int a^x\ dx = \frac{1}{\ln(a)}a^x+C$ \\
+\bottomrule[0.4mm]
+\end{tabular}
+\end{center}
+
+Each of the integration rules are true because of a corresponding rule for derivatives. \mar{Which differentiation rules do Integration by Parts and $u$-substitution correspond to?}
+
+% Here are some examples using these rules:
+% \begin{itemize}
+%     \item $\int \sin(2x)\ dx = \frac{1}{2} \int 2\sin(2x)\ dx = -\frac{1}{2}\cos(2x) + C$ by $u$-substitution. The ``inside'' function is $2x$, and while its derivative (2) doesn't appear in the integral, we can multiply by $2$ and $\frac{1}{2}$.
+% \end{itemize}
+
+
+\subsection{Partial Fraction Decomposition}
+
+When attempting to integrate a rational function, partial fraction decomposition is a common trick that comes in handy. It effectively breaks a rational function into a sum of rational functions with lower degree denominators.
 
 
 
+\begin{center}
+\def\arraystretch{1.5}
+\begin{tabular}{@{}ll@{}}
+\toprule[0.4mm]
+      Factor in denominator & Term in decomposition\\
+      \hline
+      $ax+b$          & $\frac{A}{ax+b}$ \\
+      $(ax+b)^k$      & $\frac{A_1}{ax+b}+\frac{A_2}{(ax+b)^2}+\dots+\frac{A_k}{(ax+b)^k}$ \\
+      $ax^2+bx+c$     & $\frac{Ax+B}{ax^2+bx+c}$\\
+      $(ax^2+bx+c)^k$ & $\frac{A_1x+B_1}{ax^2+bx+c}+\frac{A_2x+B_2}{(ax^2+bx+c)^2}+\dots+\frac{A_kx+B_k}{(ax^2+bx+c)^k}$ \\
+\bottomrule[0.4mm]
+    \end{tabular}
+\end{center}
+
+
+While this table is not exhaustive, it covers the range of complexity required in a calculus class.
+
+\begin{strat}[Partial Fraction Decomposition]
+    
+\begin{enumerate}
+  \item Factor the denominator of the original rational expression.
+  \item Set the original expression equal to the sum of appropriate terms (see table).
+  \item Write the sum as a single rational expression by finding a common denominator.
+  \item Use the two numerators to solve a system of equations for the unknown values, $A$, $B$, $C$, etc.
+\end{enumerate}
+\end{strat}
 
 
 
+\subsection{Trigonometric Substitution}
 
-
+Another trick that is useful when integrating is the 
 
 
 

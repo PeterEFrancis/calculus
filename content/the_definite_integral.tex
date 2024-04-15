@@ -48,7 +48,7 @@ and is defined to be the \textit{signed} area between the graph of $f$ and the $
 
 The figure shows the meaning of the word ``signed'': areas that are above the $x$-axis are counted as positive, while those below are negative.
 
-With no other tools available to you, the only way to compute definite integrals right now is to draw the graph of $f$ and compute the desired area using your knowledge of geometry. \mar{Compute $$\int_{-3}^72x+4\ dx$$ using geometry.} This can be easy if $f$ is made up of lines and circular arcs, but if not, the way to compute a definite integral is not immediately obvious.
+With no other tools available to you, the only way to compute definite integrals right now is to draw the graph of $f$ and find the desired area using your knowledge of geometry. \mar{Compute $$\int_{-3}^72x+4\ dx$$ using geometry.} This can be easy if $f$ is made up of lines and circular arcs, but if not, the way to compute a definite integral is not immediately obvious.
 
 \subsection{Reimann Sums}
 
@@ -123,7 +123,7 @@ The first way that we will attempt to compute definite integrals is with a limit
 \caption{A Right Reimann Sum}
 \end{figure}
 
-Divide the interval $(a,b)$ into $n$ equal sub-intervals, each with width $\Delta x= \frac{b-a}{n}$. Then for each sub-interval draw a rectangle with base length $\Delta x$ on the $x$-axis and height determined by the value of $f$ at the right endpoint of the sub-interval. The right endpoint of the $i$th sub-interval is $x_k=a+k\Delta x$, so the area of the $k$th rectangle is $f(x_k) \Delta x$. The area of all $n$ rectangles together is
+Divide the interval $(a,b)$ into $n$ equal sub-intervals, each with width $\Delta x= \frac{b-a}{n}$. Then for each sub-interval draw a rectangle with base length $\Delta x$ on the $x$-axis and height determined by the value of $f$ at the right endpoint of the sub-interval. The right endpoint of the $k$th sub-interval is $x_k=a+k\Delta x$, so the area of the $k$th rectangle is $f(x_k) \Delta x$. The area of all $n$ rectangles together is
 $$\sum_{k=1}^{n}f(x_k)\Delta x.$$
 Since we used the \textit{right} endpoint of each sub-interval, we call this quantity the \textbf{$n$th Right Riemann Sum}:
 $$R_n=\sum_{k=1}^{n}f\left(a+k\frac{b-a}{n}\right)\frac{b-a}{n}.$$
