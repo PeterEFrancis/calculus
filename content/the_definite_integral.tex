@@ -138,7 +138,7 @@ In practice, it doesn't matter which you choose to compute because of the follow
 $$\lim_{n\to\infty}R_n=\lim_{n\to\infty}L_n=\lim_{n\to\infty}T_n=\int_a^bf(x)\ dx.$$
 \end{thm}
 
-This theorem should be intuitive: as $n$ gets larger, the width of each rectangle gets smaller and the approximation gets better.
+This theorem should be intuitive: as $n$ gets larger, the width of each rectangle gets smaller and the approximation gets better. More abstractly, this tells us that integration and summation are intimately related: you can think of a definite integral as a sum of infinitely thin boxes with height $f(x)$ and width $dx$, one for ``each'' value of $x$ in $(a,b)$. This perspective will be very helpful later. \mar{Note the similarity in notation between a definite integral and the Riemann sum $$\sum_{k=1}^{n}f(x_k)\Delta x.$$}
 
 For large $n$, a Riemann sum can give a very good approximation, but in general it is not feasible to do by hand. However, if $f$ is a polynomial it is not hard to compute $R_n$ algebraically and then take a limit. In order to do so, we'll need the following summation identities:
 \begin{align*}
@@ -156,10 +156,10 @@ Here is an example:
     \begin{align*}
         R_n
         & = \sum_{k=1}^{n}f\left(a+k\frac{b-a}{n}\right)\frac{b-a}{n}\\ 
-        & = \sum_{k=1}^n\left(\left(0+k\frac{1-0}{n}\right)^2 + \left(0+k\frac{1-0}{n}\right)\right)\frac{1-0}{n}&&&\text{plug in}\\
-        & = \sum_{k=1}^n\left(\frac{k^2}{n^2} + \frac{k}{n}\right)\frac{1}{n} &&&\text{expand and simplify}\\
-        & = \frac{1}{n^3}\sum_{k=1}^nk^2+\frac{1}{n^2}\sum_{k=1}^nk &&& \text{factor}\\
-        & = \frac{1}{n^3}\frac{n(n+1)(2n+1)}{6}+\frac{1}{n^2}\frac{n(n+1)}{2} &&&\text{use sum identities}
+        & = \sum_{k=1}^n\left(\left(0+k\frac{1-0}{n}\right)^2 + \left(0+k\frac{1-0}{n}\right)\right)\frac{1-0}{n}&&&\text{(plug in)}\\
+        & = \sum_{k=1}^n\left(\frac{k^2}{n^2} + \frac{k}{n}\right)\frac{1}{n} &&&\text{(expand and simplify)}\\
+        & = \frac{1}{n^3}\sum_{k=1}^nk^2+\frac{1}{n^2}\sum_{k=1}^nk &&& \text{(factor)}\\
+        & = \frac{1}{n^3}\frac{n(n+1)(2n+1)}{6}+\frac{1}{n^2}\frac{n(n+1)}{2} &&&\text{(use sum identities)}
     \end{align*}
     Then take the limit:
     $$\lim_{n\to\infty}R_n=\lim_{n\to\infty} \frac{1}{n^3}\frac{n(n+1)(2n+1)}{6}+\frac{1}{n^2}\frac{n(n+1)}{2} = \frac{2}{6} + \frac{1}{2} = \frac{5}{6}.$$
@@ -167,7 +167,6 @@ Here is an example:
 \end{itemize}
 
 \mar{Compute $$\int_{0}^1x^3\ dx$$ using the method of Riemann Sums.}
-
 
 \subsection{The Fundamental Theorem of Calculus}
 

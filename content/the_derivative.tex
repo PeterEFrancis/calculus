@@ -252,7 +252,9 @@ Here are some examples:
 
 I don't recommend that you memorize the formula for $[f(x)^{g(x)}]'$. Instead, remember the procedure and re-create when you need it.
 
-
+An alternate method for logarithmic differentiation is to transform $f(x)^{g(x)}$ into a form more easily differentiable by first taking the logarithm and then exponentiating:
+$$f(x)^{g(x)}=e^{\ln\left(f(x)^{g(x)}\right)}=e^{g(x)\ln(f(x))}.$$
+\mar{Take the derivative of $e^{g(x)\ln(f(x))}$ and see that it matches the expression for $y'$ in the strategy box.}
 \subsection{Using The Inverse Rule}
 
 When we want to find the derivative of an inverse of a function $f$, the inverse rule tells us that
@@ -268,7 +270,7 @@ but how is this helpful? It is actually very easy to see why this rule is true:
 Let's use this rule to find the derivative of inverse trig functions:
 \begin{itemize}
 \item The rule says that $[\sin^{-1}(x)]'=\frac{1}{\cos(\sin^{-1}(x))}$, but we should be able to simplify this expression using the unit circle.
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
 %uncomment if require: \path (0,479); %set diagram left start at 0, and has height of 479
