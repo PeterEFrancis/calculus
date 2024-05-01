@@ -224,7 +224,7 @@ $[\arccsc(x)]'=\frac{-1}{|x|\sqrt{x^2-1}}$  \\
 
 \newpage
 
-\begin{tabular}{p{263pt} p{280pt}}
+\begin{multicols}{2}
 \begin{bx}[Integration]
 \textbf{Definitions}
 \begin{itemize}
@@ -293,7 +293,29 @@ $[\arccsc(x)]'=\frac{-1}{|x|\sqrt{x^2-1}}$  \\
 \end{center}
 \end{bx}
 
+\begin{bx}[Riemann Sums]
+\begin{tabular}{p{155pt} | p{100pt}}
+    $ R_n=\sum_{k=1}^{n}f\left(a+k\frac{b-a}{n}\right)\frac{b-a}{n}$ 
+
+$ L_n=\sum_{k=1}^{n}f\left(a+(k-1)\frac{b-a}{n}\right)\frac{b-a}{n}$ 
+
+$ T_n=\sum_{i=k}^{n}\frac{f\left(a+(k-1)\frac{b-a}{n}\right)+f\left(a+k\frac{b-a}{n}\right)}{2}\frac{b-a}{n}$
+
+$$\lim_{n\to\infty}R_n,L_n,T_n=\int_a^bf(x)\ dx$$
+
 & 
+\textbf{Sums of Powers}
+
+\begin{itemize}[leftmargin=0.75em]
+    \item $\sum_{k=1}^n 1 = n $
+    \item $\sum_{k=1}^n k = \frac{n(n+1)}{2}$
+    \item $\sum_{k=1}^n k^2 = \frac{n(n+1)(2n+1)}{6}$
+    \item $\sum_{k=1}^n k^3 = \frac{n^2(n+1)^2}{4}$
+\end{itemize}
+\end{tabular}
+
+\end{bx}
+\columnbreak
 
 \begin{bx}[Test for Convergence and Divergence]
 
@@ -354,20 +376,9 @@ $L={\displaystyle\lim _{n \to \infty}}\left|a_{n}\right|^{\frac{1}{n}}.$ Then,
 \end{itemize}
 \end{bx}
 
-\vspace{3em}
+\end{multicols}
 
-\end{tabular}
 
-\begin{tabular}{p{263px}}
-\begin{bx}[Riemann Sums]
-$ R_n=\sum_{k=1}^{n}f\left(a+k\frac{b-a}{n}\right)\frac{b-a}{n}$ 
 
-$ L_n=\sum_{k=1}^{n}f\left(a+(k-1)\frac{b-a}{n}\right)\frac{b-a}{n}$ 
-
-$ T_n=\sum_{i=k}^{n}\frac{f\left(a+(k-1)\frac{b-a}{n}\right)+f\left(a+k\frac{b-a}{n}\right)}{2}\frac{b-a}{n}$
-
-$$\lim_{n\to\infty}R_n=\lim_{n\to\infty}L_n=\lim_{n\to\infty}T_n=\int_a^bf(x)\ dx$$
-\end{bx}
-\end{tabular}
 
 \end{document}
