@@ -1,6 +1,6 @@
 # To Do
 
-- [ ] Add problems using IVT on limits and continuity exercises
+- [X] Add problems using IVT on limits and continuity exercises
 - [X] Typo on Derivative C3
 - [ ] Add strategy for $\frac{p(x)}{q(x)}$ as $x\to\infty$
 - [ ] $\frac{\sin(3x)}{\tan(7x)}$
@@ -11,7 +11,7 @@
 - [ ] Make the condensed tables and the text tables match
 - [ ] add more inverse trig to exercises
 - [ ] logrithmic examples like $\sin(x^x)$
-- [ ] implicit differentiation by parametric curves
+- [X] implicit differentiation by parametric curves
 - [ ] limit matching to make continuous
 - [ ] lim x->infty sqrt(poly)/poly
 - [ ] lim x-> infty (e^x-1)/x = 1

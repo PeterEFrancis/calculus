@@ -5,6 +5,7 @@ Click [here](Calculus.pdf) for the most recent PDF of the book, and click [here]
 [Here](condensed.pdf) is the condensed study sheet.
 
 Here are some exercises:
+- [Pre-Calculus](exercises/Pre-Calculus.pdf)
 - [Limits and Continuity](exercises/Limits%20and%20Continuity.pdf)
 - [Derivatives](exercises/Derivatives.pdf)
 - [Derivative Applications](exercises/Derivative%20Applications.pdf)
