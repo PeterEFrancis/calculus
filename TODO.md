@@ -21,3 +21,5 @@
 - [ ] parametrically defined curves in exercises
 - [ ] bela style squeeze theorem examples (Math 112H Fall 2020)
 - [ ] Explain what a radian is
+- [ ] rewrite the limit section
+- [ ] update derivative application exercises page to include things like LH rule, qualities of graphs, extremal values, etc..

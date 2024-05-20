@@ -1,26 +1,83 @@
-\section{Limits}
-
 Limits are important in calculus since we need very small quantities to effectively study change. Yeah, that's pretty vague, but hopefully it'll clear up in a few pages.
 
-We study limits for many reasons. One of them is to study functions at points where they are only ``close'' to being defined. For example, the function $f$ given by $f(x)=\frac{x(x+1)}{x}$ is not defined at $0$, but looks like the line $x+1$ everywhere else.
+We study limits for many reasons. One of them is to study functions at points where they are only ``close'' to being defined. Another is to make quantities very (arbitrarily) small, without making them 0.
 
-\subsection{Intuitive Limits}
+Here is an example of a practical use of limits. The following two functions' graphs are exactly the same, except at $x=1$.
 
-The intuitive idea of a \textbf{limit} is to examine what the output of a function does as the input moves close to a specific value. Since the functions we care about take real numbers as inputs, there are two ways you can approach a number on the real line (from the left and from the right). We will talk about left- and right-sided limits.
+\begin{figure}[h!]
+    \centering
+    \fbox{
+    \resizebox{4in}{!}{
 
-Before getting into the actual definition, we'll start intuitively. If a function is     ``continuous''\footnote{I put this word in quotes because I haven't defined it yet, but you should have an intuitive idea of what this means: being able to draw it without lifting your pencil. Just wait for a few pages.} and is defined at $a$, then as $x$ moves closer to $a$, $f(x)$ moves closer to $f(a)$, so the limit of $f$ as $x$ approaches $a$ is $f(a)$.
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+%Straight Lines [id:da5436445771795901] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (392,151.33) -- (318,151.17) ;
+%Straight Lines [id:da6949730842855149] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (392,151.33) -- (392,219.5) ;
+%Straight Lines [id:da8209687086477877] 
+\draw    (49,79.83) -- (49,231.5) ;
+%Curve Lines [id:da9233668280128751] 
+\draw    (41,186.5) .. controls (59,138.83) and (98,184.83) .. (123,152.83) ;
+%Curve Lines [id:da7989009557315903] 
+\draw    (123,152.83) .. controls (150,110.83) and (183,173.83) .. (223,143.83) ;
+
+%Straight Lines [id:da6182960293771871] 
+\draw    (233,221) -- (39,221) ;
+%Straight Lines [id:da04200773563301774] 
+\draw    (317,79.83) -- (317,231.5) ;
+%Straight Lines [id:da726566232707935] 
+\draw    (501,220.5) -- (307,220.5) ;
+%Curve Lines [id:da20535665951890536] 
+\draw    (309,186.5) .. controls (327,138.83) and (366,184.83) .. (391,152.83) ;
+%Curve Lines [id:da8509447981009293] 
+\draw    (391,152.83) .. controls (418,110.83) and (451,173.83) .. (491,143.83) ;
+%Shape: Circle [id:dp8197107597318569] 
+\draw  [fill={rgb, 255:red, 255; green, 255; blue, 255 }  ,fill opacity=1 ] (388.5,151.33) .. controls (388.5,149.4) and (390.07,147.83) .. (392,147.83) .. controls (393.93,147.83) and (395.5,149.4) .. (395.5,151.33) .. controls (395.5,153.27) and (393.93,154.83) .. (392,154.83) .. controls (390.07,154.83) and (388.5,153.27) .. (388.5,151.33) -- cycle ;
+
+%Straight Lines [id:da7228354618576209] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (123,152.83) -- (123,221) ;
+%Straight Lines [id:da24003054824236258] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (123,152.83) -- (49,152.67) ;
+
+% Text Node
+\draw (119,227.4) node [anchor=north west][inner sep=0.75pt]    {$1$};
+% Text Node
+\draw (388.5,227.4) node [anchor=north west][inner sep=0.75pt]    {$1$};
+% Text Node
+\draw (26,145) node [anchor=north west][inner sep=0.75pt]    {$10$};
+% Text Node
+\draw (294,145) node [anchor=north west][inner sep=0.75pt]    {$10$};
 
 
-Let's get a little more general: suppose a function $f$ is defined on open intervals on either side of $a$.
+\end{tikzpicture}
 
-If $f$ is defined on an interval to the \textit{left} of $a$ and the values of $f(x)$ approach $L$ as $x$ approaches $a$ from the \textit{left}, we say that the ``\textbf{left-sided limit of $f$ as $x$ approaches $a$} is $L$'' and we write $$\lim_{x\to a^-}f(x)=L.$$
-If $f$ is defined on an interval to the \textit{right} of $a$ and the values of $f(x)$ approach $L$ as $x$ approaches $a$ from the \textit{right}, we say that the \textbf{right-sided limit of $f$ as $x$ approaches $a$} is $L$'' and we write
+    }}
+    \caption{Two functions with the same limits}
+\end{figure}
+
+The first function is defined at $x=1$, while the second function is not. However, the values of the second function are near 10 when $x$ is near 1. There is still something useful we can say about the second function at 1: ``the \textit{limit} at 1 is 10.''
+
+
+
+\section{Definitions}
+
+\subsection{The Limit}
+
+The intuitive idea of a \textbf{limit} is to examine what the output of a function does as the input moves close to a specific value. We say that the limit of $f$ at $a$ is $L$ if $f(x)$ moves closer to $L$ as as $x$ moves closer to $a$. Note that $f$ need not be defined at $a$ to find the limit of $f$ as $x$ approaches $a$ (in fact, that's the whole point!).
+
+Since the functions we care about take real numbers as inputs, there are two ways you can approach a number on the real line (from the left and from the right). We will talk about left- and right-sided limits.
+
+If $f$ is defined on an interval to the \textit{left} of $a$ (with $a$ as an endpoint) and the values of $f(x)$ approach $L$ as $x$ approaches $a$ from the \textit{left}, we say that the ``\textbf{left-sided limit of $f$ as $x$ approaches $a$} is $L$'' and we write $$\lim_{x\to a^-}f(x)=L.$$
+If $f$ is defined on an interval to the \textit{right} of $a$ (with $a$ as an endpoint) and the values of $f(x)$ approach $L$ as $x$ approaches $a$ from the \textit{right}, we say that the \textbf{right-sided limit of $f$ as $x$ approaches $a$} is $L$'' and we write
 $$\lim_{x\to a^+}f(x)=L.$$
 If the right and left sided limits match, then we say that the \textbf{limit of $f$ as $x$ approaches $a$ is $L$} and write $$\lim_{x\to a}f(x)=L.$$
 
-\noindent Note: $f$ need not be defined at $a$ to find the limit of $f$ as $x$ approaches $a$.
-
-\vspace{1em}
+If the left and right sided limits, do not match, then we say that the limit \textbf{does not exist} (DNE).
 
 One can compute $f(x)$ for values of $x$ that get closer and closer to either side of $a$. If the values approach $L$, then you have good reason to believe that $L$ is the (right- and/or left-sided) limit.
 
@@ -43,6 +100,7 @@ One can compute $f(x)$ for values of $x$ that get closer and closer to either si
 \end{center}
 Such calculations, however, cannot prove that a function limits to a specific value.
 
+
 \subsection{Infinite Limits}
 
 We can extend the idea of limits outside of the real numbers to include positive and negative infinity in place of both $a$ and $L$.
@@ -54,7 +112,6 @@ We can extend the idea of limits outside of the real numbers to include positive
 \end{itemize}
 
 
-
 \subsection{Optional: The $\varepsilon-\delta$ Definition}
 
 You may be dissatisfied with the intuitive approach to limits, so we can make the definition more rigorous. The main idea that needs to be captured by a formal definition is \textit{arbitrary precision}. That is, we need a way to say formally that ``$f(x)$ approaches $L$ as $x$ approaches $a$.''
@@ -64,7 +121,7 @@ By controlling the input $x$, we must be able to make the distance $|f(x)-L|$ be
 Now we're ready for the real ``$\varepsilon-\delta$'' definition of a limit: we say that \textbf{$L$ is the limit of $f$ as $x$ approaches $a$} if
 $$\text{for all } \varepsilon > 0, \text{ there is some } \delta > 0, \text{ such that } |x - a| < \delta \implies |f(x) - L| <\varepsilon.$$
 
-Read that last line a few times, because statements with multiple quantifiers can be tricky!
+\mar{Read that definition a few times, because statements with multiple quantifiers can be tricky!}
 
 \begin{figure}[h!]
 \centering
@@ -326,20 +383,45 @@ $$|f(x)-7|=|3x + 1 - 7| = |3x-6| = 3|x-2| < 3(\varepsilon/3) = \varepsilon.$$
 For simple examples, it is pretty easy to work backwards and figure out what $\delta$ should be, but for more complicated functions $f$, it can be more difficult. Here is a \href{https://www.desmos.com/calculator/cuoca85inx}{Desmos example} that shows dynamically how $\delta$ can depend on $\varepsilon$.
 
 
+\subsection{Continuity}
+
+Intuitively, a function is continuous if you can draw its graph without lifting up your pencil. We can use limits to write a more precise definition: a function $f$ is \textbf{continuous at $a$} if three conditions are satisfied:
+\begin{enumerate}
+\item[(a)] $f$ is defined at $a$ (i.e. $f(a)$ makes sense)
+\item[(b)] $\displaystyle\lim_{x\to a^+} f(x)= f(a)$
+\item[(c)] $\displaystyle\lim_{x\to a^-} f(x)= f(a)$
+\end{enumerate}
+
+In other words, a function is continuous at a point if its value and limit match at that point.
+
+If $U$ is a subset of $\R$ and $f$ is continuous at every point in $U$, then we say that $f$ is \textbf{continuous on $U$}.
+
+In the definition above, if (b) and/or (c) is not true (or one of the sided limits doesn't exist), then $f$ is \textbf{discontinuous at $a$}. Here are three types of discontinuities that you may encounter: if $f$ is discontinuous at $a$, then
+\begin{enumerate}
+\item $f$ has a \textbf{removable discontinuity} at $a$ if $\displaystyle\lim _{x \to a} f(x)$ exists and is a real number, (but $\displaystyle f(a)\neq\lim _{x \to a} f(x)$).
+\item $f$ has a \textbf{jump discontinuity} at $a$ if $\displaystyle\lim _{x \to a^{-}} f(x)$ and $\displaystyle\lim _{x \to a^{+}} f(x)$ both exist and are real numbers, but are different.
+\item $f$ has an \textbf{infinite discontinuity} at $a$ if $\displaystyle\lim _{x \to a^{-}} f(x)=\pm \infty$ or $\displaystyle\lim _{x \to a^{+}} f(x)=\pm \infty$.
+\end{enumerate}
+\mar{Draw a picture of each kind of discontinuity.}
+
+Note that if $a$ is not in the domain of $f$, then $f$ is neither continuous or discontinuous at $a$.
+
+
+\section{Properties of Limits}
+
+
 \subsection{Limit Laws}
 
-% So far we have used the $\epsilon-\delta$ definition to prove that a limit of a function is a certain value, we estimated limits using computation, and we might be able to eye-ball a limit of a ``continuous'' function, but
-We still need a more sophisticated way to figure out what the limit of a function is at a certain point. There are several \textit{limit laws} that make computing limits easier. We also have two basic facts that should be obvious: for any $a,b\in \R$,
+There are several \textit{limit laws} that will be useful for computing limits. They can all be proven using the $\varepsilon-\delta$ definition of the limit, but you can just believe them.
 
-$$\lim_{x\to a} b = b \quad\text{ and }\quad \lim_{x\to a}x=a.$$
-
-Together with the following laws, you'll be able to evaluate the limits of many functions. Suppose $\displaystyle\lim _{x \to a} f(x)=L$ and $\displaystyle\lim _{x \to a} g(x)=M$, let $c$ be a constant, and let $n$ be a positive integer.
-
+Suppose $\displaystyle\lim _{x \to a} f(x)=L$ and $\displaystyle\lim _{x \to a} g(x)=M$, let $c$ be a constant, and let $n$ be a positive integer.
 
 \begin{center}
 \def\arraystretch{2}
 \begin{tabular}{@{}ll@{}}
 \toprule[0.4mm]
+\textbf{Constant Law} & $\displaystyle \lim_{x\to a} b= b$\\
+\textbf{Identity Law} & $\displaystyle\lim_{x\to a}x = a$\\
 \textbf{Sum law} & $\displaystyle\lim _{x \rightarrow a}(f(x)+g(x))=\lim _{x \rightarrow a} f(x)+\lim _{x \rightarrow a} g(x)=L+M$ \\
 \textbf{Difference law} & $\displaystyle\lim _{x \rightarrow a}(f(x)-g(x))=\lim _{x \rightarrow a} f(x)-\lim _{x \rightarrow a} g(x)=L-M$ \\
 \textbf{Constant Multiple law} & $\displaystyle\lim _{x \rightarrow a} c f(x)=c \cdot \lim _{x \rightarrow a} f(x)=c L$ \\
@@ -350,18 +432,331 @@ Together with the following laws, you'll be able to evaluate the limits of many 
 & and for $L \geq 0$ if $n$ is even and $f(x) \geq 0 .$ \\
 \bottomrule[0.4mm]
 \end{tabular}
+\end{center}
+\mar{Write out what each limit law means in plain English.}
 
+
+The first two laws should be obvious. 
+The last two laws are special cases of the following theorem.
+
+\begin{thm}[Composite Function Theorem]
+If $f(x)$ is continuous at $L$ and $\displaystyle\lim _{x \to a} g(x)=L$, then
+$$\lim _{x \to a} f(g(x))=f\left(\lim _{x \to a} g(x)\right)=f(L).$$
+\end{thm}
+
+
+
+\subsection{Using Continuity}
+
+You should believe that the following types of functions are continuous at every point in their domains:
+\begin{itemize}
+\item polynomials
+\item rational functions
+\item trig and inverse trig functions
+\item exponential functions
+\item logarithms
+\end{itemize}
+
+An \textbf{algebraic combination of continuous functions} (ACCF) is a sum, product, exponentiation, or composition of continuous functions.
+
+\begin{thm}
+Any ACCF is continuous on its domain.
+\end{thm}
+
+
+To finish, another very useful theorem:
+
+\begin{thm}[The Intermediate Value Theorem]
+Let $f$ be continuous over a closed, bounded interval $[a, b]$. If $z$ is any real number between $f(a)$ and $f(b)$, then there is a number $c$ in $[a, b]$ satisfying $f(c)=z$.
+\end{thm}
+
+\begin{figure}[h!]
+\centering
+\fbox{
+\tikzset{every picture/.style={line width=0.75pt}}
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,374); %set diagram left start at 0, and has height of 374
+
+%Straight Lines [id:da38498324007722995]
+\draw    (159,287) -- (517,287.2) ;
+%Straight Lines [id:da5792876353049934]
+\draw    (180,98.33) -- (180,328.2) ;
+%Curve Lines [id:da7286746857142028]
+\draw    (180,287) .. controls (366,94) and (463,235.33) .. (496,98.33) ;
+%Straight Lines [id:da23865898502362382]
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (254,223.67) -- (254,288.2) ;
+%Straight Lines [id:da15690973094077898]
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (429,167.67) -- (429,287) ;
+%Straight Lines [id:da0889210997343266]
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (429,167.67) -- (179,167.67) ;
+%Straight Lines [id:da7783842106309002]
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (254,223.67) -- (181,223.67) ;
+%Straight Lines [id:da6580337268340255]
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (303,197.1) -- (180,197.1) ;
+%Straight Lines [id:da012629362538391309]
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (303,286.33) -- (303,197.1) ;
+
+% Text Node
+\draw (248,290) node [anchor=north west][inner sep=0.75pt]    {$a$};
+% Text Node
+\draw (424,290) node [anchor=north west][inner sep=0.75pt]    {$b$};
+% Text Node
+\draw (140,216.4) node [anchor=north west][inner sep=0.75pt]    {$f( a)$};
+% Text Node
+\draw (139,156.4) node [anchor=north west][inner sep=0.75pt]    {$f( b)$};
+% Text Node
+\draw (163,186.4) node [anchor=north west][inner sep=0.75pt]    {$z$};
+% Text Node
+\draw (299,290) node [anchor=north west][inner sep=0.75pt]    {$c$};
+
+
+\end{tikzpicture}
+}
+\caption{A Cartoon of the Intermediate Value Theorem}
+\end{figure}
+
+Phrased properly, the Intermediate Value Theorem is very intuitive. If you imagine the $x$-axis is time and the $y$-axis is position, the theorem says if you start at location $f(a)$ and end at location $f(b)$, then for any location $z$ between $f(a)$ and $f(b)$, there must have been some time that you were at $z$ (as long as you can't teleport!).
+
+
+\section{Evaluating Limits}
+
+Now that you understand the definitions and some properties of limits, we will focus on how to evaluate a limit (algebraically) when you come across one:
+$$\lim_{x\to a}f(x).$$
+
+There are two main types of functions that you might be asked to evaluate limits for. The first is an algebraic combination of continuous functions (ACCF). This means any sum, product, composition, etc. of simple functions like trig, exponential, polynomial, etc. The second type is a piece-wise function composed of type 1 functions.
+
+
+The process of evaluating both types are the same, except for at boundary points of the piece-wise components. At these points, you must compare right- and left-sided limits. For every other point (and also any point for an ACCF) use the flow chart in figure \ref{fig:flowchart}. The following sections will explain the three possible outcomes.
+
+\begin{figure}[H]
+    \centering
+    \fbox{
+            
+        
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,446); %set diagram left start at 0, and has height of 446
+
+%Rounded Rect [id:dp04536261924917495] 
+\draw   (218,91.93) .. controls (218,88.29) and (220.95,85.33) .. (224.6,85.33) -- (308.4,85.33) .. controls (312.05,85.33) and (315,88.29) .. (315,91.93) -- (315,111.73) .. controls (315,115.38) and (312.05,118.33) .. (308.4,118.33) -- (224.6,118.33) .. controls (220.95,118.33) and (218,115.38) .. (218,111.73) -- cycle ;
+%Straight Lines [id:da43038695232156465] 
+\draw    (232.6,118.33) -- (158.67,166.57) ;
+\draw [shift={(157,167.67)}, rotate = 326.87] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da02535983624938165] 
+\draw    (267,119.67) -- (267,158) ;
+\draw [shift={(267,160)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da33645697944263864] 
+\draw    (303.4,118.33) -- (379.24,159.38) ;
+\draw [shift={(381,160.33)}, rotate = 208.42] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Rounded Rect [id:dp8149957234073693] 
+\draw   (103,174.93) .. controls (103,171.29) and (105.95,168.33) .. (109.6,168.33) -- (180.4,168.33) .. controls (184.05,168.33) and (187,171.29) .. (187,174.93) -- (187,194.73) .. controls (187,198.38) and (184.05,201.33) .. (180.4,201.33) -- (109.6,201.33) .. controls (105.95,201.33) and (103,198.38) .. (103,194.73) -- cycle ;
+%Rounded Rect [id:dp9518200785534192] 
+\draw   (200,171.07) .. controls (200,165.69) and (204.36,161.33) .. (209.73,161.33) -- (320.27,161.33) .. controls (325.64,161.33) and (330,165.69) .. (330,171.07) -- (330,200.27) .. controls (330,205.64) and (325.64,210) .. (320.27,210) -- (209.73,210) .. controls (204.36,210) and (200,205.64) .. (200,200.27) -- cycle ;
+%Rounded Rect [id:dp5380321492603661] 
+\draw   (345,170.07) .. controls (345,164.69) and (349.36,160.33) .. (354.73,160.33) -- (444.27,160.33) .. controls (449.64,160.33) and (454,164.69) .. (454,170.07) -- (454,199.27) .. controls (454,204.64) and (449.64,209) .. (444.27,209) -- (354.73,209) .. controls (349.36,209) and (345,204.64) .. (345,199.27) -- cycle ;
+%Straight Lines [id:da980017392599877] 
+\draw    (142,202) -- (142,251.33) ;
+\draw [shift={(142,253.33)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da24546083605149582] 
+\draw    (265,210) -- (265,251.33) ;
+\draw [shift={(265,253.33)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Straight Lines [id:da8582799815353812] 
+\draw    (398,210) -- (398,242.33) ;
+\draw [shift={(398,244.33)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+
+% Text Node
+\draw (226,92.33) node [anchor=north west][inner sep=0.75pt]   [align=left] {plug $\displaystyle a$ into f};
+% Text Node
+\draw (119,176.33) node [anchor=north west][inner sep=0.75pt]   [align=left] {number};
+% Text Node
+\draw (355,170) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{65.09pt}\setlength\topsep{0pt}
+\begin{center}
+Indeterminant\\form
 \end{center}
 
-\subsection{Limit ``Tricks'' and Key Examples}
+\end{minipage}};
+% Text Node
+\draw (122,256.83) node [anchor=north west][inner sep=0.75pt]   [align=left] {$f(a)$};
+% Text Node
+\draw (226,255.33) node [anchor=north west][inner sep=0.75pt]   [align=left] {DNE or $\displaystyle \pm \infty $};
+% Text Node
+\draw (361,246.33) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{50.33pt}\setlength\topsep{0pt}
+\begin{center}
+More work\\needed
+\end{center}
 
-There are some other tricks that will help you evaluate limits. Try these things if you're not sure what else to do; they might be helpful if you end up in a situation where you are trying to divide 0/0.
+\end{minipage}};
+% Text Node
+\draw (215,170) node [anchor=north west][inner sep=0.75pt]    {$\displaystyle\frac{\text{non-zero number}}{0}$};
+
+\end{tikzpicture}
+    }
+    \caption{Flowchart for evaluating limits}
+    \label{fig:flowchart}
+\end{figure}
+
+\subsection{A Number}
+
+If $f$ is an ACCF and $f(a)$ is a number, then $a$ is in the domain of $f$. Since any ACCF is continuous on its domain,
+$$\lim_{x\to a}f(x)=f(a)$$
+by the definition of continuity. \mar{Re-read this until you understand it!}
+
+\subsection{A (non-zero) Number over Zero}
+
+If $f$ is an ACCF and attempting to evaluate $f(a)$ results in a non-zero number over 0, then $f$ has a vertical asymptote at $x=a$. Near $x=a$, the values of $f(x)$ get very close to either positive or negative infinity. The right and left sided limits are either positive or negative infinity, so there are only four cases, as seen in figure \ref{fig:four-cases}.
+
+\begin{figure}[h]
+    \centering
+    \fbox{
+        \resizebox{4.25in}{!}{
+        \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+        
+        \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+        %uncomment if require: \path (0,446); %set diagram left start at 0, and has height of 446
+        
+        %Straight Lines [id:da7130638550602129] 
+        \draw    (17.32,128.98) -- (162.73,128.98) ;
+        %Curve Lines [id:da8198586763402247] 
+        \draw    (19.1,124.51) .. controls (81.55,124.51) and (86.01,102.21) .. (86.01,57.6) ;
+        %Curve Lines [id:da33054163491632704] 
+        \draw    (161.84,124.51) .. controls (99.39,124.51) and (94.93,102.21) .. (94.93,57.6) ;
+        %Straight Lines [id:da39635263385432795] 
+        \draw  [dash pattern={on 0.84pt off 2.51pt}]  (90.47,54.93) -- (90.47,201.24) ;
+        
+        %Straight Lines [id:da4984898910131832] 
+        \draw    (187.51,128.98) -- (332.93,128.98) ;
+        %Curve Lines [id:da12653349982399664] 
+        \draw    (189.3,124.51) .. controls (251.75,124.51) and (256.21,102.21) .. (256.21,57.6) ;
+        %Curve Lines [id:da6963380775085903] 
+        \draw    (332.04,133.14) .. controls (269.59,133.14) and (265.13,155.74) .. (265.13,200.05) ;
+        %Straight Lines [id:da5434138892345324] 
+        \draw  [dash pattern={on 0.84pt off 2.51pt}]  (260.67,54.93) -- (260.67,201.24) ;
+        
+        %Straight Lines [id:da6992946751383504] 
+        \draw    (357.71,128.98) -- (503.13,128.98) ;
+        %Curve Lines [id:da5321156852218221] 
+        \draw    (359.5,132.54) .. controls (421.95,132.54) and (426.41,155.74) .. (426.41,200.05) ;
+        %Curve Lines [id:da8818577355654187] 
+        \draw    (502.24,124.51) .. controls (439.79,124.51) and (435.33,102.21) .. (435.33,57.6) ;
+        %Straight Lines [id:da23325172919339887] 
+        \draw  [dash pattern={on 0.84pt off 2.51pt}]  (430.87,54.93) -- (430.87,201.24) ;
+        
+        %Straight Lines [id:da2808110791577314] 
+        \draw    (527.91,128.98) -- (673.33,128.98) ;
+        %Curve Lines [id:da43641618110544544] 
+        \draw    (530,133.73) .. controls (592.45,133.73) and (596.91,155.14) .. (596.91,200.05) ;
+        %Curve Lines [id:da16583705050218067] 
+        \draw    (672.44,133.14) .. controls (609.99,133.14) and (605.53,155.74) .. (605.53,200.05) ;
+        %Straight Lines [id:da9264659475889601] 
+        \draw  [dash pattern={on 0.84pt off 2.51pt}]  (601.07,54.93) -- (601.07,201.24) ;
+        
+        
+        
+        
+        
+        \end{tikzpicture}
+        
+        % \resizebox{3in}{!}{
+        % \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+        % \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+        % %uncomment if require: \path (0,446); %set diagram left start at 0, and has height of 446
+        
+        % %Straight Lines [id:da11666177611802953] 
+        % \draw    (98,120.33) -- (261,120.33) ;
+        % %Curve Lines [id:da20823749405635383] 
+        % \draw    (100,115.33) .. controls (170,115.33) and (175,90.33) .. (175,40.33) ;
+        % %Curve Lines [id:da5857981133236727] 
+        % \draw    (260,115.33) .. controls (190,115.33) and (185,90.33) .. (185,40.33) ;
+        % %Straight Lines [id:da8270643292998765] 
+        % \draw  [dash pattern={on 0.84pt off 2.51pt}]  (180,37.33) -- (180,201.33) ;
+        
+        % %Straight Lines [id:da6737028355731796] 
+        % \draw    (288,120.33) -- (451,120.33) ;
+        % %Curve Lines [id:da5853120673537593] 
+        % \draw    (290,115.33) .. controls (360,115.33) and (365,90.33) .. (365,40.33) ;
+        % %Curve Lines [id:da33546715055487053] 
+        % \draw    (450,125) .. controls (380,125) and (375,150.33) .. (375,200) ;
+        % %Straight Lines [id:da39333458455778736] 
+        % \draw  [dash pattern={on 0.84pt off 2.51pt}]  (370,37.33) -- (370,201.33) ;
+        
+        
+        % %Straight Lines [id:da41843468171367526] 
+        % \draw    (98,310.33) -- (261,310.33) ;
+        % %Curve Lines [id:da9482877395734075] 
+        % \draw    (100,314.33) .. controls (170,314.33) and (175,340.33) .. (175,390) ;
+        % %Curve Lines [id:da7803855380541431] 
+        % \draw    (260,305.33) .. controls (190,305.33) and (185,280.33) .. (185,230.33) ;
+        % %Straight Lines [id:da11027576459803168] 
+        % \draw  [dash pattern={on 0.84pt off 2.51pt}]  (180,227.33) -- (180,391.33) ;
+        
+        % %Straight Lines [id:da294114983098098] 
+        % \draw    (288,310.33) -- (451,310.33) ;
+        % %Curve Lines [id:da491751074451225] 
+        % \draw    (290.33,315.67) .. controls (360.33,315.67) and (365.33,339.67) .. (365.33,390) ;
+        % %Curve Lines [id:da32646541541064433] 
+        % \draw    (450,315) .. controls (380,315) and (375,340.33) .. (375,390) ;
+        % %Straight Lines [id:da20001269749677508] 
+        % \draw  [dash pattern={on 0.84pt off 2.51pt}]  (370,227.33) -- (370,391.33) ;
+        
+        
+        
+        
+        
+        
+        % \end{tikzpicture}
+        % }
+        }
+    }
+    \caption{The four cases of vertical asymptotes}
+    \label{fig:four-cases}
+\end{figure}
+
+Therefore, the only possibilities for the value of these limits are $\infty$, $-\infty$, and DNE. \mar{Label each function in figure \ref{fig:four-cases} with its respective limit.} To figure it out which one it is, evaluate both of the two sided limits. For each, plug in a value that is slightly to the right (or the left) of $a$. If the result is positive, the sided limit is positive infinity, and if the result is negative, negative infinity.
+
+\subsection{Indeterminant Form}
+
+There are seven indeterminant forms:
+
+\vspace{1em}
+
+\begin{center}
+\begin{Large}
+\phantom{}\hfill
+$\frac{0}{0}$ \hfill
+$\frac{\infty}{\infty}$ \hfill
+$0^0$ \hfill
+$\infty{-}\infty$ \hfill
+$1^\infty$ \hfill
+$0{\cdot}\infty$ \hfill
+$\infty^0$
+\hfill\phantom{}
+\end{Large}
+\end{center}
+
+\vspace{1em}
+
+They are called \textbf{indeterminant} because in this form, we cannot be sure of its value (or even if its value makes sense). Take $0^0$ for example: zero raised to any power should be 0, but anything raised to the power of $0$ should be 1... so which is it? \mar{Write out similar question for the other 6 indeterminant forms.}
+
+When we get an indeterminant form after trying to evaluate $f(a)$, we need to do more work. There are several things you can try:
+
 \begin{itemize}
-\item Simplify. Perhaps the function is rational, and has common factor in its numerator and denominator. By ``canceling'' the term, the resulting function is not the same: the original function has a hole at the point where the factored term is 0. For example, $f(x)=\frac{x(x-1)}{(x-1)}$ has a hole at $x=1$, but everywhere else is the line $y=x$. However, this cancellation does not change the value of the limit.
-\item Multiply by the conjugate of the denominator or the numerator of a rational function (the conjugate of a binomial $a+b$ is $a-b$).
-\item $\displaystyle\lim_{x\to 0}\frac{\sin(x)}{x} = 1$.
-\item $\displaystyle\lim_{x\to 0}\frac{\cos(x) - 1}{x} = 0$.
-\item $\displaystyle\lim_{x\to\infty}\left(1+\frac{1}{x}\right)^x = e$.
+\item Simplify. If the function is rational and has common factor in its numerator and denominator, by ``canceling'' the term, the resulting function is not the same: the original function has a hole at the point where the factored term is 0. For example, $f(x)=\frac{x(x-1)}{(x-1)}$ has a hole at $x=1$, but everywhere else is the line $y=x$. However, this cancellation does not change the value of the limit.
+\item Multiply the numerator and denominator of a rational function by the conjugate of the denominator or the numerator (the \textbf{conjugate} of a binomial $a+b$ is $a-b$).
+\item Use a special-case limit: 
+$$
+\lim_{x\to 0}\frac{\sin(x)}{x} = 1
+\quad\quad\quad\quad
+\lim_{x\to 0}\frac{\cos(x) - 1}{x} = 0
+$$
+$$
+\lim_{x\to\infty}\left(1+\frac{1}{x}\right)^x = e
+\quad\quad\quad\quad
+\lim_{x\to 0}\frac{a^x-1}{x}=\ln(a)
+$$
+
+\item In the case of $x\to\pm\infty$ for a rational function, divide the numerator and denominator by the highest degree term of the denominator.
 
 \item Use the Squeeze Theorem:
 
@@ -370,4 +765,19 @@ Let $f$, $g$, and $h$ be functions with $g(x)\leq f(x)\leq h(x)$ for all $x$ in 
 as well.
 \end{thm}
 The most common application of squeeze theorem is squeezing $$-1\leq \sin\theta \leq 1.$$
+
 \end{itemize}
+
+Later, we will learn a trick called L'H\^opital's Rule to more easily compute limits with indeterminant forms. But first we need to learn about derivatives!
+
+
+
+
+
+
+
+
+
+
+
+
