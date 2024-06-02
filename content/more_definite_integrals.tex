@@ -2,11 +2,35 @@
 
 \subsection{Improper Integrals}
 
-% \textbf{Improper integrals} are integrals involving infinity. There are two types:
-% \begin{enumerate}
-%     \item $\pm\infty$ is in a bound of the integral, or
-%     \item the function being integrated has a vertical asymptote on the interval of integration
-% \end{enumerate
+\textbf{Improper integrals} are integrals involving infinity. There are two types:
+\begin{enumerate}
+    \item $\pm\infty$ is in a bound of the integral, or
+    \item the function being integrated has a vertical asymptote on the interval of integration
+\end{enumerate}
+
+
+To evaluate an improper integral, rewrite the integral as a limit of a proper integral, compute the integral as normal, and then take the limit. When evaluating integrals of the second type, make sure you use a sided limit from the inside of the bound of integration.
+
+If the value of the improper integral is a finite quantity, we say the integral \textbf{converges}. If the value is an infinite quantity or the limit DNE, then we say the integral is \textbf{divergent}. Sometimes you might be asked the nature of the divergence (i.e. is the limit equal to $\pm\infty$ or non-existent).
+
+Here's an example of each type:
+
+\begin{itemize}%[leftmargin=1em]
+    \item $\displaystyle \int_1^\infty \frac{1}{x^2}\ dx
+     = \lim_{a\to \infty}\int_1^a \frac{1}{x^2}\ dx 
+     = \lim_{a\to \infty}\left[\frac{-1}{x}\right]_1^a 
+     = \lim_{a\to \infty} \left(1-\frac{1}{a}\right)
+    =1.$
+    \item $\displaystyle\int_{0}^{1}\frac{1}{x^{2}}\ dx 
+     = \lim_{a\to 0^+} \int_{a}^{1}\frac{1}{x^{2}}\ dx 
+     = \lim_{a\to 0^+}\left[\frac{-1}{x}\right]_a^1 
+     = \lim_{a\to 0^+}\left(\frac{1}{a}-1\right)
+     = \infty.$
+\end{itemize}
+
+
+
 
 \subsection{Even and Odd Functions}
+
 
