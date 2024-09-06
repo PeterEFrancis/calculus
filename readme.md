@@ -9,5 +9,9 @@ Here are some exercises:
 - [Limits and Continuity](exercises/Limits%20and%20Continuity.pdf)
 - [Derivatives](exercises/Derivatives.pdf)
 - [Derivative Applications](exercises/Derivative%20Applications.pdf)
+- [Integration](exercises/Integration.pdf)
+- [Integration Applications](exercises/Integration%20Applications.pdf)
+- [Sequences and Series](exercises/Sequences%20and%20Series.pdf)
+- [Differential Equations](exercises/Differential%20Equations.pdf)
 
 [Maybe clicking On this liNk will bEnefit You](https://drive.google.com/file/d/1XqBYn5BtpmJSzlKFJKeFJmHlo0MJ4PcY/view?usp=sharing)
