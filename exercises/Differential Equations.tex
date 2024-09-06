@@ -1,0 +1,54 @@
+\documentclass{article}
+
+% set font encoding for PDFLaTeX, XeLaTeX, or LuaTeX
+\usepackage{ifxetex,ifluatex}
+\if\ifxetex T\else\ifluatex T\else F\fi\fi T%
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+\usepackage{hyperref, amssymb, amsmath, multicol}
+
+\usepackage[margin=1in]{geometry}
+
+\pagenumbering{gobble}
+
+
+\newcommand{\R}{\mathbb{R}}
+
+\renewcommand{\thesubsection}{\Alph{subsection}.\!\!\!\!}
+
+
+
+\begin{document}
+
+
+\begin{center}
+\begin{Huge}Differential Equations\end{Huge}
+\end{center}
+
+
+\subsection{Find the general solutions of the following differential equations.}
+
+\begin{multicols}{2}
+\begin{enumerate}
+\item $xy^2-y`x^2=0$
+\item $y'+3x^2y=e^{-x^3}=0$
+\item $y''+8y+16=0=0$
+\item $y''+4y=0$
+\end{enumerate}
+\end{multicols}
+
+
+\subsection{Word Problems}
+\begin{enumerate}
+\item If the half-life of a radioactive substance is 10 years, how long will it take to decay by 80\% assuming the rate of change of this substance is directly proportional to the amount present?
+\end{enumerate}
+
+
+
+
+\end{document}

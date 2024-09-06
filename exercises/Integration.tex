@@ -1,0 +1,135 @@
+\documentclass{article}
+
+% set font encoding for PDFLaTeX, XeLaTeX, or LuaTeX
+\usepackage{ifxetex,ifluatex}
+\if\ifxetex T\else\ifluatex T\else F\fi\fi T%
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+\usepackage{hyperref, amssymb, amsmath, multicol}
+
+\usepackage[margin=1in]{geometry}
+
+\pagenumbering{gobble}
+
+
+\newcommand{\R}{\mathbb{R}}
+
+\renewcommand{\thesubsection}{\Alph{subsection}.\!\!\!\!}
+
+
+
+\begin{document}
+
+
+\begin{center}
+\begin{Huge}Integration Exercises\end{Huge}
+\end{center}
+
+
+\subsection{Compute the following definite integrals using basic geometry.}
+
+\begin{multicols}{3}
+\begin{enumerate}
+\item $\displaystyle \int_{-4}^{10}6x+4\ dx$
+\item $\displaystyle \int_1^6 2+\sqrt{6x-x^{2}}\ dx$
+\item $\displaystyle \int_{-2}^{4} |x|\ dx$
+\end{enumerate}
+\end{multicols}
+
+\subsection{Compute the following definite integrals using Reimann Sums.}
+
+\begin{multicols}{3}
+\begin{enumerate}
+\item $\displaystyle \int_{-4}^{10}6x+4\ dx$
+\item $\displaystyle \int_0^3 x^2+3x-4\ dx$
+\item $\displaystyle \int_{-1}^{7} \pi\ dx$
+\end{enumerate}
+\end{multicols}
+
+\subsection{Express the following limits as definite integrals, and then compute them.}
+
+\begin{multicols}{2}
+\begin{enumerate}
+\item $\displaystyle \lim_{n\to\infty}\sum_{i=1}^{n} \left(2+\frac{3i}{n}\right)^2\frac{6}{n}$
+\item $\displaystyle \lim_{n\to\infty}\sum_{i=1}^{n} \cos\left(-2+\frac{2i}{n}\right)^2\frac{8i^2}{n^3}$
+\end{enumerate}
+\end{multicols}
+
+\subsection{Compute the following derivatives.}
+
+\begin{multicols}{3}
+\begin{enumerate}
+\item $\displaystyle \frac{d}{dx}\int_0^{x^2}e^{t^2}\ dt$
+\item $\displaystyle \frac{d}{dx}\int_0^{1}\cos(3t+4)\ dt$
+\item $\displaystyle \frac{d}{dx}\int_{\sin(x)}^{2^x}t^3\ln(4t^2-5)\ dt$
+\end{enumerate}
+\end{multicols}
+
+
+\subsection{Compute the following indefinite integrals}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\displaystyle \int 3x^2\ln(x^2)\ dx$
+\item $\displaystyle \int x \sqrt{x+1}\ dx$
+\item $\displaystyle \int \frac{e^{2 x}}{1+e^{2 x}} \ d x$
+\item $\displaystyle \int  \cos^2(x)\sin^2(x)  \ d x$
+\item $\displaystyle \int \cos ^3 (x) \sin ^2 (x)\ d x$
+\item $\displaystyle \int x^3 \ln (x)\ d x$
+\item $\displaystyle \int \frac{1}{x^2-3 x}\ dx$
+\item $\displaystyle \int  \sec ^2(2 x)\ d x$
+\item $\displaystyle \int  \frac{1}{1+4 x^2}\ dx$
+\item $\displaystyle \int  \frac{\ln (x)}{x}\ d x$
+\item $\displaystyle \int  \ln (x)\ d x$
+\item $\displaystyle \int  \frac{1}{x\sqrt{\ln(x)}}\ d x$
+\item $\displaystyle \int  \frac{\sin(\sqrt x)}{\sqrt x}\ d x$
+\item $\displaystyle \int \frac{1}{x^2+5x+6} \ d x$
+\item $\displaystyle \int  \sin(x)e^x \ d x$
+\item $\displaystyle \int  \sin(x)\cos(x)\ d x$
+\item $\displaystyle \int  \arcsin(x)^2\ d x$
+\item $\displaystyle \int  \sqrt{3+4x^2}\ d x$
+\item $\displaystyle \int  x^3\sqrt{5-x^2}\ d x$
+\item $\displaystyle \int \frac{x^2+2 x+3}{(x-1)(x+1)^2}\ d x$
+\item $\displaystyle \int x^2 \sin(2 x) \ d x$
+\item $\displaystyle \int \frac{2x^2-1}{(4x-1)(x^2+1)} \ d x$
+\item $\displaystyle \int \frac{1}{x^2-4x+11} \ d x$
+\item $\displaystyle \int \frac{2x+4}{x^3-2x^2} \ d x$
+\item $\displaystyle \int \arctan\left(\frac{1}{x}\right)\ d x$
+\item $\displaystyle \int \frac{1}{x^2-7x+99}\ d x$
+\item $\displaystyle \int\left( \frac{1}{x+2}+e^{-x}\right)\ d x$
+\item $\displaystyle \int\cos^2(x)\ d x$
+\item $\displaystyle \int\frac{x^2}{(x^3+1)^2} d x$
+\item $\displaystyle \int\frac{2x-8}{(x^2+4)(x+1)} d x$
+\end{enumerate}
+\end{multicols}
+
+
+\subsection{Determine if the following integrals are convergent or divergent. If convergent, find the value; if divergent state why.}
+
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\displaystyle \int_0^{\infty} \frac{3}{x^2+3x+2}\ dx$.
+\item $\displaystyle \int_0^2 \frac{d x}{\sqrt{4-x^2}}$
+\item $\displaystyle \int_{-\infty}^{\infty} \frac{d x}{4+x^2}$
+\item $\displaystyle \int_0^2 \frac{d x}{(x-1)^2}$
+\item $\displaystyle \int_0^{\pi^2} \frac{\sin (\sqrt{x})}{\sqrt{x}}\ d x$
+\item $\displaystyle \int_0^{\infty} \frac{1}{1+x^2} \ d x$
+\item $\displaystyle \int_0^{\infty} e^{-3x} \ d x$
+\item $\displaystyle \int_0^{3} \frac{e^x}{e^x-1} \ d x$
+
+\end{enumerate}
+\end{multicols}
+
+
+
+
+
+
+
+
+
+\end{document}

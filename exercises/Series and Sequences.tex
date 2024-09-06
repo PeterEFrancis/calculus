@@ -1,0 +1,95 @@
+\documentclass{article}
+
+% set font encoding for PDFLaTeX, XeLaTeX, or LuaTeX
+\usepackage{ifxetex,ifluatex}
+\if\ifxetex T\else\ifluatex T\else F\fi\fi T%
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+\usepackage{hyperref, amssymb, amsmath, multicol}
+
+\usepackage[margin=1in]{geometry}
+
+\pagenumbering{gobble}
+
+
+\newcommand{\R}{\mathbb{R}}
+
+\renewcommand{\thesubsection}{\Alph{subsection}.\!\!\!\!}
+
+
+
+\begin{document}
+
+
+\begin{center}
+\begin{Huge}Series and Sequences Exercises\end{Huge}
+\end{center}
+
+
+\subsection{Determine whether each geometric series converges or diverges. If it converges, find its sum; If not, say why.}
+
+\begin{multicols}{3}
+\begin{enumerate}
+\item $\displaystyle \sum_{n=1}^\infty \frac{3}{n(n+3)}$
+\item $\displaystyle \sum_{k=0}^{\infty} \frac{2^{k+1}}{3^k}$
+\item $\displaystyle \sum_{k=10}^{\infty} \frac{3^{k-1}}{2^k}$
+\item $\displaystyle \sum_{n=0}^{\infty}(-1)^n \frac{5}{4^n}$
+\item $\displaystyle \sum_{n=3}^{\infty}(-1)^n \frac{3}{2^n}$
+\item $\displaystyle \sum_{n=1}^{\infty}\left( \frac{1}{n^2+n} + \frac{3^{2n}}{14^n}\right)$
+\item $\displaystyle\sum_{n=1}^{\infty}\frac{1}{n^{2}+5n+6}$
+\end{enumerate}
+\end{multicols}
+
+\subsection{True or False? Explain. }
+\begin{enumerate}
+\item There exists an infinite geometric series with sum -4 and first term -1.
+\end{enumerate}
+
+
+\subsection{Determine whether each series converges or diverges.}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\displaystyle \sum_{k=1}^{\infty} \frac{1}{k \sqrt{k}}$
+\item $\displaystyle \sum_{n=0}^{\infty} \frac{\sin ^2(n)}{1+n^2}$
+\item $\displaystyle \sum_{k=0}^{\infty} \frac{k}{e^k}$
+\item $\displaystyle \sum_{n=2}^{\infty} \frac{1}{n \ln (n)}$
+\item $\displaystyle \sum_{n=2}^{\infty} \frac{\ln(n)}{n}$
+\item $\displaystyle \sum_{n=1}^{\infty} \frac{n}{n^3+4 n-3}$
+\item $\displaystyle \sum_{n=1}^{\infty} \frac{2^{2 n}+(-1)^n}{5^n}$
+\item $\displaystyle \sum_{n=2}^{\infty} \frac{1}{n^2-1}$
+\item $\displaystyle \sum_{n=1}^{\infty}( \arctan(n)+n)$
+\item $\displaystyle \sum_{n=1}^{\infty}\frac{1}{\sqrt[4]{n^3}}$
+\item $\displaystyle \sum_{n=2}^{\infty}\frac{(2n)!}{2^nn^2}$
+\item $\displaystyle \sum_{n=1}^{\infty}\frac{(-1)^n}{n!}$
+\item $\displaystyle \sum_{n=2}^{\infty}\left(\frac{\sin(100)}{\pi}\right)^n$
+\item $\displaystyle \sum_{n=2}^{\infty}\frac{1}{n(\ln(n))^3}$
+\end{enumerate}
+\end{multicols}
+
+
+\subsection{Find the interval of convergence for the following power series.}
+\begin{multicols}{4}
+\begin{enumerate}
+\item $\displaystyle\sum_{n=0}^\infty \left(\frac{x}{4e}\right)^n$
+\item $\displaystyle\sum_{n=1}^\infty \frac{(-1)^nx^n}{3^n(n+1)}$
+\end{enumerate}
+\end{multicols}
+
+
+\subsection{Taylor and Maclaurin Series.}
+\begin{enumerate}
+\item Use Taylor series to evaluate $\displaystyle\int_0^1x\cos(x)^3\ dx$.
+\item Find all antiderivatives of $\cos(x^2)$ using Maclaurin series.
+\item Write a third degree Taylor Polynomial for $\sqrt{x}$ centered at $x = 4$.
+\end{enumerate}
+
+
+
+
+
+\end{document}
