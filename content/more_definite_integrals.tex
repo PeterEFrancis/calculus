@@ -28,9 +28,40 @@ Here's an example of each type:
      = \infty.$
 \end{itemize}
 
+\mar{For what values of $p$ does $$\int_0^1 x^p \ dx$$ converge?}
+
+When the convergence of an integral is all you care about, the following theorem can be helpful.
+
+\begin{theorem}
+If $0\leq f(x) \leq g(x)$, then $\int_a^b f(x)\ dx \leq \int_a^b g(x)\ dx$.
+\end{theorem}
+
+In particular, this means that if $\int_a^b f(x)\ dx$ diverges, then $\int_a^b g(x)\ dx$ diverges, and if $\int_a^b g(x)\ dx$ converges, then $\int_a^b f(x)\ dx$ converges.
 
 
+To finish the section, here is an algebraic property of integrals that can come in handy:
+\begin{theorem} The following are always true if each integral exists and is finite.
+\begin{enumerate}
+\item $\displaystyle\int_a^bf(x)\ dx + \int_b^cf(x)\ dx = \int_a^c f(x)\ dx$.
+\item $\displaystyle\int_a^bf(x)\ dx = -\int_b^a f(x)\ dx$.
+\end{enumerate}
+\end{theorem}
+
+\mar{Use 1 to prove 2.}
 
 \subsection{Even and Odd Functions}
+
+A function $f$ is called \textbf{even} if $f(-x)=f(x)$, and is called \textbf{odd} if $f(-x)=-f(x)$. Even functions are symmetric about the $y$-axis, and odd functions are rotationally symmetric around the origin. Therefore, if $f$ is odd,
+$$\int_{-a}^af(x)\ dx = 0$$
+since the areas bounded by $f$ to the left and right of $x=0$ differ only in sign. Similarly, if $f$ is even,
+$$\int_{-a}^af(x)\ dx = 2\int_{0}^af(x)\ dx$$
+since the areas bounded by $f$ to the left and right of $x=0$ are the same.
+Here are some examples:
+\begin{itemize}
+\item $\int_{-1}^1\sin(x)\ dx = 0$ since $\sin(-x)=-\sin(x)$.
+\item $\int_{-1}^1\cos(x)\ dx = 2\int_0^1\cos(x)\ dx$ since $\cos(-x)=\cos(x)$.
+\end{itemize}
+
+
 
 
