@@ -52,7 +52,7 @@
 \contentsline {subsection}{\numberline {9.3}Trigonometric Substitution}{39}{subsection.9.3}%
 \contentsline {section}{\numberline {10}More Definite Integrals}{41}{section.10}%
 \contentsline {subsection}{\numberline {10.1}Improper Integrals}{41}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Even and Odd Functions}{41}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.2}Even and Odd Functions}{42}{subsection.10.2}%
 \contentsline {section}{\numberline {11}Applications of Integrals}{43}{section.11}%
 \contentsline {subsection}{\numberline {11.1}Average Values}{43}{subsection.11.1}%
 \contentsline {subsection}{\numberline {11.2}Probability}{43}{subsection.11.2}%
