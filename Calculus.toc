@@ -55,14 +55,17 @@
 \contentsline {subsection}{\numberline {10.2}Even and Odd Functions}{42}{subsection.10.2}%
 \contentsline {section}{\numberline {11}Applications of Integrals}{43}{section.11}%
 \contentsline {subsection}{\numberline {11.1}Average Values}{43}{subsection.11.1}%
-\contentsline {subsection}{\numberline {11.2}Probability}{43}{subsection.11.2}%
-\contentsline {subsection}{\numberline {11.3}Volumes and Surface Area}{43}{subsection.11.3}%
-\contentsline {subsection}{\numberline {11.4}Arc Length}{43}{subsection.11.4}%
-\contentsline {subsection}{\numberline {11.5}Moments and Centroids}{43}{subsection.11.5}%
-\contentsline {subsection}{\numberline {11.6}Work}{43}{subsection.11.6}%
-\contentsline {part}{V\hspace {1em}Sequences and Series}{44}{part.5}%
-\contentsline {section}{\numberline {12}Sequences}{44}{section.12}%
-\contentsline {section}{\numberline {13}Tests for Convergence and Divergence}{44}{section.13}%
-\contentsline {section}{\numberline {14}Power Series}{47}{section.14}%
-\contentsline {subsection}{\numberline {14.1}Taylor and Maclaurin Series}{47}{subsection.14.1}%
-\contentsline {subsection}{\numberline {14.2}General Power Series}{47}{subsection.14.2}%
+\contentsline {subsubsection}{\numberline {11.1.1}Water in a tank}{43}{subsubsection.11.1.1}%
+\contentsline {subsubsection}{\numberline {11.1.2}Using the FTC and Average Slope}{43}{subsubsection.11.1.2}%
+\contentsline {subsection}{\numberline {11.2}Areas}{44}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Arc Length}{44}{subsection.11.3}%
+\contentsline {subsection}{\numberline {11.4}Probability}{45}{subsection.11.4}%
+\contentsline {subsection}{\numberline {11.5}Volumes and Surface Area}{45}{subsection.11.5}%
+\contentsline {subsection}{\numberline {11.6}Moments and Centroids}{45}{subsection.11.6}%
+\contentsline {subsection}{\numberline {11.7}Work}{45}{subsection.11.7}%
+\contentsline {part}{V\hspace {1em}Sequences and Series}{46}{part.5}%
+\contentsline {section}{\numberline {12}Sequences}{46}{section.12}%
+\contentsline {section}{\numberline {13}Tests for Convergence and Divergence}{46}{section.13}%
+\contentsline {section}{\numberline {14}Power Series}{49}{section.14}%
+\contentsline {subsection}{\numberline {14.1}Taylor and Maclaurin Series}{49}{subsection.14.1}%
+\contentsline {subsection}{\numberline {14.2}General Power Series}{49}{subsection.14.2}%
