@@ -155,6 +155,51 @@ $$L=\int_a^b\sqrt{1+f'(x)^2}\ dx.$$
 
 \subsection{Probability}
 
+Imagine we have an experiment, and every time it is performed the outcome is a real number. (Think throwing a dart at the plane, and the outcome is the $x$ coordinate of the point it lands on). 
+
+To start, the we will define an \textbf{event} to be a subset of $\R$. Given such a subset $A\subset\R$, our goal is to describe the probability that the outcome $X$ is in $A$. We denote this $\P(X\in A)$.
+
+
+For the kinds of experiments we will consider, we will assume that it is never possible to get the same outcome twice. This means that the probability of any \textit{particular} outcome is 0: for any $a\in\R$, $$\P(X\in\{a\})=\P(X=a)=0.$$ 
+This might seem paradoxical, because the dart must hit \textit{some} point. However, it should make sense since there are infinitely many possible outcomes.
+\mar{Think about this carefully.}
+
+To compute $\P(X\in A)$ in general, we need a way to describe an allocation of probability specific to the experiment that is happening. For this (of course) we use a a function! A bounded function $f:\R \to \R$ is called a \textbf{probability density function} (PDF) if it is non-negative and $\int_{\infty}^\infty f(x)\ dx= 1$.\mar{What does the condition $$\int_{\infty}^\infty f(x)\ dx= 1$$ mean in terms of probability?} 
+To compute a probability, we just have to integrate:
+$$\P(X\in A) = \int_A f(x)\ dx.$$
+This notation means that if $A$ is the union of disjoint intervals, integrate over each interval and add the results. In particular, if $A=(a,b)$, then 
+$$\P(X\in A) = \int_a^b f(x)\ dx.$$
+
+Here are some examples:
+\begin{itemize}
+\item The ``uniform'' PDF on $(0,1)$ is defined as
+
+$$f(x)=\begin{cases}1 & 0\leq x\leq 1\\ 0 & x<0\text{ or }x>1.\end{cases}$$
+
+The probability that an outcome of an experiment governed by this PDF is greater than $1/4$ is
+$$\P\left(X\in(1/4,\infty)\right)
+= \int_{\frac14}^{\infty}f(x)\ dx
+= \int_{\frac14}^{1}1\ dx + \int_{1}^{\infty}0\ dx 
+= \frac34.
+$$
+The probability that an outcome is in $(0,1/2)\cup(2/3,1)$ is
+$$\P\left(X\in(0,1/2)\cup(2/3,1)\right)
+= \int_0^{\frac12}1\ dx + \int_{\frac23}^11\ dx
+= \frac12+\frac13 = \frac56.
+$$
+
+\item  The ``exponential'' PDF is defined as
+$$f(x)=\begin{cases}0 & x < 0\\ e^{-x} & x\geq 0\end{cases}$$
+ and is often used to model the wait time between phone calls. The probability that an outcome of an experiment governed by this PDF is greater than $1/4$ is
+$$\P\left(X\in(1/4,\infty)\right)
+= \int_{\frac14}^{\infty} e^{-x}\ dx
+= e^{-\frac{1}{4}}.
+$$
+
+\mar{Draw a picture of these density functions.}
+
+
+
 \subsection{Volumes and Surface Area}
 
 

@@ -60,12 +60,12 @@
 \contentsline {subsection}{\numberline {11.2}Areas}{44}{subsection.11.2}%
 \contentsline {subsection}{\numberline {11.3}Arc Length}{44}{subsection.11.3}%
 \contentsline {subsection}{\numberline {11.4}Probability}{45}{subsection.11.4}%
-\contentsline {subsection}{\numberline {11.5}Volumes and Surface Area}{45}{subsection.11.5}%
-\contentsline {subsection}{\numberline {11.6}Moments and Centroids}{45}{subsection.11.6}%
-\contentsline {subsection}{\numberline {11.7}Work}{45}{subsection.11.7}%
-\contentsline {part}{V\hspace {1em}Sequences and Series}{46}{part.5}%
-\contentsline {section}{\numberline {12}Sequences}{46}{section.12}%
-\contentsline {section}{\numberline {13}Tests for Convergence and Divergence}{46}{section.13}%
-\contentsline {section}{\numberline {14}Power Series}{49}{section.14}%
-\contentsline {subsection}{\numberline {14.1}Taylor and Maclaurin Series}{49}{subsection.14.1}%
-\contentsline {subsection}{\numberline {14.2}General Power Series}{49}{subsection.14.2}%
+\contentsline {subsection}{\numberline {11.5}Volumes and Surface Area}{46}{subsection.11.5}%
+\contentsline {subsection}{\numberline {11.6}Moments and Centroids}{46}{subsection.11.6}%
+\contentsline {subsection}{\numberline {11.7}Work}{46}{subsection.11.7}%
+\contentsline {part}{V\hspace {1em}Sequences and Series}{47}{part.5}%
+\contentsline {section}{\numberline {12}Sequences}{47}{section.12}%
+\contentsline {section}{\numberline {13}Tests for Convergence and Divergence}{47}{section.13}%
+\contentsline {section}{\numberline {14}Power Series}{50}{section.14}%
+\contentsline {subsection}{\numberline {14.1}Taylor and Maclaurin Series}{50}{subsection.14.1}%
+\contentsline {subsection}{\numberline {14.2}General Power Series}{50}{subsection.14.2}%
