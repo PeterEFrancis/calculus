@@ -169,14 +169,15 @@ To compute a probability, we just have to integrate:
 $$\P(X\in A) = \int_A f(x)\ dx.$$
 This notation means that if $A$ is the union of disjoint intervals, integrate over each interval and add the results. In particular, if $A=(a,b)$, then 
 $$\P(X\in A) = \int_a^b f(x)\ dx.$$
-
-Here are some examples:
+The anti-derivative function
+$$F(x)=\P(X<x) = \int_{-\infty}^x f(t)\ dt$$
+is called the \textbf{cumulative distribution function} (CDF). Here are some examples:
 \begin{itemize}
 \item The ``uniform'' PDF on $(0,1)$ is defined as
-
-$$f(x)=\begin{cases}1 & 0\leq x\leq 1\\ 0 & x<0\text{ or }x>1.\end{cases}$$
-
-The probability that an outcome of an experiment governed by this PDF is greater than $1/4$ is
+$$f(x)=\begin{cases}0 & x < 0\\ 1 & 0\leq x\leq 1\\ 0 & x>1\end{cases}
+\quad\quad\text{ and } \quad\quad
+F(x)=\begin{cases}0 & x < 0\\ x & 0\leq x\leq 1\\ 1 & x>1\end{cases}$$
+is its CDF. The probability that an outcome of an experiment governed by this PDF is greater than $1/4$ is
 $$\P\left(X\in(1/4,\infty)\right)
 = \int_{\frac14}^{\infty}f(x)\ dx
 = \int_{\frac14}^{1}1\ dx + \int_{1}^{\infty}0\ dx 
@@ -189,21 +190,25 @@ $$\P\left(X\in(0,1/2)\cup(2/3,1)\right)
 $$
 
 \item  The ``exponential'' PDF is defined as
-$$f(x)=\begin{cases}0 & x < 0\\ e^{-x} & x\geq 0\end{cases}$$
- and is often used to model the wait time between phone calls. The probability that an outcome of an experiment governed by this PDF is greater than $1/4$ is
+$$f(x)=\begin{cases}0 & x < 0\\ e^{-x} & x\geq 0\end{cases}
+\quad\quad\text{ and } \quad\quad
+F(x)=\begin{cases}0 & x < 0\\1- e^{-x} & x\geq 0\end{cases}$$
+is its CDF. This PDF is often used to model the wait time between phone calls. The probability that an outcome of an experiment governed by this PDF is greater than $1/4$ is
 $$\P\left(X\in(1/4,\infty)\right)
 = \int_{\frac14}^{\infty} e^{-x}\ dx
 = e^{-\frac{1}{4}}.
 $$
 
-\mar{Draw a picture of these density functions.}
+
+
+\mar{Draw a picture of these PDFs and CDFs.}
 
 
 
 \subsection{Volumes and Surface Area}
 
 
-
 \subsection{Moments and Centroids}
+
 
 \subsection{Work}
