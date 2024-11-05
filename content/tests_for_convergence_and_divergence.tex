@@ -1,27 +1,17 @@
-\section{Sequences}
-
-A \textbf{sequence} of real numbers is an ordered and infinite list of real numbers.
-
-
-
 \section{Tests for Convergence and Divergence}
 
-
-
-Let $(a_n)$ be a sequence, and define a new sequence $(s_n)$ of ``partial sums'' by
-$$s_n=\sum_{i=1}^n a_i = a_1 + \cdots + a_n.$$
-We write 
-$$\lim _{n \to \infty} s_{n}=\lim _{n \to \infty} \sum_{i=1}^{n} a_{i}=\sum_{i=1}^{\infty} a_{i}=\sum a_n$$
-and call $\sum a_n$ an \textbf{infinite series}. We are interested in when this quantity is finite:
-\begin{itemize}
-    \item If $\lim _{n \to \infty} s_{n}$ is finite, we say that $\sum a_n$ is \textbf{convergent} (or that $\sum a_n$ converges).
-    \item  When $\lim _{n \to \infty} s_{n}$ is infinite, we say that $\sum a_n$ is \textbf{divergent} (or that $\sum a_n$ diverges).
-\end{itemize}
-
-\vspace{.5em}
+The following theorems are all used to determine when a series is convergent.
 
 \begin{thm}[Divergence Test] If $\displaystyle \lim_{n\to\infty}a_n\neq 0$, then $\sum a_n$ will diverge.
 \end{thm}
+Be careful: the converse of this theorem is not true! (If the limit of $a_n$ is 0, that does not mean that $\sum a_n$ converges). \mar{While reading forward, look for a counter-example for the converse.} Some examples:
+
+\begin{itemize}
+\item $\lim\frac{2n}{n+1}=2\neq 0$, so $\displaystyle\sum_{n=1}^\infty \frac{2n}{n+1}$ diverges.
+\item $\lim n = \infty\neq 0$, so $\displaystyle\sum_{n=1}^\infty n$ diverges.
+\item $\lim\ (-1)^n$ DNE, so $\displaystyle\sum_{n=1}^\infty (-1)^n$ diverges.
+
+\end{itemize}
 
 
 \begin{thm}[Integral Test]
@@ -29,28 +19,45 @@ Suppose that $f(x)$ is a continuous, positive, and decreasing function on the in
 $$\int_k^\infty f(x)\ dx\text{ is convergent} \iff \sum_{n=k}^\infty a_n\text{ is convergent}.$$
 \end{thm}
 
+\begin{itemize}
+\item $\displaystyle \sum_{n=2}^\infty \frac{1}{n\ln(n)}$ diverges since $\displaystyle\int_2^\infty \frac{1}{x\ln(x)}\ dx$ diverges.
+\item $\displaystyle \sum_{n=7}^\infty \frac{1}{n\ln(n)^2}$ converges since $\displaystyle\int_7^\infty \frac{1}{x\ln(x)^2}\ dx=\frac{1}{\ln(7)}<\infty$.
+\end{itemize}
+
 
 \begin{thm}[The $p$-series Test]
-If $k>0$, then $\sum_{n=k}^\infty\frac{1}{n^p}$ converges if $p>1$ and diverges if $p\leq 1$.
+\phantom{}
+
+If $k>0$, then $\displaystyle\sum_{n=k}^\infty\frac{1}{n^p}$ converges if $p>1$ and diverges if $p\leq 1$.
 \end{thm}
 
 
+\begin{itemize}
+\item $\displaystyle \sum_{n=1}^\infty \frac{1}{n^3}$ converges since $p=3>1$.
+\item $\displaystyle \sum_{n=1}^\infty \frac{1}{n}$ diverges since $p=1$.
+\item $\displaystyle \sum_{n=1}^\infty \frac{1}{\sqrt{n}}$ diverges since $p=\frac{1}{2}<1$.
+\end{itemize}
 
 
 \begin{thm}[Comparison Test]
-Suppose that we have two series $\sum a_n$ and $\sum b_n$, with $0\leq a_n\leq b_n$ for all $n$. Then
+If $0\leq a_n\leq b_n$ for all $n$, then
 $$\sum b_n\text{ converges}\implies \sum a_n\text{ converges}$$
 and (by contraposition)
 $$\sum a_n\text{ diverges}\implies \sum b_n\text{ diverges}.$$
 \end{thm}
 
 
+\begin{itemize}
+\item $\displaystyle \sum_{n=1}^\infty \frac{\sin(n)^2}{n^3} \leq \sum_{n=1}^\infty \frac{1}{n^3}$ converges.
+\item $\displaystyle \sum_{n=1}^\infty \frac{n^2+10}{n^3} \geq \sum_{n=1}^\infty \frac{n^2}{n^3}=\sum_{n=1}^\infty \frac{1}{n}$ diverges.
+\end{itemize}
+
 
 
 \begin{thm}[Limit Comparison Test]
 Suppose that we have two series $\sum a_n$ and $\sum b_n$ with $a_n\geq 0$ and $b_n > 0$ for all $n$. Define
 $$c=\lim_{n\to\infty}\frac{a_n}{b_n}.$$
-If $c$ is positive and finite, then either both series converge of both series diverge.
+If $c$ is positive and finite, then either both series converge or both series diverge.
 \end{thm}
 
 
@@ -65,13 +72,14 @@ the series $\sum a_{n}$ is convergent.
 \end{thm}
 
 
+
 \begin{thm}[Absolute Convergence Test]
-\phantom{}
-\begin{itemize}[leftmargin=1em]
-    \item If the series $\sum |a_n|$ is convergent, then $\sum a_n$ is called \textbf{absolutely convergent}, and must also be convergent.
-    \item If $\sum a_n$ converges but $\sum |a_n|$ diverges, then the series $\sum a_n$ is called \textbf{conditionally convergent}.
-\end{itemize}
+$$\sum |a_n| \text{ converges}\implies \sum a_n\text{ converges}.$$
 \end{thm}
+
+If $\sum |a_n|$ converges, then $\sum a_n$ is called \textbf{absolutely convergent}. If not, $\sum a_n$ is called \textbf{conditionally convergent}.
+
+
 
 
 \begin{thm}[Ratio Test]

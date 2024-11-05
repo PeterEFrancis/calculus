@@ -65,7 +65,8 @@
 \contentsline {subsection}{\numberline {11.7}Work}{46}{subsection.11.7}%
 \contentsline {part}{V\hspace {1em}Sequences and Series}{47}{part.5}%
 \contentsline {section}{\numberline {12}Sequences}{47}{section.12}%
-\contentsline {section}{\numberline {13}Tests for Convergence and Divergence}{47}{section.13}%
-\contentsline {section}{\numberline {14}Power Series}{50}{section.14}%
-\contentsline {subsection}{\numberline {14.1}Taylor and Maclaurin Series}{50}{subsection.14.1}%
-\contentsline {subsection}{\numberline {14.2}General Power Series}{50}{subsection.14.2}%
+\contentsline {section}{\numberline {13}Series}{47}{section.13}%
+\contentsline {section}{\numberline {14}Tests for Convergence and Divergence}{48}{section.14}%
+\contentsline {section}{\numberline {15}Power Series}{51}{section.15}%
+\contentsline {subsection}{\numberline {15.1}Taylor and Maclaurin Series}{51}{subsection.15.1}%
+\contentsline {subsection}{\numberline {15.2}General Power Series}{51}{subsection.15.2}%
