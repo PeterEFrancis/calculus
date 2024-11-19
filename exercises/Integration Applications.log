@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.19)  6 SEP 2024 11:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.19)  15 NOV 2024 00:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -498,14 +498,14 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 36.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
-./Integration Applications.tex:79: LaTeX Error: \begin{enumerate} on input line
- 73 ended by \end{document}.
+./Integration Applications.tex:80: LaTeX Error: \begin{enumerate} on input line
+ 74 ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.79 \end{document}
+l.80 \end{document}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -528,11 +528,11 @@ ged.
  )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 73 (\begingroup)
+### semi simple group (level 1) entered at line 74 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 9766 strings out of 474116
- 149341 string characters out of 5743682
+ 9767 strings out of 474116
+ 149348 string characters out of 5743682
  1942187 words of memory out of 5000000
  31985 multiletter control sequences out of 15000+600000
  583089 words of font info for 57 fonts, out of 8000000 for 9000
@@ -545,10 +545,10 @@ live/2024/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2024/t
 exmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2024/texmf-dist/f
 onts/type1/public/lm/lmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/p
 ublic/lm/lmsy10.pfb>
-Output written on "Integration Applications.pdf" (1 page, 123619 bytes).
+Output written on "Integration Applications.pdf" (1 page, 123724 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
- 21 named destinations out of 1000 (max. 500000)
+ 101 PDF objects out of 1000 (max. 8388607)
+ 82 compressed objects within 1 object stream
+ 22 named destinations out of 1000 (max. 500000)
  57 words of extra memory for PDF output out of 10000 (max. 10000000)
 

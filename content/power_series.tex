@@ -1,14 +1,95 @@
 \section{Power Series}
 
-% A \textbf{power series} can  be thought of as an infinite-degree polynomial. There are several uses of power series, but we will focus on power series that arise as approximations of other functions.
-
-
-
 
 \subsection{General Power Series}
 
+A \textbf{power series} is a series of the form
+$$\sum_{n=0}^\infty a_n(x-c)^n,$$
+where $x$ is a variable. This means that the series itself is a function of $x$, so we can write 
+$$f(x)=\sum_{n=0}^\infty a_n(x-c)^n.$$
+For some values of $x$, the power series will converge, and for others it will diverge. In other words, the domain of $f$ is the set of $x\in\R$ for which $\sum_{n=0}^\infty a_n(x-c)^n$ converges. The main topic in this section is to figure out the domain of $f$, which is called the \textbf{interval of convergence}.
 
-\subsection{Taylor and Maclaurin Series}
-% Previously, you learned that ``near $x=a$'',
-% $$f(x)\approx $$
+The tool we use to find the interval of convergence is the ratio test: define
+$$L(x)=\lim \left|\frac{a_{n+1}(x-c)^{n+1}}{a_{n}(x-c)^n}\right|=|x-c|\cdot\lim \left|\frac{a_{n+1}}{a_{n}}\right|.$$
+We know that the power series converges at the values of $x$ for which $L(x) < 1$ and diverges when $L(x) > 1$. That is, the domain of $f$ contains every value of $x$ for which
+$$|x-c|<\lim\left|\frac{a_{n}}{a_{n+1}}\right|.$$\mar{Write out this inequality as an interval. I.e. $$x\in(\dots).$$}
+The value $c$ is called the \textbf{center}, and $\lim\left|\frac{a_{n}}{a_{n+1}}\right|$ is called the \textbf{radius of convergence}. Since the ratio test doesn't say anything about when $L(x)=1$ (the endpoints of the interval of convergence), we will need to test those cases separately. Here are some examples:
+\begin{itemize}[leftmargin=0em]
+\item $\displaystyle\sum_{n=0}^\infty \frac{(-1)^n}{n}(x-1)^n$
+
+Use the ratio test and compute
+$$L(x)=|x-1|\cdot\lim\left|\frac{(-1)^{n+1}}{n+1}\frac{n}{(-1)^n}\right|=|x-1|.$$
+Then $L(x)<1$ (the series converges) when $x\in (0, 2)$. Now we test the endpoints $x=0,2$ directly:
+$$\sum_{n=0}^\infty \frac{(-1)^n}{n}(0-1)^n=\sum_{n=0}^\infty1$$
+diverges, and
+$$\sum_{n=0}^\infty \frac{(-1)^n}{n}(2-1)^n=\sum_{n=0}^\infty \frac{(-1)^n}{n}$$
+converges. Therefore $x=2$ is included in the interval of convergence, but $x=0$ is not. The interval of convergence is $(0,2]$, the radius of convergence is $1$ and the center is $x=1$.
+
+\item $\displaystyle\sum_{n=0}^\infty \frac{x^n}{n!}$.
+
+Compute
+$$L(x)=|x|\cdot\lim\left|\frac{1}{(n+1)!}\frac{n!}{1}\right|=|x|\cdot\lim\left|\frac{1}{n+1}\right|=0.$$
+Then $L(x)<1$ (the series converges) for all $x\in R$. Therefore, the interval of convergence is $(-\infty,\infty)$, the radius of convergence is $\infty$ and the center is $x=0$.
+
+\item $f(x)=\displaystyle\sum_{n=0}^\infty n! x^n$.
+Compute
+$$L(x)=|x|\cdot\lim\left|\frac{(n+1)!}{n!}\right|=|x|\cdot\lim\left|n+1\right|.$$
+Then $L(0)=0<1$ and $L(x)=\infty$ (the series diverges) for all $x\neq 0$. Therefore, the interval of convergence is $(0,0)=\{0\}$, the radius of convergence is $0$ and the center is $x=0$.
+
+
+\end{itemize}
+
+
+\subsection{Taylor Series}
+
+Previously, you learned that ``near $x=a$'',
+$$f(x)\approx f(a)+f'(a)(x-a).$$
+Notice that the left and right hand side agree in their $0$th and $1$st derivatives at $x=a$. This explains why linear approximation is a good one...but we can make it better: we can make the approximation agree with the $f(x)$ in its $2$nd derivative at $x=a$ as well:
+$$f(x)\approx f(a)+f'(a)(x-a)+\frac{f''(a)}{2}(x-a)^2.$$
+\mar{Check that the $0$th, $1$st, and $2$nd derivatives of this $2$nd degree polynomial approximation agrees with $f$ at $x=a$.}
+Note that the 2 in the denominator is there for power rule to cancel with. In that same spirit, we can continue adding more terms to make the approximation agree with the function at higher derivatives:
+$$f(x) \approx f(a)+f^{(1)}(a)(x-a)+\frac{f^{(2)}(a)}{2}(x-a)^2+\frac{f^{(3)}(a)}{2\cdot 3}(x-a)^3+\cdots+\frac{f^{(k)}(a)}{k!}(x-a)^k.$$
+Writing this in sumation notation,
+$$f(x)\approx \sum_{n=0}^k\frac{f^{(n)}(a)}{n!}(x-a)^n.$$
+This is called the \textbf{degree-$k$ Taylor polynomial} for $f$ at $a$. Note that $f^{(k)}(a)$ denotes the $k$th derivative of $f$ evaluated at $a$. Of course we can take $k$ to infinity, and by doing so we will get equality on a particular interval of convergence around $x=a$:
+$$f(x)= \sum_{n=0}^\infty\frac{f^{(n)}(a)}{n!}(x-a)^n.$$
+This is called the \textbf{Taylor series} for $f$ at $a$. When $a=0$, the series is called a \textbf{Maclaurin series}. The following table lists various common Taylor series.
+
+\begin{center}
+\def\arraystretch{1.2}
+\begin{tabular}{@{}llc@{}}
+\toprule[0.4mm]
+Function & Taylor Series & Interval of Convergence\\
+\midrule\\
+$e^x$ & \displaystyle\sum_{n=0}^\infty\frac{1}{n!} x^n$ & $\R$ \\\\
+$\sin(x)$ & \displaystyle\sum_{n=0}^\infty\frac{(-1)^n}{(2n+1)!}x^{2n+1}$ & $\R$ \\\\
+$\cos(x)$ & \displaystyle\sum_{n=0}^\infty\frac{(-1)^n}{(2n)!}x^{2n}$ & $\R$ \\\\
+$\frac{1}{1-x}$ & \displaystyle\sum_{n=0}^\infty x^n$ & $(-1,1)$ \\\\
+%$\ln(x)$ & \displaystyle\sum_{n=1}^\infty \frac{\left(-1\right)^{n+1}}{n}\left(x-1\right)^{n}$ & $(0,2)$ \\\\
+$\ln(1-x)$ & \displaystyle\sum_{n=1}^\infty \frac{-1}{n}x^{n}$ & $(-1,1)$ \\\\
+$(x+1)^k$ & \displaystyle\sum_{n=0}^\infty{k\choose n}x^{n}$ & $\R$ \\\\
+\bottomrule[0.4mm]
+\end{tabular}
+\end{center}
+\mar{Verify the Taylor series in the table.}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

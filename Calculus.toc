@@ -71,4 +71,4 @@
 \contentsline {subsection}{\numberline {13.3}Estimating Sums}{51}{subsection.13.3}%
 \contentsline {section}{\numberline {14}Power Series}{52}{section.14}%
 \contentsline {subsection}{\numberline {14.1}General Power Series}{52}{subsection.14.1}%
-\contentsline {subsection}{\numberline {14.2}Taylor and Maclaurin Series}{52}{subsection.14.2}%
+\contentsline {subsection}{\numberline {14.2}Taylor Series}{53}{subsection.14.2}%
