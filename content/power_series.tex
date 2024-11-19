@@ -49,8 +49,9 @@ $$f(x)\approx f(a)+f'(a)(x-a)+\frac{f''(a)}{2}(x-a)^2.$$
 \mar{Check that the $0$th, $1$st, and $2$nd derivatives of this $2$nd degree polynomial approximation agrees with $f$ at $x=a$.}
 Note that the 2 in the denominator is there for power rule to cancel with. In that same spirit, we can continue adding more terms to make the approximation agree with the function at higher derivatives:
 $$f(x) \approx f(a)+f^{(1)}(a)(x-a)+\frac{f^{(2)}(a)}{2}(x-a)^2+\frac{f^{(3)}(a)}{2\cdot 3}(x-a)^3+\cdots+\frac{f^{(k)}(a)}{k!}(x-a)^k.$$
-Writing this in sumation notation,
+Writing this in summation notation,
 $$f(x)\approx \sum_{n=0}^k\frac{f^{(n)}(a)}{n!}(x-a)^n.$$
+\mar{Write down the 5th degree Taylor polynomial and take all of its derivatives. Plug in $x=a$ for each one. Notice why the factorial is useful in the denominator.}
 This is called the \textbf{degree-$k$ Taylor polynomial} for $f$ at $a$. Note that $f^{(k)}(a)$ denotes the $k$th derivative of $f$ evaluated at $a$. Of course we can take $k$ to infinity, and by doing so we will get equality on a particular interval of convergence around $x=a$:
 $$f(x)= \sum_{n=0}^\infty\frac{f^{(n)}(a)}{n!}(x-a)^n.$$
 This is called the \textbf{Taylor series} for $f$ at $a$. When $a=0$, the series is called a \textbf{Maclaurin series}. The following table lists various common Taylor series.
