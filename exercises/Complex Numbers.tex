@@ -1,0 +1,51 @@
+\documentclass{article}
+
+% set font encoding for PDFLaTeX, XeLaTeX, or LuaTeX
+\usepackage{ifxetex,ifluatex}
+\if\ifxetex T\else\ifluatex T\else F\fi\fi T%
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+\usepackage{hyperref, amssymb, amsmath, multicol}
+
+\usepackage[margin=1in]{geometry}
+
+\pagenumbering{gobble}
+
+
+\newcommand{\R}{\mathbb{R}}
+
+
+\begin{document}
+
+
+\begin{center}
+\begin{Huge}Complex Numbers Exercises\end{Huge}
+\end{center}
+
+\begin{enumerate}
+\item For an arbitrary $z=x+iy$, when is $\theta=\tan^{-1}\left(\frac{y}{x}\right)$ and when is it not?
+ 
+\item Two complex numbers $z$ and $w$ are given by $z=3+4 i$ and $w=2-i$. Plot (a) $z+w$, (b) $w-z$, (c) $wz$, (d) $z / w$, (e) $z^{*} w+w^{*} z$, and (f) $w^{2}$.)
+
+\item  Find the polar representation of the following complex numbers:
+\begin{enumerate}
+\item $-\sqrt{3}+i$
+\item $2-2 i$
+\item $-i 3 / 2$
+\item $(-1-\sqrt{3} i) / 2$
+\item $i$
+\item $-2$
+\end{enumerate}
+
+\item Does $z_{1} z_{2}=r_{1} r_{2} e^{i\left(\theta_{1}+\theta_{2}\right)}$ hold for $z_{1}=r_{1} e^{i \theta_{1}}$ and $z_{2}=r_{2} e^{i \theta_{2}}$?  Check that with $z_{1}=\sqrt{3}+i$ and $z_{2}=(3 / 2)(1+i \sqrt{3})$.
+
+\item By considering the real and imaginary parts of the product $e^{i A} e^{i B}$ prove the standard formulas for $\cos (A+B)$ and $\sin (A+B)$.
+
+
+
+\end{document}

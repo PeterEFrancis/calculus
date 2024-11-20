@@ -171,7 +171,20 @@ This notation means that if $A$ is the union of disjoint intervals, integrate ov
 $$\P(X\in A) = \int_a^b f(x)\ dx.$$
 The anti-derivative function
 $$F(x)=\P(X<x) = \int_{-\infty}^x f(t)\ dt$$
-is called the \textbf{cumulative distribution function} (CDF). Here are some examples:
+is called the \textbf{cumulative distribution function} (CDF).
+
+Two statistics often used in probability are the \textbf{expected value} and the \textbf{variance}. The expected value of a PDF (if it exists) is the average value of an outcome. In finite cases, we compute the average of a finite data set with $n$ elements
+$$\{\underbrace{x_1,\dots, x_1}_{a_1}, \underbrace{x_2,\dots, x_2}_{a_2},\dots, \underbrace{x_k,\dots, x_k}_{a_k}\}$$
+by computing
+$$\mu=\frac{1}{n}\sum_{i=1}^ka_ix_i=\sum_{i=1}^k\frac{a_i}{n}x_i =\sum_{i=1}^k\P(x_i)x_i,$$
+the sum of the unique elements, each multiplied by its probability of occurring in the data set. In the continuous case we analogously compute the expected value as 
+$$\mu=\int_{-\infty}^\infty xf(x)\ dx.$$
+
+The variance of a PDF (if it exists) is the average squared distance of an outcome from the expected value. Therefore the variance is computes as
+$$\sigma^2 = \int_{-\infty}^\infty (x-\mu)^2f(x)\ dx.$$
+The square root of the variance is called the \textbf{standard deviation}.
+
+Here are some examples:
 \begin{itemize}
 \item The ``uniform'' PDF on $(0,1)$ is defined as
 $$f(x)=\begin{cases}0 & x < 0\\ 1 & 0\leq x\leq 1\\ 0 & x>1\end{cases}
@@ -189,6 +202,11 @@ $$\P\left(X\in(0,1/2)\cup(2/3,1)\right)
 = \frac12+\frac13 = \frac56.
 $$
 
+The expected value of the uniform PDF is
+$$\mu=\int_{0}^1 x\ dx=\frac{1}{2},$$
+and the variance is
+$$\sigma^2 = \int_{0}^1 \left(x-\frac{1}{2}\right)^2\ dx=\frac{1}{12}.$$
+
 \item  The ``exponential'' PDF is defined as
 $$f(x)=\begin{cases}0 & x < 0\\ e^{-x} & x\geq 0\end{cases}
 \quad\quad\text{ and } \quad\quad
@@ -198,6 +216,10 @@ $$\P\left(X\in(1/4,\infty)\right)
 = \int_{\frac14}^{\infty} e^{-x}\ dx
 = e^{-\frac{1}{4}}.
 $$
+The expected value of the uniform PDF is
+$$\mu=\int_{0}^\infty xe^x\ dx=1,$$
+and the variance is
+$$\sigma^2 = \int_{0}^\infty \left(x-1\right)^2e^{-x}\ dx=1.$$
 
 \end{itemize}
 
@@ -207,9 +229,6 @@ $$
 
 
 \subsection{Volumes and Surface Area}
-
-
-\subsection{Moments and Centroids}
 
 
 \subsection{Work}

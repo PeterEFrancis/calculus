@@ -1,0 +1,129 @@
+\newpage
+\section{Complex Numbers}
+
+A \textbf{complex number} is of the form $a+bi$, where $a$ and $b$ are real numbers and $i=\sqrt{-1}$ is the complex unit (so $i^2=-1$).\mar{Why are all real numbers actually complex numbers?} \mar{What is $i^n$ for $n=0,1,2,3,4,\dots$?} Similar to the way that real numbers can be visualized on a line, a complex number $x+yi$ can be visualized as the point $(x,y)$ on a plane.
+
+\begin{figure}[H]
+  \begin{center}
+    \fbox{\resizebox{!}{2in}{
+        \tikzset{every picture/.style={line width=0.75pt}}
+      \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+        %uncomment if require: \path (0,444); %set diagram left start at 0, and has height of 444
+
+        %Shape: Axis 2D [id:dp7259116322173234]
+        \draw  (270.5,209) -- (455,209)(307.5,66) -- (307.5,246) (448,204) -- (455,209) -- (448,214) (302.5,73) -- (307.5,66) -- (312.5,73)  ;
+        %Straight Lines [id:da9147059998992291]
+        \draw  [dash pattern={on 0.84pt off 2.51pt}]  (393,209.6) -- (393,131.6) ;
+        \draw [shift={(393,131.6)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+
+        %Straight Lines [id:da605780494745993]
+        \draw  [dash pattern={on 0.84pt off 2.51pt}]  (307.3,131.6) -- (393,131.6) ;
+
+
+        %Straight Lines [id:da26964787119937217]
+        \draw    (393,131.6) -- (306.91,209.79) ;
+
+
+
+        % Text Node
+        \draw (393,216.6) node   {$x$};
+        % Text Node
+        \draw (298,131.6) node   {$y$};
+        % Text Node
+        \draw (431,116.6) node   {$z=x+iy$};
+
+      \end{tikzpicture}
+    }}
+  \end{center}
+  \caption{Plotting a Complex Number}
+\end{figure}
+
+The horizontal axis is called the real axis and the vertical axis is called the imaginary axis. For an arbitrary complex number $z=x+iy$, we define
+\begin{itemize}
+  \item $\text{Re}(z)=x$, ``the real part of $z$,'' and
+  \item $\text{Im}(z)=y$, ``the imaginary part of $z$.'' \mar{Remember that Im$(z)$ is a real number!}
+\end{itemize}
+We can do arithmetic with complex numbers too. For any complex numbers $z_1=x_1+iy_1$ and $z_2=x_2+iy_2$, and any real number $c$, we can do the following operations:
+
+\mar{Verify these operations using the fact that $i^2=-1$.}
+
+\begin{center}
+\def\arraystretch{1.4}
+\begin{tabular}{@{}ll@{}}
+\toprule[0.4mm]
+\textbf{addition} & $z_1+ z_2=(x_1+ x_2)+i(y_1+ y_2)$\\
+\textbf{subtraction} & $z_1- z_2=(x_1- x_2)+i(y_1- y_2)$\\
+\textbf{scalar multiplication} & $c z_1=(cx_1)+i(cy_2)$\\
+\textbf{multiplication} & $z_1 \cdot z_2=(x_1x_2- y_1y_2)+i(x_1y_2+y_1x_2)$\\
+\textbf{division} & $\displaystyle\frac{z_1}{z_2}=\left(\frac{x_1x_2+y_2y_2}{x_2^2+y_2^2}\right)+i\left(\frac{x_2y_1-x_1y_2}{x_2^2+y_2^2}\right)$\\
+\bottomrule[0.4mm]
+\end{tabular}
+\end{center}
+\mar{Do some examples of each operation and plot the results. What do the different operations correspond to visually on the plane?}
+
+The \textbf{complex conjugate} of a complex number $z=x+iy$ is the complex number $z^*=x-iy$, which is the reflection of $z$ over the real axis. The \textbf{modulus} of a complex number $z$ is written $|z|$ and is defined to be the distance of $z$ from the origin:
+$$|z|=\sqrt{\text{Re}^2(x)+\text{Im}^2(x)}.$$
+For an arbitrary $z=x+iy$, it is always true that\mar{Show that $\frac{z_1}{z_2}=\frac{z_1\cdot z_2^*}{|z_2|^2}$.}
+$$z^*\cdot z =(x+iy)(x-iy) = x^2+y^2=|z|^2.$$
+\mar{What is $(z^*)^*$ for any complex $z$? What is $z^*$ for any real $z$?}
+
+We can also write complex numbers using a polar representation.
+
+
+\begin{figure}[H]
+  \centering
+    \resizebox{!}{2in}{\fbox{
+
+        \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
+
+      \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+        %uncomment if require: \path (0,444); %set diagram left start at 0, and has height of 444
+
+        %Shape: Axis 2D [id:dp7259116322173234]
+        \draw  (270.5,209) -- (455,209)(307.5,66) -- (307.5,246) (448,204) -- (455,209) -- (448,214) (302.5,73) -- (307.5,66) -- (312.5,73)  ;
+        %Straight Lines [id:da9147059998992291]
+        \draw  [dash pattern={on 0.84pt off 2.51pt}]  (393,209.6) -- (393,131.6) ;
+        \draw [shift={(393,131.6)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+
+        %Straight Lines [id:da605780494745993]
+        \draw  [dash pattern={on 0.84pt off 2.51pt}]  (307.3,131.6) -- (393,131.6) ;
+
+
+        %Straight Lines [id:da26964787119937217]
+        \draw    (393,131.6) -- (306.91,209.79) ;
+
+
+
+        % Text Node
+        \draw (393,216.6) node   {$x$};
+        % Text Node
+        \draw (298,131.6) node   {$y$};
+        % Text Node
+        \draw (431,116.6) node   {$z=x+iy$};
+        % Text Node
+        \draw (330,199) node   {$\theta $};
+        % Text Node
+        \draw (343,158) node   {$|z|$};
+
+
+      \end{tikzpicture}
+    }}
+  \caption{Polar Representation of Complex Numbers}
+\end{figure}
+
+ If $\theta$ is the angle between the complex `vector', $z$, and the real axis and $r=|z|$, then $x=r\cos\theta$ and $y=r\sin\theta$. Then we can use Euler's formula to write
+$$z=x+iy=r\cos\theta+ir\sin\theta = r(\cos\theta+i\sin\theta)=re^{i\theta}.$$
+
+
+% \begin{tcolorbox}
+% \begin{example}
+% Find the polar representation and the complex conjugate (in polar representation) of $z=\sqrt{3}+i$.
+
+% SOLUTION. Since $x=r\cos\theta$ and $y=r\sin\theta$ and $z$ is in the first quadrant, we have that $$\theta=\tan^{-1}\left(\frac{1}{\sqrt{3}}\right)=\frac{\pi}{6},\ \text{and}$$
+% $$r=\sqrt{(\sqrt{3})^2+(1)^2}=\sqrt{4}=2.$$
+% So, we have that $\sqrt{3}+i=2e^{-i\pi/6}$. The complex conjugate is $(2e^{-i\pi/3})^*=2e^{i\pi/6}$. $\qed$
+% \end{example}
+
+% \end{tcolorbox}
+
+

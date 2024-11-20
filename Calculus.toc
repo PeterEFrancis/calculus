@@ -61,8 +61,7 @@
 \contentsline {subsection}{\numberline {11.3}Arc Length}{44}{subsection.11.3}%
 \contentsline {subsection}{\numberline {11.4}Probability}{45}{subsection.11.4}%
 \contentsline {subsection}{\numberline {11.5}Volumes and Surface Area}{46}{subsection.11.5}%
-\contentsline {subsection}{\numberline {11.6}Moments and Centroids}{46}{subsection.11.6}%
-\contentsline {subsection}{\numberline {11.7}Work}{46}{subsection.11.7}%
+\contentsline {subsection}{\numberline {11.6}Work}{46}{subsection.11.6}%
 \contentsline {part}{V\hspace {1em}Sequences and Series}{47}{part.5}%
 \contentsline {section}{\numberline {12}Sequences}{47}{section.12}%
 \contentsline {section}{\numberline {13}Series}{47}{section.13}%
@@ -73,3 +72,6 @@
 \contentsline {subsection}{\numberline {14.1}General Power Series}{52}{subsection.14.1}%
 \contentsline {subsection}{\numberline {14.2}Taylor Series}{53}{subsection.14.2}%
 \contentsline {subsection}{\numberline {14.3}Estimating Error: Taylor's Inequality}{54}{subsection.14.3}%
+\contentsline {part}{VI\hspace {1em}Appendix}{56}{part.6}%
+\contentsline {section}{\numberline {15}Moments and Centroids}{56}{section.15}%
+\contentsline {section}{\numberline {16}Complex Numbers}{60}{section.16}%
