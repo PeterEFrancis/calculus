@@ -75,8 +75,30 @@ $(x+1)^k$ & \displaystyle\sum_{n=0}^\infty{k\choose n}x^{n}$ & $\R$ \\\\
 \mar{Verify the Taylor series in the table.}
 
 
+\subsection{Estimating Error: Taylor's Inequality}
 
+\begin{thm}[Taylor's Inequality]
+Suppose 
+$$S(x)=\displaystyle \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n\quad\quad\text{and}\quad\quad S_k(x)=\displaystyle \sum_{n=0}^k \frac{f^{(n)}(a)}{n!}(x-a)^n.$$
+If 
+$$\left|f^{(k+1)}(x)\right|\leq M\quad\quad\text{for all }x\in [a-d,a+d],$$
+then
+$$|S(x)-S_k(x)|\leq \frac{M}{(k+1)!}|x-a|^{k+1}\quad\quad\text{for all }x\in [a-d,a+d].$$
+\end{thm}
+\mar{Draw a picture of the interval $[a-d,a+d]$.}
 
+Given some error $\epsilon>0$, you might want to find a value of $d$ for which 
+$$|S(x)-S_k(x)|<\epsilon\quad\quad\text{for all } x\in [a-d, a+d].$$
+To do this, start by choosing some $d_0$ for which 
+$$\left|f^{(k+1)}(x)\right| \leq M\quad\quad\text{for all }x\in [a-d_0,a+d_0].$$
+Then for the same values of $x$,
+$$|S(x)-S_k(x)|\leq \frac{M}{(k+1)!}|x-a|^{k+1}.$$
+If we want this quantity to be less than $\epsilon$, we can take
+$$|x-a|<\sqrt[k+1]{\epsilon\cdot\frac{(k+1)!}{M}}.$$
+\mar{Check the algebra here.}
+Thus the $d$ we are after is
+$$d=\min\left(d_0, \sqrt[k+1]{\epsilon\cdot\frac{(k+1)!}{M}}\right).$$
+This minimum is necessary since either $d_0$ is small enough, or the interval needs to be shrunk further to $\sqrt[k+1]{\epsilon\cdot\frac{(k+1)!}{M}}$.
 
 
 

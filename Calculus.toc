@@ -72,3 +72,4 @@
 \contentsline {section}{\numberline {14}Power Series}{52}{section.14}%
 \contentsline {subsection}{\numberline {14.1}General Power Series}{52}{subsection.14.1}%
 \contentsline {subsection}{\numberline {14.2}Taylor Series}{53}{subsection.14.2}%
+\contentsline {subsection}{\numberline {14.3}Estimating Error: Taylor's Inequality}{54}{subsection.14.3}%
