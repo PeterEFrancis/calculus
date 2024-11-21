@@ -50,9 +50,9 @@ $$f(x)\approx f(a)+f'(a)(x-a)+\frac{f''(a)}{2}(x-a)^2.$$
 Note that the 2 in the denominator is there for power rule to cancel with. In that same spirit, we can continue adding more terms to make the approximation agree with the function at higher derivatives:
 $$f(x) \approx f(a)+f^{(1)}(a)(x-a)+\frac{f^{(2)}(a)}{2}(x-a)^2+\frac{f^{(3)}(a)}{2\cdot 3}(x-a)^3+\cdots+\frac{f^{(k)}(a)}{k!}(x-a)^k.$$
 Writing this in summation notation,
-$$f(x)\approx \sum_{n=0}^k\frac{f^{(n)}(a)}{n!}(x-a)^n.$$
+$$f(x)\approx T_k(x)=\sum_{n=0}^k\frac{f^{(n)}(a)}{n!}(x-a)^n.$$
 \mar{Write down the 5th degree Taylor polynomial and take all of its derivatives. Plug in $x=a$ for each one. Notice why the factorial is useful in the denominator.}
-This is called the \textbf{degree-$k$ Taylor polynomial} for $f$ at $a$. Note that $f^{(k)}(a)$ denotes the $k$th derivative of $f$ evaluated at $a$. Of course we can take $k$ to infinity, and by doing so we will get equality on a particular interval of convergence around $x=a$:
+The function $T_k(x)$ is called the \textbf{degree-$k$ Taylor polynomial} for $f$ at $a$. Note that $f^{(k)}(a)$ denotes the $k$th derivative of $f$ evaluated at $a$. Of course we can take $k$ to infinity, and by doing so we will get equality on a particular interval of convergence around $x=a$:
 $$f(x)= \sum_{n=0}^\infty\frac{f^{(n)}(a)}{n!}(x-a)^n.$$
 This is called the \textbf{Taylor series} for $f$ at $a$. When $a=0$, the series is called a \textbf{Maclaurin series}. The following table lists various common Taylor series.
 
@@ -67,7 +67,7 @@ $\sin(x)$ & \displaystyle\sum_{n=0}^\infty\frac{(-1)^n}{(2n+1)!}x^{2n+1}$ & $\R$
 $\cos(x)$ & \displaystyle\sum_{n=0}^\infty\frac{(-1)^n}{(2n)!}x^{2n}$ & $\R$ \\\\
 $\frac{1}{1-x}$ & \displaystyle\sum_{n=0}^\infty x^n$ & $(-1,1)$ \\\\
 %$\ln(x)$ & \displaystyle\sum_{n=1}^\infty \frac{\left(-1\right)^{n+1}}{n}\left(x-1\right)^{n}$ & $(0,2)$ \\\\
-$\ln(1-x)$ & \displaystyle\sum_{n=1}^\infty \frac{-1}{n}x^{n}$ & $(-1,1)$ \\\\
+$\ln(1-x)$ & \displaystyle\sum_{n=1}^\infty \frac{-1}{n}x^{n}$ & $[-1,1)$ \\\\
 $(x+1)^k$ & \displaystyle\sum_{n=0}^\infty{k\choose n}x^{n}$ & $\R$ \\\\
 \bottomrule[0.4mm]
 \end{tabular}
@@ -78,27 +78,28 @@ $(x+1)^k$ & \displaystyle\sum_{n=0}^\infty{k\choose n}x^{n}$ & $\R$ \\\\
 \subsection{Estimating Error: Taylor's Inequality}
 
 \begin{thm}[Taylor's Inequality]
-Suppose 
-$$S(x)=\displaystyle \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n\quad\quad\text{and}\quad\quad S_k(x)=\displaystyle \sum_{n=0}^k \frac{f^{(n)}(a)}{n!}(x-a)^n.$$
+% Suppose 
+% $$S(x)=\displaystyle \sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n\quad\quad\text{and}\quad\quad S_k(x)=\displaystyle \sum_{n=0}^k \frac{f^{(n)}(a)}{n!}(x-a)^n.$$
 If 
 $$\left|f^{(k+1)}(x)\right|\leq M\quad\quad\text{for all }x\in [a-d,a+d],$$
 then
-$$|S(x)-S_k(x)|\leq \frac{M}{(k+1)!}|x-a|^{k+1}\quad\quad\text{for all }x\in [a-d,a+d].$$
+$$|f(x)-T_k(x)|\leq \frac{M}{(k+1)!}|x-a|^{k+1}\leq \frac{Md^{k+1}}{(k+1)!} \quad\quad\text{for all }x\in [a-d,a+d].$$
 \end{thm}
-\mar{Draw a picture of the interval $[a-d,a+d]$.}
+\mar{Draw a picture of the interval $[a-d, a+d]$. See how it's the same as $|x-a|<d$?}
 
 Given some error $\epsilon>0$, you might want to find a value of $d$ for which 
-$$|S(x)-S_k(x)|<\epsilon\quad\quad\text{for all } x\in [a-d, a+d].$$
+$$|f(x)-T_k(x)|<\epsilon\quad\quad\text{whenever } |x-a|<d.$$
 To do this, start by choosing some $d_0$ for which 
-$$\left|f^{(k+1)}(x)\right| \leq M\quad\quad\text{for all }x\in [a-d_0,a+d_0].$$
-Then for the same values of $x$,
-$$|S(x)-S_k(x)|\leq \frac{M}{(k+1)!}|x-a|^{k+1}.$$
-If we want this quantity to be less than $\epsilon$, we can take
-$$|x-a|<\sqrt[k+1]{\epsilon\cdot\frac{(k+1)!}{M}}.$$
-\mar{Check the algebra here.}
-Thus the $d$ we are after is
-$$d=\min\left(d_0, \sqrt[k+1]{\epsilon\cdot\frac{(k+1)!}{M}}\right).$$
-This minimum is necessary since either $d_0$ is small enough, or the interval needs to be shrunk further to $\sqrt[k+1]{\epsilon\cdot\frac{(k+1)!}{M}}$.
+$$\left|f^{(k+1)}(x)\right| \leq M\quad\quad\text{whenever } |x-a|<d_0.$$
+Then by theorem,
+\begin{center}
+\begin{tabular}{ccccc}
+$|f(x)-T_k(x)|$ & $\leq$               & $\displaystyle\frac{M}{(k+1)!}|x-a|^{k+1}$  & $\leq$         & $\e$ \\
+                       & $\uparrow$       &                         					    & $\uparrow$ & \\
+                       & $|x-a|\leq d_0$ &     							            & $|x-a|\leq d_1$ \\
+\end{tabular}
+\end{center}
+where if $d_1=\sqrt[k+1]{\epsilon\cdot (k+1)!/M}$. \mar{Check the algebra solving for $d_1$.} If we want $|f(x)-T_k(x)|<\epsilon$, $|x-a|$ must be smaller than both $d_0$ and $d_1$. Thus the $d$ we are after is $d=\min\left(d_0, d_1\right)$.
 
 
 
