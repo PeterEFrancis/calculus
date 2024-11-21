@@ -1,9 +1,6 @@
 <button onclick="window.location.href='Calculus.pdf'">
    Click here for the book
 </button>
-
-<br>
-    
 <button onclick="window.location.href='condensed.pdf'">
     Click here for the Study Sheet
 </button>
