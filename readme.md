@@ -1,8 +1,16 @@
-[Peter E. Francis](https://PeterEFrancis.com)
+<button onclick="window.location.href='Calculus.pdf'">
+    <h3>&nbsp;&nbsp;Book&nbsp;&nbsp;</h3>
+</button>
 
-Click [here](Calculus.pdf) for the most recent PDF of the book, and click [here](https://github.com/PeterEFrancis/calculus) for the source code.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-[Here](condensed.pdf) is the condensed study sheet.
+<button onclick="window.location.href='condensed.pdf'">
+    <h3>&nbsp;&nbsp;Study Sheet&nbsp;&nbsp;</h3>
+</button>
+
+
+
+
 
 Here are some exercises:
 
@@ -17,3 +25,9 @@ Here are some exercises:
 - [Complex Numbers](exercises/Complex%20Numbers.pdf)
 
 [Maybe clicking On this liNk will bEnefit You](https://drive.google.com/file/d/1XqBYn5BtpmJSzlKFJKeFJmHlo0MJ4PcY/view?usp=sharing)
+
+
+
+
+
+[Peter E. Francis](https://PeterEFrancis.com)
