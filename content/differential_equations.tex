@@ -1,8 +1,31 @@
 
 \section{General Differential Equations}
 
+In algebra, the solution to an equation is a number (or numbers), but the solution to a differential equations is a function (or functions). We will only be dealing with \textbf{ordinary differential equations} (ODEs) whose solutions are functions of only one variable. Believe it or not, you have seen a differential equation already! The anti-derivative
+$$\int f(x)\ dx = F(x)+C$$
+could be rewritten as the ODE
+$$y' = f(x)$$
+whose solution set is the family of functions $y=F(x)+C$. Of course, this means that differential equations can be more difficult to solve than antiderivatives, but this should give you this intuition of why differential equations can have a family of solutions. However, much like antiderivatives, if you specify an ``initial condition,'' a single solution for a differential equation can be determined. Here is a short example of a differential equation and its solution:
+\begin{itemize}
+\item The differential equation
+$$y' + y = 2x$$
+has solution 
+$$y(x) = C e^{-x} + 2 x - 2$$
+for any $C$, since
+$$
+\left[C e^{-x} + 2 x - 2\right]'+\left(C e^{-x} + 2 x - 2\right)=
+-C e^{-x} + 2+ C e^{-x} + 2 x - 2 = 2x.
+$$
+Now if we specify the initial condition $y(0)=1$, we get
+$$ 1=y(0)=C e^{-0} + 2 (0) - 2 = C - 2,$$
+so $C=3$.
+\end{itemize}
 
-\section{Seperable ODEs}
+In the rest of this section you will learn techniques for solving two types of ODEs (separable and second order), and you will learn a way to approximate solutions (Euler's method). Afterwards, you will see some specific differential equations and their relation to different areas in science.
+
+
+
+\section{Separable ODEs}
 
 
 \section{Slope Fields and Euler's Method}
