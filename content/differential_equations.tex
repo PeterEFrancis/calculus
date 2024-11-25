@@ -1,5 +1,5 @@
 
-\section{General Differential Equations}
+\section{Introduction}
 
 In algebra, the solution to an equation is a number (or numbers), but the solution to a differential equations is a function (or functions). We will only be dealing with \textbf{ordinary differential equations} (ODEs) whose solutions are functions of only one variable. Believe it or not, you have seen a differential equation already! The anti-derivative
 $$\int f(x)\ dx = F(x)+C$$
@@ -24,14 +24,82 @@ so $C=3$.
 In the rest of this section you will learn techniques for solving two types of ODEs (separable and second order), and you will learn a way to approximate solutions (Euler's method). Afterwards, you will see some specific differential equations and their relation to different areas in science.
 
 
-
-\section{Separable ODEs}
-
-
 \section{Slope Fields and Euler's Method}
 
+Some differential equations are of the form 
+$$y'=f(x,y).$$
+In this case, we can draw a \textbf{slope field}, where at each point $(x,y)$ we draw a line segment whose slope is $f(x,y)$. 
 
-\section{Second Order Differential Equations}
+\begin{figure}[H]
+\centering
+\fbox{\includegraphics[width=3in]{img/slope_field.png}}
+\caption{The slope field $y'=x+y$.}
+\end{figure}
+
+\mar{Draw the slope field for $y'=x-y$.}
+
+Imagine a slope field to be a pool of water where the line segments show the current of water at each point. Then if you drop a ping pong ball somewhere on the slope field, the curve traced by the trajectory of the ball will be a solution to the ODE $y'=f(x,y)$. \textbf{Euler's method} is a technique for estimating solutions to this type of ODE using this ``riding the wave'' analogy.
+
+
+The main idea in Euler's method is to use the slope at a point to determine a direction to move, and move a little bit in that direction. Now you're at a new point, so you repeat this process. The less you move each time, the closer the approximation will be to the actual solution.
+
+In general, to do Euler's method you need to pick a step size for the $x$ direction: $\Delta x$. Then if you start at the point $(x_0, y_0)$, the next point will be
+$$(x_1,y_1) = (x_0 + \Delta x, y_0 + \Delta y),$$
+Where $\Delta y = \Delta x\cdot f(x_0, y_0)$. This formula comes from using the line at $(x_0, y_0)$ with slope $f(x_0, y_0)$. \mar{Do the algebra to see this.} The step size should be as small as possible for the approximation to be good, but in practice you will most likely use $1$, $\frac12$, $\frac1{10}$, or something else easy for computation. Here is an example:
+\begin{itemize}[leftmargin=1em]
+\item For the ODE $y'=x+y$, we'll do Euler's method with $\Delta x = 1$, and then again with $\Delta x = \frac{1}{2}$. For both we'll use $(x_0,y_0)=(-1,2)$. The easiest way to do these computations is in a table, computing row by row, using the $\Delta y$ in the previous row to increment to the next value of $y$.
+
+\begin{multicols}{2}
+\begin{center}
+\def\arraystretch{1.2}
+\begin{tabular}{@{}cccc@{}}
+\multicolumn{4}{c}{$\Delta x = 1$}\\
+\midrule[0.4mm]
+$x$ & $y$ & $f(x,y)$ & $\Delta y = \Delta x f(x,y)$ \\
+\midrule
+$-1$ & $1$ & $0$ & $0$\\
+$0$ & $1$ & $1$ & $1$\\
+$1$ & $2$ & $3$ & $3$\\
+$2$ & $5$ & $7$ & $7$\\
+$3$ & $12$ & $15$ & $15$\\
+\bottomrule[0.4mm]
+\end{tabular}
+\end{center}
+
+\columnbreak
+
+\begin{center}
+\def\arraystretch{1.2}
+\begin{tabular}{@{}cccc@{}}
+\multicolumn{4}{c}{$\Delta x = 1/2$}\\
+\midrule[0.4mm]
+$x$ & $y$ & $f(x,y)$ & $\Delta y$ \\
+\midrule
+$-1$ & $1$ & $0$ & $0$\\
+$-1/2$ & $1$ & $3/2$ & $3/4$\\
+$0$ & $7/4$ & $7/4$ & $7/8$\\
+$1/2$ & $7/4$ & $9/4$ & $9/8$\\
+$1$ & $23/8$ & $31/8$ & $31/16$\\
+\bottomrule[0.4mm]
+\end{tabular}
+\end{center}
+\end{multicols}
+
+\mar{Make a table for $\Delta x = 1/4$ and graph the points.}
+Here is a graph of the points in these two tables ($\Delta x = 1$ in red and $\Delta x = 1/2$ in blue). In addition, the actual solution to this ODE ($y=e^{x+1}-(x+1)$) is graphed in black.
+\begin{center}
+\includegraphics[width=3in]{img/eulers_method.png}
+\end{center}
+As you can see, the smaller step size gave a better approximation.
+\end{itemize}
+
+
+\section{Solving ODEs}
+\subsection{Separable ODEs}
+\subsection{Second Order Differential Equations}
+
+
+
 
 
 \section{Applications}
