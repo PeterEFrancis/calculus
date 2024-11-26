@@ -96,11 +96,50 @@ As you can see, the smaller step size gave a better approximation.
 
 \section{Solving ODEs}
 \subsection{Separable ODEs}
+The first kind of ODE that you can solve by hand is on expressible as one or two integrals by \textit{separating} the $x$ and $y$ variables. These are of the form
+$$y'=f(x)g(y) \quad\quad\text{or}\quad\quad \frac{dy}{dx}=f(x)g(y)$$
+and can be rewritten as
+$$\frac{1}{g(y)}\ dy = f(x)\ dx.$$
+Both sides of this equation can be differentiated (the left with respect to $y$ and the right with respect to $y$. The resulting equation is the solution. Here is an example:
+\begin{itemize}
+\item For the ODE $\frac{dy}{dx} = xy$, rewrite as
+$$\frac{1}{y}\ dy = x\ dx.$$
+Integrating both sides gives
+$$\ln|y| = \frac{x^2}{2} + C.$$
+\mar{Why is it ok that there is a constant only on one side?}
+Thus for any $C$, the curve defined be the equation above is a solution. You do not need to solve for $y$.
+\end{itemize}
+
 \subsection{Second Order Differential Equations}
 
+The next type of differential equation we can solve by hand is a \textbf{second order homogeneous linear differential equation with constant co-
+efficients}, which has general
+$$Ay''+By'+C=0$$
+where $A$, $B$, and $C$ are real numbers. It is called \textbf{homogeneous} since the right hand side is 0 (there are no terms with an $x$) and it is linear since each term is a real number times a derivative of $y$. 
 
+If $A=0$, then the ODE is separable and you can solve it by the technique described in the previous section. If $A$ is not 0, then divide through by $A$ and we get
+$$y''+by'+cy=0.$$
+The solutions to this ODE will be exponential and depend on the roots of the polynomial
+$$\lambda^2 + b\lambda + c = 0,$$
+which is called the \textbf{characteristic equation}.
+This is because plugging $y=e^{\lambda x}$ into the ODE and dividing by $e^{\lambda x}$ gives this equation. \mar{Plug $y=e^{\lambda x}$ into the ODE and get this quadratic equation.} The root(s) in question are
+$$\lambda = \frac{-b \pm \sqrt{b^2-4c}}{2}.$$
+ There are two cases:
+\begin{enumerate}
+\item The discriminant $b^2-4c$ is nonzero. In this case, there are two roots $\lambda_1$ and $\lambda_2$. Then the solutions are of the form
+$$y=pe^{\lambda_1 x} + qe^{\lambda_2 x},$$
+for any real numbers $p$ and $q$. Keep in mind that if $b^2-4c$ is negative, then $\lambda_1$ and $\lambda_2$ will be imaginary (see the appendix on complex numbers). \mar{What is a way to write $e^{(a+bi)x}$ without a complex number in the exponent?}
+\item The discriminant $b^2-4c$ is zero. In this case, there is only one root, $\lambda = -b/2$. Then the solutions are of the form
+$$y=pe^{\lambda x}+qxe^{\lambda x}$$
+for any real numbers $p$ and $q$.
+\end{enumerate}
 
-
+An interesting and useful fact is given in this theorem:
+\begin{thm}
+If $y_1$ and $y_2$ are solutions to a homogeneous ODE then so is the linear combination $p{y_1}+q{y_2}$ for any real $p$ and $q$.
+\end{thm}
+ 
+Sometimes it is considered ``good form'' to express solutions to an ODE using only real numbers. If that is desired, use this theorem to take linear combinations of solutions you have to generate those with only real numbers.
 
 \section{Applications}
 \subsection{The Logistic Equation}

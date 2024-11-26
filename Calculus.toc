@@ -77,11 +77,11 @@
 \contentsline {section}{\numberline {16}Slope Fields and Euler's Method}{57}{section.16}%
 \contentsline {section}{\numberline {17}Solving ODEs}{59}{section.17}%
 \contentsline {subsection}{\numberline {17.1}Separable ODEs}{59}{subsection.17.1}%
-\contentsline {subsection}{\numberline {17.2}Second Order Differential Equations}{59}{subsection.17.2}%
-\contentsline {section}{\numberline {18}Applications}{59}{section.18}%
-\contentsline {subsection}{\numberline {18.1}The Logistic Equation}{59}{subsection.18.1}%
-\contentsline {subsection}{\numberline {18.2}Simple Harmonic Oscillator}{59}{subsection.18.2}%
-\contentsline {subsection}{\numberline {18.3}Predator-Prey}{59}{subsection.18.3}%
-\contentsline {part}{VII\hspace {1em}Appendix}{60}{part.7}%
-\contentsline {section}{\numberline {19}Moments and Centroids}{60}{section.19}%
-\contentsline {section}{\numberline {20}Complex Numbers}{64}{section.20}%
+\contentsline {subsection}{\numberline {17.2}Second Order Differential Equations}{60}{subsection.17.2}%
+\contentsline {section}{\numberline {18}Applications}{60}{section.18}%
+\contentsline {subsection}{\numberline {18.1}The Logistic Equation}{60}{subsection.18.1}%
+\contentsline {subsection}{\numberline {18.2}Simple Harmonic Oscillator}{60}{subsection.18.2}%
+\contentsline {subsection}{\numberline {18.3}Predator-Prey}{60}{subsection.18.3}%
+\contentsline {part}{VII\hspace {1em}Appendix}{61}{part.7}%
+\contentsline {section}{\numberline {19}Moments and Centroids}{61}{section.19}%
+\contentsline {section}{\numberline {20}Complex Numbers}{65}{section.20}%
