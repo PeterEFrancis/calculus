@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.19)  24 SEP 2024 18:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.19)  3 DEC 2024 19:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1213,6 +1213,56 @@ Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@dima=\skip65
 \bigstrutjot=\dimen312
 )
+(/usr/local/texlive/2024/texmf-dist/tex/latex/vwcol/vwcol.sty
+Package: vwcol 2015/02/10 v0.2 Variable-width multicolumn text
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/ragged2e/ragged2e.sty
+Package: ragged2e 2023/06/22 v3.6 ragged2e Package
+\CenteringLeftskip=\skip66
+\RaggedLeftLeftskip=\skip67
+\RaggedRightLeftskip=\skip68
+\CenteringRightskip=\skip69
+\RaggedLeftRightskip=\skip70
+\RaggedRightRightskip=\skip71
+\CenteringParfillskip=\skip72
+\RaggedLeftParfillskip=\skip73
+\RaggedRightParfillskip=\skip74
+\JustifyingParfillskip=\skip75
+\CenteringParindent=\skip76
+\RaggedLeftParindent=\skip77
+\RaggedRightParindent=\skip78
+\JustifyingParindent=\skip79
+)
+\vwcol@sep=\skip80
+\vwcol@rule=\skip81
+\vwcol@totalwidth=\skip82
+\vwcol@averagewidth=\skip83
+\vwcol@parindent=\skip84
+\vwcol@last=\count341
+\vwcol@Ncols=\count342
+\vwcol@Nlines=\count343
+\vwcol@maxrecursion=\count344
+\vwcol@box=\box125
+\vwcol@plainbox=\box126
+\vwcol@outputbox=\box127
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/lipsum/lipsum.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2024-02-20 L3 programming layer (loader) 
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count345
+\l__pdf_internal_box=\box128
+))
+Package: l3keys2e 2024-02-18 LaTeX2e option processing using LaTeX3 keys
+)
+Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
+\g__lipsum_par_int=\count346
+\l__lipsum_a_int=\count347
+\l__lipsum_b_int=\count348
+(/usr/local/texlive/2024/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
 (/usr/local/texlive/2024/texmf-dist/tex/latex/marvosym/marvosym.sty
 Package: marvosym 2011/07/20 v2.2 Martin Vogel's Symbols font definitions
 )
@@ -1222,9 +1272,9 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 (/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count341
-\Gm@cntv=\count342
-\c@Gm@tempcnt=\count343
+\Gm@cnth=\count349
+\Gm@cntv=\count350
+\c@Gm@tempcnt=\count351
 \Gm@bindingoffset=\dimen313
 \Gm@wd@mp=\dimen314
 \Gm@odd@mp=\dimen315
@@ -1245,13 +1295,7 @@ LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 10.0pt on input line 39.
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count344
-\l__pdf_internal_box=\box125
-)
-(./condensed.aux)
+ (./condensed.aux)
 \openout1 = `condensed.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/nxlmi/m/it on input line 39.
@@ -1300,8 +1344,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
 LaTeX Font Info:    ... okay on input line 39.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 39.
 LaTeX Font Info:    ... okay on input line 39.
-\c@mv@tabular=\count345
-\c@mv@boldtabular=\count346
+\c@mv@tabular=\count352
+\c@mv@boldtabular=\count353
 LaTeX Info: Command `\dddot' is already robust on input line 39.
 LaTeX Info: Command `\ddddot' is already robust on input line 39.
 Package hyperref Info: Link coloring OFF on input line 39.
@@ -1313,16 +1357,16 @@ Package hyperref Info: Link coloring OFF on input line 39.
 
 (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count347
+\scratchcounter=\count354
 \scratchdimen=\dimen321
-\scratchbox=\box126
-\nofMPsegments=\count348
-\nofMParguments=\count349
+\scratchbox=\box129
+\nofMPsegments=\count355
+\nofMParguments=\count356
 \everyMPshowfont=\toks55
-\MPscratchCnt=\count350
+\MPscratchCnt=\count357
 \MPscratchDim=\dimen322
-\MPnumerator=\count351
-\makeMPintoPDFobject=\count352
+\MPnumerator=\count358
+\makeMPintoPDFobject=\count359
 \everyMPtoPDFconversion=\toks56
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1476,26 +1520,84 @@ l/texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_lyu3x3.enc}{/usr/local
 /texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_kijugd.enc}{/usr/local/
 texlive/2024/texmf-dist/fonts/enc/dvips/libertine/lbtn_naooyc.enc} <./img/unit-
 circle.png>]
-
-./condensed.tex:277: LaTeX Error: \begin{itemize} on input line 266 ended by \e
-nd{center}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.277 \end{center}
-                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+Overfull \hbox (0.5826pt too wide) in paragraph at lines 275--286
+[]|[] 
+ []
 
 
-Overfull \hbox (5.93256pt too wide) in paragraph at lines 316--335
+Overfull \hbox (83.37367pt too wide) in paragraph at lines 305--315
+[]|[] 
+ []
+
+
+Overfull \hbox (5.93256pt too wide) in paragraph at lines 328--349
 [][]  
  []
 
-[2] (./condensed.aux)
+./condensed.tex:417: Extra }, or forgotten $.
+l.417 ...e $\displaystyle L= \lim _{n \to \infty}}
+                                                   \left|{a_{n+1}}/{a_{n}}\r...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+[2]
+./condensed.tex:444: Missing $ inserted.
+<inserted text> 
+                $
+l.444 $e^x$ & \displaystyle
+                           \sum_{n=0}^\infty\frac{1}{n!} x^n$ & $\mathbb{R}$...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./condensed.tex:445: Missing $ inserted.
+<inserted text> 
+                $
+l.445 $\sin(x)$ & \displaystyle
+                               \sum_{n=0}^\infty\frac{(-1)^n}{(2n+1)!}x^{2n+...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./condensed.tex:446: Missing $ inserted.
+<inserted text> 
+                $
+l.446 $\cos(x)$ & \displaystyle
+                               \sum_{n=0}^\infty\frac{(-1)^n}{(2n)!}x^{2n}$ ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./condensed.tex:447: Missing $ inserted.
+<inserted text> 
+                $
+l.447 $\frac{1}{1-x}$ & \displaystyle
+                                     \sum_{n=0}^\infty x^n$ & $(-1,1)$ \\\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./condensed.tex:448: Missing $ inserted.
+<inserted text> 
+                $
+l.448 $\ln(1-x)$ & \displaystyle
+                                \sum_{n=1}^\infty \frac{-1}{n}x^{n}$ & $[-1,...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./condensed.tex:449: Missing $ inserted.
+<inserted text> 
+                $
+l.449 $(x+1)^k$ & \displaystyle
+                               \sum_{n=0}^\infty{k\choose n}x^{n}$ & $\mathb...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 449.
+
+[3] (./condensed.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1509,10 +1611,10 @@ Package rerunfilecheck Info: File `condensed.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 28582 strings out of 474116
- 523804 string characters out of 5743682
+ 29178 strings out of 474116
+ 537601 string characters out of 5743682
  1987187 words of memory out of 5000000
- 50402 multiletter control sequences out of 15000+600000
+ 50981 multiletter control sequences out of 15000+600000
  587755 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,30n,93p,411b,684s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1525,11 +1627,12 @@ LinLibertineTB.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/liber
 tine/LinLibertineTI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/
 newtx/NewTXMI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/
 txexs.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txmiaX.p
-fb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
-Output written on condensed.pdf (2 pages, 534064 bytes).
+fb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr
+/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
+Output written on condensed.pdf (3 pages, 546674 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
+ 89 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
+ 4 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

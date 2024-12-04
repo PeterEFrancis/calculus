@@ -13,7 +13,7 @@
 \usepackage{mathtools}
 \usepackage{stmaryrd}
 
-\usepackage{pgf, latexsym, float, soul, array, booktabs, dsfont, gensymb, wasysym, multicol, tcolorbox, tabularx, enumitem, multirow}
+\usepackage{pgf, latexsym, float, soul, array, booktabs, dsfont, gensymb, wasysym, multicol, tcolorbox, tabularx, enumitem, multirow, vwcol, lipsum}
 
 \usepackage{ marvosym }
 
@@ -224,31 +224,36 @@ $[\arccsc(x)]'=\frac{-1}{|x|\sqrt{x^2-1}}$  \\
 
 \newpage
 
-\begin{multicols}{2}
+
 \begin{bx}[Integration]
+\begin{tabular}{p{4in}p{3.5in}}
 \textbf{Definitions}
-\begin{itemize}
+\begin{itemize}[leftmargin=1em]
     \item The \textit{definite integral} of $f$ on $(a,b)$ is written $\int_a^bf(x)\ dx$ and is defined to be the \textit{signed} area between the graph of $f$ and the $x$-axis (if such a quantity exists).
     \item The \textit{indefinite integral} (or \textit{anti-derivative}) of $f$ on is written $\int f(x)\ dx$ or $\int f$ is the family of functions whose derivative is $f$.
 \end{itemize}
 
 \vspace{0.5em}
 
-\textbf{Fundamental Theorem of Calculus}: If $F'=f$,
+\textbf{Fundamental Theorem of Calculus} If $F'=f$,
     $$\int_a^bf(x)\ dx = F(b)-F(a).$$
 
-\textbf{Rules for Integration:}
+
+& 
+\vspace{-2em}
+
 \begin{center}
 \def\arraystretch{1.5}
 \begin{tabular}{@{}ll@{}}
 \toprule[0.4mm]
 \textbf{Scalar Rule} & $\int a f = a \int f$. \\
 \textbf{Sum Rule} & $\int f + \int g= \int f + \int g$ \\
-\textbf{Integration by Parts} & $\int f'g = fg - \int fg' $ \\
+\textbf{Int. by Parts}
+ & $\int f'g = fg - \int fg' $ \\
 \textbf{$u$-substitution} & $\int f'(g(x))g'(x)\ dx =  f(g(x))$ \\
-\midrule[0.4mm]
+\midrule
 \textbf{Power Rule}
- & $\int x^a \ dx = \begin{cases}
+ & $\displaystyle\int x^a \ dx = \begin{cases}
 \frac{1}{a+1}x^{a+1} + C & a \neq -1\\
 \ln|x| + C & a = -1
 \end{cases}$ \\
@@ -256,32 +261,19 @@ $[\arccsc(x)]'=\frac{-1}{|x|\sqrt{x^2-1}}$  \\
 & $\int \sin(x)\ dx = -\cos(x)+C$\\
 & $\int \cos(x)\ dx = \sin(x)+C$ \\
 
-\textbf{Exponential Rules} & $\int a^x\ dx = \frac{1}{\ln(a)}a^x+C$ \\
+\textbf{Exp. Rules} & $\int a^x\ dx = \frac{1}{\ln(a)}a^x+C$ \\
 \bottomrule[0.4mm]
 \end{tabular}
 \end{center}
+\\ 
 
-\textbf{Other Common Anti-derivatives}
-\setlength\leftmargin{2em}
-\begin{itemize}
-\item $\int\ln(x)\ dx = x\ln(x) - x + C$
+\end{tabular}
 
-\item $\int \tan(x)\ dx = \ln|\cos(x)|+C$ 
+\begin{tabular}{p{3.25in}p{2in}p{1in}}
 
-\item $\int \sec(x)\ dx = \ln|\sec(x)+\tan(x)|+C$
-
-\item $\int \csc(x)\ dx = \ln|\csc(x)-\cot(x)|+C$ 
-
-\item $\int \cot(x)\ dx = \ln|\sin(x)|+C$
-
-\end{center}
-
-\vspace{0.5em}
-
-\textbf{Partial Fractions:}
-\begin{center}
 \def\arraystretch{1.5}
 \begin{tabular}{@{}ll@{}}
+\multicolumn{2}{l}{\textbf{Partial Fractions}} \\
 \toprule[0.4mm]
       Factor & Term in decomposition\\
       \hline
@@ -291,14 +283,12 @@ $[\arccsc(x)]'=\frac{-1}{|x|\sqrt{x^2-1}}$  \\
       $(ax^2+bx+c)^k$ & $\frac{A_1x+B_1}{ax^2+bx+c}+\frac{A_2x+B_2}{(ax^2+bx+c)^2}+\dots+\frac{A_kx+B_k}{(ax^2+bx+c)^k}$ \\
 \bottomrule[0.4mm]
 \end{tabular}
-\end{center}
 
-\vspace{0.5em}
+& 
 
-\textbf{Trig Substitution:}\\
-\begin{center}
 \def\arraystretch{1.5}
 \begin{tabular}{@{}lll@{}}
+	\multicolumn{3}{l}{\textbf{Trig Substitutions}} \\
     \toprule[0.4mm]
     Integrand & Substitution & Result \\
     \hline
@@ -306,11 +296,33 @@ $[\arccsc(x)]'=\frac{-1}{|x|\sqrt{x^2-1}}$  \\
     $\sqrt{a^2+x^2}$ & $x=a\tan\theta$ & $a\sec\theta$ \\
     $\sqrt{x^2-a^2}$ & $x=a\sec\theta$ & $a\tan\theta$ \\
     \bottomrule[0.4mm]
+    \\
 \end{tabular}
-\end{center}
+
+&
+
+\def\arraystretch{1.5}
+\begin{tabular}{@{}l@{}}
+\textbf{Other Antiderivatives} \\
+ \toprule[0.4mm]
+ $\int\ln(x)\ dx = x\ln(x) - x + C$\\
+ $\int \tan(x)\ dx = \ln|\cos(x)|+C$ \\
+$\int \sec(x)\ dx = \ln|\sec(x)+\tan(x)|+C$\\
+ $\int \csc(x)\ dx = \ln|\csc(x)-\cot(x)|+C$ \\
+$\int \cot(x)\ dx = \ln|\sin(x)|+C$  \\
+    \bottomrule[0.4mm]
+\end{tabular}
+
+
+\end{tabular}
 \end{bx}
 
-\columnbreak
+
+
+
+
+
+\begin{multicols}{2}
 
 \begin{bx}[Riemann Sums]
 \begin{tabular}{p{155pt} | p{100pt}}
@@ -319,6 +331,8 @@ $[\arccsc(x)]'=\frac{-1}{|x|\sqrt{x^2-1}}$  \\
 $ L_n=\sum_{k=1}^{n}f\left(a+(k-1)\frac{b-a}{n}\right)\frac{b-a}{n}$ 
 
 $ T_n=\sum_{i=k}^{n}\frac{f\left(a+(k-1)\frac{b-a}{n}\right)+f\left(a+k\frac{b-a}{n}\right)}{2}\frac{b-a}{n}$
+
+\vspace{-1em}
 
 $$\lim_{n\to\infty}R_n,L_n,T_n=\int_a^bf(x)\ dx$$
 
@@ -336,69 +350,117 @@ $$\lim_{n\to\infty}R_n,L_n,T_n=\int_a^bf(x)\ dx$$
 \end{bx}
 
 
+\begin{bx}[Bounds]
+
+If $f(x)>0$ is CTS and decreasing $[1,\infty)$ with $f(n)=a_n$, then for any $N$,
+$$\left(\sum_{n=1}^N a_n+\int_{N+1}^\infty f(x)\ dx \right)
+\leq \sum_{n=1}^\infty a_n \leq 
+\left(\sum_{n=1}^N a_n+  \int_{N}^\infty f(x)\ dx\right).$$
+
+\hrule
+\vspace{1em}
+
+Suppose $S=\sum_{n=1}^\infty b_n (-1)^n$ where $b_n\geq 0$, and $b_n$ decreases to 0. Then for any $N$,
+$$\left|S-S_N\right|\leq b_{N+1}$$
+where $S_N=\sum_{n=1}^N b_n (-1)^n$.
+\vspace{1em}
+
+\hrule
+\vspace{1em}
+
+\textbf{Taylor's Inequality:}
+If for all $x\in [a-d,a+d]$,
+$$\left|f^{(k+1)}(x)\right|\leq M,$$
+then for all $x\in [a-d,a+d]$,
+$$|f(x)-T_k(x)|\leq \frac{M}{(k+1)!}|x-a|^{k+1}.$$
+
+
+
+
+\end{bx}
+
+\columnbreak
+
+
 
 \begin{bx}[Test for Convergence and Divergence]
 
 \begin{itemize}[leftmargin=1em]
 
-\item \textbf{Divergence Test:} If $\displaystyle \lim_{n\to\infty}a_n\neq 0$, then $\sum a_n$ will diverge.\\
+\item \textbf{Divergence Test:} ${\displaystyle \lim_{n\to\infty}a_n\neq 0 }\implies \sum a_n $ diverges.\\
 
 \item \textbf{Integral Test:}
-Suppose that $f(x)$ is a continuous, positive, and decreasing function on the interval $[k,\infty)$ and that $f(n)=a_n$. Then
-$$\int_k^\infty f(x)\ dx\text{ is convergent} \iff \sum_{n=k}^\infty a_n\text{ is convergent}.$$
-
+If $f(x) > 0$ is CTS and decreasing on $[k,\infty)$, and $f(n)=a_n$,
+$$\int_k^\infty f(x)\ dx\text{ converges} \iff \sum_{n=k}^\infty a_n\text{ converges}.$$
 
 \item \textbf{The $p$-series Test:}
- If $k>0$, then $\sum_{n=k}^\infty\frac{1}{n^p}$ converges if $p>1$ and diverges if $p\leq 1$.
+ If $k>0$, $\displaystyle\sum_{n=k}^\infty\frac{1}{n^p}$ converges $\iff p>1$.
 
 
 \item \textbf{Comparison Test:}
- Suppose that we have two series $\sum a_n$ and $\sum b_n$, with $0\leq a_n\leq b_n$ for all $n$. Then
+ If $0\leq a_n\leq b_n$ for all $n$, then
  $$\sum b_n\text{ converges}\implies \sum a_n\text{ converges}.$$
-% and (by contraposition)
-% $$\sum a_n\text{ diverges}\implies \sum b_n\text{ diverges}.$$
 
 
 \item \textbf{Limit Comparison Test:}
-Suppose that we have two series $\sum a_n$ and $\sum b_n$ with $a_n\geq 0$ and $b_n > 0$ for all $n$. Define $c=\lim_{n\to\infty}{a_n}/{b_n}.$ If $c$ is positive and finite, then either both series converge of both series diverge.
+If $a_n\geq 0$ and $b_n > 0$ for all $n$ and $\displaystyle\lim_{n\to\infty}{a_n}/{b_n}$ is positive and finite, then 
+$$\sum a_n\text{ converges }\iff \sum b_n\text{ converges}.$$
 
 
 \item \textbf{Alternating Series Test:}
-Suppose that we have a series $\sum a_{n}$ and either $a_{n}=(-1)^{n} b_{n}$ or $a_{n}=(-1)^{n+1} b_{n}$ where $b_{n} \geq 0$ for all $n .$ Then if ${\displaystyle\lim _{n \to \infty}} b_{n}=0$ and $\left\{b_{n}\right\}$ is a decreasing sequence, the series $\sum a_{n}$ is convergent.
+If $b_{n} \geq 0$ decreases to 0, $\sum b_{n}(-1)^{n}$ converges.
 
 
 \item \textbf{Absolute Convergence Test:}
-\phantom{}
-\begin{itemize}[leftmargin=1em]
-    \item If the series $\sum |a_n|$ is convergent, then $\sum a_n$ is called \textbf{absolutely convergent}, and must also be convergent.
-    \item If $\sum a_n$ converges but $\sum |a_n|$ diverges, then the series $\sum a_n$ is called \textbf{conditionally convergent}.
-\end{itemize}
+$$\sum |a_n| \text{ converges}\implies \sum a_n\text{ converges}.$$
 
+\item \textbf{Ratio Test:} Define $\displaystyle L= \lim _{n \to \infty}} \left|{a_{n+1}}/{a_{n}}\right|$.\\ If $L<1$, $\sum a_{n}$ converges. If $L>1$,  $\sum a_{n}$ diverges.
 
-\item \textbf{Ratio Test:}
-For series $\sum a_{n}$, define, $ L={\displaystyle\lim _{n \to \infty}} \left|\frac{a_{n+1}}{a_{n}}\right|.$ Then,
-\begin{enumerate}[leftmargin=1em]
-    \item if $L<1$ the series is absolutely convergent (and hence convergent).
-    \item if $L>1$ the series is divergent.
-    \item  if $L=1$ the series may be divergent, conditionally convergent, or absolutely convergent.
-\end{enumerate}
 
 \item \textbf{Root Test}
-For series $\sum a_{n}$, define,
-$L={\displaystyle\lim _{n \to \infty}}\left|a_{n}\right|^{\frac{1}{n}}.$ Then,
-\begin{enumerate}[leftmargin=1em]
-    \item if $L<1$ the series is absolutely convergent (and hence convergent).
-    \item if $L>1$ the series is divergent.
-    \item if $L=1$ the series may be divergent, conditionally convergent, or absolutely convergent.
-\end{enumerate}
-
+Define $L={\displaystyle\lim _{n \to \infty}}\left|a_{n}\right|^{{1}/{n}}$. If $L<1$, $\sum a_{n}$ converges.\\ If $L>1$,  $\sum a_{n}$ diverges.
 
 \end{itemize}
 \end{bx}
 
+
+\newpage
+\begin{bx}[Power Series]
+$$\sum_{n=0}^\infty a_n(x-c)^n$$
+converges on
+$$|x-c|<\lim\left|\frac{a_{n}}{a_{n+1}}\right|.$$
+Test the interval's endpoints separately. On some interval centered at $a$,
+$$f(x)=\sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n.$$
+Near $x=a$, 
+$$f(x)\approx T_k(x)=\sum_{n=0}^k \frac{f^{(n)}(a)}{n!}(x-a)^n.$$
+
+\begin{center}
+\def\arraystretch{1.2}
+\begin{tabular}{llc}
+\multicolumn{3}{c}{\textbf{Common Taylor Series}}\\
+\midrule[0.4mm]
+Function & Taylor Series & Interval of Convergence\\
+\midrule\\
+$e^x$ & \displaystyle\sum_{n=0}^\infty\frac{1}{n!} x^n$ & $\mathbb{R}$ \\\\
+$\sin(x)$ & \displaystyle\sum_{n=0}^\infty\frac{(-1)^n}{(2n+1)!}x^{2n+1}$ & $\mathbb{R}$ \\\\
+$\cos(x)$ & \displaystyle\sum_{n=0}^\infty\frac{(-1)^n}{(2n)!}x^{2n}$ & $\mathbb{R}$ \\\\
+$\frac{1}{1-x}$ & \displaystyle\sum_{n=0}^\infty x^n$ & $(-1,1)$ \\\\
+$\ln(1-x)$ & \displaystyle\sum_{n=1}^\infty \frac{-1}{n}x^{n}$ & $[-1,1)$ \\\\
+$(x+1)^k$ & \displaystyle\sum_{n=0}^\infty{k\choose n}x^{n}$ & $\mathbb{R}$ \\\\
+\bottomrule[0.4mm]
+\end{tabular}
+\end{center}
+
+
+\end{bx}
+
+
+
+\columnbreak
+
+\phantom{}
+
 \end{multicols}
-
-
 
 
 \end{document}
