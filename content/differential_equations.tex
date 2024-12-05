@@ -100,13 +100,12 @@ The first kind of ODE that you can solve by hand is on expressible as one or two
 $$y'=f(x)g(y) \quad\quad\text{or}\quad\quad \frac{dy}{dx}=f(x)g(y)$$
 and can be rewritten as
 $$\frac{1}{g(y)}\ dy = f(x)\ dx.$$
-Both sides of this equation can be differentiated (the left with respect to $y$ and the right with respect to $y$. The resulting equation is the solution. Here is an example:
+Both sides of this equation can be differentiated (the left with respect to $y$ and the right with respect to $x$). The resulting equation is the solution. Here is an example:
 \begin{itemize}
 \item For the ODE $\frac{dy}{dx} = xy$, rewrite as
 $$\frac{1}{y}\ dy = x\ dx.$$
 Integrating both sides gives
-$$\ln|y| = \frac{x^2}{2} + C.$$
-\mar{Why is it ok that there is a constant only on one side?}
+$$\ln|y| = \frac{x^2}{2} + C.$$\mar{Why is it ok that there is a constant only on one side?}
 Thus for any $C$, the curve defined be the equation above is a solution. You do not need to solve for $y$.
 \end{itemize}
 
@@ -126,7 +125,7 @@ $$\lambda = \frac{-b \pm \sqrt{b^2-4ac}}{2a}.$$
 \item The discriminant $b^2-4ac$ is nonzero. In this case, there are two roots $\lambda_1$ and $\lambda_2$. Then the solutions are of the form
 $$y=pe^{\lambda_1 x} + qe^{\lambda_2 x},$$
 for any real numbers $p$ and $q$. Keep in mind that if $b^2-4c$ is negative, then $\lambda_1$ and $\lambda_2$ will be imaginary (see the appendix on complex numbers). \mar{What is a way to write $e^{(a+bi)x}$ without a complex number in the exponent?}
-\item The discriminant $b^2-4c$ is zero. In this case, there is only one root, $\lambda = -b/2$. Then the solutions are of the form
+\item The discriminant $b^2-4c$ is zero. In this case, the only root is $\lambda = -b/2$. Then the solutions are of the form
 $$y=pe^{\lambda x}+qxe^{\lambda x}$$
 for any real numbers $p$ and $q$.
 \end{enumerate}

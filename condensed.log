@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.19)  3 DEC 2024 19:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.19)  5 DEC 2024 12:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1530,12 +1530,65 @@ Overfull \hbox (83.37367pt too wide) in paragraph at lines 305--315
  []
 
 
-Overfull \hbox (5.93256pt too wide) in paragraph at lines 328--349
+Overfull \hbox (5.53256pt too wide) in paragraph at lines 330--352
 [][]  
  []
 
-./condensed.tex:417: Extra }, or forgotten $.
-l.417 ...e $\displaystyle L= \lim _{n \to \infty}}
+./condensed.tex:376: Missing $ inserted.
+<inserted text> 
+                $
+l.376 $e^x$ & \sum
+                  _{n=0}^\infty\frac{1}{n!} x^n$ & $\mathbb{R}$ \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./condensed.tex:377: Missing $ inserted.
+<inserted text> 
+                $
+l.377 $\sin(x)$ & \sum
+                      _{n=0}^\infty\frac{(-1)^n}{(2n+1)!}x^{2n+1}$ & $\mathb...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./condensed.tex:378: Missing $ inserted.
+<inserted text> 
+                $
+l.378 $\cos(x)$ & \sum
+                      _{n=0}^\infty\frac{(-1)^n}{(2n)!}x^{2n}$ & $\mathbb{R}...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./condensed.tex:379: Missing $ inserted.
+<inserted text> 
+                $
+l.379 $\frac{1}{1-x}$ & \sum
+                            _{n=0}^\infty x^n$ & $(-1,1)$ \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./condensed.tex:380: Missing $ inserted.
+<inserted text> 
+                $
+l.380 $\ln(1-x)$ & \sum
+                       _{n=1}^\infty \frac{-1}{n}x^{n}$ & $[-1,1)$ \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./condensed.tex:381: Missing $ inserted.
+<inserted text> 
+                $
+l.381 $(x+1)^k$ & \sum
+                      _{n=0}^\infty{k\choose n}x^{n}$ & $\mathbb{R}$ \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 381.
+
+./condensed.tex:423: Extra }, or forgotten $.
+l.423 ...e $\displaystyle L= \lim _{n \to \infty}}
                                                    \left|{a_{n+1}}/{a_{n}}\r...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1544,58 +1597,9 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 [2]
-./condensed.tex:444: Missing $ inserted.
-<inserted text> 
-                $
-l.444 $e^x$ & \displaystyle
-                           \sum_{n=0}^\infty\frac{1}{n!} x^n$ & $\mathbb{R}$...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./condensed.tex:445: Missing $ inserted.
-<inserted text> 
-                $
-l.445 $\sin(x)$ & \displaystyle
-                               \sum_{n=0}^\infty\frac{(-1)^n}{(2n+1)!}x^{2n+...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./condensed.tex:446: Missing $ inserted.
-<inserted text> 
-                $
-l.446 $\cos(x)$ & \displaystyle
-                               \sum_{n=0}^\infty\frac{(-1)^n}{(2n)!}x^{2n}$ ...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./condensed.tex:447: Missing $ inserted.
-<inserted text> 
-                $
-l.447 $\frac{1}{1-x}$ & \displaystyle
-                                     \sum_{n=0}^\infty x^n$ & $(-1,1)$ \\\\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./condensed.tex:448: Missing $ inserted.
-<inserted text> 
-                $
-l.448 $\ln(1-x)$ & \displaystyle
-                                \sum_{n=1}^\infty \frac{-1}{n}x^{n}$ & $[-1,...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./condensed.tex:449: Missing $ inserted.
-<inserted text> 
-                $
-l.449 $(x+1)^k$ & \displaystyle
-                               \sum_{n=0}^\infty{k\choose n}x^{n}$ & $\mathb...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Package amsmath Warning: Foreign command \atopwithdelims;
-(amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 449.
+Overfull \hbox (2.47072pt too wide) in paragraph at lines 493--503
+[][]  
+ []
 
 [3] (./condensed.aux)
  ***********
@@ -1611,10 +1615,10 @@ Package rerunfilecheck Info: File `condensed.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 29178 strings out of 474116
- 537601 string characters out of 5743682
+ 29180 strings out of 474116
+ 537650 string characters out of 5743682
  1987187 words of memory out of 5000000
- 50981 multiletter control sequences out of 15000+600000
+ 50983 multiletter control sequences out of 15000+600000
  587755 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,30n,93p,411b,684s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1629,7 +1633,7 @@ newtx/NewTXMI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/
 txexs.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txmiaX.p
 fb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr
 /local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
-Output written on condensed.pdf (3 pages, 546674 bytes).
+Output written on condensed.pdf (3 pages, 550791 bytes).
 PDF statistics:
  89 PDF objects out of 1000 (max. 8388607)
  58 compressed objects within 1 object stream

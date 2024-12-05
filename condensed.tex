@@ -325,7 +325,9 @@ $\int \cot(x)\ dx = \ln|\sin(x)|+C$  \\
 \begin{multicols}{2}
 
 \begin{bx}[Riemann Sums]
-\begin{tabular}{p{155pt} | p{100pt}}
+\vspace{-0.5em}
+
+\begin{tabular}{p{155pt}  p{100pt}}
     $ R_n=\sum_{k=1}^{n}f\left(a+k\frac{b-a}{n}\right)\frac{b-a}{n}$ 
 
 $ L_n=\sum_{k=1}^{n}f\left(a+(k-1)\frac{b-a}{n}\right)\frac{b-a}{n}$ 
@@ -337,6 +339,7 @@ $ T_n=\sum_{i=k}^{n}\frac{f\left(a+(k-1)\frac{b-a}{n}\right)+f\left(a+k\frac{b-a
 $$\lim_{n\to\infty}R_n,L_n,T_n=\int_a^bf(x)\ dx$$
 
 & 
+
 \textbf{Sums of Powers}
 
 \begin{itemize}[leftmargin=0.75em]
@@ -347,34 +350,38 @@ $$\lim_{n\to\infty}R_n,L_n,T_n=\int_a^bf(x)\ dx$$
 \end{itemize}
 \end{tabular}
 
+\vspace{-1em}
+
 \end{bx}
 
 
-\begin{bx}[Bounds]
-
-If $f(x)>0$ is CTS and decreasing $[1,\infty)$ with $f(n)=a_n$, then for any $N$,
-$$\left(\sum_{n=1}^N a_n+\int_{N+1}^\infty f(x)\ dx \right)
-\leq \sum_{n=1}^\infty a_n \leq 
-\left(\sum_{n=1}^N a_n+  \int_{N}^\infty f(x)\ dx\right).$$
-
-\hrule
-\vspace{1em}
-
-Suppose $S=\sum_{n=1}^\infty b_n (-1)^n$ where $b_n\geq 0$, and $b_n$ decreases to 0. Then for any $N$,
-$$\left|S-S_N\right|\leq b_{N+1}$$
-where $S_N=\sum_{n=1}^N b_n (-1)^n$.
-\vspace{1em}
-
-\hrule
-\vspace{1em}
-
-\textbf{Taylor's Inequality:}
-If for all $x\in [a-d,a+d]$,
-$$\left|f^{(k+1)}(x)\right|\leq M,$$
-then for all $x\in [a-d,a+d]$,
-$$|f(x)-T_k(x)|\leq \frac{M}{(k+1)!}|x-a|^{k+1}.$$
 
 
+
+\begin{bx}[Power Series]
+% $$\sum_{n=0}^\infty a_n(x-c)^n\text{ converges on }
+% |x-c|<\lim\left|\frac{a_{n}}{a_{n+1}}\right|.$$
+% Test this interval's endpoints separately.
+ Near $x=a$, 
+$$f(x)\approx T_k(x)=\sum_{n=0}^k \frac{f^{(n)}(a)}{n!}(x-a)^n,$$
+and on some interval centered at $a$,
+$$f(x)=\sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n.$$
+
+\begin{center}
+\def\arraystretch{1.55}
+\begin{tabular}{llc}
+\midrule[0.4mm]
+Function & Taylor Series & Interval of Convergence\\
+\midrule
+$e^x$ & \sum_{n=0}^\infty\frac{1}{n!} x^n$ & $\mathbb{R}$ \\
+$\sin(x)$ & \sum_{n=0}^\infty\frac{(-1)^n}{(2n+1)!}x^{2n+1}$ & $\mathbb{R}$ \\
+$\cos(x)$ & \sum_{n=0}^\infty\frac{(-1)^n}{(2n)!}x^{2n}$ & $\mathbb{R}$ \\
+$\frac{1}{1-x}$ & \sum_{n=0}^\infty x^n$ & $(-1,1)$ \\
+$\ln(1-x)$ & \sum_{n=1}^\infty \frac{-1}{n}x^{n}$ & $[-1,1)$ \\
+$(x+1)^k$ & \sum_{n=0}^\infty{k\choose n}x^{n}$ & $\mathbb{R}$ \\
+\bottomrule[0.4mm]
+\end{tabular}
+\end{center}
 
 
 \end{bx}
@@ -403,8 +410,7 @@ $$\int_k^\infty f(x)\ dx\text{ converges} \iff \sum_{n=k}^\infty a_n\text{ conve
 
 
 \item \textbf{Limit Comparison Test:}
-If $a_n\geq 0$ and $b_n > 0$ for all $n$ and $\displaystyle\lim_{n\to\infty}{a_n}/{b_n}$ is positive and finite, then 
-$$\sum a_n\text{ converges }\iff \sum b_n\text{ converges}.$$
+If $a_n\geq 0$ and $b_n > 0$ for all $n$ and $\displaystyle\lim_{n\to\infty}{a_n}/{b_n}$ is positive and finite, then $$\sum a_n\text{ converges }\iff \sum b_n\text{ converges}.$$
 
 
 \item \textbf{Alternating Series Test:}
@@ -417,39 +423,43 @@ $$\sum |a_n| \text{ converges}\implies \sum a_n\text{ converges}.$$
 \item \textbf{Ratio Test:} Define $\displaystyle L= \lim _{n \to \infty}} \left|{a_{n+1}}/{a_{n}}\right|$.\\ If $L<1$, $\sum a_{n}$ converges. If $L>1$,  $\sum a_{n}$ diverges.
 
 
-\item \textbf{Root Test}
-Define $L={\displaystyle\lim _{n \to \infty}}\left|a_{n}\right|^{{1}/{n}}$. If $L<1$, $\sum a_{n}$ converges.\\ If $L>1$,  $\sum a_{n}$ diverges.
+\item \textbf{Root Test:}
+Define $L={\displaystyle\lim _{n \to \infty}}\left|a_{n}\right|^{{1}/{n}}$.\\ If $L<1$, $\sum a_{n}$ converges. If $L>1$,  $\sum a_{n}$ diverges.
 
 \end{itemize}
 \end{bx}
 
 
-\newpage
-\begin{bx}[Power Series]
-$$\sum_{n=0}^\infty a_n(x-c)^n$$
-converges on
-$$|x-c|<\lim\left|\frac{a_{n}}{a_{n+1}}\right|.$$
-Test the interval's endpoints separately. On some interval centered at $a$,
-$$f(x)=\sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n.$$
-Near $x=a$, 
-$$f(x)\approx T_k(x)=\sum_{n=0}^k \frac{f^{(n)}(a)}{n!}(x-a)^n.$$
 
-\begin{center}
-\def\arraystretch{1.2}
-\begin{tabular}{llc}
-\multicolumn{3}{c}{\textbf{Common Taylor Series}}\\
-\midrule[0.4mm]
-Function & Taylor Series & Interval of Convergence\\
-\midrule\\
-$e^x$ & \displaystyle\sum_{n=0}^\infty\frac{1}{n!} x^n$ & $\mathbb{R}$ \\\\
-$\sin(x)$ & \displaystyle\sum_{n=0}^\infty\frac{(-1)^n}{(2n+1)!}x^{2n+1}$ & $\mathbb{R}$ \\\\
-$\cos(x)$ & \displaystyle\sum_{n=0}^\infty\frac{(-1)^n}{(2n)!}x^{2n}$ & $\mathbb{R}$ \\\\
-$\frac{1}{1-x}$ & \displaystyle\sum_{n=0}^\infty x^n$ & $(-1,1)$ \\\\
-$\ln(1-x)$ & \displaystyle\sum_{n=1}^\infty \frac{-1}{n}x^{n}$ & $[-1,1)$ \\\\
-$(x+1)^k$ & \displaystyle\sum_{n=0}^\infty{k\choose n}x^{n}$ & $\mathbb{R}$ \\\\
-\bottomrule[0.4mm]
-\end{tabular}
-\end{center}
+
+
+\newpage
+
+
+
+\begin{bx}[Bounding Error]
+
+If $f(x)>0$ is CTS and decreasing on $[1,\infty)$ with $f(n)=a_n$, then for any $N$,
+$$\left(\sum_{n=1}^N a_n+\int_{N+1}^\infty f(x)\ dx \right)
+\leq \sum_{n=1}^\infty a_n \leq 
+\left(\sum_{n=1}^N a_n+  \int_{N}^\infty f(x)\ dx\right).$$
+
+\hrule
+\vspace{1em}
+
+Suppose $S=\sum_{n=1}^\infty b_n (-1)^n$ where $b_n\geq 0$, and $b_n$ decreases to 0. Then for any $N$,
+$$\left|S-S_N\right|\leq b_{N+1}$$
+where $S_N=\sum_{n=1}^N b_n (-1)^n$.
+\vspace{1em}
+
+\hrule
+\vspace{1em}
+
+\textbf{Taylor's Inequality:}
+If for all $x\in [a-d,a+d]$,
+$$\left|f^{(k+1)}(x)\right|\leq M,$$
+then for all $x\in [a-d,a+d]$,
+$$|f(x)-T_k(x)|\leq \frac{M}{(k+1)!}|x-a|^{k+1}.$$
 
 
 \end{bx}
@@ -458,9 +468,47 @@ $(x+1)^k$ & \displaystyle\sum_{n=0}^\infty{k\choose n}x^{n}$ & $\mathbb{R}$ \\\\
 
 \columnbreak
 
-\phantom{}
+
+\begin{bx}[Solving ODEs]
+
+To solve the separable ODE  $\displaystyle \frac{dy}{dx}=f(x)g(y),$
+separate the $x$ and $y$ variables and integrate:
+$$\int \frac{1}{g(y)}\ dy = \int f(x)\ dx.$$
+
+To solve a 2nd order ODE of the form $ay''+by'+c=0,$
+find the roots $\lambda$ of the characteristic equation
+$$a\lambda^2 + b\lambda + c = 0.$$
+\begin{center}
+\begin{tabular}{lll}
+\toprule[0.4mm]
+Case & Roots & Solutions\\
+\midrule
+$b^2-4ac\neq 0$ & $\lambda_1$, $\lambda_2$ & $y=pe^{\lambda_1 x} + qe^{\lambda_2 x}$\\
+$b^2-4ac= 0$ & $\lambda$ & $y=pe^{\lambda x}+qxe^{\lambda x}$\\
+\bottomrule[0.4mm]
+\end{tabular}
+\end{center}
+
+\def\arraystretch{1.5}
+\begin{tabular}{lll}
+\multicolumn{3}{l}{\textbf{Common ODEs}}\\
+\toprule[0.4mm]
+Name & ODE & Solution\\
+\midrule
+Exponential & $y'=ky$ & $y=e^{kx+C}$\\
+Logistic & $y'=ky\left(1 - \frac{y}{M}\right)$ & $y=\frac{M}{1\pm Ce^{-kx}}$ \\
+Harmonic Oscillator & $-ky=my''$ & $y=A\cdot\cos\left(\sqrt{\frac{k}{m}}x+C\right)$\\
+\bottomrule[0.4mm]
+\end{tabular}
+
+
+\end{bx}
 
 \end{multicols}
+
+
+
+
 
 
 \end{document}
