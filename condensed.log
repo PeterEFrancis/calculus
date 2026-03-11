@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.19)  5 DEC 2024 12:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.19)  11 MAR 2026 10:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1617,7 +1617,7 @@ Package rerunfilecheck Info: File `condensed.out' has not changed.
 Here is how much of TeX's memory you used:
  29180 strings out of 474116
  537650 string characters out of 5743682
- 1987187 words of memory out of 5000000
+ 1986187 words of memory out of 5000000
  50983 multiletter control sequences out of 15000+600000
  587755 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1633,7 +1633,7 @@ newtx/NewTXMI.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/
 txexs.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txmiaX.p
 fb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr
 /local/texlive/2024/texmf-dist/fonts/type1/public/newtx/txsys.pfb>
-Output written on condensed.pdf (3 pages, 550791 bytes).
+Output written on condensed.pdf (3 pages, 550753 bytes).
 PDF statistics:
  89 PDF objects out of 1000 (max. 8388607)
  58 compressed objects within 1 object stream
