@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.19)  4 MAR 2026 17:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.19)  3 SEP 2026 15:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -655,7 +655,7 @@ Package rerunfilecheck Info: File `"Limits and Continuity".out' has not changed
 Here is how much of TeX's memory you used:
  11312 strings out of 474116
  173472 string characters out of 5743682
- 1965187 words of memory out of 5000000
+ 1964187 words of memory out of 5000000
  33461 multiletter control sequences out of 15000+600000
  595125 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -672,7 +672,7 @@ ive/2024/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2024/t
 exmf-dist/fonts/type1/public/lm/lmsy5.pfb></usr/local/texlive/2024/texmf-dist/f
 onts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/
 public/amsfonts/symbols/msbm10.pfb>
-Output written on "Limits and Continuity.pdf" (2 pages, 185679 bytes).
+Output written on "Limits and Continuity.pdf" (2 pages, 185694 bytes).
 PDF statistics:
  151 PDF objects out of 1000 (max. 8388607)
  116 compressed objects within 2 object streams
