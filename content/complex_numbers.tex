@@ -53,16 +53,16 @@ We can do arithmetic with complex numbers too. For any complex numbers $z_1=x_1+
 \toprule[0.4mm]
 \textbf{addition} & $z_1+ z_2=(x_1+ x_2)+i(y_1+ y_2)$\\
 \textbf{subtraction} & $z_1- z_2=(x_1- x_2)+i(y_1- y_2)$\\
-\textbf{scalar multiplication} & $c z_1=(cx_1)+i(cy_2)$\\
+\textbf{scalar multiplication} & $c z_1=(cx_1)+i(cy_1)$\\
 \textbf{multiplication} & $z_1 \cdot z_2=(x_1x_2- y_1y_2)+i(x_1y_2+y_1x_2)$\\
-\textbf{division} & $\displaystyle\frac{z_1}{z_2}=\left(\frac{x_1x_2+y_2y_2}{x_2^2+y_2^2}\right)+i\left(\frac{x_2y_1-x_1y_2}{x_2^2+y_2^2}\right)$\\
+\textbf{division} ($z_2\ne 0$) & $\displaystyle\frac{z_1}{z_2}=\left(\frac{x_1x_2+y_1y_2}{x_2^2+y_2^2}\right)+i\left(\frac{x_2y_1-x_1y_2}{x_2^2+y_2^2}\right)$\\
 \bottomrule[0.4mm]
 \end{tabular}
 \end{center}
 \mar{Do some examples of each operation and plot the results. What do the different operations correspond to visually on the plane?}
 
 The \textbf{complex conjugate} of a complex number $z=x+iy$ is the complex number $z^*=x-iy$, which is the reflection of $z$ over the real axis. The \textbf{modulus} of a complex number $z$ is written $|z|$ and is defined to be the distance of $z$ from the origin:
-$$|z|=\sqrt{\text{Re}^2(x)+\text{Im}^2(x)}.$$
+$$|z|=\sqrt{\operatorname{Re}(z)^2+\operatorname{Im}(z)^2}=\sqrt{x^2+y^2}.$$
 For an arbitrary $z=x+iy$, it is always true that\mar{Show that $\frac{z_1}{z_2}=\frac{z_1\cdot z_2^*}{|z_2|^2}$.}
 $$z^*\cdot z =(x+iy)(x-iy) = x^2+y^2=|z|^2.$$
 \mar{What is $(z^*)^*$ for any complex $z$? What is $z^*$ for any real $z$?}
@@ -125,5 +125,3 @@ $$z=x+iy=r\cos\theta+ir\sin\theta = r(\cos\theta+i\sin\theta)=re^{i\theta}.$$
 % \end{example}
 
 % \end{tcolorbox}
-
-

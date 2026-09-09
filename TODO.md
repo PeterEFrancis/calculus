@@ -18,6 +18,10 @@ Fall 2020)
 - [X] rewrite the limit section
 
 
+- [X] what about things like x * cos(1/x)
+
+
+
 #### derivatives
 
 - [X] Typo on Derivative C3

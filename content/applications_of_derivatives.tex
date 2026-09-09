@@ -73,9 +73,13 @@ so we weren't that far off! \mar{Estimate $\sqrt{3.9}$ and compare to the actual
 L'H\^opital's Rule is a way to easily tackle some of those limit problems that were in an indeterminate form, namely $\frac{0}{0}$ and $\frac{\infty}{\infty}$.
 
 \begin{thm}
-If $\displaystyle \lim_{x\to a} f(x)= \lim_{x\to a} g(x)= 0$ or $\infty$, then
-$$\lim_{x\to a}\frac{f(x)}{g(x)}=\lim_{x\to a}\frac{f'(x)}{g'(x)},$$
-as long as all of these limits are defined.
+Let $f$ and $g$ be differentiable on a deleted neighborhood of $a$ (or on a
+tail interval when $a=\pm\infty$), with $g(x)\ne0$ and $g'(x)\ne0$ there.
+Suppose that $f/g$ has the indeterminate form $0/0$ or $\infty/\infty$ as
+$x\to a$. If
+$$\lim_{x\to a}\frac{f'(x)}{g'(x)}=L$$
+exists, possibly with $L=\pm\infty$, then
+$$\lim_{x\to a}\frac{f(x)}{g(x)}=L.$$
 \end{thm}
 
 What this means for you: if you are trying to take the limit of a rational function and after plugging in you get $\frac{0}{0}$ or $\frac{\infty}{\infty}$, then take the derivative of the numerator and the denominator, and try to evaluate the limit again.
@@ -86,7 +90,7 @@ It is possible that one use of L'H\^optial's rule won't be enough: you may have 
 \item $\displaystyle \lim_{x\to \infty}\frac{3x^2+1}{4x^2+3x}\overset{\text{LH}}{=}\lim_{x\to\infty}\frac{6x}{8x+3}\overset{\text{LH}}{=}\lim_{x\to\infty}\frac{6}{8}=\frac{3}{4}$.
 \end{itemize}
 
-Sometimes you will encounter an indeterminant form that is not $\frac00$ or $\frac\infty\infty$, and in these cases, we can transform it into the form $\frac00$ or $\frac\infty\infty$ and then use L'H\^optial's rule. Here are some illustriative examples:
+Sometimes you will encounter an indeterminate form that is not $\frac00$ or $\frac\infty\infty$, and in these cases, we can transform it into the form $\frac00$ or $\frac\infty\infty$ and then use L'H\^optial's rule. Here are some illustriative examples:
 
 \begin{itemize}
 
@@ -103,7 +107,7 @@ $\displaystyle \lim_{x\to 0^+} x\ln(x) =\lim_{x\to 0^+} \frac{\ln(x)}{1/x} \over
 \item $\displaystyle\lim_{x\to 0^+} x^x =\lim_{x\to0^+}e^{\ln(x^x)}=e^{\displaystyle\lim_{x\to0^+}\ln(x^x)}=e^{\displaystyle\lim_{x\to 0^+}x\ln(x)} = e^0 = 1.$
 
 
-\mar{Label each of these examples with original and trasnsformed type of indeterminant forms they demonstrate.}
+\mar{Label each of these examples with original and trasnsformed type of indeterminate forms they demonstrate.}
 
 
 % \item $\displaystyle\lim_{x\to\infty}\left(1+\frac{1}{x}\right)^x = e^{\displaystyle\lim_{x\to\infty}\textstyle\frac{\ln\left(1+\frac{1}{x}\right)}{1/x}}\overset{\text{LH}}{=}e^{\displaystyle\lim_{x\to\infty}\textstyle \frac{(-1/x^2)/(1+1/x)}{-1/x^2}}=e^{\displaystyle\lim_{x\to\infty}\textstyle \frac{1}{1+1/x}}= e$.
@@ -206,40 +210,37 @@ In plain English, the mean value theorem says that the average value of the slop
 
 
 
-\subsection{Extremal Points}
+\subsection{Extrema and Critical Numbers}
 
-\noindent A function $f$ has a
-$$\textbf{local} \begin{cases}\textbf{maximum}\\\textbf{minimum}\end{cases}\text{at }a \text{ if }\begin{cases}f(a)\geq f(x)\\f(a)\leq f(x)\end{cases} \text{for all $x$ in some interval $I\ni a$};$$
+\noindent A function $f$ has a \textbf{local maximum} at $a$ if there is an open interval $I\ni a$ such that
+$$f(a)\geq f(x)\qquad\text{for every }x\in I\cap\operatorname{dom}(f).$$
+A \textbf{local minimum} is defined in the same way, with $f(a)\leq f(x)$.
 
-$$\textbf{global} \begin{cases}\textbf{maximum}\\\textbf{minimum}\end{cases}\text{at }a \text{ if }\begin{cases}f(a)\geq f(x)\\f(a)\leq f(x)\end{cases} \text{for all $x$ in the domain of $f$}.$$
-Any such point is called an \textbf{extremal point} of $f$.
+The function has a \textbf{global maximum} at $a$ if
+$$f(a)\geq f(x)\qquad\text{for every }x\text{ in the domain of }f.$$
+A \textbf{global minimum} is defined in the same way, with $f(a)\leq f(x)$.
+When one of these conditions holds, $a$ is a location of an extremum, $f(a)$ is the corresponding \textbf{extremal value}, and $(a,f(a))$ is the corresponding \textbf{extremal point} on the graph of $f$.
 
-Global maximum \textit{values} are unique, but points at which they occur might not be. For example, $\sin(x)$ has global maximum value of $1$, even though this value occurs infinitely many times on the domain of $\sin(x)$. All global extremal points are local extremal points.
+A global maximum or minimum value, if it exists, is unique, but it may occur at more than one input. For example, $\sin(x)$ has a global maximum value of $1$, even though this value occurs infinitely many times on the domain of $\sin(x)$. Every global extremum is also a local extremum.
 
 
-The point $a$ is called a \textbf{critical point} of $f$ if $f'(a)=0$ or $f$ is not differentiable at $a$ ($f'(a)$ doesn't exist). The following theorem tells us how find extremal points using critical points.
+A number $a$ in the domain of $f$ is called a \textbf{critical number} of $f$ if $f'(a)=0$ or $f'(a)$ does not exist. The corresponding graph point $(a,f(a))$ is called a \textbf{critical point} of $f$. The following theorem tells us how to find extrema using critical numbers.
 
 \begin{thm}
-If $a$ is an extremal point of $f$, $a$ is a critical point of $f$.
+If $f$ has a local extremum at $a$, then $a$ is a critical number of $f$.
 \end{thm}
 
-\noindent WARNING: The converse is not true! (i.e. not all critical points are extremal!)\mar{Name and draw a function with a non-extremal critical point.}
+\noindent WARNING: The converse is not true: not every critical number is the location of a local extremum.\mar{Name and draw a function with a critical number at which it has no local extremum.}
 
 \begin{thm}[First Derivative Test]
-Suppose $a$ is a critical point of $f$.
-$$\text{If $f'$ } \begin{cases}
-\text{changes from $(+)$ to $(-)$}\\
-\text{changes from $(-)$ to $(+)$}\\
-\text{doesn't change sign}\\
-\end{cases}
-\text{at $a$, then $a$ is}
-\begin{cases}
-\text{a local maximum of $f$}.\\
-\text{a local minimum of $f$}.\\
-\text{not a extremal point}.\\
-\end{cases}$$
+Suppose $a$ is a critical number of $f$ and $f$ is continuous at $a$.
+Then, sufficiently close to $a$
+\begin{itemize}
+\item if $f'$ changes from $(+)$ to $(-)$, then $f$ has a local maximum at $a$.
+\item if $f'$ changes from $(-)$ to $(+)$, then $f$ has a local minimum at $a$.
+\item if $f'$ has the same strict sign on both sides of $a$, then $f$ has no local extremum at $a$.
+\end{itemize}
 \end{thm}
-
 
 \begin{thm}[Second Derivative Test]
 Suppose $f'(a)=0$ and $f''$ is continuous at $a$.
@@ -247,20 +248,20 @@ $$\text{If } \begin{cases}
 f''(a)>0\\
 f''(a)<0
 \end{cases}
-\text{then $a$ is a}
+\text{then $f$ has}
 \begin{cases}
-\text{local minimum}\\
-\text{local maximum}
-\end{cases} \text{of $f$}.$$
+\text{a local minimum at $a$}\\
+\text{a local maximum at $a$}
+\end{cases}.$$
 \end{thm}
 
 
-\begin{strat}[Finding Extremal Points]
+\begin{strat}[Finding Extrema]
 \begin{enumerate}[leftmargin=1em]
 \item Solve $f'(x)=0$ for $x$.
-\item Find other critical points (points of non-differentiability such as endpoints of the domain, cusps, peaks, and points of discontinuity).
-\item If you are looking for \textit{local} extremal points, use the first or second derivative tests as necessary to classify points the critical points you found.
-\item If you are looking for \textit{global} extremal points, evaluate $f$ at each critical points to find the largest and smallest.
+\item Find any other critical numbers: numbers in the domain at which $f'$ does not exist, such as endpoints, corners, cusps, vertical tangents, and discontinuities at which $f$ is defined.
+\item If you are looking for \textit{local} extrema, use the first or second derivative tests where applicable to determine which critical numbers are locations of local extrema.
+\item If you are looking for \textit{global} extrema, evaluate $f$ at each critical number and compare the resulting values.
 \end{enumerate}
 \end{strat}
 
@@ -269,40 +270,37 @@ f''(a)<0
 
 ``Optimization''-style questions will ask you to optimize (maximize or minimize) a certain quantity $A$ under specified constraints. The constraints will still allow one variable $x$ of change. This means you will need to find the value of $x$ for which $A$ is maximal or minimal. 
 
-The strategy for optimization problems is very similar to the strategy for related rates, but uses the theory of extremal points from the previous section.
+The strategy for optimization problems is very similar to the strategy for related rates, but uses the theory of extrema from the previous section.
 
 \begin{strat}[Optimization]
 \begin{enumerate}[leftmargin=1em]
 \item Draw a picture.
 \item Label the relevant quantities.
 \item Find an equation for the quantity that you want to optimize $A$ in terms of the thing that you can change $x$ (and note the domain of $A$).
-\item Find the extremal points of $A$.
+\item Find the locations and values of the extrema of $A$.
 \end{enumerate}
 \end{strat}
 
 
 \subsection{Newton's Method for Finding Roots}
 
-Imagine that you have an function $f$ and you want to find the zeros (or roots) of $f$. That is, you want to find the values of $x$ such that $f(x)=0$. \textbf{Newton's Method} is a computational algorithm that can sometimes be used to approximate such a value. First, we'll describe the algorithm, and then we'll show how to do use your TI calculator to implement it.
+Imagine that you have a function $f$ and you want to find the zeros (or roots) of $f$. That is, you want to find the values of $x$ such that $f(x)=0$. \textbf{Newton's Method} is a computational algorithm that can sometimes be used to approximate such a value. First, we'll describe the algorithm, and then we'll show how to use your TI calculator to implement it.
 
-Imagine that $x_0$ is an initial guess of a root of the function $f$. If we can take the derivative of $f$, then we know that the tangent line of $f$ at $x_0$ is
+Imagine that $x_0$ is an initial guess of a root of the function $f$. If $f'(x_0)\ne 0$, then the tangent line of $f$ at $x_0$ is
 $$y-f(x_0)=f'(x_0)(x-x_0)$$
-and so we find (setting $y=0$ and solving for $x$) this tangent line intersects the $x$-axis at the point $(x_1,0)$, where
+and so we find (setting $y=0$ and solving for $x$) that this tangent line intersects the $x$-axis at the point $(x_1,0)$, where
 $$x_1=x_0-\frac{f(x_0)}{f'(x_0)}.$$
-We continue this, setting
-$$x_2=x_1-\frac{f(x_1)}{f'(x_1)},$$
-and so on:
+We continue in the same way. As long as $f'(x_n)\ne0$, set
 $$x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}.$$
+If $f(x_n)=0$, stop: we have found a root. If $f'(x_n)=0$ before we find a root, the method gets stuck and we need a different guess.
 
-In many cases, this sequence of numbers should approach a zero of $f$. Here is the intuitive reason why: (1) if $x_n$ is not a zero of $f$, then $x_{n+1}$ moves in the direction of a zero, and (2) if $x_n$ is a zero of $f$, then $x_{n+1}=x_n$.
-
-The second point is obvious, but let's look into the first point. If $f(x_n)$ is not 0, then we have two cases:
+In many cases, this sequence of numbers approaches a zero of $f$. The idea is simple: near $x_n$, use the tangent line as an approximation of the graph and take the zero of that line as the next guess. The sign of $-f(x_n)/f'(x_n)$ tells us which way the next guess moves:
 \begin{itemize}
-\item $x_n<x_{n+1}$ (move to the right).  Algebraically, this occurs exactly when $f(x_n)$ and $f'(x_n)$ have opposite sign (when $f$ is increasing below the $x$-axis, or decreasing above the $x$-axis). \mar{Draw a picture showing the four cases.}
-\item $x_{n+1}<x_n$ (move to the left). Similarly, this occurs exactly when $f(x_n)$ and $f'(x_n)$ have the same sign (when $f$ is increasing above the $x$-axis, or decreasing below the $x$-axis).
+\item $x_n<x_{n+1}$ (move to the right) when $f(x_n)$ and $f'(x_n)$ have opposite signs. \mar{Draw a picture showing the four cases.}
+\item $x_{n+1}<x_n$ (move to the left) when $f(x_n)$ and $f'(x_n)$ have the same sign.
 \end{itemize}
 
-Seems reasonable, right? In either case we try to move in the direction of  a root.
+This tells us whether the next guess lies to the left or right, but it does not guarantee that it is closer to a root. Newton's method can move away from a root, enter a cycle, encounter a point where $f'=0$, or converge to a different root. However, if $r$ is a root with $f'(r)\ne0$, $f$ is smooth near $r$, and $x_0$ is close enough to $r$, then Newton's method converges to $r$.
 
 Now, how do we use Newton's method? Get out your TI calculator, and type the function $f$ into \texttt{Y$_\text{1}$=}, and $f'$ into \texttt{Y$_\text{2}$=}. Then return to the main calculator screen and type
 \begin{center}
@@ -314,5 +312,4 @@ Now, how do we use Newton's method? Get out your TI calculator, and type the fun
 \end{center}
 and click \texttt{ENTER}. The variable \texttt{A} is now set as $x_1$, and this value should be displayed. Click \texttt{ENTER} again and \texttt{A} is now $x_2$. Continue clicking \texttt{ENTER} to find $x_n$ for higher $n$ (clicking 100 times will show you $x_{100}$).
 
-Although Newton's method is generally an easy algorithm to implement and use, it does not always work.\mar{Consider $f(x)=x^3$ and try to use Newtons method to detect the root $0$ with the initial guess $x_0=1$.}
-
+Although Newton's method is generally an easy algorithm to implement and use, it does not always work.\mar{Try $f(x)=x^3-2x+2$ with $x_0=0$. Show that the guesses cycle: $0\to1\to0\to\cdots$.}

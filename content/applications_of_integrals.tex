@@ -66,7 +66,7 @@ $$\frac{F(b)-F(a)}{b-a}\overset{FTC}{=}\frac{\int_a^bf(x) \ dx}{b-a}.$$
 
 
 \subsection{Areas}
-To compute the area $A$ between $f(x)$ and $g(x)$ on $[a,b]$, imagine dividing up the area into infinitesimally small strips, each with height $f(x)-g(x)$ and (infinitesimal) width $dx$. The area of the strip is therefore $dA=(f(x)-g(x))\ dx$. One such strip is shown on the graph below (the width enlarged to be visible). To compute the desired area, simply integrate $dA$ over $[a,b]$:
+Suppose $f(x)\geq g(x)$ for every $x\in[a,b]$, so that $f$ is the upper curve and $g$ is the lower curve. To compute the area $A$ between them, imagine dividing the region into infinitesimally small strips, each with height $f(x)-g(x)$ and (infinitesimal) width $dx$. The area of the strip is therefore $dA=(f(x)-g(x))\ dx$. One such strip is shown on the graph below (the width enlarged to be visible). To compute the desired area, simply integrate $dA$ over $[a,b]$:
 $$A=\int dA = \int_a^b(f(x)-g(x))\ dx.$$
 
 \begin{figure}[H]
@@ -164,7 +164,7 @@ For the kinds of experiments we will consider, we will assume that it is never p
 This might seem paradoxical, because the dart must hit \textit{some} point. However, it should make sense since there are infinitely many possible outcomes.
 \mar{Think about this carefully.}
 
-To compute $\P(X\in A)$ in general, we need a way to describe an allocation of probability specific to the experiment that is happening. For this (of course) we use a a function! A bounded function $f:\R \to \R$ is called a \textbf{probability density function} (PDF) if it is non-negative and $\int_{\infty}^\infty f(x)\ dx= 1$.\mar{What does the condition $$\int_{\infty}^\infty f(x)\ dx= 1$$ mean in terms of probability?} 
+To compute $\P(X\in A)$ in general, we need a way to describe an allocation of probability specific to the experiment that is happening. For this (of course) we use a a function! A bounded function $f:\R \to \R$ is called a \textbf{probability density function} (PDF) if it is non-negative and $\int_{-\infty}^\infty f(x)\ dx= 1$.\mar{What does the condition $$\int_{-\infty}^\infty f(x)\ dx= 1$$ mean in terms of probability?}
 To compute a probability, we just have to integrate:
 $$\P(X\in A) = \int_A f(x)\ dx.$$
 This notation means that if $A$ is the union of disjoint intervals, integrate over each interval and add the results. In particular, if $A=(a,b)$, then 
@@ -216,8 +216,8 @@ $$\P\left(X\in(1/4,\infty)\right)
 = \int_{\frac14}^{\infty} e^{-x}\ dx
 = e^{-\frac{1}{4}}.
 $$
-The expected value of the uniform PDF is
-$$\mu=\int_{0}^\infty xe^x\ dx=1,$$
+The expected value of the exponential PDF is
+$$\mu=\int_{0}^\infty xe^{-x}\ dx=1,$$
 and the variance is
 $$\sigma^2 = \int_{0}^\infty \left(x-1\right)^2e^{-x}\ dx=1.$$
 

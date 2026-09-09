@@ -15,7 +15,7 @@ We know that the power series converges at the values of $x$ for which $L(x) < 1
 $$|x-c|<\lim\left|\frac{a_{n}}{a_{n+1}}\right|.$$\mar{Write out this inequality as an interval. I.e. $$x\in(\dots).$$}
 The value $c$ is called the \textbf{center}, and $\lim\left|\frac{a_{n}}{a_{n+1}}\right|$ is called the \textbf{radius of convergence}. Since the ratio test doesn't say anything about when $L(x)=1$ (the endpoints of the interval of convergence), we will need to test those cases separately. Here are some examples:
 \begin{itemize}[leftmargin=0em]
-\item $\displaystyle\sum_{n=0}^\infty \frac{(-1)^n}{n}(x-1)^n$
+\item $\displaystyle\sum_{n=1}^\infty \frac{(-1)^n}{n}(x-1)^n$
 
 Use the ratio test and compute
 $$L(x)=|x-1|\cdot\lim\left|\frac{(-1)^{n+1}}{n+1}\frac{n}{(-1)^n}\right|=|x-1|.$$
@@ -52,9 +52,19 @@ $$f(x) \approx f(a)+f^{(1)}(a)(x-a)+\frac{f^{(2)}(a)}{2}(x-a)^2+\frac{f^{(3)}(a)
 Writing this in summation notation,
 $$f(x)\approx T_k(x)=\sum_{n=0}^k\frac{f^{(n)}(a)}{n!}(x-a)^n.$$
 \mar{Write down the 5th degree Taylor polynomial and take all of its derivatives. Plug in $x=a$ for each one. Notice why the factorial is useful in the denominator.}
-The function $T_k(x)$ is called the \textbf{degree-$k$ Taylor polynomial} for $f$ at $a$. Note that $f^{(k)}(a)$ denotes the $k$th derivative of $f$ evaluated at $a$. Of course we can take $k$ to infinity, and by doing so we will get equality on a particular interval of convergence around $x=a$:
+The function $T_k(x)$ is called the \textbf{degree-$k$ Taylor polynomial} for $f$ at $a$. Note that $f^{(k)}(a)$ denotes the $k$th derivative of $f$ evaluated at $a$. The difference between $f(x)$ and its degree-$k$ Taylor polynomial is called the \textbf{Taylor remainder}:
+$$R_k(x)=f(x)-T_k(x).$$
+Thus $f(x)=T_k(x)+R_k(x)$. If, for a particular value of $x$,
+$$\lim_{k\to\infty}R_k(x)=0,$$
+then taking $k\to\infty$ gives
 $$f(x)= \sum_{n=0}^\infty\frac{f^{(n)}(a)}{n!}(x-a)^n.$$
-This is called the \textbf{Taylor series} for $f$ at $a$. When $a=0$, the series is called a \textbf{Maclaurin series}. The following table lists various common Taylor series.
+The infinite series on the right is called the \textbf{Taylor series} for $f$ at $a$. When $a=0$, the series is called a \textbf{Maclaurin series}.
+
+As a power series centered at $a$, a Taylor series has a radius of convergence $r$: it converges when $|x-a|<r$, diverges when $|x-a|>r$, and its behavior at the endpoints must be checked separately. If $r=0$, the interval of convergence is the singleton set $\{a\}$; if $r=\infty$, the series converges for every real number. Caution: the interval of convergence describes only where the Taylor series converges to something (not necessarily $f(x)$). At a point in that interval, the Taylor series equals $f(x)$ only when the Taylor remainder tends to zero there.
+\mar{Consider the function 
+$$f(x)=\begin{cases} e^{-1/x^2} & x\neq 0\\ 0 & x=0. \end{cases}$ Determine the Taylor series and interval of convergence of $f$ at $x=0$. Compare the value of series and the function on the IOC.}
+
+The following table lists various common Taylor series.
 
 \begin{center}
 \def\arraystretch{1.2}
@@ -62,13 +72,13 @@ This is called the \textbf{Taylor series} for $f$ at $a$. When $a=0$, the series
 \toprule[0.4mm]
 Function & Taylor Series & Interval of Convergence\\
 \midrule\\
-$e^x$ & \displaystyle\sum_{n=0}^\infty\frac{1}{n!} x^n$ & $\R$ \\\\
-$\sin(x)$ & \displaystyle\sum_{n=0}^\infty\frac{(-1)^n}{(2n+1)!}x^{2n+1}$ & $\R$ \\\\
-$\cos(x)$ & \displaystyle\sum_{n=0}^\infty\frac{(-1)^n}{(2n)!}x^{2n}$ & $\R$ \\\\
-$\frac{1}{1-x}$ & \displaystyle\sum_{n=0}^\infty x^n$ & $(-1,1)$ \\\\
+$e^x$ & $\displaystyle\sum_{n=0}^\infty\frac{1}{n!} x^n$ & $\R$ \\\\
+$\sin(x)$ & $\displaystyle\sum_{n=0}^\infty\frac{(-1)^n}{(2n+1)!}x^{2n+1}$ & $\R$ \\\\
+$\cos(x)$ & $\displaystyle\sum_{n=0}^\infty\frac{(-1)^n}{(2n)!}x^{2n}$ & $\R$ \\\\
+$\frac{1}{1-x}$ & $\displaystyle\sum_{n=0}^\infty x^n$ & $(-1,1)$ \\\\
 %$\ln(x)$ & \displaystyle\sum_{n=1}^\infty \frac{\left(-1\right)^{n+1}}{n}\left(x-1\right)^{n}$ & $(0,2)$ \\\\
-$\ln(1-x)$ & \displaystyle\sum_{n=1}^\infty \frac{-1}{n}x^{n}$ & $[-1,1)$ \\\\
-$(x+1)^k$ & \displaystyle\sum_{n=0}^\infty{k\choose n}x^{n}$ & $\R$ \\\\
+$\ln(1-x)$ & $\displaystyle\sum_{n=1}^\infty \frac{-1}{n}x^{n}$ & $[-1,1)$ \\\\
+$(x+1)^k$ & $\displaystyle\sum_{n=0}^{k}{k\choose n}x^{n}$ & $\R\ (k\in\mathbb{Z}_{\geq 0})$ \\\\
 \bottomrule[0.4mm]
 \end{tabular}
 \end{center}
@@ -100,12 +110,6 @@ $|f(x)-T_k(x)|$ & $\leq$               & $\displaystyle\frac{M}{(k+1)!}|x-a|^{k+
 \end{tabular}
 \end{center}
 where $d_1=\sqrt[k+1]{\epsilon\cdot (k+1)!/M}$. \mar{Check the algebra solving for $d_1$.} If we want $|f(x)-T_k(x)|<\epsilon$, $|x-a|$ must be smaller than both $d_0$ and $d_1$. Thus the $d$ we are after is $d=\min\left(d_0, d_1\right)$.
-
-
-
-
-
-
 
 
 

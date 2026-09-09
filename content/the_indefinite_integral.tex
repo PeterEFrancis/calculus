@@ -24,7 +24,7 @@ Similarly to differentiation, we will build up a two-part collection of tools to
 \begin{tabular}{@{}ll@{}}
 \toprule[0.4mm]
 \textbf{Scalar Multiplication} & $\int a f = a \int f$. \\
-\textbf{Sum} & $\int f + \int g= \int f + \int g$ \\
+\textbf{Sum} & $\int (f+g)=\int f+\int g$ \\
 \textbf{Integration by Parts} & $\int f'g = fg - \int fg' $ \\
 \textbf{$u$-substitution} & $\int f'(g(x))g'(x)\ dx =  f(g(x))$ \\
 % \textbf{$u$-substitution} & $\int (f'\circ g)g' =  f\circ g$ \\
@@ -48,7 +48,7 @@ Similarly to differentiation, we will build up a two-part collection of tools to
 \end{cases}$ \\
 \textbf{Trig Rules}  & $\int \sin(x)\ dx = -\cos(x)+C$\\
                      & $\int \cos(x)\ dx = \sin(x)+C$ \\
-\textbf{Exponential Rules} & $\int a^x\ dx = \frac{1}{\ln(a)}a^x+C$ \\
+\textbf{Exponential Rules} & $\int a^x\ dx = \frac{1}{\ln(a)}a^x+C$, where $a>0$ and $a\ne1$ \\
 \bottomrule[0.4mm]
 \end{tabular}
 \end{center}
@@ -118,6 +118,13 @@ While this table is not exhaustive, it covers the range of complexity required i
 
 Another useful integration trick is Trig Substitution. The moral of this method is to replace a square-root containing a quadratic with an equivalent trigonometric expression that is easier to integrate. There are only three common examples of this. The table below summarizes them.
 
+\noindent\textbf{Assumptions.} Assume $a>0$. For $x=a\sin\theta$, take
+$-\pi/2\le\theta\le\pi/2$; for $x=a\tan\theta$, take
+$-\pi/2<\theta<\pi/2$. For $x=a\sec\theta$, take
+$0\le\theta<\pi/2$ when $x\ge a$, or $\pi\le\theta<3\pi/2$ when $x\le-a$.
+These choices make each substitution one-to-one and justify removing the
+absolute values from the square-root simplifications.
+
 \begin{center}
     \def\arraystretch{1.5}
     \begin{tabular}{@{}lll@{}}
@@ -161,6 +168,3 @@ This is explained geometrically by drawing the following triangle.
 \end{center}
 \mar{Draw the triangles for the other two examples.}
 \end{itemize}
-
-
-

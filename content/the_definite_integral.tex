@@ -130,7 +130,7 @@ $$R_n=\sum_{k=1}^{n}f\left(a+k\frac{b-a}{n}\right)\frac{b-a}{n}.$$
 We could also have used the \textit{left} endpoint of each sub-interval to determine the height of each box, in which case we would get the \textbf{$n$th Left Riemann Sum}:\mar{Draw a picture of $L_n$.}
 $$L_n=\sum_{k=1}^{n}f\left(a+(k-1)\frac{b-a}{n}\right)\frac{b-a}{n}.$$
 If instead we use trapezoids above each sub-interval, we get the \textbf{$n$th Trapezoid Riemann Sum}: \mar{Draw a picture of $T_n$.}
-$$T_n=\sum_{i=k}^{n}\frac{f\left(a+(k-1)\frac{b-a}{n}\right)+f\left(a+k\frac{b-a}{n}\right)}{2}\frac{b-a}{n}=\frac{R_n+L_n}{2},$$
+$$T_n=\sum_{k=1}^{n}\frac{f\left(a+(k-1)\frac{b-a}{n}\right)+f\left(a+k\frac{b-a}{n}\right)}{2}\frac{b-a}{n}=\frac{R_n+L_n}{2},$$
 where the $k$th trapezoid has width $\Delta x$ and heights determined by the left and right endpoints of the $k$th sub-interval. (Remember that a trapezoid with width $w$ and heights $h_1$ and $h_2$ has area $A=\frac{h_1+h_2}{2}w$. \mar{When are $R_n$, $L_n$, and $T_n$ overestimates? Underestimates?}
 
 In practice, it doesn't matter which you choose to compute because of the following theorem:
@@ -173,8 +173,9 @@ Here is an example:
 Let's cut right to the chase:
 
 \begin{thm}[The Fundamental Theorem of Calculus]
-    $$\int_a^bf(x)\ dx = F(b)-F(a),$$
-    where $F'=f$.
+    If $f$ is continuous on $[a,b]$ and $F$ is continuous on $[a,b]$ with
+    $F'=f$ on $(a,b)$, then
+    $$\int_a^b f(x)\ dx = F(b)-F(a).$$
 \end{thm}
 
 This theorem is the connection between differentiation and integration! It is also how we will compute definite integrals from now on:
@@ -186,8 +187,6 @@ This theorem is the connection between differentiation and integration! It is al
 The first point is called \textbf{anti-differentiation}, and is the harder step. Before we get to that, let's try to understand how this theorem agrees with our intuition about Riemann Sums. If we take the $b$-derivative of the equation in the theorem, we get
 $$\frac{d}{db}\left[\int_a^{b}f(x)\ dx\right] = \frac{d}{db}\left[F(b)-F(a)\right] = f(b).$$
 This means that the rate at which the area is changing is $f(b)$. This makes sense in terms of Riemann sums: if we increase $b$ by a small amount $\Delta b$, the area will change by about $f(b) \Delta b$. Thus the derivative of the area is $f(b)\Delta b/\Delta b = f(b)$. \mar{Draw a picture of $b$ increasing by $\Delta b$. Then sit and really think about this until it makes sense.}
-
-
 
 
 

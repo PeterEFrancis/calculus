@@ -377,7 +377,7 @@ It may be helpful to think about the definition of a limit as a game/conversatio
 \item[A:] Yes! If we take $x$ such that $|x-2|<1/30$, then
 $$|f(x)-7|=|3x + 1 - 7| = |3x-6| = 3|x-2| < 3(1/30) = 1/10.$$
 \end{itemize}
-In this example, $\varepsilon = 1/10$ and $\delta = 1/30$. However, if we want to really prove that the limit is 7, we let $\epsilon>0$ be arbitrary, and take $\delta = \varepsilon/3$. Then for any $x$ such that $|x-2|<\delta$,
+In this example, $\varepsilon = 1/10$ and $\delta = 1/30$. However, if we want to really prove that the limit is 7, we let $\varepsilon>0$ be arbitrary, and take $\delta = \varepsilon/3$. Then for any $x$ such that $|x-2|<\delta$,
 $$|f(x)-7|=|3x + 1 - 7| = |3x-6| = 3|x-2| < 3(\varepsilon/3) = \varepsilon.$$
 
 \mar{Prove that the limit of $x^2+1$ at $1$ is $2$.\\
@@ -388,26 +388,32 @@ For simple examples, it is pretty easy to work backwards and figure out what $\d
 
 \subsection{Continuity}
 
-Intuitively, a function is continuous if you can draw its graph without lifting up your pencil. We can use limits to write a more precise definition: a function $f$ is \textbf{continuous at $a$} if three conditions are satisfied:
+Intuitively, a function is continuous if you can draw its graph without lifting up your pencil. We can use limits to write a more precise definition: a function $f$ is \textbf{continuous at $a$} if
+$$\lim_{x\to a}f(x)=f(a).$$
+This equation implicitly requires three things:
 \begin{enumerate}
-\item[(a)] $f$ is defined at $a$ (i.e. $f(a)$ makes sense)
-\item[(b)] $\displaystyle\lim_{x\to a^+} f(x)= f(a)$
-\item[(c)] $\displaystyle\lim_{x\to a^-} f(x)= f(a)$
+\item[(a)] $f$ is defined at $a$ (i.e. $f(a)$ makes sense),
+\item[(b)] $\displaystyle\lim_{x\to a}f(x)$ exists, and
+\item[(c)] $\displaystyle\lim_{x\to a}f(x)=f(a)$.
 \end{enumerate}
 
-In other words, a function is continuous at a point if its value and limit match at that point.
+A function is \textbf{continuous from the right at $a$} if $\displaystyle\lim_{x\to a^+}f(x)=f(a)$, and it is \textbf{continuous from the left at $a$} if $\displaystyle\lim_{x\to a^-}f(x)=f(a)$. At an included endpoint of an interval, continuity means continuity from the side lying in the interval.
 
-If $U$ is a subset of $\R$ and $f$ is continuous at every point in $U$, then we say that $f$ is \textbf{continuous on $U$}.
+A function is \textbf{continuous on an interval} if it is continuous at every interior number in the interval and has the appropriate one-sided continuity at each included endpoint.
 
-In the definition above, if (b) and/or (c) is not true (or one of the sided limits doesn't exist), then $f$ is \textbf{discontinuous at $a$}. Here are three types of discontinuities that you may encounter: if $f$ is discontinuous at $a$, then
+\noindent\textbf{Definition:} If $f$ is defined near $a$ (on an open interval containing $a$, except possibly at $a$ itself) but is not continuous at $a$, then $f$ is \textbf{discontinuous at $a$}. The phrase ``except possibly at $a$'' is important: $f(a)$ need not be defined, so holes and vertical asymptotes at omitted interior $x$-values still count as discontinuities. At an included endpoint, failure of the appropriate one-sided condition likewise makes $f$ discontinuous there.
+
+Here are three types of discontinuities that you may encounter:
 \begin{enumerate}
-\item $f$ has a \textbf{removable discontinuity} at $a$ if $\displaystyle\lim _{x \to a} f(x)$ exists and is a real number, (but $\displaystyle f(a)\neq\lim _{x \to a} f(x)$).
+\item $f$ has a \textbf{removable discontinuity} at $a$ if $\displaystyle\lim _{x \to a} f(x)$ exists and is a real number, but $f(a)$ is either undefined or unequal to this limit.
 \item $f$ has a \textbf{jump discontinuity} at $a$ if $\displaystyle\lim _{x \to a^{-}} f(x)$ and $\displaystyle\lim _{x \to a^{+}} f(x)$ both exist and are real numbers, but are different.
 \item $f$ has an \textbf{infinite discontinuity} at $a$ if $\displaystyle\lim _{x \to a^{-}} f(x)=\pm \infty$ or $\displaystyle\lim _{x \to a^{+}} f(x)=\pm \infty$.
 \end{enumerate}
 \mar{Draw a picture of each kind of discontinuity.}
 
-Note that if $a$ is not in the domain of $f$, then $f$ is neither continuous or discontinuous at $a$.
+For example, $\frac{x^2-9}{x-3}$ has a removable discontinuity at $3$, while $\frac{1}{x}$ has an infinite discontinuity at $0$, even though neither function is defined at the indicated number.
+
+Not every number outside the domain is a discontinuity: the condition that $f$ be defined near $a$ rules out unrelated numbers and missing domain endpoints.
 
 
 \section{Properties of Limits}
@@ -451,7 +457,7 @@ $$\lim _{x \to a} f(g(x))=f\left(\lim _{x \to a} g(x)\right)=f(L).$$
 
 \subsection{Using Continuity}
 
-You should believe that the following types of functions are continuous at every point in their domains:
+You should believe that the following types of functions are continuous at every number in their domains:
 \begin{itemize}
 \item polynomials
 \item rational functions
@@ -529,7 +535,7 @@ $$\lim_{x\to a}f(x).$$
 There are two main types of functions that you might be asked to evaluate limits for. The first is an algebraic combination of continuous functions (ACCF). This means any sum, product, composition, etc. of simple functions like trig, exponential, polynomial, etc. The second type is a piece-wise function composed of type 1 functions.
 
 
-The process of evaluating both types are the same, except for at boundary points of the piece-wise components. At these points, you must compare right- and left-sided limits. For every other point (and also any point for an ACCF) use the flow chart in figure \ref{fig:flowchart}. The following sections will explain the three possible outcomes.
+The process of evaluating both types are the same, except for at boundary points of the piece-wise components. At these points, you must compare right- and left-sided limits. For every other point (and also any point for an ACCF) use the flow chart in figure \ref{fig:flowchart}. The following sections will explain the four possible outcomes.
 
 \begin{figure}[H]
     \centering
@@ -537,63 +543,33 @@ The process of evaluating both types are the same, except for at boundary points
             
         
 
-\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+\begin{tikzpicture}[
+    every node/.style={font=\small},
+    choice/.style={draw, rounded corners, align=center, minimum height=0.9cm, inner sep=4pt}
+]
+\node[choice] (plug) at (0,2.2) {plug $\displaystyle a$ into $f$};
 
-\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-%uncomment if require: \path (0,446); %set diagram left start at 0, and has height of 446
+\node[choice, minimum width=1.7cm] (number) at (-4.45,0.5) {number};
+\node[choice, text width=2.8cm] (overzero) at (-1.65,0.5)
+    {$\displaystyle\frac{\text{non-zero number}}{0}$};
+\node[choice, text width=2.2cm] (indeterminate) at (1.2,0.5)
+    {indeterminate\\form};
+\node[choice, text width=2.7cm] (undefined) at (3.95,0.5)
+    {undefined for\\another reason};
 
-%Rounded Rect [id:dp04536261924917495] 
-\draw   (218,91.93) .. controls (218,88.29) and (220.95,85.33) .. (224.6,85.33) -- (308.4,85.33) .. controls (312.05,85.33) and (315,88.29) .. (315,91.93) -- (315,111.73) .. controls (315,115.38) and (312.05,118.33) .. (308.4,118.33) -- (224.6,118.33) .. controls (220.95,118.33) and (218,115.38) .. (218,111.73) -- cycle ;
-%Straight Lines [id:da43038695232156465] 
-\draw    (232.6,118.33) -- (158.67,166.57) ;
-\draw [shift={(157,167.67)}, rotate = 326.87] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Straight Lines [id:da02535983624938165] 
-\draw    (267,119.67) -- (267,158) ;
-\draw [shift={(267,160)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Straight Lines [id:da33645697944263864] 
-\draw    (303.4,118.33) -- (379.24,159.38) ;
-\draw [shift={(381,160.33)}, rotate = 208.42] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Rounded Rect [id:dp8149957234073693] 
-\draw   (103,174.93) .. controls (103,171.29) and (105.95,168.33) .. (109.6,168.33) -- (180.4,168.33) .. controls (184.05,168.33) and (187,171.29) .. (187,174.93) -- (187,194.73) .. controls (187,198.38) and (184.05,201.33) .. (180.4,201.33) -- (109.6,201.33) .. controls (105.95,201.33) and (103,198.38) .. (103,194.73) -- cycle ;
-%Rounded Rect [id:dp9518200785534192] 
-\draw   (200,171.07) .. controls (200,165.69) and (204.36,161.33) .. (209.73,161.33) -- (320.27,161.33) .. controls (325.64,161.33) and (330,165.69) .. (330,171.07) -- (330,200.27) .. controls (330,205.64) and (325.64,210) .. (320.27,210) -- (209.73,210) .. controls (204.36,210) and (200,205.64) .. (200,200.27) -- cycle ;
-%Rounded Rect [id:dp5380321492603661] 
-\draw   (345,170.07) .. controls (345,164.69) and (349.36,160.33) .. (354.73,160.33) -- (444.27,160.33) .. controls (449.64,160.33) and (454,164.69) .. (454,170.07) -- (454,199.27) .. controls (454,204.64) and (449.64,209) .. (444.27,209) -- (354.73,209) .. controls (349.36,209) and (345,204.64) .. (345,199.27) -- cycle ;
-%Straight Lines [id:da980017392599877] 
-\draw    (142,202) -- (142,251.33) ;
-\draw [shift={(142,253.33)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Straight Lines [id:da24546083605149582] 
-\draw    (265,210) -- (265,251.33) ;
-\draw [shift={(265,253.33)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Straight Lines [id:da8582799815353812] 
-\draw    (398,210) -- (398,242.33) ;
-\draw [shift={(398,244.33)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+\node (number-result) at (-4.45,-0.9) {$f(a)$};
+\node (overzero-result) at (-1.65,-0.9) {DNE or $\displaystyle\pm\infty$};
+\node[align=center] (indeterminate-result) at (1.2,-0.9) {More work\\needed};
+\node[align=center] (undefined-result) at (3.95,-0.9) {More work\\needed};
 
-% Text Node
-\draw (226,92.33) node [anchor=north west][inner sep=0.75pt]   [align=left] {plug $\displaystyle a$ into f};
-% Text Node
-\draw (119,176.33) node [anchor=north west][inner sep=0.75pt]   [align=left] {number};
-% Text Node
-\draw (355,170) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{65.09pt}\setlength\topsep{0pt}
-\begin{center}
-Indeterminant\\form
-\end{center}
-
-\end{minipage}};
-% Text Node
-\draw (122,256.83) node [anchor=north west][inner sep=0.75pt]   [align=left] {$f(a)$};
-% Text Node
-\draw (226,255.33) node [anchor=north west][inner sep=0.75pt]   [align=left] {DNE or $\displaystyle \pm \infty $};
-% Text Node
-\draw (361,246.33) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{50.33pt}\setlength\topsep{0pt}
-\begin{center}
-More work\\needed
-\end{center}
-
-\end{minipage}};
-% Text Node
-\draw (215,170) node [anchor=north west][inner sep=0.75pt]    {$\displaystyle\frac{\text{non-zero number}}{0}$};
-
+\draw[->] (plug.220) -- (number.north);
+\draw[->] (plug.250) -- (overzero.north);
+\draw[->] (plug.290) -- (indeterminate.north);
+\draw[->] (plug.320) -- (undefined.north);
+\draw[->] (number.south) -- (number-result.north);
+\draw[->] (overzero.south) -- (overzero-result.north);
+\draw[->] (indeterminate.south) -- (indeterminate-result.north);
+\draw[->] (undefined.south) -- (undefined-result.north);
 \end{tikzpicture}
     }
     \caption{Flowchart for evaluating limits}
@@ -718,9 +694,9 @@ If $f$ is an ACCF and attempting to evaluate $f(a)$ results in a non-zero number
 
 Therefore, the only possibilities for the value of these limits are $\infty$, $-\infty$, and DNE. \mar{Label each function in figure \ref{fig:four-cases} with its respective limit.} To figure it out which one it is, evaluate both of the two sided limits. For each, plug in a value that is slightly to the right (or the left) of $a$. If the result is positive, the sided limit is positive infinity, and if the result is negative, negative infinity.
 
-\subsection{Indeterminant Form}
+\subsection{Indeterminate Form}
 
-There are seven indeterminant forms:
+There are seven indeterminate forms:
 
 \vspace{1em}
 
@@ -740,9 +716,10 @@ $\infty^0$
 
 \vspace{1em}
 
-They are called \textbf{indeterminant} because in this form, we cannot be sure of its value (or even if its value makes sense). Take $0^0$ for example: zero raised to any power should be 0, but anything raised to the power of $0$ should be 1... so which is it? \mar{Write out similar question for the other 6 indeterminant forms.}
+They are called \textbf{indeterminate} because in this form, we cannot be sure of its value (or even if its value makes sense). Take $0^0$ for example: zero raised to any power should be 0, but anything raised to the power of $0$ should be 1... so which is it? 
 
-When we get an indeterminant form after trying to evaluate $f(a)$, we need to do more work. There are several things you can try:
+When we get an indeterminate form after trying to evaluate $f(a)$, we need to do more work. There are several things you can try: \mar{Write out similar question for the other 6 indeterminate forms.}
+
 
 \begin{itemize}
 \item Simplify. If the function is rational and has common factor in its numerator and denominator, by ``canceling'' the term, the resulting function is not the same: the original function has a hole at the point where the factored term is 0. For example, $f(x)=\frac{x(x-1)}{(x-1)}$ has a hole at $x=1$, but everywhere else is the line $y=x$. However, this cancellation does not change the value of the limit.
@@ -760,22 +737,31 @@ $$
 $$
 
 \item In the case of $x\to\pm\infty$ for a rational function, divide the numerator and denominator by the highest degree term of the denominator.
+\end{itemize}
 
-\item Use the Squeeze Theorem:
+Later, we will learn a trick called L'H\^opital's Rule to more easily compute limits with indeterminate forms. But first we need to learn about derivatives!
+
+
+\subsection{Undefined for Another Reason}
+
+Sometimes plugging $a$ into $f$ is undefined without producing a non-zero number over 0 or an indeterminate form. In this case, here are three things you can try:
+
+\begin{itemize}
+\item Use the Squeeze Theorem, especially when part of the function is bounded:
 
 \begin{thm}[Squeeze Theorem]
 Let $f$, $g$, and $h$ be functions with $g(x)\leq f(x)\leq h(x)$ for all $x$ in some interval around $a$ (except possibly at $a$). If $$\lim_{x\to a}g(x)=L=\lim_{x\to a} h(x),$$ then $$\lim_{x\to a} f(x)=L$$
 as well.
 \end{thm}
-The most common application of squeeze theorem is squeezing $$-1\leq \sin\theta \leq 1.$$
+For example, since $\left|\cos(1/x)\right|\leq 1$,
+$$-|x|\leq x\cos(1/x)\leq |x|,$$
+so the Squeeze Theorem gives $\displaystyle\lim_{x\to0}x\cos(1/x)=0$.
+
+\item Make a change of variables to turn the limit into a more familiar one. Be sure to determine what the new variable approaches.
+
+\item Find the limit of the inner expression first, then use the Composite Function Theorem if the outer function is continuous at that limit.
 
 \end{itemize}
-
-Later, we will learn a trick called L'H\^opital's Rule to more easily compute limits with indeterminant forms. But first we need to learn about derivatives!
-
-
-
-
 
 
 

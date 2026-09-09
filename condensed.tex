@@ -3,7 +3,7 @@
 \usepackage{libertine}
 \usepackage[libertine]{newtxmath}
 
-\usepackage{hyperref, amsmath, amssymb}
+\usepackage{hyperref, amsmath}
 \usepackage{amsfonts}
 \usepackage{graphics}
 \usepackage{tikz}
@@ -109,7 +109,7 @@ $L$ is the limit of $f$ as $x$ approaches $a$ if for all $\varepsilon > 0$, ther
 
 $\delta > 0$, such that 
 
-$|x - a| < \delta \implies |f(x) - L| <\varepsilon$.
+$0<|x - a| < \delta {\implies} |f(x) - L| <\varepsilon$.
 
 \end{tabular}
 
@@ -122,12 +122,12 @@ $$\lim_{x\to 0}\frac{\sin(x)}{x} = 1\quad\quad\lim_{x\to\infty}\left(1+\frac{1}{
 \vspace{-0.8em}
 
 \begin{bx}[Continuity]
-\textbf{Definition:} $f$ is \textit{continuous} at $x=a$ if $\displaystyle\lim_{x\to a}f(x)=f(a)$.
+\textbf{Definition:} $f$ is \textit{continuous} at $x=a$ if $\displaystyle\lim_{x\to a}f(x)=f(a)$. If $f$ is defined near $a$ (except possibly at $a$ itself) but fails the continuity condition, then $f$ is discontinuous at $a$.
 
 \begin{itemize}
 \setlength\itemsep{-0.25em}
-\item The following functions are \textbf{continuous on their domains}: polynomials, rational functions, trig and inverse trig functions, exponential functions, logarithms.
-\item The sum, product, and composition of continuous functions is continuous.
+\item polynomials, trig (and inverses), exponentials, and logs are \textbf{CTS on their domains}
+\item The algebraic combination of continuous functions is continuous.
 \end{itemize}
 
 \vspace{0.5em}
@@ -164,13 +164,15 @@ $$L(x)=f(a) + f'(a)(x-a)$$
 
 \textbf{L'H\^opital's Rule:}
 
-If $\displaystyle \lim_{x\to a} f(x)= \lim_{x\to a} g(x)= 0$ or $\infty$, then
-$$\lim_{x\to a}\frac{f(x)}{g(x)}=\lim_{x\to a}\frac{f'(x)}{g'(x)}.$$
+If $f,g$ are differentiable on a deleted neighborhood of $a$, $g'\ne0$ there,
+$f/g$ has form $0/0$ or $\infty/\infty$, and
+$L=\displaystyle\lim_{x\to a}f'(x)/g'(x)$ exists (possibly infinite), then
+$\displaystyle\lim_{x\to a}f(x)/g(x)=L$.
 
 \vspace{0.25em}
 
 \begin{center}
-\def\arraystretch{1.5}
+\def\arraystretch{1.35}
 \begin{tabular}{ll}
 \toprule[0.4mm]
 \textbf{Scalar Rule} & $[af]' = af'$ \\
@@ -179,6 +181,7 @@ $$\lim_{x\to a}\frac{f(x)}{g(x)}=\lim_{x\to a}\frac{f'(x)}{g'(x)}.$$
 \textbf{Quotient Rule} & $\left[\frac{f}{g}\right]' = \frac{f'g - fg'}{g^2}$ \\
 \textbf{Chain Rule} & $[f(g(x))]' = f'(g(x))g'(x)$ \\
 \textbf{Inverse Rule} & $[f^{-1}(x)]' = \frac{1}{f'(f^{-1}(x))}$ \\
+\multicolumn{2}{@{}l@{}}{\scriptsize Requires $f$ differentiable and one-to-one, $f'(f^{-1}(x))\ne0$.}\\
 \bottomrule[0.4mm]
 \end{tabular}
 \end{center}
@@ -187,7 +190,7 @@ $$\lim_{x\to a}\frac{f(x)}{g(x)}=\lim_{x\to a}\frac{f'(x)}{g'(x)}.$$
 
 % \vspace{2em}
 
-\textbf{Logarithmic Differentiation:}
+\textbf{Logarithmic Differentiation ($f(x)>0$):}
 
 To find the derivative of $y=f(x)^{g(x)}$, take $\ln()$ of both sides, bring $g(x)$ down using the log rule ($\ln(a^b)=b\ln(a)$):
 $$\ln(y)=\ln(f(x)^{g(x)})=g(x)\ln(f(x))$$
@@ -235,7 +238,7 @@ $[\arccsc(x)]'=\frac{-1}{|x|\sqrt{x^2-1}}$  \\
 
 \vspace{0.5em}
 
-\textbf{Fundamental Theorem of Calculus} If $F'=f$,
+\textbf{Fundamental Theorem of Calculus} If $f$ is continuous on $[a,b]$ and $F$ is continuous on $[a,b]$ with $F'=f$ on $(a,b)$, then
     $$\int_a^bf(x)\ dx = F(b)-F(a).$$
 
 
@@ -247,7 +250,7 @@ $[\arccsc(x)]'=\frac{-1}{|x|\sqrt{x^2-1}}$  \\
 \begin{tabular}{@{}ll@{}}
 \toprule[0.4mm]
 \textbf{Scalar Rule} & $\int a f = a \int f$. \\
-\textbf{Sum Rule} & $\int f + \int g= \int f + \int g$ \\
+\textbf{Sum Rule} & $\int (f+g)=\int f+\int g$ \\
 \textbf{Int. by Parts}
  & $\int f'g = fg - \int fg' $ \\
 \textbf{$u$-substitution} & $\int f'(g(x))g'(x)\ dx =  f(g(x))$ \\
@@ -261,7 +264,7 @@ $[\arccsc(x)]'=\frac{-1}{|x|\sqrt{x^2-1}}$  \\
 & $\int \sin(x)\ dx = -\cos(x)+C$\\
 & $\int \cos(x)\ dx = \sin(x)+C$ \\
 
-\textbf{Exp. Rules} & $\int a^x\ dx = \frac{1}{\ln(a)}a^x+C$ \\
+\textbf{Exp. Rules} & $\int a^x\ dx = \frac{a^x}{\ln(a)}+C,\quad a>0,\ a\ne1$ \\
 \bottomrule[0.4mm]
 \end{tabular}
 \end{center}
@@ -295,9 +298,14 @@ $[\arccsc(x)]'=\frac{-1}{|x|\sqrt{x^2-1}}$  \\
     $\sqrt{a^2-x^2}$ & $x=a\sin\theta$ & $a\cos\theta$ \\
     $\sqrt{a^2+x^2}$ & $x=a\tan\theta$ & $a\sec\theta$ \\
     $\sqrt{x^2-a^2}$ & $x=a\sec\theta$ & $a\tan\theta$ \\
-    \bottomrule[0.4mm]
-    \\
+	    \bottomrule[0.4mm]
+	    \\
 \end{tabular}
+\vspace{-2em}
+
+{\scriptsize Assume $a>0$. Use $|\theta|\le\pi/2$ for sine and
+$|\theta|<\pi/2$ for tangent. For secant, use $0\le\theta<\pi/2$ if $x\ge a$,
+or $\pi\le\theta<3\pi/2$ if $x\le-a$.\par}
 
 &
 
@@ -306,7 +314,7 @@ $[\arccsc(x)]'=\frac{-1}{|x|\sqrt{x^2-1}}$  \\
 \textbf{Other Antiderivatives} \\
  \toprule[0.4mm]
  $\int\ln(x)\ dx = x\ln(x) - x + C$\\
- $\int \tan(x)\ dx = \ln|\cos(x)|+C$ \\
+ $\int \tan(x)\ dx = -\ln|\cos(x)|+C$ \\
 $\int \sec(x)\ dx = \ln|\sec(x)+\tan(x)|+C$\\
  $\int \csc(x)\ dx = \ln|\csc(x)-\cot(x)|+C$ \\
 $\int \cot(x)\ dx = \ln|\sin(x)|+C$  \\
@@ -315,6 +323,9 @@ $\int \cot(x)\ dx = \ln|\sin(x)|+C$  \\
 
 
 \end{tabular}
+
+\vspace{-2em}
+
 \end{bx}
 
 
@@ -332,7 +343,7 @@ $\int \cot(x)\ dx = \ln|\sin(x)|+C$  \\
 
 $ L_n=\sum_{k=1}^{n}f\left(a+(k-1)\frac{b-a}{n}\right)\frac{b-a}{n}$ 
 
-$ T_n=\sum_{i=k}^{n}\frac{f\left(a+(k-1)\frac{b-a}{n}\right)+f\left(a+k\frac{b-a}{n}\right)}{2}\frac{b-a}{n}$
+$ T_n=\sum_{k=1}^{n}\frac{f\left(a+(k-1)\frac{b-a}{n}\right)+f\left(a+k\frac{b-a}{n}\right)}{2}\frac{b-a}{n}$
 
 \vspace{-1em}
 
@@ -373,12 +384,12 @@ $$f(x)=\sum_{n=0}^\infty \frac{f^{(n)}(a)}{n!}(x-a)^n.$$
 \midrule[0.4mm]
 Function & Taylor Series & Interval of Convergence\\
 \midrule
-$e^x$ & \sum_{n=0}^\infty\frac{1}{n!} x^n$ & $\mathbb{R}$ \\
-$\sin(x)$ & \sum_{n=0}^\infty\frac{(-1)^n}{(2n+1)!}x^{2n+1}$ & $\mathbb{R}$ \\
-$\cos(x)$ & \sum_{n=0}^\infty\frac{(-1)^n}{(2n)!}x^{2n}$ & $\mathbb{R}$ \\
-$\frac{1}{1-x}$ & \sum_{n=0}^\infty x^n$ & $(-1,1)$ \\
-$\ln(1-x)$ & \sum_{n=1}^\infty \frac{-1}{n}x^{n}$ & $[-1,1)$ \\
-$(x+1)^k$ & \sum_{n=0}^\infty{k\choose n}x^{n}$ & $\mathbb{R}$ \\
+$e^x$ & $\sum_{n=0}^\infty\frac{1}{n!} x^n$ & $\mathbb{R}$ \\
+$\sin(x)$ & $\sum_{n=0}^\infty\frac{(-1)^n}{(2n+1)!}x^{2n+1}$ & $\mathbb{R}$ \\
+$\cos(x)$ & $\sum_{n=0}^\infty\frac{(-1)^n}{(2n)!}x^{2n}$ & $\mathbb{R}$ \\
+$\frac{1}{1-x}$ & $\sum_{n=0}^\infty x^n$ & $(-1,1)$ \\
+$\ln(1-x)$ & $\sum_{n=1}^\infty \frac{-1}{n}x^{n}$ & $[-1,1)$ \\
+$(x+1)^k$ & $\sum_{n=0}^{k}{k\choose n}x^{n}$ & $\mathbb{R}\ (k\in\mathbb{Z}_{\geq 0})$ \\
 \bottomrule[0.4mm]
 \end{tabular}
 \end{center}
@@ -420,7 +431,7 @@ If $b_{n} \geq 0$ decreases to 0, $\sum b_{n}(-1)^{n}$ converges.
 \item \textbf{Absolute Convergence Test:}
 $$\sum |a_n| \text{ converges}\implies \sum a_n\text{ converges}.$$
 
-\item \textbf{Ratio Test:} Define $\displaystyle L= \lim _{n \to \infty}} \left|{a_{n+1}}/{a_{n}}\right|$.\\ If $L<1$, $\sum a_{n}$ converges. If $L>1$,  $\sum a_{n}$ diverges.
+\item \textbf{Ratio Test:} Define $\displaystyle L= \lim _{n \to \infty} \left|{a_{n+1}}/{a_{n}}\right|$.\\ If $L<1$, $\sum a_{n}$ converges. If $L>1$,  $\sum a_{n}$ diverges.
 
 
 \item \textbf{Root Test:}
@@ -475,19 +486,22 @@ To solve the separable ODE  $\displaystyle \frac{dy}{dx}=f(x)g(y),$
 separate the $x$ and $y$ variables and integrate:
 $$\int \frac{1}{g(y)}\ dy = \int f(x)\ dx.$$
 
-To solve a 2nd order ODE of the form $ay''+by'+c=0,$
+To solve a 2nd order ODE of the form $ay''+by'+cy=0$ with $a\ne0$,
 find the roots $\lambda$ of the characteristic equation
 $$a\lambda^2 + b\lambda + c = 0.$$
 \begin{center}
-\begin{tabular}{lll}
+\small
+\begin{tabular}{@{}lll@{}}
 \toprule[0.4mm]
 Case & Roots & Solutions\\
 \midrule
-$b^2-4ac\neq 0$ & $\lambda_1$, $\lambda_2$ & $y=pe^{\lambda_1 x} + qe^{\lambda_2 x}$\\
-$b^2-4ac= 0$ & $\lambda$ & $y=pe^{\lambda x}+qxe^{\lambda x}$\\
+$\Delta>0$ & $\lambda_1,\lambda_2$ & $y=pe^{\lambda_1 x}+qe^{\lambda_2 x}$\\
+$\Delta=0$ & $\lambda=-b/(2a)$ & $y=(p+qx)e^{\lambda x}$\\
+$\Delta<0$ & $\alpha\pm i\beta$ & $y=e^{\alpha x}\bigl(p\cos(\beta x)+q\sin(\beta x)\bigr)$\\
 \bottomrule[0.4mm]
 \end{tabular}
 \end{center}
+Here $\Delta=b^2-4ac$, $\alpha=-b/(2a)$, and $\beta=\sqrt{4ac-b^2}/(2|a|)$.
 
 \def\arraystretch{1.5}
 \begin{tabular}{lll}
