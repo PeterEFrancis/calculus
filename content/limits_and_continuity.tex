@@ -545,22 +545,23 @@ The process of evaluating both types are the same, except for at boundary points
 
 \begin{tikzpicture}[
     every node/.style={font=\small},
-    choice/.style={draw, rounded corners, align=center, minimum height=0.9cm, inner sep=4pt}
+    choice/.style={draw, rounded corners, align=center, font=\footnotesize,
+        minimum height=1cm, inner xsep=3pt, inner ysep=4pt}
 ]
 \node[choice] (plug) at (0,2.2) {plug $\displaystyle a$ into $f$};
 
-\node[choice, minimum width=1.7cm] (number) at (-4.45,0.5) {number};
-\node[choice, text width=2.8cm] (overzero) at (-1.65,0.5)
+\node[choice, minimum width=1.6cm] (number) at (-4.57,0.5) {number};
+\node[choice, text width=2.4cm] (overzero) at (-1.9,0.5)
     {$\displaystyle\frac{\text{non-zero number}}{0}$};
-\node[choice, text width=2.2cm] (indeterminate) at (1.2,0.5)
+\node[choice, text width=2cm] (indeterminate) at (1.08,0.5)
     {indeterminate\\form};
-\node[choice, text width=2.7cm] (undefined) at (3.95,0.5)
+\node[choice, text width=2.4cm] (undefined) at (4.06,0.5)
     {undefined for\\another reason};
 
-\node (number-result) at (-4.45,-0.9) {$f(a)$};
-\node (overzero-result) at (-1.65,-0.9) {DNE or $\displaystyle\pm\infty$};
-\node[align=center] (indeterminate-result) at (1.2,-0.9) {More work\\needed};
-\node[align=center] (undefined-result) at (3.95,-0.9) {More work\\needed};
+\node (number-result) at (-4.57,-0.9) {$f(a)$};
+\node (overzero-result) at (-1.9,-0.9) {DNE or $\displaystyle\pm\infty$};
+\node[align=center] (indeterminate-result) at (1.08,-0.9) {More work\\needed};
+\node[align=center] (undefined-result) at (4.06,-0.9) {More work\\needed};
 
 \draw[->] (plug.220) -- (number.north);
 \draw[->] (plug.250) -- (overzero.north);
@@ -762,7 +763,6 @@ so the Squeeze Theorem gives $\displaystyle\lim_{x\to0}x\cos(1/x)=0$.
 \item Find the limit of the inner expression first, then use the Composite Function Theorem if the outer function is continuous at that limit.
 
 \end{itemize}
-
 
 
 

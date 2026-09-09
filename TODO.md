@@ -20,7 +20,7 @@ Fall 2020)
 
 - [X] what about things like x * cos(1/x)
 
-
+a
 
 #### derivatives
 
