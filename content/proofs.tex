@@ -1,0 +1,969 @@
+\section{Proofs by Chapter}
+\label{sec:selected-proofs}
+
+\subsection{Proofs from Chapter \ref*{sec:trigonometry}: Trigonometry}
+
+\proofheading{The Law of Sines (Theorem~\ref*{source:proof:law-of-sines})}{proof:law-of-sines}
+
+\begin{proof}
+The area of the triangle can be computed using any side as the base:
+$$
+\Delta=\frac12bc\sin A=\frac12ca\sin B=\frac12ab\sin C.
+$$
+Dividing by $abc/2$ and then taking reciprocals gives
+$$
+\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}
+=\frac{abc}{2\Delta}.
+$$
+To connect this with the circumradius $R$, consider the chord of length $a$.
+The inscribed-angle theorem says that the corresponding central angle is
+$2A$ (or use $\pi-A$ when $A$ is obtuse). Bisecting the isosceles triangle
+formed by the two radii gives $a/2=R\sin A$. If $A$ is a right angle, the
+chord is a diameter and the same formula holds. Thus $a/\sin A=2R$.
+\end{proof}
+
+\proofheading{The Law of Cosines (Theorem~\ref*{source:proof:law-of-cosines})}{proof:law-of-cosines}
+
+\begin{proof}
+Place the vertex with angle $C$ at $(0,0)$, and place the other two vertices
+at $(b,0)$ and $(a\cos C,a\sin C)$. The distance between them is $c$, so
+\begin{align*}
+c^2&=(b-a\cos C)^2+(a\sin C)^2\\
+&=b^2-2ab\cos C+a^2\cos^2 C+a^2\sin^2 C\\
+&=a^2+b^2-2ab\cos C.
+\end{align*}
+Rearranging gives $a^2+b^2=c^2+2ab\cos C$.
+\end{proof}
+
+\proofheading{Heron's Formula (Theorem~\ref*{source:proof:heron})}{proof:heron}
+
+\begin{proof}
+Since $\Delta=ab\sin C/2$, use the Law of Cosines to eliminate the angle:
+\begin{align*}
+16\Delta^2
+&=4a^2b^2(1-\cos^2 C)\\
+&=4a^2b^2-(a^2+b^2-c^2)^2\\
+&=\bigl((a+b)^2-c^2\bigr)\bigl(c^2-(a-b)^2\bigr)\\
+&=(a+b+c)(a+b-c)(c+a-b)(c-a+b)\\
+&=16s(s-a)(s-b)(s-c),
+\end{align*}
+where $s=(a+b+c)/2$. Divide by 16 and take the nonnegative square root.
+\end{proof}
+
+\subsection{Proofs from Chapter \ref*{sec:real-functions}: Functions on the Real Line}
+
+\proofheading{Invertibility and Bijectivity (Theorem~\ref*{source:proof:invertibility})}{proof:invertibility}
+
+\begin{proof}
+Suppose $f:A\to B$ has an inverse $g:B\to A$. If $f(x_1)=f(x_2)$, applying
+$g$ gives $x_1=x_2$, so $f$ is injective. Every $y\in B$ equals $f(g(y))$,
+so $f$ is surjective as well.
+
+Conversely, suppose $f$ is bijective. For each $y\in B$, surjectivity gives
+an $x\in A$ with $f(x)=y$, and injectivity makes this $x$ unique. Define
+$g(y)$ to be that $x$. Then $g(f(x))=x$ and $f(g(y))=y$, so $g=f^{-1}$.
+\end{proof}
+
+\proofheading{Continuity of a Monotone Inverse}{proof:inverse-continuity}
+\label{sec:inverse-continuity-proof}
+
+\begin{proof}
+Here is a useful fact for the root functions and the Inverse Rule: a
+continuous, strictly monotone function on an interval has a continuous
+inverse on its image. Suppose first that $f$ is increasing, and write
+$y_0=f(x_0)$. Choose $x_-<x_0<x_+$ as close to $x_0$ as desired. Then
+$$
+f(x_-)<y_0<f(x_+).
+$$
+If $y$ is sufficiently close to $y_0$, it lies between these two values.
+Monotonicity then forces $x_-<f^{-1}(y)<x_+$. This proves
+$f^{-1}(y)\to x_0$ as $y\to y_0$. At an endpoint use only the available
+side; for a decreasing function reverse the inequalities.
+\end{proof}
+
+\subsection{Proofs from Chapter \ref*{sec:limit-properties}: Properties of Limits}
+
+\proofheading{The Limit Laws}{proof:limit-laws}
+
+\begin{proof}
+Suppose $f(x)\to L$ and $g(x)\to M$. A constant stays equal to itself, and
+$|x-a|\to0$ proves the Identity Law. For sums, differences, and constant
+multiples, the estimates
+\begin{align*}
+|(f+g)-(L+M)|&\leq |f-L|+|g-M|,\\
+|(f-g)-(L-M)|&\leq |f-L|+|g-M|,\\
+|cf-cL|&=|c|\,|f-L|
+\end{align*}
+show that the errors approach zero. Here the arguments $x$ are suppressed
+to keep the formulas short.
+
+For products, first restrict $x$ close enough that $|f(x)|\leq |L|+1$.
+Adding and subtracting $fM$ gives
+$$
+|fg-LM|\leq |f|\,|g-M|+|M|\,|f-L|\longrightarrow0.
+$$
+If $M\ne0$, then eventually $|g(x)|>|M|/2$, and
+$$
+\left|\frac1{g(x)}-\frac1M\right|
+=\frac{|M-g(x)|}{|g(x)|\,|M|}
+\leq\frac{2|M-g(x)|}{|M|^2}\longrightarrow0.
+$$
+Multiplying by $f(x)$ proves the Quotient Law. Repeated use of the Product
+Law proves the Power Law for positive integer powers.
+
+Finally, $t\mapsto t^n$ is continuous and strictly increasing on $\R$ when
+$n$ is odd, and on $[0,\infty)$ when $n$ is even. Its inverse is therefore
+continuous by Section \ref{sec:inverse-continuity-proof}. Applying this
+continuity to $f(x)\to L$ gives the Root Law, with nonnegative inputs
+required for even roots.
+\end{proof}
+
+\proofheading{The Composite Function Theorem (Theorem~\ref*{source:proof:composite-limit})}{proof:composite-limit}
+
+\begin{proof}
+Suppose $g(x)\to L$, $f$ is continuous at $L$, and the composition is
+defined for the inputs under consideration. Given $\varepsilon>0$, continuity
+gives an $\eta>0$ such that
+$$
+|y-L|<\eta\quad\Longrightarrow\quad|f(y)-f(L)|<\varepsilon
+$$
+for $y$ in the domain of $f$. Since $g(x)\to L$, we have $|g(x)-L|<\eta$
+when $x$ is sufficiently close to $a$, with $x\ne a$. Substitute $y=g(x)$
+to get $|f(g(x))-f(L)|<\varepsilon$. This proves the desired limit. Notice
+that $g(x)=L$ causes no problem: the outer function is continuous there.
+The same argument works for one-sided limits and limits at infinity.
+\end{proof}
+
+\proofheading{Continuity of Algebraic Combinations (Theorem~\ref*{source:proof:algebraic-continuity})}{proof:algebraic-continuity}
+
+\begin{proof}
+At a point where $f$ and $g$ are continuous, their limits equal their
+values. The Sum and Product Laws therefore show that $f+g$ and $fg$ are
+continuous there. The Composite Function Theorem gives the same conclusion
+for compositions. Fixed real powers are continuous on their real domains:
+on positive inputs use $y^r=\exp(r\ln y)$; at 0, positive powers approach
+0; and on negative inputs any permitted rational power is a signed power
+of $-y$.
+
+For a variable exponent with $f(x)>0$, write
+$$
+f(x)^{g(x)}=\exp\bigl(g(x)\ln(f(x))\bigr).
+$$
+This is a composition and product of continuous functions. Repeating these
+steps handles any finite combination. At domain endpoints, all limits
+are taken through the allowed inputs.
+\end{proof}
+
+\proofheading{The Intermediate Value Theorem (Theorem~\ref*{source:proof:intermediate-value})}{proof:intermediate-value}
+
+\begin{proof}
+The endpoint values themselves are already attained. For a value $z$
+strictly between them, suppose first that $f(a)<z<f(b)$. Bisect $[a,b]$.
+If the midpoint has value $z$, we are done; otherwise retain the half whose
+endpoint values still lie on opposite sides of $z$. Repeat.
+
+The resulting closed intervals are nested, and their lengths are
+$(b-a)/2^n$. Completeness of the real numbers gives a common point $c$;
+both endpoint sequences approach $c$. The left endpoint values are below
+$z$ and the right endpoint values are above $z$. By continuity, both
+sequences of values approach $f(c)$, so $f(c)\leq z$ and $f(c)\geq z$.
+Thus $f(c)=z$. If $f(a)>f(b)$, apply the same argument to $-f$ and $-z$.
+\end{proof}
+
+\subsection{Proofs from Chapter \ref*{sec:evaluating-limits}: Evaluating Limits}
+\label{sec:special-case-proofs}
+
+\proofheading{\texorpdfstring{$\displaystyle\lim_{x\to0}\frac{\sin(x)}{x}=1$}{lim x -> 0 sin(x)/x = 1}}{proof:sine-limit}
+
+\begin{proof}
+Measure angles in radians. For $0<x<\pi/2$, draw the unit-circle sector
+between angles 0 and $x$. The inner triangle $OAB$ lies inside the sector,
+and the outer triangle $OAT$ contains it. The line $AT$ is tangent to the
+circle at $A=(1,0)$.
+\begin{center}
+\begin{tikzpicture}[scale=4.3, line cap=round, line join=round,
+                    every node/.style={font=\small}]
+\coordinate (O) at (0,0);
+\coordinate (A) at (1,0);
+\coordinate (B) at ({cos(42)},{sin(42)});
+\coordinate (T) at (1,{tan(42)});
+\coordinate (H) at ({cos(42)},0);
+\fill[gray!10] (O)--(A)--(T)--cycle;
+\fill[gray!22] (O)--(A) arc[start angle=0,end angle=42,radius=1]--cycle;
+\fill[gray!40] (O)--(A)--(B)--cycle;
+\draw (O)--(A)--(T)--cycle;
+\draw (A) arc[start angle=0,end angle=42,radius=1];
+\draw (A)--(B);
+\draw[dashed] (B)--(H) node[midway,left=3pt] {$\sin(x)$};
+\draw (0.18,0) arc[start angle=0,end angle=42,radius=0.18];
+\node at (0.26,0.09) {$x$};
+\draw ({cos(42)-0.035},0)--({cos(42)-0.035},0.035)
+      --({cos(42)},0.035);
+\draw (0.965,0)--(0.965,0.035)--(1,0.035);
+\node[below left] at (O) {$O$};
+\node[below right] at (A) {$A=(1,0)$};
+\node[above left=2pt] at (B) {$B$};
+\node[above right] at (T) {$T$};
+\node[right=5pt] at (1,{tan(42)/2}) {$\tan(x)$};
+\node[below=3pt] at (0.4,0) {$1$};
+\end{tikzpicture}
+\end{center}
+Both triangles have base $OA=1$. Their heights are $\sin(x)$ and
+$\tan(x)$, and the sector has area $x/2$. Comparing these areas gives
+$$
+\frac{\sin(x)}{2}<\frac{x}{2}<\frac{\tan(x)}{2},
+$$
+so $\sin(x)<x<\tan(x)$. Using also $\sin(-y)=-\sin(y)$, we get
+$|\sin(y)|\leq |y|$ near 0. Therefore,
+$$
+0\leq 1-\cos(x)=2\sin^2(x/2)\leq \frac{x^2}{2},
+$$
+so $\cos(x)\to1$ as $x\to0$. The area inequalities also give, for
+$0<x<\pi/2$,
+$$
+\cos(x)<\frac{\sin(x)}{x}<1.
+$$
+The Squeeze Theorem gives the right-sided limit $1$. Replacing $x$ by $-x$
+leaves the quotient unchanged, so the left-sided limit is also $1$:
+\[
+\lim_{x\to0}\frac{\sin(x)}{x}=1.
+\qedhere
+\]
+\end{proof}
+
+\proofheading{\texorpdfstring{$\displaystyle\lim_{x\to0}\frac{\cos(x)-1}{x}=0$}{lim x -> 0 (cos(x)-1)/x = 0}}{proof:cosine-limit}
+
+\begin{proof}
+Again use radians. For $x\ne0$, the identity
+$\cos(x)-1=-2\sin^2(x/2)$ gives
+$$
+\frac{\cos(x)-1}{x}
+=-\sin(x/2)\frac{\sin(x/2)}{x/2}.
+$$
+The sine factor approaches $0$. The quotient approaches $1$ by the sine
+limit, with $x/2\to0$. Thus
+\[
+\lim_{x\to0}\frac{\cos(x)-1}{x}=-(0)(1)=0.
+\qedhere
+\]
+\end{proof}
+
+\proofheading{\texorpdfstring{$\displaystyle\lim_{x\to\infty}\left(1+\frac1x\right)^x=e$}{lim x -> infinity (1+1/x)^x = e}}{proof:euler-limit}
+
+\begin{proof}
+For the two exponential limits, use the standard integral definition
+$$
+\ln(y)=\int_1^y\frac{1}{t}\,dt\qquad (y>0).
+$$
+This function is continuous, strictly increasing, and has range $\R$, so it
+has a continuous inverse $\exp$. Set $e=\exp(1)$ and use the usual
+definition $a^z=\exp(z\ln(a))$ for $a>0$. In particular, $e^z=\exp(z)$.
+
+First we need a logarithm limit. For $u>0$, the integrand $1/t$ on
+$[1,1+u]$ is between $1/(1+u)$ and 1. Integrating and dividing by $u$ gives
+$$
+\frac{1}{1+u}\leq\frac{\ln(1+u)}{u}\leq1.
+$$
+For $-1<u<0$, rewrite the quotient as
+$$
+\frac{\ln(1+u)}{u}=\frac{1}{-u}\int_{1+u}^1\frac{1}{t}\,dt.
+$$
+Here the integrand is between 1 and $1/(1+u)$, so
+$$
+1\leq\frac{\ln(1+u)}{u}\leq\frac{1}{1+u}.
+$$
+On each side of 0, both bounds approach 1. The Squeeze Theorem therefore gives
+$$
+\lim_{u\to0}\frac{\ln(1+u)}{u}=1.
+$$
+
+Now set $u=1/x$. As $x\to\infty$, we have $u\to0^+$, and
+$$
+\left(1+\frac1x\right)^x
+=\exp\left(\frac{\ln(1+u)}{u}\right).
+$$
+The exponent approaches $1$, so continuity of the exponential function gives
+\[
+\lim_{x\to\infty}\left(1+\frac1x\right)^x=e.
+\qedhere
+\]
+\end{proof}
+
+\proofheading{\texorpdfstring{$\displaystyle\lim_{x\to0}\frac{a^x-1}{x}=\ln(a)\quad(a>0)$}{lim x -> 0 (a^x-1)/x = ln(a), a > 0}}{proof:exponential-limit}
+
+\begin{proof}
+Let $a>0$. First set $v=e^t-1$. As $t\to0$, we have $v\to0$ by continuity
+of the exponential, and $t=\ln(1+v)$. When $t\ne0$, we also have $v\ne0$, so
+$$
+\frac{e^t-1}{t}=\frac{v}{\ln(1+v)}
+=\frac{1}{\ln(1+v)/v}.
+$$
+We just proved that the denominator on the right approaches 1. Its
+reciprocal therefore approaches 1 as well, giving
+$$
+\lim_{t\to0}\frac{e^t-1}{t}=1.
+$$
+If $a\ne1$, then for $x\ne0$,
+$$
+\frac{a^x-1}{x}
+=\ln(a)\frac{e^{x\ln(a)}-1}{x\ln(a)}.
+$$
+Since $x\ln(a)\to0$, the quotient on the right approaches 1 by the limit
+above. If $a=1$, the original quotient is zero for every $x\ne0$.
+In either case,
+\[
+\lim_{x\to0}\frac{a^x-1}{x}=\ln(a).
+\qedhere
+\]
+\end{proof}
+
+\proofheading{The Squeeze Theorem (Theorem~\ref*{source:proof:squeeze})}{proof:squeeze}
+
+\begin{proof}
+Suppose $g(x)\leq f(x)\leq h(x)$ near $a$ and both bounding functions
+approach $L$. Given $\varepsilon>0$, choose $x$ close enough to $a$ that both
+$g(x)$ and $h(x)$ lie between $L-\varepsilon$ and $L+\varepsilon$. Then
+$$
+L-\varepsilon<g(x)\leq f(x)\leq h(x)<L+\varepsilon,
+$$
+so $|f(x)-L|<\varepsilon$. This is exactly $f(x)\to L$.
+\end{proof}
+
+\subsection{Proofs from Chapter \ref*{sec:the-derivative}: The Derivative}
+\label{sec:derivative-proofs}
+
+\proofheading{Differentiability Implies Continuity (Theorem~\ref*{source:proof:differentiability-continuity})}{proof:differentiability-continuity}
+
+\begin{proof}
+If $f$ is differentiable at $a$, then for $h\ne0$,
+$$
+f(a+h)-f(a)
+=h\frac{f(a+h)-f(a)}{h}\longrightarrow 0
+$$
+as $h\to0$: the first factor approaches 0 and the second approaches the
+finite number $f'(a)$. Thus $f(a+h)\to f(a)$, so $f$ is continuous at $a$.
+\end{proof}
+
+\proofheading{The Product Rule}{proof:product-rule}
+\label{sec:product-rule-proof}
+
+\begin{proof}
+Suppose $f$ and $g$ are differentiable at $a$. Start with the difference
+quotient for $fg$. For $h\ne0$, add and subtract $f(a+h)g(a)$ in the numerator:
+\begin{align*}
+&\frac{f(a+h)g(a+h)-f(a)g(a)}{h}\\
+&\quad=\frac{f(a+h)g(a+h)-f(a+h)g(a)}{h}+\frac{f(a+h)g(a)-f(a)g(a)}{h}\\
+&\quad=\frac{f(a+h)\bigl(g(a+h)-g(a)\bigr)}{h}+\frac{g(a)\bigl(f(a+h)-f(a)\bigr)}{h}\\
+&\quad=f(a+h)\frac{g(a+h)-g(a)}{h}
+   +g(a)\frac{f(a+h)-f(a)}{h}.
+\end{align*}
+Since $f$ is differentiable at $a$, it is continuous there, so
+$f(a+h)\to f(a)$. Taking the limit as $h\to0$ gives
+\[
+[fg]'(a)=f(a)g'(a)+g(a)f'(a).
+\qedhere
+\]
+\end{proof}
+
+\proofheading{The Chain Rule}{proof:chain-rule}
+\label{sec:chain-rule-proof}
+
+\begin{proof}
+Suppose $g$ is differentiable at $a$ and $f$ is differentiable at $g(a)$.
+Write $b=g(a)$. The difference quotient for $f$ has a limit at $b$, so we can
+fill in its missing value by defining
+$$
+Q(k)=
+\begin{cases}
+\dfrac{f(b+k)-f(b)}{k},&k\ne0,\\[6pt]
+f'(b),&k=0.
+\end{cases}
+$$
+The definition of $f'(b)$ says that $Q(k)\to f'(b)=Q(0)$ as $k\to0$.
+Thus $Q$ is continuous at 0. The value $Q(0)$ is assigned separately; it is
+not obtained by dividing by zero.
+
+Now let $k(h)=g(a+h)-g(a)$. Since $g$ is differentiable at $a$, it is
+continuous there, so $k(h)\to0$. For every $h\ne0$,
+$$
+\frac{f(g(a+h))-f(g(a))}{h}
+=Q(k(h))\frac{k(h)}{h}.
+$$
+This identity also holds when $k(h)=0$, since then both sides are zero.
+Continuity of $Q$ gives $Q(k(h))\to f'(b)$, while $k(h)/h\to g'(a)$ by the
+definition of the derivative. Taking the limit gives
+\[
+[f\circ g]'(a)=f'(g(a))g'(a).
+\qedhere
+\]
+\end{proof}
+
+\proofheading{The Power Rule}{proof:power-rule}
+\label{sec:power-rule-proof}
+
+\begin{proof}
+Let $r$ be any real number. For $x>0$, write $x^r=e^{r\ln(x)}$.
+Using the Chain Rule and the derivatives of the exponential and logarithm,
+\begin{align*}
+[x^r]'
+&=e^{r\ln(x)}[r\ln(x)]'\\
+&=x^r\frac{r}{x}\\
+&=rx^{r-1}.
+\end{align*}
+There is no circular reasoning here: the derivatives of $e^x$ and $\ln(x)$
+follow from the special-case limits proved above, without using the Power
+Rule. For $h\ne0$, their difference quotients have these limits as $h\to0$:
+\begin{align*}
+\frac{e^{x+h}-e^x}{h}
+&=e^x\frac{e^h-1}{h}\longrightarrow e^x,\\
+\frac{\ln(x+h)-\ln(x)}{h}
+&=\frac1x\frac{\ln(1+h/x)}{h/x}\longrightarrow\frac1x.
+\end{align*}
+
+What about negative inputs? If $r=m/n$ in lowest terms with $n$ odd
+(including integers, where $n=1$), then for $x<0$,
+$x^r=(-1)^m(-x)^r$. Applying the positive-input result and the Chain Rule,
+$$
+[x^r]'
+=-(-1)^m r(-x)^{r-1}
+=r\frac{(-1)^m(-x)^r}{x}
+=rx^{r-1}.
+$$
+Other real exponents do not give a real-valued power function on negative
+inputs.
+
+At $x=0$, check the difference quotient directly whenever the power is
+defined on both sides. For $r>0$, it is $h^r/h$: this approaches $0$ if
+$r>1$, equals $1$ if $r=1$, and has no finite limit if $0<r<1$.
+The case $r=0$ is the constant function $1$, with derivative $0$;
+negative powers are undefined at $0$.
+\end{proof}
+
+\subsection{Proofs from Chapter \ref*{sec:applications-of-derivatives}: Applications of Derivatives}
+\label{sec:derivative-applications-proofs}
+
+\proofheading{Local Extrema and Critical Numbers (Theorem~\ref*{source:proof:critical-numbers})}{proof:critical-numbers}
+
+\begin{proof}
+Suppose $f$ has a local maximum at $a$. If $f'(a)$ does not exist, $a$ is
+already a critical number. Otherwise, for sufficiently small $h$,
+$$
+\frac{f(a+h)-f(a)}h\leq0\quad(h>0),\qquad
+\frac{f(a+h)-f(a)}h\geq0\quad(h<0).
+$$
+Both one-sided limits equal $f'(a)$, so $f'(a)\leq0$ and $f'(a)\geq0$.
+Thus $f'(a)=0$, making $a$ a critical number. For a local minimum reverse
+the inequalities. This is often called Fermat's theorem.
+\end{proof}
+
+\proofheading{The Extreme Value Theorem}{proof:extreme-value}
+
+\begin{proof}
+We need one fact about closed, bounded intervals: every sequence in such
+an interval has a convergent subsequence with its limit in the interval.
+To see why, repeatedly bisect the interval and keep a closed half
+containing infinitely many terms. The nested intervals shrink to a point;
+choosing terms with increasing indices from them gives the subsequence.
+
+Now let $f$ be continuous on $[a,b]$. If $f$ were unbounded, we could choose
+$x_n\in[a,b]$ with $|f(x_n)|>n$. A convergent subsequence $x_{n_j}\to c$
+would give $f(x_{n_j})\to f(c)$ by continuity, a contradiction. Thus $f$
+is bounded. Let $M$ be the least upper bound of its values, and choose
+$x_n$ with $M-1/n<f(x_n)\leq M$. Another convergent subsequence gives
+$f(c)=M$, so the maximum is attained. Apply the same argument to $-f$ to
+obtain a minimum.
+\end{proof}
+
+\proofheading{The Mean Value Theorem (Theorem~\ref*{source:proof:mean-value})}{proof:mean-value}
+
+\begin{proof}
+Suppose $f$ is continuous on $[a,b]$ and differentiable on $(a,b)$. Subtract
+the line joining the endpoints:
+$$
+F(x)=f(x)-f(a)-\frac{f(b)-f(a)}{b-a}(x-a).
+$$
+Then $F(a)=F(b)=0$. If $F$ is constant, $F'=0$ everywhere inside the
+interval. Otherwise, the Extreme Value Theorem gives a positive maximum
+or a negative minimum, attained at an interior point $c$. Fermat's theorem
+then gives $F'(c)=0$. In either case, for some $c\in(a,b)$,
+$$
+0=F'(c)=f'(c)-\frac{f(b)-f(a)}{b-a},
+$$
+which is the desired result. When $f(a)=f(b)$, this is Rolle's theorem.
+\end{proof}
+
+\proofheading{The First Derivative Test (Theorem~\ref*{source:proof:first-derivative-test})}{proof:first-derivative-test}
+
+\begin{proof}
+Suppose $f$ is continuous at $a$ and differentiable on each side nearby.
+For $x\ne a$ close to $a$, the Mean Value Theorem gives a point $c$ between
+$a$ and $x$ such that
+$$
+f(x)-f(a)=f'(c)(x-a).
+$$
+If $f'$ is positive to the left and negative to the right, this product is
+negative on both sides. Thus $f(x)<f(a)$ nearby, giving a local maximum.
+Reversing the signs makes the product positive on both sides, giving a
+local minimum. If $f'$ has the same strict sign on both sides, the product
+has opposite signs on the two sides: nearby values lie both above and
+below $f(a)$, so there is no local extremum.
+\end{proof}
+
+\proofheading{The Second Derivative Test (Theorem~\ref*{source:proof:second-derivative-test})}{proof:second-derivative-test}
+
+\begin{proof}
+Suppose $f'(a)=0$, $f''$ is continuous at $a$, and $f''(a)>0$. Then $f''$
+stays positive on a small interval around $a$. Apply the Mean Value Theorem
+to $f'$ between $a$ and a nearby $x$:
+$$
+f'(x)=f'(x)-f'(a)=f''(c)(x-a).
+$$
+This is negative to the left of $a$ and positive to the right. The First
+Derivative Test gives a local minimum. If $f''(a)<0$, all signs reverse
+and we get a local maximum.
+\end{proof}
+
+\proofheading{L'H\^opital's Rule (Theorem~\ref*{source:proof:lhopital})}{proof:lhopital}
+\label{sec:lhopital-proof}
+
+\begin{proof}
+Suppose $f$ and $g$ are differentiable near the limiting input, except
+possibly at that input, with $g(x)\ne0$ and $g'(x)\ne0$ there. Assume
+$f/g$ has the form $0/0$ or $\infty/\infty$, and
+$$
+\frac{f'(x)}{g'(x)}\longrightarrow L,
+$$
+where $L$ may also be $\infty$ or $-\infty$. We want to show that
+$f(x)/g(x)\to L$.
+
+The key is a version of the Mean Value Theorem for two functions. Suppose
+$f$ and $g$ are continuous on $[u,v]$ and differentiable on $(u,v)$, with
+$g'\ne0$. The Mean Value Theorem ensures that $g(v)\ne g(u)$. Set
+$$
+A=\frac{f(v)-f(u)}{g(v)-g(u)},\qquad
+H(t)=f(t)-f(u)-A\bigl(g(t)-g(u)\bigr).
+$$
+Since $H(u)=H(v)=0$, the Mean Value Theorem gives some $c\in(u,v)$ with
+$H'(c)=0$. Thus $f'(c)-Ag'(c)=0$, so
+$$
+\frac{f(v)-f(u)}{g(v)-g(u)}=\frac{f'(c)}{g'(c)}.
+$$
+This is called the \textbf{Cauchy Mean Value Theorem}.
+
+First consider the $0/0$ case as $x\to a^+$, with $a$ finite.
+Since $f(x)\to0$ and $g(x)\to0$, assign the endpoint values $f(a)=g(a)=0$.
+This makes both functions continuous at $a$ without changing the limit.
+Apply the result above on $[a,x]$:
+$$
+\frac{f(x)}{g(x)}
+=\frac{f(x)-f(a)}{g(x)-g(a)}
+=\frac{f'(c)}{g'(c)}
+\qquad(a<c<x).
+$$
+As $x\to a^+$, the point $c$ must approach $a^+$ too, so the last quotient
+approaches $L$. This works whether $L$ is finite or infinite. The left-sided
+argument uses $[x,a]$ instead. If both sides have the same limit, we have
+the two-sided result.
+
+For the $\infty/\infty$ case, again work on one side of a finite input $a$.
+Start with $L$ finite, and choose any $\varepsilon>0$. Choose a fixed point $b$
+close enough to $a$ that
+$$
+\left|\frac{f'(t)}{g'(t)}-L\right|<\varepsilon
+$$
+for every $t$ between $b$ and $a$. For $x$ between $b$ and $a$, the Cauchy
+Mean Value Theorem gives
+$$
+R(x):=\frac{f(x)-f(b)}{g(x)-g(b)}
+=\frac{f'(c)}{g'(c)},
+$$
+where $c$ is between $b$ and $x$. In particular, $|R(x)-L|<\varepsilon$.
+Rearranging gives
+$$
+\frac{f(x)}{g(x)}-L
+=\bigl(R(x)-L\bigr)\left(1-\frac{g(b)}{g(x)}\right)
+ +\frac{f(b)-Lg(b)}{g(x)}.
+$$
+Since $|g(x)|\to\infty$, the factor in parentheses approaches $1$ and the
+last term approaches $0$. Thus, for $x$ sufficiently close to $a$, the
+absolute value of the right side is less than $3\varepsilon$. Since
+$\varepsilon$ can be as small as we like, $f(x)/g(x)\to L$.
+
+If $L=\infty$, choose any $M>0$ and choose $b$ close enough that
+$f'(t)/g'(t)>2M$ between $b$ and $a$. Then $R(x)>2M$, and
+$$
+\frac{f(x)}{g(x)}
+=R(x)\left(1-\frac{g(b)}{g(x)}\right)+\frac{f(b)}{g(x)}.
+$$
+The factor in parentheses approaches $1$ and the last term approaches $0$,
+so this is eventually greater than $M$. Since $M$ is arbitrary, the limit
+is $\infty$. Replacing $f$ by $-f$ proves the case $L=-\infty$.
+
+Finally, limits as $x\to\pm\infty$ reduce to the cases above by setting
+$t=1/x$. The functions $F(t)=f(1/t)$ and $G(t)=g(1/t)$ have the same
+indeterminate form as $t\to0^\pm$. By the Chain Rule, their derivatives
+both acquire a factor of $-1/t^2$, which cancels:
+$$
+\frac{F'(t)}{G'(t)}=\frac{f'(1/t)}{g'(1/t)}\longrightarrow L.
+$$
+Applying the corresponding one-sided result gives $F(t)/G(t)\to L$, which
+is exactly the desired limit $f(x)/g(x)\to L$ at infinity.
+\end{proof}
+
+
+\subsection{Proofs from Chapter \ref*{sec:definite-integral}: The Definite Integral}
+
+\proofheading{Convergence of Riemann Sums (Theorem~\ref*{source:proof:riemann-sums})}{proof:riemann-sums}
+
+\begin{proof}
+A precise way to define the Riemann integral is to trap the signed area
+between lower and upper rectangle sums. For an integrable function, these
+can be made arbitrarily close: given $\varepsilon>0$, choose a partition $P$
+whose upper sum minus lower sum is less than $\varepsilon/2$.
+
+Write $|f(x)|\leq B$, and let $m$ be the number of interior dividing points
+in $P$. Now take a uniform partition $Q$ of width $\Delta x$. On cells of
+$Q$ contained in one cell of $P$, the total gap between upper and lower
+sums is no greater than the gap for $P$. At most $m$ cells cross a dividing
+point of $P$, and each contributes at most $2B\Delta x$. Thus
+$$
+U_Q-L_Q\leq U_P-L_P+2Bm\Delta x<\varepsilon
+$$
+once $\Delta x$ is sufficiently small. Both the integral and every tagged
+sum on $Q$ lie between $L_Q$ and $U_Q$, so the tagged sum approaches the
+integral. In particular, the left and right sums do. Finally,
+$T_n=(L_n+R_n)/2$, so the trapezoid sums have the same limit.
+\end{proof}
+
+\proofheading{The Fundamental Theorem of Calculus (Theorem~\ref*{source:proof:fundamental-theorem})}{proof:fundamental-theorem}
+
+\begin{proof}
+Suppose $f$ is continuous on $[a,b]$, $F$ is continuous there, and $F'=f$
+on $(a,b)$. On each subinterval $[x_{j-1},x_j]$, the Mean Value Theorem
+gives some $c_j$ inside it with
+$$
+F(x_j)-F(x_{j-1})=F'(c_j)\Delta x=f(c_j)\Delta x.
+$$
+Add these equations. The intermediate $F$ values cancel, leaving
+$$
+F(b)-F(a)=\sum_{j=1}^n f(c_j)\Delta x.
+$$
+A continuous function on a closed interval is uniformly continuous, so
+its upper and lower sums approach one another as the widths shrink; in
+particular, it is Riemann integrable. Taking $n\to\infty$ in the equation
+above proves
+$$
+F(b)-F(a)=\int_a^b f(x)\,dx.
+$$
+
+The other familiar part of the theorem says that accumulating area gives
+an antiderivative. Set $A(x)=\int_a^x f(t)\,dt$. Additivity of integrals gives
+$$
+\frac{A(x+h)-A(x)}h-f(x)
+=\frac1h\int_x^{x+h}\bigl(f(t)-f(x)\bigr)\,dt.
+$$
+By continuity, $|f(t)-f(x)|<\varepsilon$ throughout this short interval when
+$|h|$ is small. The absolute value of the right side is then at most
+$\varepsilon$, for either sign of $h$. Thus $A'(x)=f(x)$ for $a<x<b$.
+\end{proof}
+
+\subsection{Proofs from Chapter \ref*{sec:more-definite-integrals}: More Definite Integrals}
+
+\proofheading{Comparison of Integrals (Theorem~\ref*{source:proof:integral-comparison})}{proof:integral-comparison}
+
+\begin{proof}
+First work on a closed interval where both functions are integrable. If
+$0\leq f\leq g$, the same inequalities hold for their Riemann sums, so
+taking limits gives
+$$
+0\leq\int_a^b f(x)\,dx\leq\int_a^b g(x)\,dx.
+$$
+For an improper integral, apply this comparison before taking the
+endpoint limit. For example, on $[a,\infty)$,
+$$
+0\leq\int_a^t f(x)\,dx\leq\int_a^t g(x)\,dx.
+$$
+Both truncated integrals increase as $t$ increases. If the integral of
+$g$ converges, the integral of $f$ is increasing and bounded above, so it
+has a finite limit. If the integral of $f$ diverges, it increases without
+bound, forcing the integral of $g$ to do the same. At a finite singularity
+use the corresponding one-sided endpoint limit; split at interior
+singularities and apply the argument to each piece.
+\end{proof}
+
+\proofheading{Splitting an Integral and Reversing Its Bounds (Theorem~\ref*{source:proof:integral-additivity})}{proof:integral-additivity}
+
+\begin{proof}
+For $a<b<c$, choose partitions of $[a,b]$ and $[b,c]$. Joining them gives
+a partition of $[a,c]$, and its Riemann sum is exactly the sum of the two
+smaller Riemann sums. Let the widths tend to zero to get
+$$
+\int_a^b f(x)\,dx+\int_b^c f(x)\,dx=\int_a^c f(x)\,dx.
+$$
+Reversing direction changes the sign of every signed width. This is why
+the oriented integral is defined by
+$$
+\int_b^a f(x)\,dx=-\int_a^b f(x)\,dx.
+$$
+With this convention the splitting identity holds in any order of the
+three bounds. For improper integrals, first split on proper intervals
+and then take the relevant limits. The assumption that all the integrals
+are finite prevents any invalid cancellation of infinities.
+\end{proof}
+
+\subsection{Proofs from Chapter \ref*{sec:series}: Series}
+
+\phantomsection\label{proof:monotone-sequences}
+\proofsource{proof:monotone-sequences}
+We will repeatedly use one consequence of completeness: a bounded
+increasing sequence converges to its least upper bound $S$. Indeed, for
+any $\varepsilon>0$, some term exceeds $S-\varepsilon$, and every later term
+stays between $S-\varepsilon$ and $S$. A bounded decreasing sequence works
+the same way with a greatest lower bound.
+
+\proofheading{The Geometric Series}{proof:geometric-series}
+
+\begin{proof}
+For $S_N=1+r+\cdots+r^{N-1}$, subtract $rS_N$ from $S_N$ to get
+$(1-r)S_N=1-r^N$. Thus, when $r\ne1$,
+$$
+S_N=\frac{1-r^N}{1-r}.
+$$
+If $|r|<1$, then $r^N\to0$, giving a sum of $1/(1-r)$. Multiplying by a
+constant gives the formula for any first term. If $|r|\geq1$, the terms
+$r^n$ do not approach zero, so the series diverges by the next test.
+\end{proof}
+
+\proofheading{The Divergence Test (Theorem~\ref*{source:proof:divergence-test})}{proof:divergence-test}
+
+\begin{proof}
+Suppose $\sum a_n$ converges, and let $S_n$ be its partial sums. Then both
+$S_n$ and $S_{n-1}$ approach the same number $S$, so
+$$
+a_n=S_n-S_{n-1}\longrightarrow S-S=0.
+$$
+Therefore, if the terms fail to approach zero, including when their limit
+does not exist, the series cannot converge.
+\end{proof}
+
+\proofheading{The Integral Test (Theorem~\ref*{source:proof:integral-test})}{proof:integral-test}
+
+\begin{proof}
+Suppose $f$ is positive, continuous, and decreasing on $[k,\infty)$,
+where $k$ is a positive integer, and $a_n=f(n)$. Comparing each rectangle
+with the area beneath the graph gives
+$$
+f(n+1)\leq\int_n^{n+1}f(x)\,dx\leq f(n).
+$$
+Adding these inequalities yields
+$$
+\int_k^{N+1}f(x)\,dx\leq\sum_{n=k}^N a_n
+\leq a_k+\int_k^N f(x)\,dx.
+$$
+If the improper integral converges, the partial sums are increasing and
+bounded above, so the series converges. If the series converges, the
+truncated integrals are increasing and bounded above, so the integral
+converges. This proves both directions.
+\end{proof}
+
+\proofheading{The \texorpdfstring{$p$}{p}-Series Test (Theorem~\ref*{source:proof:p-series-test})}{proof:p-series-test}
+
+\begin{proof}
+For $p>0$, the function $x^{-p}$ is positive and decreasing. If $p\ne1$,
+$$
+\int_k^t x^{-p}\,dx=\frac{t^{1-p}-k^{1-p}}{1-p}.
+$$
+As $t\to\infty$, this has a finite limit exactly when $p>1$. For $p=1$,
+the integral is $\ln(t)-\ln(k)$, which diverges. The Integral Test gives
+the corresponding conclusions for the series. If $p\leq0$, the terms
+$1/n^p$ do not approach zero, so the Divergence Test applies.
+\end{proof}
+
+\proofheading{The Comparison Test (Theorem~\ref*{source:proof:series-comparison})}{proof:series-comparison}
+
+\begin{proof}
+Suppose $0\leq a_n\leq b_n$ and $\sum b_n$ converges to $B$. Then the
+partial sums of $\sum a_n$ are increasing and satisfy
+$$
+0\leq\sum_{n=1}^N a_n\leq\sum_{n=1}^N b_n\leq B.
+$$
+They are bounded, so they converge. The divergence statement follows by
+contraposition: if $\sum a_n$ diverges, $\sum b_n$ cannot converge.
+Changing finitely many initial terms does not affect convergence, so an
+eventual comparison is enough.
+\end{proof}
+
+\proofheading{The Limit Comparison Test (Theorem~\ref*{source:proof:limit-comparison})}{proof:limit-comparison}
+
+\begin{proof}
+Suppose $a_n\geq0$, $b_n>0$, and $a_n/b_n\to c$ with $0<c<\infty$.
+For all sufficiently large $n$,
+$$
+\frac c2<\frac{a_n}{b_n}<\frac{3c}{2},
+\qquad\text{so}\qquad
+\frac c2b_n<a_n<\frac{3c}{2}b_n.
+$$
+If $\sum b_n$ converges, the upper bound makes $\sum a_n$ converge.
+If $\sum a_n$ converges, the lower bound makes $\sum b_n$ converge.
+Thus the two series have the same convergence behavior.
+\end{proof}
+
+\proofheading{The Alternating Series Test (Theorem~\ref*{source:proof:alternating-test})}{proof:alternating-test}
+
+\begin{proof}
+Consider $b_1-b_2+b_3-b_4+\cdots$, where $b_n\geq0$ decreases to zero.
+The even partial sums increase, since
+$$
+S_{2m+2}-S_{2m}=b_{2m+1}-b_{2m+2}\geq0.
+$$
+The odd partial sums decrease, since
+$$
+S_{2m+3}-S_{2m+1}=-b_{2m+2}+b_{2m+3}\leq0.
+$$
+Every even partial sum lies below every later odd partial sum, and the
+partial sums stay between $0$ and $b_1$. Thus each subsequence converges.
+Their limits agree because $S_{2m+1}-S_{2m}=b_{2m+1}\to0$. Hence the
+whole sequence of partial sums converges. Starting with a negative term
+just multiplies all partial sums by $-1$.
+\end{proof}
+
+\proofheading{The Absolute Convergence Test (Theorem~\ref*{source:proof:absolute-convergence})}{proof:absolute-convergence}
+
+\begin{proof}
+Split each term into its positive and negative parts:
+$$
+a_n^+=\frac{|a_n|+a_n}{2},\qquad
+a_n^-=\frac{|a_n|-a_n}{2}.
+$$
+Both are nonnegative and at most $|a_n|$. If $\sum|a_n|$ converges, the
+Comparison Test makes both $\sum a_n^+$ and $\sum a_n^-$ converge.
+Since $a_n=a_n^+-a_n^-$, subtracting their convergent partial sums proves
+that $\sum a_n$ converges.
+\end{proof}
+
+\proofheading{The Ratio Test (Theorem~\ref*{source:proof:ratio-test})}{proof:ratio-test}
+
+\begin{proof}
+Assume the terms are eventually nonzero so that the ratios are defined.
+If $|a_{n+1}/a_n|\to L<1$, choose $q$ with $L<q<1$. Eventually
+$|a_{n+1}|\leq q|a_n|$. Iterating from some index $N$ gives
+$$
+|a_{N+j}|\leq |a_N|q^j.
+$$
+The geometric series on the right converges, so $\sum|a_n|$ converges by
+comparison.
+
+If $L>1$, including $L=\infty$, choose $q>1$ smaller than $L$.
+Eventually $|a_{n+1}|\geq q|a_n|$, so the absolute values grow at least
+geometrically and do not approach zero. The series diverges.
+
+When $L=1$, the test cannot decide: $\sum1/n$ diverges,
+$\sum(-1)^{n+1}/n$ converges conditionally, and $\sum1/n^2$ converges
+absolutely, but the absolute ratios in all three cases approach $1$.
+\end{proof}
+
+\proofheading{The Root Test (Theorem~\ref*{source:proof:root-test})}{proof:root-test}
+
+\begin{proof}
+If $\sqrt[n]{|a_n|}\to L<1$, choose $q$ with $L<q<1$. For large $n$,
+$\sqrt[n]{|a_n|}\leq q$, so $|a_n|\leq q^n$. Comparison with a geometric
+series gives absolute convergence.
+
+If $L>1$, including $L=\infty$, choose $1<q<L$. Eventually
+$|a_n|\geq q^n$, so the terms fail to approach zero and the series
+diverges. At $L=1$, the same three examples used for the Ratio Test give
+all three outcomes: their absolute $n$th roots approach $1$, since
+$n^{-p/n}=\exp(-p\ln(n)/n)\to1$ for fixed $p$.
+\end{proof}
+
+\proofheading{The Integral-Test Error Bounds (Theorem~\ref*{source:proof:integral-error})}{proof:integral-error}
+
+\begin{proof}
+For a positive decreasing $f$ with $a_n=f(n)$, apply the rectangle
+comparisons to the tail rather than the whole series:
+$$
+\int_{N+1}^{m+1}f(x)\,dx
+\leq\sum_{n=N+1}^m a_n
+\leq\int_N^m f(x)\,dx.
+$$
+Let $m\to\infty$. If $S_N$ is the partial sum through $N$ and $S$ is the
+convergent series sum, this gives
+$$
+\int_{N+1}^\infty f(x)\,dx\leq S-S_N\leq\int_N^\infty f(x)\,dx.
+$$
+Adding $S_N$ gives the bounds on the full sum. If the positive series
+diverges, the inequalities still hold with value $+\infty$, but they no
+longer give a finite approximation error.
+\end{proof}
+
+\proofheading{The Alternating-Series Error Bound (Theorem~\ref*{source:proof:alternating-error})}{proof:alternating-error}
+
+\begin{proof}
+Under the Alternating Series Test hypotheses, the sum lies between any
+two consecutive partial sums. Indeed, after subtracting $S_N$, the tail
+is again an alternating series with decreasing magnitudes, and its
+partial sums stay between $0$ and its first term (in whichever order).
+That first term has magnitude $b_{N+1}$, so
+$$
+|S-S_N|\leq b_{N+1}.
+$$
+For a series starting with $-b_1$, the odd partial sums are the lower
+bounds and the even partial sums are the upper bounds, as in the chapter.
+\end{proof}
+
+\subsection{Proofs from Chapter \ref*{sec:power-series}: Power Series}
+
+\proofheading{Taylor's Inequality (Theorem~\ref*{source:proof:taylor-inequality})}{proof:taylor-inequality}
+
+\begin{proof}
+Let $k$ be a nonnegative integer, and suppose the derivatives through
+order $k+1$ exist on an interval containing $[a-d,a+d]$, with
+$|f^{(k+1)}|\leq M$ there. Fix $x\ne a$ in that interval of radius $d$,
+and write $R=f(x)-T_k(x)$. Define
+$$
+H(t)=f(t)-T_k(t)-R\left(\frac{t-a}{x-a}\right)^{k+1}.
+$$
+Then $H(a)=H(x)=0$, and
+$$
+H'(a)=H''(a)=\cdots=H^{(k)}(a)=0
+$$
+when $k\geq1$. Rolle's theorem gives a zero of $H'$ between $a$ and $x$.
+Together with $H'(a)=0$, this gives a zero of $H''$ between those points.
+Repeating $k+1$ times produces a point $c$ between $a$ and $x$ with
+$H^{(k+1)}(c)=0$. Consequently,
+$$
+0=f^{(k+1)}(c)-R\frac{(k+1)!}{(x-a)^{k+1}},
+\qquad
+R=\frac{f^{(k+1)}(c)}{(k+1)!}(x-a)^{k+1}.
+$$
+Taking absolute values gives
+$$
+|f(x)-T_k(x)|
+\leq\frac{M}{(k+1)!}|x-a|^{k+1}
+\leq\frac{Md^{k+1}}{(k+1)!}.
+$$
+At $x=a$ the error is zero, so the inequality holds there too.
+\end{proof}
+
+\subsection{Proofs from Chapter \ref*{sec:solving-odes}: Solving ODEs}
+
+\proofheading{Linear Combinations of Homogeneous Solutions (Theorem~\ref*{source:proof:homogeneous-solutions})}{proof:homogeneous-solutions}
+
+\begin{proof}
+For the equation $ay''+by'+cy=0$, suppose $y_1$ and $y_2$ are solutions
+and $p,q$ are constants. Set $y=py_1+qy_2$. The Sum and Scalar Multiple
+Rules give
+$$
+y'=py_1'+qy_2',\qquad y''=py_1''+qy_2''.
+$$
+Substitute these into the left side of the equation and group terms:
+\begin{align*}
+ay''+by'+cy
+&=p(ay_1''+by_1'+cy_1)\\
+&\quad+q(ay_2''+by_2'+cy_2)\\
+&=p\cdot0+q\cdot0=0.
+\end{align*}
+Thus $y$ is another solution. The same calculation works with variable
+coefficients or higher derivatives, provided the equation is linear and
+homogeneous. Homogeneity alone is not enough for a nonlinear equation.
+\end{proof}

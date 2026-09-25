@@ -417,10 +417,12 @@ Not every number outside the domain is a discontinuity: the condition that $f$ b
 
 
 \section{Properties of Limits}
+\label{sec:limit-properties}
 
 
 \subsection{Limit Laws}
 
+\proofref{proof:limit-laws}
 There are several \textit{limit laws} that will be useful for computing limits. They can all be proven using the $\varepsilon-\delta$ definition of the limit, but you can just believe them.
 
 Suppose $\displaystyle\lim _{x \to a} f(x)=L$ and $\displaystyle\lim _{x \to a} g(x)=M$, let $c$ be a constant, and let $n$ be a positive integer.
@@ -446,12 +448,42 @@ Suppose $\displaystyle\lim _{x \to a} f(x)=L$ and $\displaystyle\lim _{x \to a} 
 
 
 The first two laws should be obvious. 
-The last two laws are special cases of the following theorem.
+The last two laws are special cases of the Composite Function Theorem.
+
+\subsection{Composite Function Theorem and Change of Variables}
+
 
 \begin{thm}[Composite Function Theorem]
-If $f(x)$ is continuous at $L$ and $\displaystyle\lim _{x \to a} g(x)=L$, then
+\proofref{proof:composite-limit}
+If $f(x)$ is continuous at $L=\displaystyle\lim _{x \to a} g(x)$, then
 $$\lim _{x \to a} f(g(x))=f\left(\lim _{x \to a} g(x)\right)=f(L).$$
 \end{thm}
+
+A \textbf{change of variable} gives the inside expression a new name. Let
+$y=g(x)$ and $L=\displaystyle\lim_{x\to a}g(x)$. Then as $x\to a$, we have
+$y\to L$. Under the hypotheses of the theorem, the diagram first rewrites the
+limit in terms of $y$, then uses the continuity of $f$ at $L$. Thus change of
+variable is just the Composite Function Theorem carried out in two steps.
+
+\begin{center}
+\begin{tikzpicture}[every node/.style={font=\small, inner sep=2pt}]
+\node (composite) at (-3.25,0.95)
+    {$\displaystyle\lim_{x\to a}f(g(x))$};
+\node (continuous) at (3.25,0.95)
+    {$\displaystyle f\left(\lim_{x\to a}g(x)\right)$};
+\node (substitution) at (0,-0.75)
+    {$\displaystyle\lim_{\small y\displaystyle\to\left(\lim_{x\to a}g(x)\right)}f(y)$};
+
+\draw[double, double distance=1.2pt] (composite) -- (continuous);
+\draw[double, double distance=1.2pt] (composite) -- (substitution);
+\draw[double, double distance=1.2pt] (substitution) -- (continuous);
+
+\node[font=\scriptsize] at (0,1.3) {Composite Function Theorem};
+\node[font=\scriptsize, align=center] at (-3,0)
+    {change of variable\\[-2pt]$y=g(x)$};
+\node[font=\scriptsize] at (3,0) {continuity of $f$};
+\end{tikzpicture}
+\end{center}
 
 
 
@@ -467,8 +499,10 @@ You should believe that the following types of functions are continuous at every
 \end{itemize}
 
 An \textbf{algebraic combination of continuous functions} (ACCF) is a sum, product, exponentiation, or composition of continuous functions.
+For variable real exponents, an expression $f(x)^{g(x)}$ requires $f(x)>0$.
 
 \begin{thm}
+\proofref{proof:algebraic-continuity}
 Any ACCF is continuous on its domain.
 \end{thm}
 
@@ -476,6 +510,7 @@ Any ACCF is continuous on its domain.
 To finish, another very useful theorem:
 
 \begin{thm}[The Intermediate Value Theorem]
+\proofref{proof:intermediate-value}
 Let $f$ be continuous over a closed, bounded interval $[a, b]$. If $z$ is any real number between $f(a)$ and $f(b)$, then there is a number $c$ in $[a, b]$ satisfying $f(c)=z$.
 \end{thm}
 
@@ -528,6 +563,7 @@ Phrased properly, the Intermediate Value Theorem is very intuitive. If you imagi
 
 
 \section{Evaluating Limits}
+\label{sec:evaluating-limits}
 
 Now that you understand the definitions and some properties of limits, we will focus on how to evaluate a limit (algebraically) when you come across one:
 $$\lim_{x\to a}f(x).$$
@@ -550,12 +586,12 @@ The process of evaluating both types are the same, except for at boundary points
 ]
 \node[choice] (plug) at (0,2.2) {plug $\displaystyle a$ into $f$};
 
-\node[choice, minimum width=1.6cm] (number) at (-4.57,0.5) {number};
-\node[choice, text width=2.4cm] (overzero) at (-1.9,0.5)
-    {$\displaystyle\frac{\text{non-zero number}}{0}$};
-\node[choice, text width=2cm] (indeterminate) at (1.08,0.5)
+\node[choice, minimum width=1.6cm, minimum height=1.35cm] (number) at (-4.57,0.5) {number};
+\node[choice, text width=2.4cm, minimum height=1.35cm] (overzero) at (-1.9,0.5)
+    {$\displaystyle\frac{\text{non-zero number}}{0}$\\or $\ln(0^+)$};
+\node[choice, text width=2cm, minimum height=1.35cm] (indeterminate) at (1.08,0.5)
     {indeterminate\\form};
-\node[choice, text width=2.4cm] (undefined) at (4.06,0.5)
+\node[choice, text width=2.4cm, minimum height=1.35cm] (undefined) at (4.06,0.5)
     {undefined for\\another reason};
 
 \node (number-result) at (-4.57,-0.9) {$f(a)$};
@@ -583,7 +619,7 @@ If $f$ is an ACCF and $f(a)$ is a number, then $a$ is in the domain of $f$. Sinc
 $$\lim_{x\to a}f(x)=f(a)$$
 by the definition of continuity. \mar{Re-read this until you understand it!}
 
-\subsection{A (non-zero) Number over Zero}
+\subsection{A (non-zero) Number over Zero or \texorpdfstring{$\ln(0^+)$}{ln(0+)}}
 
 If $f$ is an ACCF and attempting to evaluate $f(a)$ results in a non-zero number over 0, then $f$ has a vertical asymptote at $x=a$. Near $x=a$, the values of $f(x)$ get very close to either positive or negative infinity. The right and left sided limits are either positive or negative infinity, so there are only four cases, as seen in figure \ref{fig:four-cases}.
 
@@ -693,7 +729,34 @@ If $f$ is an ACCF and attempting to evaluate $f(a)$ results in a non-zero number
     \label{fig:four-cases}
 \end{figure}
 
-Therefore, the only possibilities for the value of these limits are $\infty$, $-\infty$, and DNE. \mar{Label each function in figure \ref{fig:four-cases} with its respective limit.} To figure it out which one it is, evaluate both of the two sided limits. For each, plug in a value that is slightly to the right (or the left) of $a$. If the result is positive, the sided limit is positive infinity, and if the result is negative, negative infinity.
+Therefore, the only possibilities for the value of these limits are $\infty$, $-\infty$, and DNE. \mar{Label each function in figure \ref{fig:four-cases} with its respective limit.} To figure it out which one it is, evaluate both of the two sided limits. For each, find the sign by imagining $x$ is slightly smaller or larger than $a$. If the result is positive, the sided limit is positive infinity, and if the result is negative, negative infinity.
+
+\begin{samepage}
+For example, consider
+$$\lim_{x\to1}\frac{x-3}{x(x-1)^2}.$$
+Plugging in gives a non-zero number over 0. To determine the sign of the limit, evaluate the sign of each part near $x=1$:
+$$
+\begin{array}{c|ccc|c}
+ & x-3 & x & (x-1)^2 & \dfrac{x-3}{x(x-1)^2}\\
+\hline
+x\to1^- & - & + & + & -\\
+x\to1^+ & - & + & + & -
+\end{array}
+$$
+The denominator approaches 0 and the quotient is negative from both sides, so
+$$\lim_{x\to1}\frac{x-3}{x(x-1)^2}=-\infty.$$
+\end{samepage}
+
+Another way that a function could have a vertical asymptote is $\ln(0^+)$, meaning that the input of the logarithm approaches 0 through positive values. Since
+$$\lim_{u\to0^+}\ln(u)=-\infty,$$
+if $g(x)\to0^+$, then $\ln(g(x))\to-\infty$.
+
+\begin{samepage}
+For example, consider
+$$\lim_{x\to2^+}\ln(x^2-4).$$
+Plugging in gives $\ln(0)$. To the right of 2, $x^2-4$ is positive, so as $x\to2^+$ its value approaches $0^+$. Therefore,
+$$\lim_{x\to2^+}\ln(x^2-4)=-\infty.$$
+\end{samepage}
 
 \subsection{Indeterminate Form}
 
@@ -725,17 +788,11 @@ When we get an indeterminate form after trying to evaluate $f(a)$, we need to do
 \begin{itemize}
 \item Simplify. If the function is rational and has common factor in its numerator and denominator, by ``canceling'' the term, the resulting function is not the same: the original function has a hole at the point where the factored term is 0. For example, $f(x)=\frac{x(x-1)}{(x-1)}$ has a hole at $x=1$, but everywhere else is the line $y=x$. However, this cancellation does not change the value of the limit.
 \item Multiply the numerator and denominator of a rational function by the conjugate of the denominator or the numerator (the \textbf{conjugate} of a binomial $a+b$ is $a-b$).
-\item Use a special-case limit: 
-$$
-\lim_{x\to 0}\frac{\sin(x)}{x} = 1
-\quad\quad\quad\quad
-\lim_{x\to 0}\frac{\cos(x) - 1}{x} = 0
-$$
-$$
-\lim_{x\to\infty}\left(1+\frac{1}{x}\right)^x = e
-\quad\quad\quad\quad
-\lim_{x\to 0}\frac{a^x-1}{x}=\ln(a)
-$$
+\item Use a special-case limit. Here angles are measured in radians and $a>0$:
+$$\lim_{x\to0}\frac{\sin(x)}{x}=1.\hbox{\proofref{proof:sine-limit}}$$
+$$\lim_{x\to0}\frac{\cos(x)-1}{x}=0.\hbox{\proofref{proof:cosine-limit}}$$
+$$\lim_{x\to\infty}\left(1+\frac1x\right)^x=e.\hbox{\proofref{proof:euler-limit}}$$
+$$\lim_{x\to0}\frac{a^x-1}{x}=\ln(a).\hbox{\proofref{proof:exponential-limit}}$$
 
 \item In the case of $x\to\pm\infty$ for a rational function, divide the numerator and denominator by the highest degree term of the denominator.
 \end{itemize}
@@ -751,6 +808,7 @@ Sometimes plugging $a$ into $f$ is undefined without producing a non-zero number
 \item Use the Squeeze Theorem, especially when part of the function is bounded:
 
 \begin{thm}[Squeeze Theorem]
+\proofref{proof:squeeze}
 Let $f$, $g$, and $h$ be functions with $g(x)\leq f(x)\leq h(x)$ for all $x$ in some interval around $a$ (except possibly at $a$). If $$\lim_{x\to a}g(x)=L=\lim_{x\to a} h(x),$$ then $$\lim_{x\to a} f(x)=L$$
 as well.
 \end{thm}
@@ -763,10 +821,3 @@ so the Squeeze Theorem gives $\displaystyle\lim_{x\to0}x\cos(1/x)=0$.
 \item Find the limit of the inner expression first, then use the Composite Function Theorem if the outer function is continuous at that limit.
 
 \end{itemize}
-
-
-
-
-
-
-

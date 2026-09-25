@@ -19,70 +19,125 @@
 \contentsline {subsection}{\numberline {3.4}Continuity}{21}{subsection.3.4}%
 \contentsline {section}{\numberline {4}Properties of Limits}{22}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Limit Laws}{22}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Using Continuity}{22}{subsection.4.2}%
-\contentsline {section}{\numberline {5}Evaluating Limits}{23}{section.5}%
+\contentsline {subsection}{\numberline {4.2}Composite Function Theorem and Change of Variables}{22}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Using Continuity}{23}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Evaluating Limits}{24}{section.5}%
 \contentsline {subsection}{\numberline {5.1}A Number}{24}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}A (non-zero) Number over Zero}{24}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Indeterminate Form}{24}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Undefined for Another Reason}{25}{subsection.5.4}%
-\contentsline {part}{III\hspace {1em}Derivatives and Applications}{26}{part.3}%
-\contentsline {section}{\numberline {6}The Derivative}{26}{section.6}%
-\contentsline {subsection}{\numberline {6.1}The Limit Definition}{26}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}The Two Part ``Program'' for Finding Derivatives}{27}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Implicit Differentiation}{27}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Parametric Curves}{28}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Logarithmic Differentiation}{29}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}Using The Inverse Rule}{29}{subsection.6.6}%
-\contentsline {section}{\numberline {7}Applications of Derivatives}{31}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Linear Approximation}{31}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}L'H\^opital's Rule}{31}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Kinematics}{32}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Related Rates}{33}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}Qualities of Graphs}{33}{subsection.7.5}%
-\contentsline {subsection}{\numberline {7.6}Extrema and Critical Numbers}{34}{subsection.7.6}%
-\contentsline {subsection}{\numberline {7.7}Optimization}{35}{subsection.7.7}%
-\contentsline {subsection}{\numberline {7.8}Newton's Method for Finding Roots}{35}{subsection.7.8}%
-\contentsline {part}{IV\hspace {1em}Integration and Applications}{37}{part.4}%
-\contentsline {section}{\numberline {8}The Definite Integral}{37}{section.8}%
-\contentsline {subsection}{\numberline {8.1}The Definite Integral}{37}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Reimann Sums}{37}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}The Fundamental Theorem of Calculus}{39}{subsection.8.3}%
-\contentsline {section}{\numberline {9}The Indefinite Integral}{40}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Anti-differentiation}{40}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Partial Fraction Decomposition}{41}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Trigonometric Substitution}{41}{subsection.9.3}%
-\contentsline {section}{\numberline {10}More Definite Integrals}{43}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Improper Integrals}{43}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Even and Odd Functions}{44}{subsection.10.2}%
-\contentsline {section}{\numberline {11}Applications of Integrals}{45}{section.11}%
-\contentsline {subsection}{\numberline {11.1}Average Values}{45}{subsection.11.1}%
-\contentsline {subsubsection}{\numberline {11.1.1}Water in a tank}{45}{subsubsection.11.1.1}%
-\contentsline {subsubsection}{\numberline {11.1.2}Using the FTC and Average Slope}{45}{subsubsection.11.1.2}%
-\contentsline {subsection}{\numberline {11.2}Areas}{46}{subsection.11.2}%
-\contentsline {subsection}{\numberline {11.3}Arc Length}{46}{subsection.11.3}%
-\contentsline {subsection}{\numberline {11.4}Probability}{47}{subsection.11.4}%
-\contentsline {subsection}{\numberline {11.5}Volumes and Surface Area}{48}{subsection.11.5}%
-\contentsline {subsection}{\numberline {11.6}Work}{48}{subsection.11.6}%
-\contentsline {part}{V\hspace {1em}Sequences and Series}{49}{part.5}%
-\contentsline {section}{\numberline {12}Sequences}{49}{section.12}%
-\contentsline {section}{\numberline {13}Series}{49}{section.13}%
-\contentsline {subsection}{\numberline {13.1}Introduction}{49}{subsection.13.1}%
-\contentsline {subsection}{\numberline {13.2}Tests for Convergence and Divergence}{50}{subsection.13.2}%
-\contentsline {subsection}{\numberline {13.3}Estimating Sums}{53}{subsection.13.3}%
-\contentsline {section}{\numberline {14}Power Series}{54}{section.14}%
-\contentsline {subsection}{\numberline {14.1}General Power Series}{54}{subsection.14.1}%
-\contentsline {subsection}{\numberline {14.2}Taylor Series}{55}{subsection.14.2}%
-\contentsline {subsection}{\numberline {14.3}Estimating Error: Taylor's Inequality}{56}{subsection.14.3}%
-\contentsline {part}{VI\hspace {1em}Differential Equations}{58}{part.6}%
-\contentsline {section}{\numberline {15}Introduction}{58}{section.15}%
-\contentsline {section}{\numberline {16}Slope Fields and Euler's Method}{58}{section.16}%
-\contentsline {section}{\numberline {17}Solving ODEs}{60}{section.17}%
-\contentsline {subsection}{\numberline {17.1}Separable ODEs}{60}{subsection.17.1}%
-\contentsline {subsection}{\numberline {17.2}Second Order Differential Equations}{61}{subsection.17.2}%
-\contentsline {section}{\numberline {18}Applications}{61}{section.18}%
-\contentsline {subsection}{\numberline {18.1}The Logistic Equation}{61}{subsection.18.1}%
-\contentsline {subsection}{\numberline {18.2}Simple Harmonic Oscillator}{61}{subsection.18.2}%
-\contentsline {subsection}{\numberline {18.3}Predator-Prey}{61}{subsection.18.3}%
-\contentsline {part}{VII\hspace {1em}Appendix}{62}{part.7}%
-\contentsline {section}{\numberline {19}Moments and Centroids}{62}{section.19}%
-\contentsline {section}{\numberline {20}Complex Numbers}{66}{section.20}%
+\contentsline {subsection}{\numberline {5.2}A (non-zero) Number over Zero or $\ln (0^+)$}{24}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Indeterminate Form}{25}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Undefined for Another Reason}{26}{subsection.5.4}%
+\contentsline {part}{III\hspace {1em}Derivatives and Applications}{27}{part.3}%
+\contentsline {section}{\numberline {6}The Derivative}{27}{section.6}%
+\contentsline {subsection}{\numberline {6.1}The Limit Definition}{27}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}The Two Part ``Program'' for Finding Derivatives}{28}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Implicit Differentiation}{29}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Parametric Curves}{29}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Logarithmic Differentiation}{30}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Using The Inverse Rule}{30}{subsection.6.6}%
+\contentsline {section}{\numberline {7}Applications of Derivatives}{32}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Linear Approximation}{32}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}L'H\^opital's Rule}{32}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Kinematics}{33}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Related Rates}{34}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Qualities of Graphs}{34}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Extrema and Critical Numbers}{35}{subsection.7.6}%
+\contentsline {subsection}{\numberline {7.7}Optimization}{36}{subsection.7.7}%
+\contentsline {subsection}{\numberline {7.8}Newton's Method for Finding Roots}{36}{subsection.7.8}%
+\contentsline {part}{IV\hspace {1em}Integration and Applications}{38}{part.4}%
+\contentsline {section}{\numberline {8}The Definite Integral}{38}{section.8}%
+\contentsline {subsection}{\numberline {8.1}The Definite Integral}{38}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Reimann Sums}{38}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}The Fundamental Theorem of Calculus}{40}{subsection.8.3}%
+\contentsline {section}{\numberline {9}The Indefinite Integral}{42}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Anti-differentiation}{42}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Partial Fraction Decomposition}{43}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Trigonometric Substitution}{43}{subsection.9.3}%
+\contentsline {section}{\numberline {10}More Definite Integrals}{45}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Improper Integrals}{45}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Even and Odd Functions}{46}{subsection.10.2}%
+\contentsline {section}{\numberline {11}Applications of Integrals}{47}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Average Values}{47}{subsection.11.1}%
+\contentsline {subsubsection}{\numberline {11.1.1}Water in a tank}{47}{subsubsection.11.1.1}%
+\contentsline {subsubsection}{\numberline {11.1.2}Using the FTC and Average Slope}{47}{subsubsection.11.1.2}%
+\contentsline {subsection}{\numberline {11.2}Areas}{48}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Arc Length}{48}{subsection.11.3}%
+\contentsline {subsection}{\numberline {11.4}Probability}{49}{subsection.11.4}%
+\contentsline {subsection}{\numberline {11.5}Volumes and Surface Area}{50}{subsection.11.5}%
+\contentsline {subsection}{\numberline {11.6}Work}{50}{subsection.11.6}%
+\contentsline {part}{V\hspace {1em}Sequences and Series}{51}{part.5}%
+\contentsline {section}{\numberline {12}Sequences}{51}{section.12}%
+\contentsline {section}{\numberline {13}Series}{51}{section.13}%
+\contentsline {subsection}{\numberline {13.1}Introduction}{51}{subsection.13.1}%
+\contentsline {subsection}{\numberline {13.2}Tests for Convergence and Divergence}{52}{subsection.13.2}%
+\contentsline {subsection}{\numberline {13.3}Estimating Sums}{55}{subsection.13.3}%
+\contentsline {section}{\numberline {14}Power Series}{56}{section.14}%
+\contentsline {subsection}{\numberline {14.1}General Power Series}{56}{subsection.14.1}%
+\contentsline {subsection}{\numberline {14.2}Taylor Series}{57}{subsection.14.2}%
+\contentsline {subsection}{\numberline {14.3}Estimating Error: Taylor's Inequality}{58}{subsection.14.3}%
+\contentsline {part}{VI\hspace {1em}Differential Equations}{60}{part.6}%
+\contentsline {section}{\numberline {15}Introduction}{60}{section.15}%
+\contentsline {section}{\numberline {16}Slope Fields and Euler's Method}{60}{section.16}%
+\contentsline {section}{\numberline {17}Solving ODEs}{62}{section.17}%
+\contentsline {subsection}{\numberline {17.1}Separable ODEs}{62}{subsection.17.1}%
+\contentsline {subsection}{\numberline {17.2}Second Order Differential Equations}{63}{subsection.17.2}%
+\contentsline {section}{\numberline {18}Applications}{63}{section.18}%
+\contentsline {subsection}{\numberline {18.1}The Logistic Equation}{63}{subsection.18.1}%
+\contentsline {subsection}{\numberline {18.2}Simple Harmonic Oscillator}{63}{subsection.18.2}%
+\contentsline {subsection}{\numberline {18.3}Predator-Prey}{63}{subsection.18.3}%
+\contentsline {part}{VII\hspace {1em}Appendix}{64}{part.7}%
+\contentsline {section}{\numberline {19}Moments and Centroids}{64}{section.19}%
+\contentsline {section}{\numberline {20}Complex Numbers}{68}{section.20}%
+\contentsline {section}{\numberline {21}Proofs by Chapter}{70}{section.21}%
+\contentsline {subsection}{\numberline {21.1}Proofs from Chapter \ref *{sec:trigonometry}: Trigonometry}{70}{subsection.21.1}%
+\contentsline {subsubsection}{\numberline {21.1.1}The Law of Sines (Theorem~\ref *{source:proof:law-of-sines})}{70}{subsubsection.21.1.1}%
+\contentsline {subsubsection}{\numberline {21.1.2}The Law of Cosines (Theorem~\ref *{source:proof:law-of-cosines})}{70}{subsubsection.21.1.2}%
+\contentsline {subsubsection}{\numberline {21.1.3}Heron's Formula (Theorem~\ref *{source:proof:heron})}{70}{subsubsection.21.1.3}%
+\contentsline {subsection}{\numberline {21.2}Proofs from Chapter \ref *{sec:real-functions}: Functions on the Real Line}{70}{subsection.21.2}%
+\contentsline {subsubsection}{\numberline {21.2.1}Invertibility and Bijectivity (Theorem~\ref *{source:proof:invertibility})}{70}{subsubsection.21.2.1}%
+\contentsline {subsubsection}{\numberline {21.2.2}Continuity of a Monotone Inverse}{71}{subsubsection.21.2.2}%
+\contentsline {subsection}{\numberline {21.3}Proofs from Chapter \ref *{sec:limit-properties}: Properties of Limits}{71}{subsection.21.3}%
+\contentsline {subsubsection}{\numberline {21.3.1}The Limit Laws}{71}{subsubsection.21.3.1}%
+\contentsline {subsubsection}{\numberline {21.3.2}The Composite Function Theorem (Theorem~\ref *{source:proof:composite-limit})}{71}{subsubsection.21.3.2}%
+\contentsline {subsubsection}{\numberline {21.3.3}Continuity of Algebraic Combinations (Theorem~\ref *{source:proof:algebraic-continuity})}{72}{subsubsection.21.3.3}%
+\contentsline {subsubsection}{\numberline {21.3.4}The Intermediate Value Theorem (Theorem~\ref *{source:proof:intermediate-value})}{72}{subsubsection.21.3.4}%
+\contentsline {subsection}{\numberline {21.4}Proofs from Chapter \ref *{sec:evaluating-limits}: Evaluating Limits}{72}{subsection.21.4}%
+\contentsline {subsubsection}{\numberline {21.4.1}$\displaystyle \lim _{x\to 0}\frac {\sin (x)}{x}=1$}{72}{subsubsection.21.4.1}%
+\contentsline {subsubsection}{\numberline {21.4.2}$\displaystyle \lim _{x\to 0}\frac {\cos (x)-1}{x}=0$}{73}{subsubsection.21.4.2}%
+\contentsline {subsubsection}{\numberline {21.4.3}$\displaystyle \lim _{x\to \infty }\left (1+\frac 1x\right )^x=e$}{73}{subsubsection.21.4.3}%
+\contentsline {subsubsection}{\numberline {21.4.4}$\displaystyle \lim _{x\to 0}\frac {a^x-1}{x}=\ln (a)\hskip 1em\relax (a>0)$}{74}{subsubsection.21.4.4}%
+\contentsline {subsubsection}{\numberline {21.4.5}The Squeeze Theorem (Theorem~\ref *{source:proof:squeeze})}{74}{subsubsection.21.4.5}%
+\contentsline {subsection}{\numberline {21.5}Proofs from Chapter \ref *{sec:the-derivative}: The Derivative}{74}{subsection.21.5}%
+\contentsline {subsubsection}{\numberline {21.5.1}Differentiability Implies Continuity (Theorem~\ref *{source:proof:differentiability-continuity})}{74}{subsubsection.21.5.1}%
+\contentsline {subsubsection}{\numberline {21.5.2}The Product Rule}{75}{subsubsection.21.5.2}%
+\contentsline {subsubsection}{\numberline {21.5.3}The Chain Rule}{75}{subsubsection.21.5.3}%
+\contentsline {subsubsection}{\numberline {21.5.4}The Power Rule}{75}{subsubsection.21.5.4}%
+\contentsline {subsection}{\numberline {21.6}Proofs from Chapter \ref *{sec:applications-of-derivatives}: Applications of Derivatives}{76}{subsection.21.6}%
+\contentsline {subsubsection}{\numberline {21.6.1}Local Extrema and Critical Numbers (Theorem~\ref *{source:proof:critical-numbers})}{76}{subsubsection.21.6.1}%
+\contentsline {subsubsection}{\numberline {21.6.2}The Extreme Value Theorem}{76}{subsubsection.21.6.2}%
+\contentsline {subsubsection}{\numberline {21.6.3}The Mean Value Theorem (Theorem~\ref *{source:proof:mean-value})}{76}{subsubsection.21.6.3}%
+\contentsline {subsubsection}{\numberline {21.6.4}The First Derivative Test (Theorem~\ref *{source:proof:first-derivative-test})}{77}{subsubsection.21.6.4}%
+\contentsline {subsubsection}{\numberline {21.6.5}The Second Derivative Test (Theorem~\ref *{source:proof:second-derivative-test})}{77}{subsubsection.21.6.5}%
+\contentsline {subsubsection}{\numberline {21.6.6}L'H\^opital's Rule (Theorem~\ref *{source:proof:lhopital})}{77}{subsubsection.21.6.6}%
+\contentsline {subsection}{\numberline {21.7}Proofs from Chapter \ref *{sec:definite-integral}: The Definite Integral}{78}{subsection.21.7}%
+\contentsline {subsubsection}{\numberline {21.7.1}Convergence of Riemann Sums (Theorem~\ref *{source:proof:riemann-sums})}{78}{subsubsection.21.7.1}%
+\contentsline {subsubsection}{\numberline {21.7.2}The Fundamental Theorem of Calculus (Theorem~\ref *{source:proof:fundamental-theorem})}{79}{subsubsection.21.7.2}%
+\contentsline {subsection}{\numberline {21.8}Proofs from Chapter \ref *{sec:more-definite-integrals}: More Definite Integrals}{79}{subsection.21.8}%
+\contentsline {subsubsection}{\numberline {21.8.1}Comparison of Integrals (Theorem~\ref *{source:proof:integral-comparison})}{79}{subsubsection.21.8.1}%
+\contentsline {subsubsection}{\numberline {21.8.2}Splitting an Integral and Reversing Its Bounds (Theorem~\ref *{source:proof:integral-additivity})}{80}{subsubsection.21.8.2}%
+\contentsline {subsection}{\numberline {21.9}Proofs from Chapter \ref *{sec:series}: Series}{80}{subsection.21.9}%
+\contentsline {subsubsection}{\numberline {21.9.1}The Geometric Series}{80}{subsubsection.21.9.1}%
+\contentsline {subsubsection}{\numberline {21.9.2}The Divergence Test (Theorem~\ref *{source:proof:divergence-test})}{80}{subsubsection.21.9.2}%
+\contentsline {subsubsection}{\numberline {21.9.3}The Integral Test (Theorem~\ref *{source:proof:integral-test})}{80}{subsubsection.21.9.3}%
+\contentsline {subsubsection}{\numberline {21.9.4}The $p$-Series Test (Theorem~\ref *{source:proof:p-series-test})}{81}{subsubsection.21.9.4}%
+\contentsline {subsubsection}{\numberline {21.9.5}The Comparison Test (Theorem~\ref *{source:proof:series-comparison})}{81}{subsubsection.21.9.5}%
+\contentsline {subsubsection}{\numberline {21.9.6}The Limit Comparison Test (Theorem~\ref *{source:proof:limit-comparison})}{81}{subsubsection.21.9.6}%
+\contentsline {subsubsection}{\numberline {21.9.7}The Alternating Series Test (Theorem~\ref *{source:proof:alternating-test})}{81}{subsubsection.21.9.7}%
+\contentsline {subsubsection}{\numberline {21.9.8}The Absolute Convergence Test (Theorem~\ref *{source:proof:absolute-convergence})}{82}{subsubsection.21.9.8}%
+\contentsline {subsubsection}{\numberline {21.9.9}The Ratio Test (Theorem~\ref *{source:proof:ratio-test})}{82}{subsubsection.21.9.9}%
+\contentsline {subsubsection}{\numberline {21.9.10}The Root Test (Theorem~\ref *{source:proof:root-test})}{82}{subsubsection.21.9.10}%
+\contentsline {subsubsection}{\numberline {21.9.11}The Integral-Test Error Bounds (Theorem~\ref *{source:proof:integral-error})}{82}{subsubsection.21.9.11}%
+\contentsline {subsubsection}{\numberline {21.9.12}The Alternating-Series Error Bound (Theorem~\ref *{source:proof:alternating-error})}{82}{subsubsection.21.9.12}%
+\contentsline {subsection}{\numberline {21.10}Proofs from Chapter \ref *{sec:power-series}: Power Series}{83}{subsection.21.10}%
+\contentsline {subsubsection}{\numberline {21.10.1}Taylor's Inequality (Theorem~\ref *{source:proof:taylor-inequality})}{83}{subsubsection.21.10.1}%
+\contentsline {subsection}{\numberline {21.11}Proofs from Chapter \ref *{sec:solving-odes}: Solving ODEs}{83}{subsection.21.11}%
+\contentsline {subsubsection}{\numberline {21.11.1}Linear Combinations of Homogeneous Solutions (Theorem~\ref *{source:proof:homogeneous-solutions})}{83}{subsubsection.21.11.1}%

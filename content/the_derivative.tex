@@ -1,4 +1,5 @@
 \section{The Derivative}
+\label{sec:the-derivative}
 
 \subsection{The Limit Definition}
 
@@ -138,6 +139,13 @@ $$y=f(a)+f'(a)(x-a).$$
 
 You'll notice that the tangent line captures some \textit{local information} about $f$ at $a$. In other words, it is a good approximation of $f$ at $a$; that is, $f$ and its tangent line are ``similar'' at $a$. Intuitively, you should think about the tangent line at $a$ to be the line that ``hugs $f$ the best at $a$.''
 
+A function $f$ is \textbf{differentiable at $a$} if $f'(a)$ exists as a finite number.
+
+\begin{thm}[Differentiability Implies Continuity]
+\proofref{proof:differentiability-continuity}
+If $f$ is differentiable at $a$, then $f$ is continuous at $a$.
+\end{thm}
+
 Note that this definition of the derivative only makes sense if $f$ is defined on an open interval containing $a$. We can view the derivative as a function, and write $[f(x)]'$ or $f'(x)$. The derivative of $f'(x)$ is called the \textbf{second derivative} and is denoted $f''(x)$. In general, the $n$th derivative $f^{(n)}(x)$ is defined to be the derivative of $f^{(n-1)}(x)$.
 
 \subsection{The Two Part ``Program'' for Finding Derivatives}
@@ -152,16 +160,15 @@ So now we have a goal: find derivatives of functions. The problem is that the li
 \toprule[0.4mm]
 \textbf{The Scalar Multiple Rule} & $[af]' = af'$. \\
 \textbf{The Sum Rule} & $[f + g]' = f' + g'$ \\
-\textbf{The Product Rule} & $[fg]' = f'g + fg'$ \\
+\proofref{proof:product-rule}\textbf{The Product Rule} & $[fg]' = f'g + fg'$ \\
 \textbf{The Quotient Rule} & $\left[\frac{f}{g}\right]' = \frac{f'g - fg'}{g^2}$ \\
-\textbf{The Chain Rule} & $[f(g(x))]' = f'(g(x))g'(x)$ \\
+\proofref{proof:chain-rule}\textbf{The Chain Rule} & $[f(g(x))]' = f'(g(x))g'(x)$ \\
 \textbf{The Inverse Rule} & $[f^{-1}(x)]' = \frac{1}{f'(f^{-1}(x))}$ \\
 \bottomrule[0.4mm]
 \end{tabular}
 \end{center}
-
 The inverse rule requires $f$ to be differentiable and one-to-one on an
-interval, with $f'(f^{-1}(x))\ne0$ at the point in question.
+interval, with $f'(f^{-1}(x))\ne0$ at the point in question.\mar{Prove the sum and scalar multiple rules using the limit definition.}
 
 \item find derivatives of ``basic'' functions:
 
@@ -173,7 +180,7 @@ interval, with $f'(f^{-1}(x))\ne0$ at the point in question.
 \begin{tabular}{@{}ll@{}}
 \toprule[0.4mm]
 \textbf{Constant Rule}     & $[a]' = 0$ \\
-\textbf{Power Rule}        & $[x^a]' = ax^{a-1}$ \\
+\proofref{proof:power-rule}\textbf{Power Rule}        & $[x^a]' = ax^{a-1}$ \\
 \textbf{Trig Rules}  & $[\sin(x)]' = \cos(x)$ \\
 & $[\cos(x)]' = -\sin(x)$ \\
 \textbf{Exponential Rules} & $[a^x]' = \ln(a)a^x$ \\
@@ -276,6 +283,8 @@ It is easy to see where this formula comes from:
 \implies & f'(f^{-1}(x))[f^{-1}(x)]'=1 & &\text{(chain rule)}\\
 \implies & [f^{-1}(x)]' =\frac{1}{f'(f^{-1}(x))} & & \text{(solve for $[f^{-1}(x)]'$)}.
 \end{align*}
+
+\mar{Use this rule to find the derivative of $\log_a(x)$.}
 
 Let's use this rule to find the derivative of inverse trig functions:
 \begin{itemize}

@@ -65,7 +65,7 @@
 \renewcommand{\H}{\mathcal{H}}
 \newcommand{\D}{\mathbb{D}}
 \newcommand{\dabba}{\partial}
-\newcommand{\e}{\epsilon}
+\newcommand{\e}{\varepsilon}
 \newcommand{\eu}{\text{e}}
 \newcommand{\bs}{\blacksquare}
 \newcommand{\di}{\diamond}
@@ -83,6 +83,37 @@
 
 
 \newcommand{\mar}[1]{\marginpar{\begin{tcolorbox}[colback=white, arc=0in, left=1mm, right=1mm, leftrule=.3em, bottomrule=.05em, rightrule=.05em, toprule=.05em, halign=flush left]#1\end{tcolorbox}}}
+
+% Keep the margin position independent of a theorem box's local text width.
+\newlength{\proofmarginx}
+\setlength{\proofmarginx}{\dimexpr1in+\hoffset+\oddsidemargin+\textwidth+\marginparsep\relax}
+
+\newcommand{\proofmarginbox}[1]{%
+\leavevmode
+% Anchor to this line, even inside a theorem box, table, or display.
+\begin{tikzpicture}[remember picture, overlay, baseline=0pt]
+\node[anchor=base west, outer sep=0pt,
+  text width=\dimexpr1.45in-3mm\relax, align=left,
+  fill=black!8, draw=black!25, line width=.3pt,
+  inner xsep=1.5mm, inner ysep=1mm,
+  font=\normalfont\footnotesize]
+  at ([xshift=\proofmarginx]current page.west |- 0,0)
+  {\hypersetup{hidelinks}#1};
+\end{tikzpicture}}%
+
+\newcommand{\proofref}[2][]{%
+\leavevmode
+\phantomsection\label{source:#2}%
+\proofmarginbox{%
+\if\relax\detokenize{#1}\relax\else #1\par\fi
+\hyperref[#2]{\textbf{Proof}\ (p.~\pageref*{#2})}}}
+
+\newcommand{\proofsource}[1]{%
+\proofmarginbox{\hyperref[source:#1]{Page~\pageref*{source:#1}}}}
+
+\newcommand{\proofheading}[2]{%
+\subsubsection[#1]{\texorpdfstring{\protect\proofsource{#2}}{}#1}%
+\label{#2}}
 
 
 
@@ -168,7 +199,14 @@ Stony Brook, NY 11794, USA, Earth\\
 
 \newpage
 
+\begingroup
+\setcounter{tocdepth}{2}
+\makeatletter
+% Leave room for appendix entries such as 21.10.
+\renewcommand*{\l@subsection}{\@dottedtocline{2}{1.5em}{3em}}
+\makeatother
 \tableofcontents
+\endgroup
 
 \newpage
 \listoffigures
@@ -227,18 +265,9 @@ Stony Brook, NY 11794, USA, Earth\\
 \part{Appendix}
 \input{content/moments_and_centroids.tex}
 \input{content/complex_numbers.tex}
+\newpage
+\input{content/proofs.tex}
 
 
 
 \end{document}
-
-
-
-
-
-
-
-
-
-
-

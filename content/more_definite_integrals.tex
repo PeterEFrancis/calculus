@@ -1,4 +1,5 @@
 \section{More Definite Integrals}
+\label{sec:more-definite-integrals}
 
 \subsection{Improper Integrals}
 
@@ -38,20 +39,25 @@ Many times, a vertical asymptote won't be one of the endpoints of the interval. 
 
 When the convergence of an integral is all you care about, the following theorem can be helpful.
 
-\begin{theorem}
-If $0\leq f(x) \leq g(x)$ on the interval of integration, then $\int_a^b f(x)\ dx \leq \int_a^b g(x)\ dx$.
-\end{theorem}
+\begin{thm}
+\proofref{proof:integral-comparison}
+Suppose $a<b$ and $f$ and $g$ are integrable on each closed subinterval away
+from any improper endpoints. If $0\leq f(x)\leq g(x)$ on the interval of
+integration, then $\int_a^b f(x)\ dx\leq\int_a^b g(x)\ dx$, allowing
+the value $+\infty$ for these nonnegative improper integrals.
+\end{thm}
 In particular, if $\int_a^b f(x)\ dx$ diverges then $\int_a^b g(x)\ dx$ diverges, and if $\int_a^b g(x)\ dx$ converges, then $\int_a^b f(x)\ dx$ converges.
 
 \vspace{1em}
 
 To finish the section, here is an algebraic property of integrals that can come in handy:
-\begin{theorem} The following are always true if each integral exists and is finite.
+\begin{thm}
+\proofref{proof:integral-additivity} The following are always true if each integral exists and is finite.
 \begin{enumerate}
 \item $\displaystyle\int_a^bf(x)\ dx + \int_b^cf(x)\ dx = \int_a^c f(x)\ dx$.
 \item $\displaystyle\int_a^bf(x)\ dx = -\int_b^a f(x)\ dx$.
 \end{enumerate}
-\end{theorem}
+\end{thm}
 
 \mar{Use 1 to prove 2.}
 
@@ -67,6 +73,3 @@ Here are some examples:
 \item $\int_{-1}^1\sin(x)\ dx = 0$ since $\sin(-x)=-\sin(x)$.
 \item $\int_{-1}^1\cos(x)\ dx = 2\int_0^1\cos(x)\ dx$ since $\cos(-x)=\cos(x)$.
 \end{itemize}
-
-
-

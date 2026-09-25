@@ -1,4 +1,5 @@
 \section{Functions on the Real Line}
+\label{sec:real-functions}
 
 \subsection{Real Numbers}
 
@@ -162,6 +163,7 @@ In this case, we call $g$ the \textbf{inverse} of $f$ and write $f^{-1}=g$. In o
 
 You might wonder: \textit{when is a function invertible?} It turns out that we already understand exactly what we want:
 \begin{thm}
+\proofref{proof:invertibility}
 A function is invertible exactly when it is bijective.
 \end{thm}
 Lets think through this: looking back at Figure \ref{three-functions}, the first function is not invertible because it is not injective. Both 1 and 3 map to 6, but condition (i) says that we must have $f^{-1}(f(1))=1$ and $f^{-1}(f(3))=3$. Since $f(1)$ and $f(3)$ are both equal to $6$, we must have that $1=f^{-1}(6)=3$, crazy talk!
@@ -170,6 +172,7 @@ The third function in Figure \ref{three-functions} is not invertible because it 
 
 The condition that invertible functions must be injective is sometimes called the \textbf{horizontal line test} for real functions: the graph of an invertible real function cannot intersect any horizontal line more than once (i.e. if a horizontal line intersects the graph of a function more than once, then the function cannot be invertible). \mar{Draw the graph of a non-invertible function failing the horizontal line test.}
 
+\proofref[Inverse continuity]{proof:inverse-continuity}
 The general strategy for finding a functions inverse is to switch the place of $x$ and $y$ in the equation, and then solve for $y$. The result, if it exists, will give you an inverse for the original function (on a possibly smaller domain). Graphically, the inverse of a function is a reflection of the function across the line $y=x$. If a function is not bijective, we can ``fix'' it by making its domain or codomain smaller. For any function there are several ways to do this, but there are some agreed upon conventions that I'll outline below.
 
 \begin{itemize}

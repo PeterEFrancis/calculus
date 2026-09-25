@@ -95,6 +95,7 @@ As you can see, the smaller step size gave a better approximation.
 
 
 \section{Solving ODEs}
+\label{sec:solving-odes}
 \subsection{Separable ODEs}
 The first kind of ODE that you can solve by hand is on expressible as one or two integrals by \textit{separating} the $x$ and $y$ variables. These are of the form
 $$y'=f(x)g(y) \quad\quad\text{or}\quad\quad \frac{dy}{dx}=f(x)g(y)$$
@@ -137,7 +138,8 @@ for any real numbers $p$ and $q$. \mar{Use Euler's identity to verify this real-
 
 An interesting and useful fact is given in this theorem:
 \begin{thm}
-If $y_1$ and $y_2$ are solutions to a homogeneous ODE then so is the linear combination $p{y_1}+q{y_2}$ for any real $p$ and $q$.
+\proofref{proof:homogeneous-solutions}
+If $y_1$ and $y_2$ are solutions to the same homogeneous linear ODE, then so is the linear combination $p{y_1}+q{y_2}$ for any real $p$ and $q$.
 \end{thm}
  
 Sometimes it is considered ``good form'' to express solutions to an ODE using only real numbers. If that is desired, use this theorem to take linear combinations of solutions you have to generate those with only real numbers.

@@ -1,5 +1,6 @@
 
 \section{Applications of Derivatives}
+\label{sec:applications-of-derivatives}
 
 
 \subsection{Linear Approximation}
@@ -73,6 +74,7 @@ so we weren't that far off! \mar{Estimate $\sqrt{3.9}$ and compare to the actual
 L'H\^opital's Rule is a way to easily tackle some of those limit problems that were in an indeterminate form, namely $\frac{0}{0}$ and $\frac{\infty}{\infty}$.
 
 \begin{thm}
+\proofref{proof:lhopital}
 Let $f$ and $g$ be differentiable on a deleted neighborhood of $a$ (or on a
 tail interval when $a=\pm\infty$), with $g(x)\ne0$ and $g'(x)\ne0$ there.
 Suppose that $f/g$ has the indeterminate form $0/0$ or $\infty/\infty$ as
@@ -168,6 +170,7 @@ $$
 You already know what \textbf{increasing} and \textbf{decreasing} mean. The graph of a function that is \textbf{concave up at $x$} looks like a bowl near $x$, and the graph of a function that is \textbf{concave down at $x$} looks like a hill near $x$. Points on a graph where concavity changes (from up to down, or down to up) are called \textbf{inflection points}. \mar{Draw a sketch of an inflection point.}
 
 \begin{thm}[The Mean Value Theorem]
+\proofref{proof:mean-value}
 If $f$ is continuous on $[a,b]$ and differentiable on $(a,b)$, then there is some $c\in (a,b)$ for which $f'(c)=\frac{f(b)-f(a)}{b-a}$.
 \end{thm}
 
@@ -221,18 +224,21 @@ $$f(a)\geq f(x)\qquad\text{for every }x\text{ in the domain of }f.$$
 A \textbf{global minimum} is defined in the same way, with $f(a)\leq f(x)$.
 When one of these conditions holds, $a$ is a location of an extremum, $f(a)$ is the corresponding \textbf{extremal value}, and $(a,f(a))$ is the corresponding \textbf{extremal point} on the graph of $f$.
 
+\proofref[Extreme value theorem]{proof:extreme-value}
 A global maximum or minimum value, if it exists, is unique, but it may occur at more than one input. For example, $\sin(x)$ has a global maximum value of $1$, even though this value occurs infinitely many times on the domain of $\sin(x)$. Every global extremum is also a local extremum.
 
 
-A number $a$ in the domain of $f$ is called a \textbf{critical number} of $f$ if $f'(a)=0$ or $f'(a)$ does not exist. The corresponding graph point $(a,f(a))$ is called a \textbf{critical point} of $f$. The following theorem tells us how to find extrema using critical numbers.
+A number $a$ in the domain of $f$ is called a \textbf{critical number} of $f$ if $f'(a)=0$ or $f'(a)$ does not exist. The corresponding graph point $(a,f(a))$ is called a \textbf{critical point} of $f$. The following theorem tells us how to find extrema using critical numbers.\mar{Name and draw a function with a critical number at which it has no local extremum.}
 
 \begin{thm}
+\proofref{proof:critical-numbers}
 If $f$ has a local extremum at $a$, then $a$ is a critical number of $f$.
 \end{thm}
 
-\noindent WARNING: The converse is not true: not every critical number is the location of a local extremum.\mar{Name and draw a function with a critical number at which it has no local extremum.}
+\noindent WARNING: The converse is not true: not every critical number is the location of a local extremum.
 
 \begin{thm}[First Derivative Test]
+\proofref{proof:first-derivative-test}
 Suppose $a$ is a critical number of $f$ and $f$ is continuous at $a$.
 Then, sufficiently close to $a$
 \begin{itemize}
@@ -243,6 +249,7 @@ Then, sufficiently close to $a$
 \end{thm}
 
 \begin{thm}[Second Derivative Test]
+\proofref{proof:second-derivative-test}
 Suppose $f'(a)=0$ and $f''$ is continuous at $a$.
 $$\text{If } \begin{cases}
 f''(a)>0\\
