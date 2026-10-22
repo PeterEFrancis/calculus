@@ -439,24 +439,31 @@ The case $r=0$ is the constant function $1$, with derivative $0$;
 negative powers are undefined at $0$.
 \end{proof}
 
+\proofheading{Derivatives of Even and Odd Functions (Theorem~\ref*{source:proof:even-odd-derivatives})}{proof:even-odd-derivatives}
+
+\begin{proof}
+The Chain Rule gives $[f(-x)]'=-f'(-x)$. If $f$ is even, differentiate
+$f(-x)=f(x)$ to get
+$$-f'(-x)=f'(x),\qquad\text{so}\qquad f'(-x)=-f'(x).$$
+Thus $f'$ is odd. If $f$ is odd, differentiate $f(-x)=-f(x)$ instead:
+$$-f'(-x)=-f'(x),\qquad\text{so}\qquad f'(-x)=f'(x).$$
+Thus $f'$ is even.
+\end{proof}
+
+\proofheading{An Even Function at the Origin (Theorem~\ref*{source:proof:even-derivative-zero})}{proof:even-derivative-zero}
+
+\begin{proof}
+For $h\ne0$ sufficiently close to 0, evenness gives
+$$\frac{f(-h)-f(0)}{-h}=-\frac{f(h)-f(0)}{h}.$$
+As $h\to0$, the left side approaches $f'(0)$ and the right side
+approaches $-f'(0)$. Since this derivative exists, $f'(0)=-f'(0)$,
+so $f'(0)=0$.
+\end{proof}
+
 \subsection{Proofs from Chapter \ref*{sec:applications-of-derivatives}: Applications of Derivatives}
 \label{sec:derivative-applications-proofs}
 
-\proofheading{Local Extrema and Critical Numbers (Theorem~\ref*{source:proof:critical-numbers})}{proof:critical-numbers}
-
-\begin{proof}
-Suppose $f$ has a local maximum at $a$. If $f'(a)$ does not exist, $a$ is
-already a critical number. Otherwise, for sufficiently small $h$,
-$$
-\frac{f(a+h)-f(a)}h\leq0\quad(h>0),\qquad
-\frac{f(a+h)-f(a)}h\geq0\quad(h<0).
-$$
-Both one-sided limits equal $f'(a)$, so $f'(a)\leq0$ and $f'(a)\geq0$.
-Thus $f'(a)=0$, making $a$ a critical number. For a local minimum reverse
-the inequalities. This is often called Fermat's theorem.
-\end{proof}
-
-\proofheading{The Extreme Value Theorem}{proof:extreme-value}
+\proofheading{The Extreme Value Theorem (Theorem~\ref*{source:proof:extreme-value})}{proof:extreme-value}
 
 \begin{proof}
 We need one fact about closed, bounded intervals: every sequence in such
@@ -472,6 +479,19 @@ is bounded. Let $M$ be the least upper bound of its values, and choose
 $x_n$ with $M-1/n<f(x_n)\leq M$. Another convergent subsequence gives
 $f(c)=M$, so the maximum is attained. Apply the same argument to $-f$ to
 obtain a minimum.
+\end{proof}
+
+\proofheading{Fermat's Theorem (Theorem~\ref*{source:proof:critical-numbers})}{proof:critical-numbers}
+
+\begin{proof}
+Suppose $f$ has a local maximum at $a$ and $f'(a)$ exists. For sufficiently
+small $h$,
+$$
+\frac{f(a+h)-f(a)}h\leq0\quad(h>0),\qquad
+\frac{f(a+h)-f(a)}h\geq0\quad(h<0).
+$$
+Both one-sided limits equal $f'(a)$, so $f'(a)\leq0$ and $f'(a)\geq0$.
+Thus $f'(a)=0$. For a local minimum reverse the inequalities.
 \end{proof}
 
 \proofheading{The Mean Value Theorem (Theorem~\ref*{source:proof:mean-value})}{proof:mean-value}

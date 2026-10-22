@@ -202,7 +202,7 @@ Stony Brook, NY 11794, USA, Earth\\
 \begingroup
 \setcounter{tocdepth}{2}
 \makeatletter
-% Leave room for appendix entries such as 21.10.
+% Leave room for two-digit appendix section and subsection numbers.
 \renewcommand*{\l@subsection}{\@dottedtocline{2}{1.5em}{3em}}
 \makeatother
 \tableofcontents
@@ -230,6 +230,8 @@ Stony Brook, NY 11794, USA, Earth\\
 % \newpage
 % \input{content/continuity.tex}
 
+\newpage
+\input{content/asymptotes.tex}
 
 
 \newpage
@@ -265,6 +267,8 @@ Stony Brook, NY 11794, USA, Earth\\
 \part{Appendix}
 \input{content/moments_and_centroids.tex}
 \input{content/complex_numbers.tex}
+\newpage
+\input{content/slanted_asymptotes.tex}
 \newpage
 \input{content/proofs.tex}
 

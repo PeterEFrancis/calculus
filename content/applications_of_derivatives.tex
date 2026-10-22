@@ -69,59 +69,6 @@ If we check a calculator for a better approximation, we find that
 $$\sqrt{4.1}\approx 2.02484567313,$$
 so we weren't that far off! \mar{Estimate $\sqrt{3.9}$ and compare to the actual value.}
 
-\subsection{L'H\^opital's Rule}
-
-L'H\^opital's Rule is a way to easily tackle some of those limit problems that were in an indeterminate form, namely $\frac{0}{0}$ and $\frac{\infty}{\infty}$.
-
-\begin{thm}
-\proofref{proof:lhopital}
-Let $f$ and $g$ be differentiable on a deleted neighborhood of $a$ (or on a
-tail interval when $a=\pm\infty$), with $g(x)\ne0$ and $g'(x)\ne0$ there.
-Suppose that $f/g$ has the indeterminate form $0/0$ or $\infty/\infty$ as
-$x\to a$. If
-$$\lim_{x\to a}\frac{f'(x)}{g'(x)}=L$$
-exists, possibly with $L=\pm\infty$, then
-$$\lim_{x\to a}\frac{f(x)}{g(x)}=L.$$
-\end{thm}
-
-What this means for you: if you are trying to take the limit of a rational function and after plugging in you get $\frac{0}{0}$ or $\frac{\infty}{\infty}$, then take the derivative of the numerator and the denominator, and try to evaluate the limit again.
-
-It is possible that one use of L'H\^optial's rule won't be enough: you may have to use it multiple times. Here are some examples:
-\begin{itemize}
-\item $\displaystyle \lim_{x\to 0}\frac{\sin(x)}{x}\overset{\text{LH}}{=}\lim_{x\to 0}\frac{\cos(x)}{1}=1.$
-\item $\displaystyle \lim_{x\to \infty}\frac{3x^2+1}{4x^2+3x}\overset{\text{LH}}{=}\lim_{x\to\infty}\frac{6x}{8x+3}\overset{\text{LH}}{=}\lim_{x\to\infty}\frac{6}{8}=\frac{3}{4}$.
-\end{itemize}
-
-Sometimes you will encounter an indeterminate form that is not $\frac00$ or $\frac\infty\infty$, and in these cases, we can transform it into the form $\frac00$ or $\frac\infty\infty$ and then use L'H\^optial's rule. Here are some illustriative examples:
-
-\begin{itemize}
-
-\item
-$\displaystyle \lim_{x\to1} \frac{1}{x-1} - \frac{1}{\ln(x)}
-= \lim_{x\to1} \frac{\ln\left(x\right)-x+1}{(x-1)\ln\left(x\right)}
-\overset{\text{LH}}{=} \lim_{x\to1}\frac{{1}/{x}-1}{\ln\left(x\right)+1-\frac{1}{x}}$\\
-\phantom{} \hspace{1.01in}$\overset{\text{LH}}{=}\lim_{x\to1} \frac{-{1}/{x^{2}}}{{1}/{x}+{1}/{x^{2}}}
-=-\frac12$.
-
-\item
-$\displaystyle \lim_{x\to 0^+} x\ln(x) =\lim_{x\to 0^+} \frac{\ln(x)}{1/x} \overset{\text{LH}}{=}\lim_{x\to0^+}\frac{1/x}{-1/x^2}=\lim_{x\to0^+}-x=0$.
-
-\item $\displaystyle\lim_{x\to 0^+} x^x =\lim_{x\to0^+}e^{\ln(x^x)}=e^{\displaystyle\lim_{x\to0^+}\ln(x^x)}=e^{\displaystyle\lim_{x\to 0^+}x\ln(x)} = e^0 = 1.$
-
-
-\mar{Label each of these examples with original and trasnsformed type of indeterminate forms they demonstrate.}
-
-
-% \item $\displaystyle\lim_{x\to\infty}\left(1+\frac{1}{x}\right)^x = e^{\displaystyle\lim_{x\to\infty}\textstyle\frac{\ln\left(1+\frac{1}{x}\right)}{1/x}}\overset{\text{LH}}{=}e^{\displaystyle\lim_{x\to\infty}\textstyle \frac{(-1/x^2)/(1+1/x)}{-1/x^2}}=e^{\displaystyle\lim_{x\to\infty}\textstyle \frac{1}{1+1/x}}= e$.
-
-% \item ($\infty ^ 0$)
-
-\end{itemize}
-
-
-
-
-
 \subsection{Kinematics}
 
 Kinematics is the study of motion. In this section, we'll concern ourselves with only one basic situation: an object moving in a straight path (only forwards and backwards).
@@ -156,6 +103,38 @@ Here is the general problem-solving strategy:
 \end{strat}
 
 
+
+\subsection{Extrema and Critical Numbers}
+
+\noindent A function $f$ has a \textbf{local maximum} at $a$ if there is an open interval $I\ni a$ such that
+$$f(a)\geq f(x)\qquad\text{for every }x\in I\cap\operatorname{dom}(f).$$
+A \textbf{local minimum} is defined in the same way, with $f(a)\leq f(x)$.
+
+The function has a \textbf{global maximum} at $a$ if
+$$f(a)\geq f(x)\qquad\text{for every }x\text{ in the domain of }f.$$
+A \textbf{global minimum} is defined in the same way, with $f(a)\leq f(x)$.
+When one of these conditions holds, $a$ is a location of an extremum, $f(a)$ is the corresponding \textbf{extremal value}, and $(a,f(a))$ is the corresponding \textbf{extremal point} on the graph of $f$.
+
+A global maximum or minimum value, if it exists, is unique, but it may occur at more than one input. For example, $\sin(x)$ has a global maximum value of $1$, even though this value occurs infinitely many times on the domain of $\sin(x)$. Every global extremum is also a local extremum.
+
+\begin{thm}[The Extreme Value Theorem]
+\proofref{proof:extreme-value}
+A continuous function on a closed, bounded interval $[a,b]$ attains both
+a maximum and a minimum on that interval.
+\end{thm}
+
+
+A number $a$ in the domain of $f$ is called a \textbf{critical number} of $f$ if $f'(a)=0$ or $f'(a)$ does not exist. The corresponding graph point $(a,f(a))$ is called a \textbf{critical point} of $f$. The following theorem tells us how to find extrema using critical numbers.\mar{Name and draw a function with a critical number at which it has no local extremum.}
+
+\begin{thm}[Fermat's Theorem]
+\proofref{proof:critical-numbers}
+If $f$ has a local extremum at $a$ and $f'(a)$ exists, then $f'(a)=0$.
+\end{thm}
+
+Thus every local extremum occurs at a critical number: either $f'(a)=0$
+or $f'(a)$ does not exist.
+
+\noindent WARNING: The converse is not true: not every critical number is the location of a local extremum.
 
 \subsection{Qualities of Graphs}
 
@@ -211,32 +190,6 @@ In plain English, the mean value theorem says that the average value of the slop
 % \end{tabular}
 % \end{center}
 
-
-
-\subsection{Extrema and Critical Numbers}
-
-\noindent A function $f$ has a \textbf{local maximum} at $a$ if there is an open interval $I\ni a$ such that
-$$f(a)\geq f(x)\qquad\text{for every }x\in I\cap\operatorname{dom}(f).$$
-A \textbf{local minimum} is defined in the same way, with $f(a)\leq f(x)$.
-
-The function has a \textbf{global maximum} at $a$ if
-$$f(a)\geq f(x)\qquad\text{for every }x\text{ in the domain of }f.$$
-A \textbf{global minimum} is defined in the same way, with $f(a)\leq f(x)$.
-When one of these conditions holds, $a$ is a location of an extremum, $f(a)$ is the corresponding \textbf{extremal value}, and $(a,f(a))$ is the corresponding \textbf{extremal point} on the graph of $f$.
-
-\proofref[Extreme value theorem]{proof:extreme-value}
-A global maximum or minimum value, if it exists, is unique, but it may occur at more than one input. For example, $\sin(x)$ has a global maximum value of $1$, even though this value occurs infinitely many times on the domain of $\sin(x)$. Every global extremum is also a local extremum.
-
-
-A number $a$ in the domain of $f$ is called a \textbf{critical number} of $f$ if $f'(a)=0$ or $f'(a)$ does not exist. The corresponding graph point $(a,f(a))$ is called a \textbf{critical point} of $f$. The following theorem tells us how to find extrema using critical numbers.\mar{Name and draw a function with a critical number at which it has no local extremum.}
-
-\begin{thm}
-\proofref{proof:critical-numbers}
-If $f$ has a local extremum at $a$, then $a$ is a critical number of $f$.
-\end{thm}
-
-\noindent WARNING: The converse is not true: not every critical number is the location of a local extremum.
-
 \begin{thm}[First Derivative Test]
 \proofref{proof:first-derivative-test}
 Suppose $a$ is a critical number of $f$ and $f$ is continuous at $a$.
@@ -273,11 +226,64 @@ f''(a)<0
 \end{strat}
 
 
+\subsection{L'H\^opital's Rule}
+
+L'H\^opital's Rule is a way to easily tackle some of those limit problems that were in an indeterminate form, namely $\frac{0}{0}$ and $\frac{\infty}{\infty}$.
+
+\begin{thm}
+\proofref{proof:lhopital}
+Let $f$ and $g$ be differentiable on a deleted neighborhood of $a$ (or on a
+tail interval when $a=\pm\infty$), with $g(x)\ne0$ and $g'(x)\ne0$ there.
+Suppose that $f/g$ has the indeterminate form $0/0$ or $\infty/\infty$ as
+$x\to a$. If
+$$\lim_{x\to a}\frac{f'(x)}{g'(x)}=L$$
+exists, possibly with $L=\pm\infty$, then
+$$\lim_{x\to a}\frac{f(x)}{g(x)}=L.$$
+\end{thm}
+
+What this means for you: if you are trying to take the limit of a rational function and after plugging in you get $\frac{0}{0}$ or $\frac{\infty}{\infty}$, then take the derivative of the numerator and the denominator, and try to evaluate the limit again.
+
+It is possible that one use of L'H\^optial's rule won't be enough: you may have to use it multiple times. Here are some examples:
+\begin{itemize}
+\item $\displaystyle \lim_{x\to 0}\frac{\sin(x)}{x}\overset{\text{LH}}{=}\lim_{x\to 0}\frac{\cos(x)}{1}=1.$
+\item $\displaystyle \lim_{x\to \infty}\frac{3x^2+1}{4x^2+3x}\overset{\text{LH}}{=}\lim_{x\to\infty}\frac{6x}{8x+3}\overset{\text{LH}}{=}\lim_{x\to\infty}\frac{6}{8}=\frac{3}{4}$.
+\end{itemize}
+
+Sometimes you will encounter an indeterminate form that is not $\frac00$ or $\frac\infty\infty$, and in these cases, we can transform it into the form $\frac00$ or $\frac\infty\infty$ and then use L'H\^optial's rule. Here are some illustriative examples:
+
+\begin{itemize}
+
+\item
+$\displaystyle \lim_{x\to1} \frac{1}{x-1} - \frac{1}{\ln(x)}
+= \lim_{x\to1} \frac{\ln\left(x\right)-x+1}{(x-1)\ln\left(x\right)}
+\overset{\text{LH}}{=} \lim_{x\to1}\frac{{1}/{x}-1}{\ln\left(x\right)+1-\frac{1}{x}}$\\
+\phantom{} \hspace{1.01in}$\overset{\text{LH}}{=}\lim_{x\to1} \frac{-{1}/{x^{2}}}{{1}/{x}+{1}/{x^{2}}}
+=-\frac12$.
+
+\item
+$\displaystyle \lim_{x\to 0^+} x\ln(x) =\lim_{x\to 0^+} \frac{\ln(x)}{1/x} \overset{\text{LH}}{=}\lim_{x\to0^+}\frac{1/x}{-1/x^2}=\lim_{x\to0^+}-x=0$.
+
+\item $\displaystyle\lim_{x\to 0^+} x^x =\lim_{x\to0^+}e^{\ln(x^x)}=e^{\displaystyle\lim_{x\to0^+}\ln(x^x)}=e^{\displaystyle\lim_{x\to 0^+}x\ln(x)} = e^0 = 1.$
+
+
+\mar{Label each of these examples with original and trasnsformed type of indeterminate forms they demonstrate.}
+
+
+% \item $\displaystyle\lim_{x\to\infty}\left(1+\frac{1}{x}\right)^x = e^{\displaystyle\lim_{x\to\infty}\textstyle\frac{\ln\left(1+\frac{1}{x}\right)}{1/x}}\overset{\text{LH}}{=}e^{\displaystyle\lim_{x\to\infty}\textstyle \frac{(-1/x^2)/(1+1/x)}{-1/x^2}}=e^{\displaystyle\lim_{x\to\infty}\textstyle \frac{1}{1+1/x}}= e$.
+
+% \item ($\infty ^ 0$)
+
+\end{itemize}
+
+
+
+
+
 \subsection{Optimization}
 
 ``Optimization''-style questions will ask you to optimize (maximize or minimize) a certain quantity $A$ under specified constraints. The constraints will still allow one variable $x$ of change. This means you will need to find the value of $x$ for which $A$ is maximal or minimal. 
 
-The strategy for optimization problems is very similar to the strategy for related rates, but uses the theory of extrema from the previous section.
+The strategy for optimization problems is very similar to the strategy for related rates, but uses the theory of extrema developed above.
 
 \begin{strat}[Optimization]
 \begin{enumerate}[leftmargin=1em]

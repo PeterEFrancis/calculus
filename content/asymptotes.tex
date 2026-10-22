@@ -1,0 +1,68 @@
+\section{Asymptotes}
+\label{sec:asymptotes}
+
+An \textbf{asymptote} is a line that describes how a graph behaves near
+some input or far out to the left or right. Limits tell us exactly what
+this means. We will focus on horizontal and vertical lines here; see
+Section~\ref{sec:slanted-asymptotes} in the appendix for slanted asymptotes
+and other ways to describe a function's long-term behavior.
+
+\subsection{Horizontal Asymptotes}
+
+The line $y=L$ is a \textbf{horizontal asymptote} of $f$ if
+$$\lim_{x\to\infty}f(x)=L\qquad\text{or}\qquad
+\lim_{x\to-\infty}f(x)=L,$$
+where $L$ is a finite number. So, to find horizontal asymptotes, compute
+these two limits separately. The left and right ends of the graph might
+approach different heights, or one end might have no horizontal asymptote.
+
+For example:
+\begin{itemize}
+\item Remember that $\sqrt{x^2}=|x|$. For $x\ne0$,
+$$\frac{x}{\sqrt{x^2+1}}=
+\frac{x/|x|}{\sqrt{1+1/x^2}}.$$
+The numerator on the right is 1 for $x>0$ and $-1$ for $x<0$, so
+$$\lim_{x\to\infty}\frac{x}{\sqrt{x^2+1}}=1,
+\qquad
+\lim_{x\to-\infty}\frac{x}{\sqrt{x^2+1}}=-1.$$
+This graph has two horizontal asymptotes: $y=1$ on the right and $y=-1$
+on the left.
+\end{itemize}
+
+A horizontal asymptote is not a barrier: the graph can cross it.
+The limit only describes what happens far out, not at every input.
+
+\subsection{Vertical Asymptotes}
+
+The line $x=a$ is a \textbf{vertical asymptote} of $f$ if at least one
+of its one-sided limits is infinite:
+$$\lim_{x\to a^-}f(x)=\pm\infty\qquad\text{or}\qquad
+\lim_{x\to a^+}f(x)=\pm\infty.$$
+Only one side is needed, and we only approach through inputs in the
+domain. The value of $f(a)$, if it is defined, does not affect these limits.
+
+To find vertical asymptotes, look for inputs where the expression becomes
+undefined, then check the one-sided limits. For rational functions, factor
+and cancel common factors first (away from the excluded inputs), then
+check the remaining denominator zeros. A zero in the original denominator
+is only a candidate, not a guarantee!
+
+Here are some examples:
+\begin{itemize}
+\item Let
+$$f(x)=\frac{x^2-1}{(x-1)(x-2)}=\frac{x+1}{x-2}
+\qquad(x\ne1,2).$$
+There are two candidates, but
+$$\lim_{x\to1}f(x)=\frac{2}{-1}=-2.$$
+So there is a hole at $x=1$, not a vertical asymptote. Near $x=2$, the numerator
+$x+1$ is positive, while $x-2$ is negative on the left and positive on
+the right. Thus
+$$\lim_{x\to2^-}f(x)=-\infty,\qquad
+\lim_{x\to2^+}f(x)=\infty,$$
+and $x=2$ is a vertical asymptote.
+
+\item Not every vertical asymptote comes from a denominator. For instance,
+$$\lim_{x\to0^+}\ln(x)=-\infty,$$
+so $x=0$ is a vertical asymptote of $\ln(x)$, even though there is no
+left-hand side of its domain near 0.
+\end{itemize}

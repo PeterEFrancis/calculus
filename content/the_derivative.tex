@@ -201,6 +201,38 @@ $$[\cot(x)]' = -\csc^2(x)
 \mar{Try to find a pattern with these four derivatives.}
 
 
+\subsection{Even and Odd Functions}
+\label{sec:even-odd-derivatives}
+
+For these definitions, the domain must be symmetric about 0: whenever
+$x$ is in the domain, so is $-x$. A function $f$ is called \textbf{even}
+if $f(-x)=f(x)$ for every $x$ in its domain, and \textbf{odd} if
+$f(-x)=-f(x)$. The graph of an even function is symmetric about the
+$y$-axis; the graph of an odd function is unchanged by a half-turn about
+the origin. For example, $x^2$ and $\cos(x)$ are even, while $x^3$ and
+$\sin(x)$ are odd.
+
+Differentiating switches these two kinds of symmetry:
+\begin{thm}[Derivatives of Even and Odd Functions]
+\proofref{proof:even-odd-derivatives}
+Suppose $f$ is differentiable on an open interval symmetric about 0.
+\begin{itemize}
+\item If $f$ is even, then $f'$ is odd: $f'(-x)=-f'(x)$.
+\item If $f$ is odd, then $f'$ is even: $f'(-x)=f'(x)$.
+\end{itemize}
+\end{thm}
+You can see this in $[x^2]'=2x$ and $[\sin(x)]'=\cos(x)$.
+
+At the center of an even function's symmetry, there is another useful fact:
+\begin{thm}[An Even Function at the Origin]
+\proofref{proof:even-derivative-zero}
+If $f$ is even and $f'(0)$ exists, then $f'(0)=0$.
+\end{thm}
+In other words, differentiability at 0 forces a horizontal tangent there.
+The hypothesis matters: $f(x)=|x|$ is even, but $f'(0)$ does not exist.
+\mar{Why is the same not true for odd functions?}
+
+
 \subsection{Implicit Differentiation}
 
 We'll refer to the set of points that satisfy an equation of two variables as a \textbf{curve in the plane}. Some examples you might have seen before are circles and ellipses. The circle with center $(h,k)$ and radius $r$ is the set of points $(x,y)$ in the plane that satisfy the equation
