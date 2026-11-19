@@ -135,23 +135,26 @@
 \contentsline {subsubsection}{\numberline {23.7.4}The Finite Geometric Sum}{86}{subsubsection.23.7.4}%
 \contentsline {subsubsection}{\numberline {23.7.5}Why Continuous Functions Are Integrable}{86}{subsubsection.23.7.5}%
 \contentsline {subsubsection}{\numberline {23.7.6}The Fundamental Theorem of Calculus (Theorem~\ref *{source:proof:fundamental-theorem})}{87}{subsubsection.23.7.6}%
-\contentsline {subsection}{\numberline {23.8}Proofs from Chapter \ref *{sec:more-definite-integrals}: More Definite Integrals}{87}{subsection.23.8}%
-\contentsline {subsubsection}{\numberline {23.8.1}Comparison of Integrals (Theorem~\ref *{source:proof:integral-comparison})}{87}{subsubsection.23.8.1}%
-\contentsline {subsubsection}{\numberline {23.8.2}Splitting an Integral and Reversing Its Bounds (Theorem~\ref *{source:proof:integral-additivity})}{88}{subsubsection.23.8.2}%
-\contentsline {subsection}{\numberline {23.9}Proofs from Chapter \ref *{sec:series}: Series}{88}{subsection.23.9}%
-\contentsline {subsubsection}{\numberline {23.9.1}The Geometric Series}{88}{subsubsection.23.9.1}%
-\contentsline {subsubsection}{\numberline {23.9.2}The Divergence Test (Theorem~\ref *{source:proof:divergence-test})}{88}{subsubsection.23.9.2}%
-\contentsline {subsubsection}{\numberline {23.9.3}The Integral Test (Theorem~\ref *{source:proof:integral-test})}{89}{subsubsection.23.9.3}%
-\contentsline {subsubsection}{\numberline {23.9.4}The $p$-Series Test (Theorem~\ref *{source:proof:p-series-test})}{89}{subsubsection.23.9.4}%
-\contentsline {subsubsection}{\numberline {23.9.5}The Comparison Test (Theorem~\ref *{source:proof:series-comparison})}{89}{subsubsection.23.9.5}%
-\contentsline {subsubsection}{\numberline {23.9.6}The Limit Comparison Test (Theorem~\ref *{source:proof:limit-comparison})}{89}{subsubsection.23.9.6}%
-\contentsline {subsubsection}{\numberline {23.9.7}The Alternating Series Test (Theorem~\ref *{source:proof:alternating-test})}{90}{subsubsection.23.9.7}%
-\contentsline {subsubsection}{\numberline {23.9.8}The Absolute Convergence Test (Theorem~\ref *{source:proof:absolute-convergence})}{90}{subsubsection.23.9.8}%
-\contentsline {subsubsection}{\numberline {23.9.9}The Ratio Test (Theorem~\ref *{source:proof:ratio-test})}{90}{subsubsection.23.9.9}%
-\contentsline {subsubsection}{\numberline {23.9.10}The Root Test (Theorem~\ref *{source:proof:root-test})}{90}{subsubsection.23.9.10}%
-\contentsline {subsubsection}{\numberline {23.9.11}The Integral-Test Error Bounds (Theorem~\ref *{source:proof:integral-error})}{91}{subsubsection.23.9.11}%
-\contentsline {subsubsection}{\numberline {23.9.12}The Alternating-Series Error Bound (Theorem~\ref *{source:proof:alternating-error})}{91}{subsubsection.23.9.12}%
-\contentsline {subsection}{\numberline {23.10}Proofs from Chapter \ref *{sec:power-series}: Power Series}{91}{subsection.23.10}%
-\contentsline {subsubsection}{\numberline {23.10.1}Taylor's Inequality (Theorem~\ref *{source:proof:taylor-inequality})}{91}{subsubsection.23.10.1}%
-\contentsline {subsection}{\numberline {23.11}Proofs from Chapter \ref *{sec:solving-odes}: Solving ODEs}{92}{subsection.23.11}%
-\contentsline {subsubsection}{\numberline {23.11.1}Linear Combinations of Homogeneous Solutions (Theorem~\ref *{source:proof:homogeneous-solutions})}{92}{subsubsection.23.11.1}%
+\contentsline {subsection}{\numberline {23.8}Proofs from Chapter \ref *{sec:indefinite-integral}: The Indefinite Integral}{87}{subsection.23.8}%
+\contentsline {subsubsection}{\numberline {23.8.1}Integration by Parts}{87}{subsubsection.23.8.1}%
+\contentsline {subsubsection}{\numberline {23.8.2}$u$-Substitution}{88}{subsubsection.23.8.2}%
+\contentsline {subsection}{\numberline {23.9}Proofs from Chapter \ref *{sec:more-definite-integrals}: More Definite Integrals}{88}{subsection.23.9}%
+\contentsline {subsubsection}{\numberline {23.9.1}Comparison of Integrals (Theorem~\ref *{source:proof:integral-comparison})}{88}{subsubsection.23.9.1}%
+\contentsline {subsubsection}{\numberline {23.9.2}Splitting an Integral and Reversing Its Bounds (Theorem~\ref *{source:proof:integral-additivity})}{89}{subsubsection.23.9.2}%
+\contentsline {subsection}{\numberline {23.10}Proofs from Chapter \ref *{sec:series}: Series}{89}{subsection.23.10}%
+\contentsline {subsubsection}{\numberline {23.10.1}The Geometric Series}{89}{subsubsection.23.10.1}%
+\contentsline {subsubsection}{\numberline {23.10.2}The Divergence Test (Theorem~\ref *{source:proof:divergence-test})}{89}{subsubsection.23.10.2}%
+\contentsline {subsubsection}{\numberline {23.10.3}The Integral Test (Theorem~\ref *{source:proof:integral-test})}{89}{subsubsection.23.10.3}%
+\contentsline {subsubsection}{\numberline {23.10.4}The $p$-Series Test (Theorem~\ref *{source:proof:p-series-test})}{90}{subsubsection.23.10.4}%
+\contentsline {subsubsection}{\numberline {23.10.5}The Comparison Test (Theorem~\ref *{source:proof:series-comparison})}{90}{subsubsection.23.10.5}%
+\contentsline {subsubsection}{\numberline {23.10.6}The Limit Comparison Test (Theorem~\ref *{source:proof:limit-comparison})}{90}{subsubsection.23.10.6}%
+\contentsline {subsubsection}{\numberline {23.10.7}The Alternating Series Test (Theorem~\ref *{source:proof:alternating-test})}{90}{subsubsection.23.10.7}%
+\contentsline {subsubsection}{\numberline {23.10.8}The Absolute Convergence Test (Theorem~\ref *{source:proof:absolute-convergence})}{91}{subsubsection.23.10.8}%
+\contentsline {subsubsection}{\numberline {23.10.9}The Ratio Test (Theorem~\ref *{source:proof:ratio-test})}{91}{subsubsection.23.10.9}%
+\contentsline {subsubsection}{\numberline {23.10.10}The Root Test (Theorem~\ref *{source:proof:root-test})}{91}{subsubsection.23.10.10}%
+\contentsline {subsubsection}{\numberline {23.10.11}The Integral-Test Error Bounds (Theorem~\ref *{source:proof:integral-error})}{91}{subsubsection.23.10.11}%
+\contentsline {subsubsection}{\numberline {23.10.12}The Alternating-Series Error Bound (Theorem~\ref *{source:proof:alternating-error})}{92}{subsubsection.23.10.12}%
+\contentsline {subsection}{\numberline {23.11}Proofs from Chapter \ref *{sec:power-series}: Power Series}{92}{subsection.23.11}%
+\contentsline {subsubsection}{\numberline {23.11.1}Taylor's Inequality (Theorem~\ref *{source:proof:taylor-inequality})}{92}{subsubsection.23.11.1}%
+\contentsline {subsection}{\numberline {23.12}Proofs from Chapter \ref *{sec:solving-odes}: Solving ODEs}{92}{subsection.23.12}%
+\contentsline {subsubsection}{\numberline {23.12.1}Linear Combinations of Homogeneous Solutions (Theorem~\ref *{source:proof:homogeneous-solutions})}{92}{subsubsection.23.12.1}%

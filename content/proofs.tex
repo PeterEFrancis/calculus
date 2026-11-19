@@ -867,6 +867,48 @@ F(b)-F(a)=\int_a^b f(x)\,dx.
 $$
 \end{proof}
 
+\subsection{Proofs from Chapter \ref*{sec:indefinite-integral}: The Indefinite Integral}
+
+\proofheading{Integration by Parts}{proof:integration-by-parts}
+
+\begin{proof}
+Suppose $f$ and $g$ are differentiable on an interval, and let $H$ be an
+antiderivative of $fg'$. By the Product Rule,
+\begin{align*}
+[fg-H]'&=f'g+fg'-H'\\
+&=f'g+fg'-fg'\\
+&=f'g.
+\end{align*}
+So $fg-H$ is an antiderivative of $f'g$:
+$$\int f'(x)g(x)\,dx=f(x)g(x)-H(x)+C.$$
+Writing $H=\int fg'$ gives the integration by parts formula. The
+arbitrary constant can be absorbed into the remaining indefinite integral.
+
+If both integrands are continuous on $[a,b]$, the Fundamental Theorem
+of Calculus also gives the definite version:
+$$\int_a^b f'(x)g(x)\,dx
+=f(b)g(b)-f(a)g(a)-\int_a^b f(x)g'(x)\,dx.$$
+\end{proof}
+
+\proofheading{\texorpdfstring{$u$-Substitution}{u-Substitution}}{proof:u-substitution}
+
+\begin{proof}
+Suppose $g$ is differentiable on an interval and $f$ is differentiable
+on an interval containing the values of $g$. The Chain Rule says
+$$[f(g(x))]'=f'(g(x))g'(x).$$
+Thus $f(g(x))$ is an antiderivative of the integrand, so
+$$\int f'(g(x))g'(x)\,dx=f(g(x))+C.$$
+Writing $u=g(x)$ and $du=g'(x)\,dx$ records this same calculation as
+$$\int f'(g(x))g'(x)\,dx=\int f'(u)\,du=f(u)+C.$$
+Finally, substitute $u=g(x)$ back into the answer.
+
+For continuous derivatives, the Fundamental Theorem of Calculus gives
+the definite version, with the endpoints changed as well:
+$$\int_a^b f'(g(x))g'(x)\,dx
+=f(g(b))-f(g(a))
+=\int_{g(a)}^{g(b)}f'(u)\,du.$$
+\end{proof}
+
 \subsection{Proofs from Chapter \ref*{sec:more-definite-integrals}: More Definite Integrals}
 
 \proofheading{Comparison of Integrals (Theorem~\ref*{source:proof:integral-comparison})}{proof:integral-comparison}
