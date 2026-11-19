@@ -1,6 +1,10 @@
 \section{Proofs by Chapter}
 \label{sec:selected-proofs}
 
+These arguments use the definitions and results in the book, together with
+ordinary algebra and geometry. Supporting facts about bounds and rectangle
+sums are explained below before they are used.
+
 \subsection{Proofs from Chapter \ref*{sec:trigonometry}: Trigonometry}
 
 \proofheading{The Law of Sines (Theorem~\ref*{source:proof:law-of-sines})}{proof:law-of-sines}
@@ -16,10 +20,15 @@ $$
 =\frac{abc}{2\Delta}.
 $$
 To connect this with the circumradius $R$, consider the chord of length $a$.
-The inscribed-angle theorem says that the corresponding central angle is
-$2A$ (or use $\pi-A$ when $A$ is obtuse). Bisecting the isosceles triangle
-formed by the two radii gives $a/2=R\sin A$. If $A$ is a right angle, the
-chord is a diameter and the same formula holds. Thus $a/\sin A=2R$.
+Join the center to all three vertices. Each triangle formed by two radii
+is isosceles, so its base angles are equal. Adding the triangle angle sums
+(or subtracting when the center lies outside the original triangle)
+shows that the smaller central angle opposite $a$ is $2A$ when $A$ is
+acute, and $2(\pi-A)$ when $A$ is obtuse. Bisect the isosceles triangle
+formed by that chord and its two radii. This gives
+$a/2=R\sin A$, using $\sin(\pi-A)=\sin A$ in the obtuse case.
+If $A$ is a right angle, the chord is a diameter, so $a=2R$.
+Thus $a/\sin A=2R$.
 \end{proof}
 
 \proofheading{The Law of Cosines (Theorem~\ref*{source:proof:law-of-cosines})}{proof:law-of-cosines}
@@ -51,6 +60,42 @@ where $s=(a+b+c)/2$. Divide by 16 and take the nonnegative square root.
 \end{proof}
 
 \subsection{Proofs from Chapter \ref*{sec:real-functions}: Functions on the Real Line}
+
+\subsubsection{Shrinking Intervals and Bounds}
+\label{sec:real-number-tools}
+
+Repeatedly keeping a closed half of an interval picks out a real number
+$c$. The left and right choices give the binary digits of its position
+within the original interval, just as decimal digits specify a real
+number. After $n$ choices, the unfilled binary tail is at most $2^{-n}$
+of the original length. Thus $c$ lies in every retained interval, and
+every point of the $n$th interval is within its length of $c$.
+This describes the absence of gaps in the real line.
+
+An \textbf{upper bound} of a nonempty set $S$ is a number at least as large
+as every member of $S$. If $S$ has an upper bound, it has a
+\textbf{least upper bound} $M$. Here is why. Start with a lower endpoint
+$l$ that is not an upper bound and an upper endpoint $u$ that is.
+Bisect $[l,u]$, replacing $u$ by the midpoint if that midpoint is an upper
+bound, and replacing $l$ otherwise. The intervals shrink to a common point
+$M$. If some $s\in S$ exceeded $M$, eventually an upper endpoint would be
+smaller than $s$, a contradiction. Also, for any $\varepsilon>0$, a late
+lower endpoint exceeds $M-\varepsilon$ and is not an upper bound.
+Therefore some $s\in S$ exceeds $M-\varepsilon$. So $M$ bounds $S$, and
+no smaller number does. Negating the numbers gives the corresponding
+\textbf{greatest lower bound}.
+
+This also explains why bounded increasing sequences converge.
+Let $M$ be the least upper bound of their terms. Some term exceeds
+$M-\varepsilon$, and every later term stays between $M-\varepsilon$ and
+$M$, so the limit is $M$. For a decreasing sequence, negate its terms.
+
+The same argument works for increasing functions with an upper bound.
+For example, if $q(t)$ increases and stays bounded as $t\to\infty$,
+choose $t_0$ with $q(t_0)>M-\varepsilon$. Then
+$M-\varepsilon<q(t)\leq M$ for $t\geq t_0$, so $q(t)\to M$.
+For a finite endpoint choose $t_0$ before that endpoint; reverse signs
+or the direction of approach for the other monotone cases.
 
 \proofheading{Invertibility and Bijectivity (Theorem~\ref*{source:proof:invertibility})}{proof:invertibility}
 
@@ -138,40 +183,58 @@ The same argument works for one-sided limits and limits at infinity.
 
 \begin{proof}
 At a point where $f$ and $g$ are continuous, their limits equal their
-values. The Sum and Product Laws therefore show that $f+g$ and $fg$ are
-continuous there. The Composite Function Theorem gives the same conclusion
-for compositions. Fixed real powers are continuous on their real domains:
-on positive inputs use $y^r=\exp(r\ln y)$; at 0, positive powers approach
-0; and on negative inputs any permitted rational power is a signed power
-of $-y$.
+values. The Sum, Product, and Quotient Laws show that sums, products,
+and quotients with nonzero denominator are continuous there.
+The Composite Function Theorem handles compositions. We use here the
+continuity of exponential and logarithmic functions already stated in
+the main chapter. For positive inputs, a fixed real power can be written
+$$y^r=e^{r\ln(y)},$$
+so it is continuous by those same rules.
+
+At 0, if $r>0$, choose a positive integer $m$ with $1/m<r$. For $0<y<1$,
+$$0\leq y^r\leq y^{1/m}\longrightarrow0$$
+by the Root Law. On permitted negative inputs, use $|y^r|=|y|^r$.
+Away from 0, an allowed rational power on negative inputs is a signed
+power of $-y$, which is continuous by the positive-input argument.
 
 For a variable exponent with $f(x)>0$, write
-$$
-f(x)^{g(x)}=\exp\bigl(g(x)\ln(f(x))\bigr).
-$$
-This is a composition and product of continuous functions. Repeating these
-steps handles any finite combination. At domain endpoints, all limits
-are taken through the allowed inputs.
+$$f(x)^{g(x)}=e^{g(x)\ln(f(x))}.$$
+This is again a composition and product of continuous functions.
+Repeating these steps handles any finite combination. At domain endpoints,
+take limits through the allowed inputs.
 \end{proof}
 
 \proofheading{The Intermediate Value Theorem (Theorem~\ref*{source:proof:intermediate-value})}{proof:intermediate-value}
 
 \begin{proof}
-The endpoint values themselves are already attained. For a value $z$
-strictly between them, suppose first that $f(a)<z<f(b)$. Bisect $[a,b]$.
-If the midpoint has value $z$, we are done; otherwise retain the half whose
-endpoint values still lie on opposite sides of $z$. Repeat.
+The endpoint values themselves are already attained. Suppose
+$f(a)<z<f(b)$. Bisect $[a,b]$. If the midpoint has value $z$, we are done;
+otherwise keep the half whose endpoint values lie on opposite sides of
+$z$, and repeat.
 
-The resulting closed intervals are nested, and their lengths are
-$(b-a)/2^n$. Completeness of the real numbers gives a common point $c$;
-both endpoint sequences approach $c$. The left endpoint values are below
-$z$ and the right endpoint values are above $z$. By continuity, both
-sequences of values approach $f(c)$, so $f(c)\leq z$ and $f(c)\geq z$.
-Thus $f(c)=z$. If $f(a)>f(b)$, apply the same argument to $-f$ and $-z$.
+The shrinking closed intervals have a common point $c$, by the argument
+in Section~\ref{sec:real-number-tools}. If $f(c)<z$, continuity makes
+$f(t)<z$ throughout some neighborhood of $c$ in $[a,b]$. Eventually a
+retained interval lies entirely in that neighborhood, contradicting its
+endpoint value above $z$. The case $f(c)>z$ gives the opposite
+contradiction. Therefore $f(c)=z$. If $f(a)>f(b)$, apply the same argument
+to $-f$ and $-z$.
 \end{proof}
 
 \subsection{Proofs from Chapter \ref*{sec:evaluating-limits}: Evaluating Limits}
 \label{sec:special-case-proofs}
+
+\proofheading{The Squeeze Theorem (Theorem~\ref*{source:proof:squeeze})}{proof:squeeze}
+
+\begin{proof}
+Suppose $g(x)\leq f(x)\leq h(x)$ near $a$ and both bounding functions
+approach $L$. Given $\varepsilon>0$, choose $x$ close enough to $a$ that both
+$g(x)$ and $h(x)$ lie between $L-\varepsilon$ and $L+\varepsilon$. Then
+$
+L-\varepsilon<g(x)\leq f(x)\leq h(x)<L+\varepsilon,
+$
+so $|f(x)-L|<\varepsilon$. This is exactly $f(x)\to L$.
+\end{proof}
 
 \proofheading{\texorpdfstring{$\displaystyle\lim_{x\to0}\frac{\sin(x)}{x}=1$}{lim x -> 0 sin(x)/x = 1}}{proof:sine-limit}
 
@@ -209,7 +272,8 @@ circle at $A=(1,0)$.
 \end{tikzpicture}
 \end{center}
 Both triangles have base $OA=1$. Their heights are $\sin(x)$ and
-$\tan(x)$, and the sector has area $x/2$. Comparing these areas gives
+$\tan(x)$, and the sector is the fraction $x/(2\pi)$ of a unit disk, so its area
+is $(x/(2\pi))\pi=x/2$. Comparing these areas gives
 $$
 \frac{\sin(x)}{2}<\frac{x}{2}<\frac{\tan(x)}{2},
 $$
@@ -251,83 +315,82 @@ limit, with $x/2\to0$. Thus
 \proofheading{\texorpdfstring{$\displaystyle\lim_{x\to\infty}\left(1+\frac1x\right)^x=e$}{lim x -> infinity (1+1/x)^x = e}}{proof:euler-limit}
 
 \begin{proof}
-For the two exponential limits, use the standard integral definition
+One elementary way to define the usual constant $e$ starts with
+$a_n=(1+1/n)^n$. We first show that these numbers have a limit.
+Multiplying out the $n$ factors gives
 $$
-\ln(y)=\int_1^y\frac{1}{t}\,dt\qquad (y>0).
+a_n=2+\sum_{k=2}^n\frac1{k!}
+\left(1-\frac1n\right)\cdots\left(1-\frac{k-1}{n}\right).
 $$
-This function is continuous, strictly increasing, and has range $\R$, so it
-has a continuous inverse $\exp$. Set $e=\exp(1)$ and use the usual
-definition $a^z=\exp(z\ln(a))$ for $a>0$. In particular, $e^z=\exp(z)$.
+Each factor increases with $n$, and the next sum has an additional
+positive term, so $(a_n)$ increases. Since $k!\geq2^{k-1}$ for $k\geq2$,
+$$
+2\leq a_n\leq2+\sum_{k=2}^n\frac1{2^{k-1}}
+=3-\frac1{2^{n-1}}<3.
+$$
+The bounded increasing sequence therefore has a limit, by
+Section~\ref{sec:real-number-tools}. This limit defines $e$; the natural
+logarithm $\ln$ is the logarithm with this base.
 
-First we need a logarithm limit. For $u>0$, the integrand $1/t$ on
-$[1,1+u]$ is between $1/(1+u)$ and 1. Integrating and dividing by $u$ gives
+For real $x\to\infty$, choose the integer $n$ with $n\leq x<n+1$.
+Comparing the bases and the positive exponents gives
 $$
-\frac{1}{1+u}\leq\frac{\ln(1+u)}{u}\leq1.
+\frac{a_{n+1}}{1+1/(n+1)}
+\leq\left(1+\frac1x\right)^x
+\leq a_n\left(1+\frac1n\right).
 $$
-For $-1<u<0$, rewrite the quotient as
-$$
-\frac{\ln(1+u)}{u}=\frac{1}{-u}\int_{1+u}^1\frac{1}{t}\,dt.
-$$
-Here the integrand is between 1 and $1/(1+u)$, so
-$$
-1\leq\frac{\ln(1+u)}{u}\leq\frac{1}{1+u}.
-$$
-On each side of 0, both bounds approach 1. The Squeeze Theorem therefore gives
-$$
-\lim_{u\to0}\frac{\ln(1+u)}{u}=1.
-$$
+Both bounds approach $e$, so the Squeeze Theorem proves the result.
 
-Now set $u=1/x$. As $x\to\infty$, we have $u\to0^+$, and
+We will also need the limit as $x\to-\infty$.
+Writing $x=-y$, where $y>1$,
 $$
-\left(1+\frac1x\right)^x
-=\exp\left(\frac{\ln(1+u)}{u}\right).
+\left(1-\frac1y\right)^{-y}
+=\left(1+\frac1{y-1}\right)^{y-1}
+ \left(1+\frac1{y-1}\right)\longrightarrow e.
 $$
-The exponent approaches $1$, so continuity of the exponential function gives
-\[
-\lim_{x\to\infty}\left(1+\frac1x\right)^x=e.
-\qedhere
-\]
 \end{proof}
 
 \proofheading{\texorpdfstring{$\displaystyle\lim_{x\to0}\frac{a^x-1}{x}=\ln(a)\quad(a>0)$}{lim x -> 0 (a^x-1)/x = ln(a), a > 0}}{proof:exponential-limit}
 
 \begin{proof}
-Let $a>0$. First set $v=e^t-1$. As $t\to0$, we have $v\to0$ by continuity
-of the exponential, and $t=\ln(1+v)$. When $t\ne0$, we also have $v\ne0$, so
+First, an elementary inequality: for $u>-1$ and a positive integer $n$,
+$$(1+u)^n\geq1+nu.$$
+It holds for $n=1$. If it holds for $n$, multiply by the positive number
+$1+u$ and use
+$$(1+nu)(1+u)=1+(n+1)u+nu^2\geq1+(n+1)u.$$
+Thus it holds for every positive integer $n$.
+For any fixed real $t$ and sufficiently large $n$, this gives
+$$\left(1+\frac tn\right)^n\geq1+t.$$
+When $t\ne0$, set $x=n/t$ in the preceding Euler limit, including its
+negative-input version, and raise to the fixed power $t$.
+Continuity of this power makes the left side approach $e^t$.
+For $t=0$ it equals 1. Hence $e^t\geq1+t$ for every real $t$.
+
+For $h>0$, apply this inequality to $h$ and $-h$:
 $$
-\frac{e^t-1}{t}=\frac{v}{\ln(1+v)}
-=\frac{1}{\ln(1+v)/v}.
+e^h\geq1+h,\qquad e^{-h}\geq1-h,
+\qquad\text{so}\qquad
+1\leq\frac{e^h-1}{h}\leq e^h.
 $$
-We just proved that the denominator on the right approaches 1. Its
-reciprocal therefore approaches 1 as well, giving
-$$
-\lim_{t\to0}\frac{e^t-1}{t}=1.
-$$
-If $a\ne1$, then for $x\ne0$,
+Continuity and the Squeeze Theorem give the right-sided limit 1.
+For $h=-k<0$,
+$$\frac{e^h-1}{h}=e^{-k}\frac{e^k-1}{k}\longrightarrow1.$$
+So the two-sided limit is 1 for base $e$.
+
+We also get a logarithm limit needed later. Set $h=\ln(1+u)$.
+As $u\to0$, continuity gives $h\to0$, and
+$$\frac{\ln(1+u)}u=\frac{h}{e^h-1}\longrightarrow1.$$
+
+Now let $a>0$. If $a\ne1$, the exponent laws give
 $$
 \frac{a^x-1}{x}
-=\ln(a)\frac{e^{x\ln(a)}-1}{x\ln(a)}.
+=\ln(a)\frac{e^{x\ln(a)}-1}{x\ln(a)}
+\longrightarrow\ln(a).
 $$
-Since $x\ln(a)\to0$, the quotient on the right approaches 1 by the limit
-above. If $a=1$, the original quotient is zero for every $x\ne0$.
-In either case,
-\[
-\lim_{x\to0}\frac{a^x-1}{x}=\ln(a).
-\qedhere
-\]
+If $a=1$, the quotient is zero for every $x\ne0$, as required.
 \end{proof}
 
-\proofheading{The Squeeze Theorem (Theorem~\ref*{source:proof:squeeze})}{proof:squeeze}
 
-\begin{proof}
-Suppose $g(x)\leq f(x)\leq h(x)$ near $a$ and both bounding functions
-approach $L$. Given $\varepsilon>0$, choose $x$ close enough to $a$ that both
-$g(x)$ and $h(x)$ lie between $L-\varepsilon$ and $L+\varepsilon$. Then
-$$
-L-\varepsilon<g(x)\leq f(x)\leq h(x)<L+\varepsilon,
-$$
-so $|f(x)-L|<\varepsilon$. This is exactly $f(x)\to L$.
-\end{proof}
 
 \subsection{Proofs from Chapter \ref*{sec:the-derivative}: The Derivative}
 \label{sec:derivative-proofs}
@@ -410,9 +473,8 @@ Using the Chain Rule and the derivatives of the exponential and logarithm,
 &=x^r\frac{r}{x}\\
 &=rx^{r-1}.
 \end{align*}
-There is no circular reasoning here: the derivatives of $e^x$ and $\ln(x)$
-follow from the special-case limits proved above, without using the Power
-Rule. For $h\ne0$, their difference quotients have these limits as $h\to0$:
+The derivatives of $e^x$ and $\ln(x)$ used here follow directly from
+the special-case limits proved above. For $h\ne0$, their difference quotients have these limits as $h\to0$:
 \begin{align*}
 \frac{e^{x+h}-e^x}{h}
 &=e^x\frac{e^h-1}{h}\longrightarrow e^x,\\
@@ -466,19 +528,25 @@ so $f'(0)=0$.
 \proofheading{The Extreme Value Theorem (Theorem~\ref*{source:proof:extreme-value})}{proof:extreme-value}
 
 \begin{proof}
-We need one fact about closed, bounded intervals: every sequence in such
-an interval has a convergent subsequence with its limit in the interval.
-To see why, repeatedly bisect the interval and keep a closed half
-containing infinitely many terms. The nested intervals shrink to a point;
-choosing terms with increasing indices from them gives the subsequence.
+First show that $f$ is bounded on $[a,b]$. If it were unbounded, at least
+one closed half would also be unbounded: otherwise the larger of two
+bounds would bound the whole interval. Keep an unbounded half and repeat.
+The retained intervals shrink to a common point $c$, by
+Section~\ref{sec:real-number-tools}. Continuity gives
+$|f(t)-f(c)|<1$ for all $t$ sufficiently close to $c$ in $[a,b]$.
+A short enough retained interval lies there, so
+$|f(t)|\leq|f(c)|+1$ on it, a contradiction.
 
-Now let $f$ be continuous on $[a,b]$. If $f$ were unbounded, we could choose
-$x_n\in[a,b]$ with $|f(x_n)|>n$. A convergent subsequence $x_{n_j}\to c$
-would give $f(x_{n_j})\to f(c)$ by continuity, a contradiction. Thus $f$
-is bounded. Let $M$ be the least upper bound of its values, and choose
-$x_n$ with $M-1/n<f(x_n)\leq M$. Another convergent subsequence gives
-$f(c)=M$, so the maximum is attained. Apply the same argument to $-f$ to
-obtain a minimum.
+Let $M$ be the least upper bound of the values of $f$, whose existence
+was explained in that same section. Some closed half of $[a,b]$ contains
+values greater than $M-\varepsilon$ for every $\varepsilon>0$; otherwise each half would
+stay below $M$ by a positive amount, giving an upper bound smaller than
+$M$ for the whole interval. Retain such a half and repeat.
+
+Their common point $c$ satisfies $f(c)\leq M$. If $f(c)<M$, continuity
+would keep the values on a sufficiently short retained interval below
+$(f(c)+M)/2<M$. This contradicts its values arbitrarily close to $M$.
+Thus $f(c)=M$. Apply the same argument to $-f$ to obtain a minimum.
 \end{proof}
 
 \proofheading{Fermat's Theorem (Theorem~\ref*{source:proof:critical-numbers})}{proof:critical-numbers}
@@ -633,32 +701,155 @@ is exactly the desired limit $f(x)/g(x)\to L$ at infinity.
 
 \subsection{Proofs from Chapter \ref*{sec:definite-integral}: The Definite Integral}
 
+\subsubsection{Rectangle Sums and Signed Area}
+\label{sec:rectangle-sum-tools}
+
+Here is a precise rectangle version of signed area. A \textbf{partition}
+$P$ cuts $[a,b]$ into finitely many subintervals. For a bounded function,
+use the greatest lower bound of its heights on each subinterval for a
+\textbf{lower sum} $L_P$, and the least upper bound for an
+\textbf{upper sum} $U_P$. These bounds exist by
+Section~\ref{sec:real-number-tools}.
+
+Adding dividing points can only increase $L_P$ and decrease $U_P$.
+Any lower sum is at most any upper sum: insert the dividing points from
+both partitions to compare them on one common partition.
+Consequently, the least upper bound $I$ of all lower sums satisfies
+$L_P\leq I\leq U_P$
+for every $P$. If $U_P-L_P$ can be made arbitrarily small, these bounds
+determine just one number. This is the \textbf{Riemann integral}: the
+number squeezed between the lower and upper rectangle approximations.
+
 \proofheading{Convergence of Riemann Sums (Theorem~\ref*{source:proof:riemann-sums})}{proof:riemann-sums}
 
 \begin{proof}
-A precise way to define the Riemann integral is to trap the signed area
-between lower and upper rectangle sums. For an integrable function, these
-can be made arbitrarily close: given $\varepsilon>0$, choose a partition $P$
-whose upper sum minus lower sum is less than $\varepsilon/2$.
+For an integrable function, the upper and lower sums just described can
+be made arbitrarily close. Given $\varepsilon>0$, choose a partition $P$
+with $U_P-L_P<\varepsilon/2$.
 
 Write $|f(x)|\leq B$, and let $m$ be the number of interior dividing points
-in $P$. Now take a uniform partition $Q$ of width $\Delta x$. On cells of
-$Q$ contained in one cell of $P$, the total gap between upper and lower
-sums is no greater than the gap for $P$. At most $m$ cells cross a dividing
-point of $P$, and each contributes at most $2B\Delta x$. Thus
+in $P$. Take any partition $Q$ whose subinterval widths are at most
+$\Delta x$. On cells of $Q$ contained in one cell of $P$, the total gap
+between upper and lower sums is no greater than the gap for $P$.
+At most $m$ cells cross a dividing point of $P$, and each contributes
+at most $2B\Delta x$. Thus
 $$
 U_Q-L_Q\leq U_P-L_P+2Bm\Delta x<\varepsilon
 $$
-once $\Delta x$ is sufficiently small. Both the integral and every tagged
-sum on $Q$ lie between $L_Q$ and $U_Q$, so the tagged sum approaches the
-integral. In particular, the left and right sums do. Finally,
-$T_n=(L_n+R_n)/2$, so the trapezoid sums have the same limit.
+once $\Delta x$ is sufficiently small.
+
+A \textbf{tagged sum} chooses the height $f(x_k)$ at any one point of
+each subinterval. Both the integral and every tagged sum lie between
+$L_Q$ and $U_Q$, so their difference approaches 0 as the largest width
+approaches 0. This proves the result for left and right endpoint sums.
+Finally, $T_n=(L_n+R_n)/2$, so the trapezoid sums have the same limit.
 \end{proof}
+
+\proofheading{Polynomial Sum Identities}{proof:polynomial-sums}
+
+\begin{proof}
+Let $n$ be a positive integer. The constant sum $\sum_{k=1}^n1=n$
+just counts $n$ copies of 1.
+
+For the other identities, write $S_j=\sum_{k=1}^n k^j$.
+To find $S_1$, write the same sum forwards and backwards:
+\begin{align*}
+S_1&=1+2+\cdots+n,\\
+S_1&=n+(n-1)+\cdots+1.
+\end{align*}
+Adding gives $n$ copies of $n+1$, so
+$$2S_1=n(n+1),\qquad S_1=\frac{n(n+1)}2.$$
+
+For the squares, expand $(k+1)^3-k^3=3k^2+3k+1$ and sum from
+$k=1$ to $n$. On the left, every interior cube cancels:
+$$(n+1)^3-1=3S_2+3S_1+n.$$
+Substitute the formula for $S_1$ and rearrange:
+\begin{align*}
+3S_2&=(n+1)^3-1-\frac{3n(n+1)}2-n\\
+&=\frac{n(n+1)(2n+1)}2.
+\end{align*}
+Thus $S_2=n(n+1)(2n+1)/6$.
+
+For the cubes, expand $(k+1)^4-k^4=4k^3+6k^2+4k+1$.
+Summing and canceling the interior fourth powers gives
+$$(n+1)^4-1=4S_3+6S_2+4S_1+n.$$
+Using the two formulas just proved,
+\begin{align*}
+4S_3&=(n+1)^4-1-n(n+1)(2n+1)-2n(n+1)-n\\
+&=n^4+2n^3+n^2\\
+&=n^2(n+1)^2.
+\end{align*}
+Therefore $S_3=n^2(n+1)^2/4$.
+\end{proof}
+
+\proofheading{The Finite Geometric Sum}{proof:finite-geometric-sum}
+
+\begin{proof}
+Let $n$ be a positive integer and write the sum as $S$.
+Multiplying by $r$ shifts every power up by one:
+\begin{align*}
+S&=r+r^2+\cdots+r^n,\\
+rS&=r^2+r^3+\cdots+r^{n+1}.
+\end{align*}
+Subtract the second line from the first. All the middle terms cancel:
+$$(1-r)S=r-r^{n+1}=r(1-r^n).$$
+For $r\ne1$, divide by $1-r$ to get
+$$\sum_{k=1}^n r^k=\frac{r(1-r^n)}{1-r}.$$
+If $r=1$, there are $n$ copies of 1, so the sum is $n$.
+\end{proof}
+
+\subsubsection{Why Continuous Functions Are Integrable}
+\label{sec:continuous-integrability}
+
+The Extreme Value Theorem makes a continuous $f$ bounded on $[a,b]$.
+Fix $\eta>0$, and repeatedly divide $[a,b]$ into equal halves.
+Call a subinterval \textit{bad} if two of its function values differ
+by at least $\eta$.
+
+Suppose bad subintervals occur at arbitrarily fine stages. One of the
+first two halves must contain them at arbitrarily fine stages. Keep that
+half, and repeat this choice. The nested halves shrink to a common point
+$c$. Each retained half contains a bad subinterval. But continuity at $c$
+eventually puts every value on a retained half within $\eta/3$ of $f(c)$,
+so any two differ by less than $2\eta/3$. This is a contradiction.
+
+Thus, at some stage no subinterval is bad. On that partition,
+$U_P-L_P\leq\eta(b-a).$
+Since $\eta$ can be as small as we like, $f$ is integrable.
+
+We also need a little algebra of integrals. For integrable functions
+$f$ and $g$, refine their partitions until both upper-minus-lower gaps
+are small. The gap for $f+g$ is at most the sum of those gaps, and scaling
+by a constant $C$ multiplies the gap by $|C|$. So sums and constant
+multiples are integrable too. Adding or scaling heights in rectangle sums
+then proves the corresponding rules for their limits.
+Joining partitions on $[a,b]$ and $[b,c]$ gives
+$\int_a^b f(t)\,dt+\int_b^c f(t)\,dt=\int_a^c f(t)\,dt.$
+Reversing the bounds changes the sign by definition.
+For an integrable $g$ with $|g|\leq M$, each rectangle sum has absolute value
+at most $M$ times the interval's length. Taking limits gives
+$\left|\int_u^v g(t)\,dt\right|\leq M|v-u|.$
+A constant $C$ integrates to $C(v-u)$ because every rectangle sum
+already has that value.
 
 \proofheading{The Fundamental Theorem of Calculus (Theorem~\ref*{source:proof:fundamental-theorem})}{proof:fundamental-theorem}
 
 \begin{proof}
-Suppose $f$ is continuous on $[a,b]$, $F$ is continuous there, and $F'=f$
+Suppose $f$ is continuous on $[a,b]$.
+
+For the first part, set $A(x)=\int_a^x f(t)\,dt$. Since $|f|$ is bounded
+by some number $M$ on $[a,b]$,
+$$|A(y)-A(x)|\leq M|y-x|,$$
+so $A$ is continuous on $[a,b]$. For $a<x<b$, additivity of integrals gives
+$$
+\frac{A(x+h)-A(x)}h-f(x)
+=\frac1h\int_x^{x+h}\bigl(f(t)-f(x)\bigr)\,dt.
+$$
+By continuity, $|f(t)-f(x)|<\varepsilon$ throughout this short interval when
+$|h|$ is small. The absolute value of the right side is then at most
+$\varepsilon$, for either sign of $h$. Thus $A'(x)=f(x)$.
+
+For the second part, suppose $F$ is continuous on $[a,b]$ and $F'=f$
 on $(a,b)$. On each subinterval $[x_{j-1},x_j]$, the Mean Value Theorem
 gives some $c_j$ inside it with
 $$
@@ -668,23 +859,12 @@ Add these equations. The intermediate $F$ values cancel, leaving
 $$
 F(b)-F(a)=\sum_{j=1}^n f(c_j)\Delta x.
 $$
-A continuous function on a closed interval is uniformly continuous, so
-its upper and lower sums approach one another as the widths shrink; in
-particular, it is Riemann integrable. Taking $n\to\infty$ in the equation
-above proves
+These are tagged Riemann sums for the continuous function $f$, which
+is integrable by the rectangle argument above. Taking $n\to\infty$
+therefore proves
 $$
 F(b)-F(a)=\int_a^b f(x)\,dx.
 $$
-
-The other familiar part of the theorem says that accumulating area gives
-an antiderivative. Set $A(x)=\int_a^x f(t)\,dt$. Additivity of integrals gives
-$$
-\frac{A(x+h)-A(x)}h-f(x)
-=\frac1h\int_x^{x+h}\bigl(f(t)-f(x)\bigr)\,dt.
-$$
-By continuity, $|f(t)-f(x)|<\varepsilon$ throughout this short interval when
-$|h|$ is small. The absolute value of the right side is then at most
-$\varepsilon$, for either sign of $h$. Thus $A'(x)=f(x)$ for $a<x<b$.
 \end{proof}
 
 \subsection{Proofs from Chapter \ref*{sec:more-definite-integrals}: More Definite Integrals}
@@ -704,8 +884,9 @@ $$
 0\leq\int_a^t f(x)\,dx\leq\int_a^t g(x)\,dx.
 $$
 Both truncated integrals increase as $t$ increases. If the integral of
-$g$ converges, the integral of $f$ is increasing and bounded above, so it
-has a finite limit. If the integral of $f$ diverges, it increases without
+$g$ converges, the integral of $f$ is increasing and bounded above.
+The monotone-function argument in Section~\ref{sec:real-number-tools}
+therefore gives a finite limit. If the integral of $f$ diverges, it increases without
 bound, forcing the integral of $g$ to do the same. At a finite singularity
 use the corresponding one-sided endpoint limit; split at interior
 singularities and apply the argument to each piece.
@@ -735,11 +916,11 @@ are finite prevents any invalid cancellation of infinities.
 
 \phantomsection\label{proof:monotone-sequences}
 \proofsource{proof:monotone-sequences}
-We will repeatedly use one consequence of completeness: a bounded
-increasing sequence converges to its least upper bound $S$. Indeed, for
-any $\varepsilon>0$, some term exceeds $S-\varepsilon$, and every later term
-stays between $S-\varepsilon$ and $S$. A bounded decreasing sequence works
-the same way with a greatest lower bound.
+We will use the bounded monotone limit argument explained in
+Section~\ref{sec:real-number-tools}. A bounded increasing sequence
+converges to the least upper bound $S$ of its terms: eventually all terms
+lie between $S-\varepsilon$ and $S$. For a decreasing sequence, negate
+its terms.
 
 \proofheading{The Geometric Series}{proof:geometric-series}
 
@@ -750,8 +931,10 @@ $$
 S_N=\frac{1-r^N}{1-r}.
 $$
 If $|r|<1$, then $r^N\to0$, giving a sum of $1/(1-r)$. Multiplying by a
-constant gives the formula for any first term. If $|r|\geq1$, the terms
-$r^n$ do not approach zero, so the series diverges by the next test.
+constant gives the formula for any first term. If the partial sums
+converged, their consecutive differences would approach zero by the
+Difference Law. But those differences are $r^n$, which do not approach
+zero when $|r|\geq1$. So the series diverges in that case.
 \end{proof}
 
 \proofheading{The Divergence Test (Theorem~\ref*{source:proof:divergence-test})}{proof:divergence-test}
@@ -841,7 +1024,8 @@ $$
 S_{2m+3}-S_{2m+1}=-b_{2m+2}+b_{2m+3}\leq0.
 $$
 Every even partial sum lies below every later odd partial sum, and the
-partial sums stay between $0$ and $b_1$. Thus each subsequence converges.
+partial sums stay between $0$ and $b_1$. The even and odd partial sums are
+therefore bounded monotone sequences, so both converge.
 Their limits agree because $S_{2m+1}-S_{2m}=b_{2m+1}\to0$. Hence the
 whole sequence of partial sums converges. Starting with a negative term
 just multiplies all partial sums by $-1$.
@@ -893,13 +1077,15 @@ If $L>1$, including $L=\infty$, choose $1<q<L$. Eventually
 $|a_n|\geq q^n$, so the terms fail to approach zero and the series
 diverges. At $L=1$, the same three examples used for the Ratio Test give
 all three outcomes: their absolute $n$th roots approach $1$, since
-$n^{-p/n}=\exp(-p\ln(n)/n)\to1$ for fixed $p$.
+$n^{-p/n}=e^{-p\ln(n)/n}\to1$ for fixed $p$. Here L'H\^opital's rule gives
+$\lim_{x\to\infty}\frac{\ln(x)}x
+=\lim_{x\to\infty}\frac{1/x}{1}=0.$
 \end{proof}
 
 \proofheading{The Integral-Test Error Bounds (Theorem~\ref*{source:proof:integral-error})}{proof:integral-error}
 
 \begin{proof}
-For a positive decreasing $f$ with $a_n=f(n)$, apply the rectangle
+For a positive, continuous, decreasing $f$ with $a_n=f(n)$, apply the rectangle
 comparisons to the tail rather than the whole series:
 $$
 \int_{N+1}^{m+1}f(x)\,dx

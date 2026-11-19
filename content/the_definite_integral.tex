@@ -51,7 +51,7 @@ The figure shows the meaning of the word ``signed'': areas that are above the $x
 
 With no other tools available to you, the only way to compute definite integrals right now is to draw the graph of $f$ and find the desired area using your knowledge of geometry. \mar{Compute $$\int_{-3}^72x+4\ dx$$ using geometry.} This can be easy if $f$ is made up of lines and circular arcs, but if not, the way to compute a definite integral is not immediately obvious.
 
-\subsection{Reimann Sums}
+\subsection{Riemann Sums}
 
 The first way that we will attempt to compute definite integrals is with a limit of a Riemann sum. We will start by approximating the area by a collection of vertical rectangles. Refer to the figure as an example as we construct a Riemann sum.
 
@@ -121,7 +121,7 @@ The first way that we will attempt to compute definite integrals is with a limit
 \end{tikzpicture}
 
 }
-\caption{A Right Reimann Sum}
+\caption{A Right Riemann Sum}
 \end{figure}
 
 Divide the interval $(a,b)$ into $n$ equal sub-intervals, each with width $\Delta x= \frac{b-a}{n}$. Then for each sub-interval draw a rectangle with base length $\Delta x$ on the $x$-axis and height determined by the value of $f$ at the right endpoint of the sub-interval. The right endpoint of the $k$th sub-interval is $x_k=a+k\Delta x$, so the area of the $k$th rectangle is $f(x_k) \Delta x$. The area of all $n$ rectangles together is
@@ -142,9 +142,9 @@ $$\lim_{n\to\infty}R_n=\lim_{n\to\infty}L_n=\lim_{n\to\infty}T_n=\int_a^bf(x)\ d
 
 This theorem should be intuitive: as $n$ gets larger, the width of each rectangle gets smaller and the approximation gets better. More abstractly, this tells us that integration and summation are intimately related: you can think of a definite integral as a sum of infinitely thin boxes with height $f(x)$ and width $dx$, one for ``each'' value of $x$ in $(a,b)$. This perspective will be very helpful later. \mar{Note the similarity in notation between a definite integral and the Riemann sum $$\sum_{k=1}^{n}f(x_k)\Delta x.$$}
 
-For large $n$, a Riemann sum can give a very good approximation, but in general it is not feasible to do by hand. However, if $f$ is a polynomial it is not hard to compute $R_n$ algebraically and then take a limit. In order to do so, we'll need the following summation identities:
+For large $n$, a Riemann sum can give a very good approximation, but in general it is not feasible to do by hand. For some functions, though, a summation identity lets us simplify $R_n$ before taking the limit. These identities are useful for polynomials:
 \begin{align*}
-&\sum_{k=1}^n 1 = n 
+&\sum_{k=1}^n 1 = n \hbox{\proofref{proof:polynomial-sums}}
 & &
 \sum_{k=1}^n k = \frac{n(n+1)}{2}\\
 &\sum_{k=1}^n k^2 = \frac{n(n+1)(2n+1)}{6}
@@ -152,7 +152,11 @@ For large $n$, a Riemann sum can give a very good approximation, but in general 
 \sum_{k=1}^n k^3 = \frac{n^2(n+1)^2}{4}
 \end{align*}
 
-Here is an example:
+For exponential functions we can use the \textbf{finite geometric sum}:
+$$\sum_{k=1}^n r^k=\frac{r(1-r^n)}{1-r}\qquad(r\ne1).\hbox{\proofref{proof:finite-geometric-sum}}$$
+If $r=1$, the sum is just $n$.
+
+Here are some examples:
 \begin{itemize}
     \item To compute $\int_{0}^{1}x^2+x\ dx$, first find $R_n$:
     \begin{align*}
@@ -165,10 +169,25 @@ Here is an example:
     \end{align*}
     Then take the limit:
     $$\lim_{n\to\infty}R_n=\lim_{n\to\infty} \frac{1}{n^3}\frac{n(n+1)(2n+1)}{6}+\frac{1}{n^2}\frac{n(n+1)}{2} = \frac{2}{6} + \frac{1}{2} = \frac{5}{6}.$$
-    
-\end{itemize}
+    \mar{Compute $$\int_{0}^1x^3\ dx$$ using the method of Riemann Sums.}
 
-\mar{Compute $$\int_{0}^1x^3\ dx$$ using the method of Riemann Sums.}
+    \item To compute $\int_0^1 2^x\ dx$, use $\Delta x=1/n$ and the right endpoints $x_k=k/n$. Write $r=2^{1/n}$, so $r^n=2$.
+    \begin{align*}
+        R_n
+        & = \sum_{k=1}^n 2^{k/n}\frac{1}{n} &&& \text{(plug in)}\\
+        & = \frac{1}{n}\sum_{k=1}^n r^k &&& \text{(factor and use $r=2^{1/n}$)}\\
+        & = \frac{1}{n}\frac{r(1-r^n)}{1-r} &&& \text{(use the geometric sum)}\\
+        & = \frac{2^{1/n}}{(2^{1/n}-1)/(1/n)} &&& \text{(substitute and simplify)}
+    \end{align*}
+    Then take the limit. With $h=1/n$, the quotient $h/(2^h-1)$ has the form $0/0$, so we can use L'H\^opital's rule:
+    \begin{align*}
+        \int_0^1 2^x\ dx
+        & = \lim_{h\to0^+} 2^h\frac{h}{2^h-1} &&& \text{(set $h=1/n$)}\\
+        & = \lim_{h\to0^+}\frac{h}{2^h-1} &&& \text{(since $2^h\to 1$)}\\
+        & = \lim_{h\to0^+}\frac{1}{2^h\ln(2)} &&& \text{(L'H\^opital's rule)}\\
+        & = \frac{1}{\ln(2)}. &&& \text{(evaluate)}
+    \end{align*}
+\end{itemize}
 
 \subsection{The Fundamental Theorem of Calculus}
 
@@ -176,20 +195,24 @@ Let's cut right to the chase:
 
 \begin{thm}[The Fundamental Theorem of Calculus]
 \proofref{proof:fundamental-theorem}
-    If $f$ is continuous on $[a,b]$ and $F$ is continuous on $[a,b]$ with
-    $F'=f$ on $(a,b)$, then
-    $$\int_a^b f(x)\ dx = F(b)-F(a).$$
+    Suppose $f$ is continuous on $[a,b]$.
+    \begin{enumerate}
+        \item If $A(x)=\int_a^x f(t)\ dt$, then $A$ is continuous on $[a,b]$ and differentiable on $(a,b)$, with
+        $$A'(x)=\left[\int_a^x f(t)\ dt\right]'=f(x).$$
+        \item If $F$ is continuous on $[a,b]$ and $F'=f$ on $(a,b)$, then
+        $$\int_a^b f(x)\ dx=F(b)-F(a).$$
+    \end{enumerate}
 \end{thm}
 
-This theorem is the connection between differentiation and integration! It is also how we will compute definite integrals from now on:
+The first part says that differentiating an accumulation of area gives back the original function. The second part says that we can compute a definite integral using any antiderivative. This theorem is the connection between differentiation and integration!
+
+Here is how we will compute definite integrals from now on:
 \begin{enumerate}
     \item Find a function $F$ for which $F'=f$.
     \item Evaluate $F(b)-F(a).$
 \end{enumerate}
 
-The first point is called \textbf{anti-differentiation}, and is the harder step. Before we get to that, let's try to understand how this theorem agrees with our intuition about Riemann Sums. If we take the $b$-derivative of the equation in the theorem, we get
-$$\frac{d}{db}\left[\int_a^{b}f(x)\ dx\right] = \frac{d}{db}\left[F(b)-F(a)\right] = f(b).$$
-This means that the rate at which the area is changing is $f(b)$. This makes sense in terms of Riemann sums: if we increase $b$ by a small amount $\Delta b$, the area will change by about $f(b) \Delta b$. Thus the derivative of the area is $f(b)\Delta b/\Delta b = f(b)$. \mar{Draw a picture of $b$ increasing by $\Delta b$. Then sit and really think about this until it makes sense.}
+The first step is called \textbf{anti-differentiation}, and is the harder step. Before we get to that, let's see how the first part of the theorem agrees with our intuition about Riemann sums. If we increase the upper endpoint $x$ by a small amount $\Delta x$, the accumulated area changes by about $f(x)\Delta x$. Its rate of change is therefore $f(x)\Delta x/\Delta x=f(x)$, just as $A'(x)=f(x)$ says. \mar{Draw a picture of $x$ increasing by $\Delta x$. Then sit and really think about this until it makes sense.}
 
 
 

@@ -101,9 +101,11 @@
   {\hypersetup{hidelinks}#1};
 \end{tikzpicture}}%
 
+% Keep source labels working inside amsmath's unnumbered displays.
+\let\proofsourcelabel\label
 \newcommand{\proofref}[2][]{%
 \leavevmode
-\phantomsection\label{source:#2}%
+\phantomsection\proofsourcelabel{source:#2}%
 \proofmarginbox{%
 \if\relax\detokenize{#1}\relax\else #1\par\fi
 \hyperref[#2]{\textbf{Proof}\ (p.~\pageref*{#2})}}}
