@@ -96,65 +96,67 @@
 \contentsline {subsection}{\numberline {22.2}Other Asymptotics}{73}{subsection.22.2}%
 \contentsline {section}{\numberline {23}Proofs by Chapter}{75}{section.23}%
 \contentsline {subsection}{\numberline {23.1}Proofs from Chapter \ref *{sec:trigonometry}: Trigonometry}{75}{subsection.23.1}%
-\contentsline {subsubsection}{\numberline {23.1.1}The Law of Sines (Theorem~\ref *{source:proof:law-of-sines})}{75}{subsubsection.23.1.1}%
-\contentsline {subsubsection}{\numberline {23.1.2}The Law of Cosines (Theorem~\ref *{source:proof:law-of-cosines})}{75}{subsubsection.23.1.2}%
-\contentsline {subsubsection}{\numberline {23.1.3}Heron's Formula (Theorem~\ref *{source:proof:heron})}{75}{subsubsection.23.1.3}%
+\contentsline {subsubsection}{\numberline {23.1.1}The Sine Angle-Sum Formulas}{75}{subsubsection.23.1.1}%
+\contentsline {subsubsection}{\numberline {23.1.2}The Cosine Angle-Sum Formulas}{75}{subsubsection.23.1.2}%
+\contentsline {subsubsection}{\numberline {23.1.3}The Law of Sines (Theorem~\ref *{source:proof:law-of-sines})}{76}{subsubsection.23.1.3}%
+\contentsline {subsubsection}{\numberline {23.1.4}The Law of Cosines (Theorem~\ref *{source:proof:law-of-cosines})}{76}{subsubsection.23.1.4}%
+\contentsline {subsubsection}{\numberline {23.1.5}Heron's Formula (Theorem~\ref *{source:proof:heron})}{76}{subsubsection.23.1.5}%
 \contentsline {subsection}{\numberline {23.2}Proofs from Chapter \ref *{sec:real-functions}: Functions on the Real Line}{76}{subsection.23.2}%
 \contentsline {subsubsection}{\numberline {23.2.1}Shrinking Intervals and Bounds}{76}{subsubsection.23.2.1}%
-\contentsline {subsubsection}{\numberline {23.2.2}Invertibility and Bijectivity (Theorem~\ref *{source:proof:invertibility})}{76}{subsubsection.23.2.2}%
-\contentsline {subsubsection}{\numberline {23.2.3}Continuity of a Monotone Inverse}{76}{subsubsection.23.2.3}%
+\contentsline {subsubsection}{\numberline {23.2.2}Invertibility and Bijectivity (Theorem~\ref *{source:proof:invertibility})}{77}{subsubsection.23.2.2}%
+\contentsline {subsubsection}{\numberline {23.2.3}Continuity of a Monotone Inverse}{77}{subsubsection.23.2.3}%
 \contentsline {subsection}{\numberline {23.3}Proofs from Chapter \ref *{sec:limit-properties}: Properties of Limits}{77}{subsection.23.3}%
 \contentsline {subsubsection}{\numberline {23.3.1}The Limit Laws}{77}{subsubsection.23.3.1}%
-\contentsline {subsubsection}{\numberline {23.3.2}The Composite Function Theorem (Theorem~\ref *{source:proof:composite-limit})}{77}{subsubsection.23.3.2}%
-\contentsline {subsubsection}{\numberline {23.3.3}Continuity of Algebraic Combinations (Theorem~\ref *{source:proof:algebraic-continuity})}{77}{subsubsection.23.3.3}%
-\contentsline {subsubsection}{\numberline {23.3.4}The Intermediate Value Theorem (Theorem~\ref *{source:proof:intermediate-value})}{78}{subsubsection.23.3.4}%
-\contentsline {subsection}{\numberline {23.4}Proofs from Chapter \ref *{sec:evaluating-limits}: Evaluating Limits}{78}{subsection.23.4}%
-\contentsline {subsubsection}{\numberline {23.4.1}The Squeeze Theorem (Theorem~\ref *{source:proof:squeeze})}{78}{subsubsection.23.4.1}%
-\contentsline {subsubsection}{\numberline {23.4.2}$\displaystyle \lim _{x\to 0}\frac {\sin (x)}{x}=1$}{78}{subsubsection.23.4.2}%
-\contentsline {subsubsection}{\numberline {23.4.3}$\displaystyle \lim _{x\to 0}\frac {\cos (x)-1}{x}=0$}{79}{subsubsection.23.4.3}%
-\contentsline {subsubsection}{\numberline {23.4.4}$\displaystyle \lim _{x\to \infty }\left (1+\frac 1x\right )^x=e$}{79}{subsubsection.23.4.4}%
+\contentsline {subsubsection}{\numberline {23.3.2}The Composite Function Theorem (Theorem~\ref *{source:proof:composite-limit})}{78}{subsubsection.23.3.2}%
+\contentsline {subsubsection}{\numberline {23.3.3}Continuity of Algebraic Combinations (Theorem~\ref *{source:proof:algebraic-continuity})}{78}{subsubsection.23.3.3}%
+\contentsline {subsubsection}{\numberline {23.3.4}The Intermediate Value Theorem (Theorem~\ref *{source:proof:intermediate-value})}{79}{subsubsection.23.3.4}%
+\contentsline {subsection}{\numberline {23.4}Proofs from Chapter \ref *{sec:evaluating-limits}: Evaluating Limits}{79}{subsection.23.4}%
+\contentsline {subsubsection}{\numberline {23.4.1}The Squeeze Theorem (Theorem~\ref *{source:proof:squeeze})}{79}{subsubsection.23.4.1}%
+\contentsline {subsubsection}{\numberline {23.4.2}$\displaystyle \lim _{x\to 0}\frac {\sin (x)}{x}=1$}{79}{subsubsection.23.4.2}%
+\contentsline {subsubsection}{\numberline {23.4.3}$\displaystyle \lim _{x\to 0}\frac {\cos (x)-1}{x}=0$}{80}{subsubsection.23.4.3}%
+\contentsline {subsubsection}{\numberline {23.4.4}$\displaystyle \lim _{x\to \infty }\left (1+\frac 1x\right )^x=e$}{80}{subsubsection.23.4.4}%
 \contentsline {subsubsection}{\numberline {23.4.5}$\displaystyle \lim _{x\to 0}\frac {a^x-1}{x}=\ln (a)\hskip 1em\relax (a>0)$}{80}{subsubsection.23.4.5}%
-\contentsline {subsection}{\numberline {23.5}Proofs from Chapter \ref *{sec:the-derivative}: The Derivative}{80}{subsection.23.5}%
-\contentsline {subsubsection}{\numberline {23.5.1}Differentiability Implies Continuity (Theorem~\ref *{source:proof:differentiability-continuity})}{80}{subsubsection.23.5.1}%
+\contentsline {subsection}{\numberline {23.5}Proofs from Chapter \ref *{sec:the-derivative}: The Derivative}{81}{subsection.23.5}%
+\contentsline {subsubsection}{\numberline {23.5.1}Differentiability Implies Continuity (Theorem~\ref *{source:proof:differentiability-continuity})}{81}{subsubsection.23.5.1}%
 \contentsline {subsubsection}{\numberline {23.5.2}The Product Rule}{81}{subsubsection.23.5.2}%
-\contentsline {subsubsection}{\numberline {23.5.3}The Chain Rule}{81}{subsubsection.23.5.3}%
-\contentsline {subsubsection}{\numberline {23.5.4}The Power Rule}{81}{subsubsection.23.5.4}%
-\contentsline {subsubsection}{\numberline {23.5.5}Derivatives of Even and Odd Functions (Theorem~\ref *{source:proof:even-odd-derivatives})}{82}{subsubsection.23.5.5}%
-\contentsline {subsubsection}{\numberline {23.5.6}An Even Function at the Origin (Theorem~\ref *{source:proof:even-derivative-zero})}{82}{subsubsection.23.5.6}%
-\contentsline {subsection}{\numberline {23.6}Proofs from Chapter \ref *{sec:applications-of-derivatives}: Applications of Derivatives}{82}{subsection.23.6}%
-\contentsline {subsubsection}{\numberline {23.6.1}The Extreme Value Theorem (Theorem~\ref *{source:proof:extreme-value})}{82}{subsubsection.23.6.1}%
+\contentsline {subsubsection}{\numberline {23.5.3}The Chain Rule}{82}{subsubsection.23.5.3}%
+\contentsline {subsubsection}{\numberline {23.5.4}The Power Rule}{82}{subsubsection.23.5.4}%
+\contentsline {subsubsection}{\numberline {23.5.5}Derivatives of Even and Odd Functions (Theorem~\ref *{source:proof:even-odd-derivatives})}{83}{subsubsection.23.5.5}%
+\contentsline {subsubsection}{\numberline {23.5.6}An Even Function at the Origin (Theorem~\ref *{source:proof:even-derivative-zero})}{83}{subsubsection.23.5.6}%
+\contentsline {subsection}{\numberline {23.6}Proofs from Chapter \ref *{sec:applications-of-derivatives}: Applications of Derivatives}{83}{subsection.23.6}%
+\contentsline {subsubsection}{\numberline {23.6.1}The Extreme Value Theorem (Theorem~\ref *{source:proof:extreme-value})}{83}{subsubsection.23.6.1}%
 \contentsline {subsubsection}{\numberline {23.6.2}Fermat's Theorem (Theorem~\ref *{source:proof:critical-numbers})}{83}{subsubsection.23.6.2}%
-\contentsline {subsubsection}{\numberline {23.6.3}The Mean Value Theorem (Theorem~\ref *{source:proof:mean-value})}{83}{subsubsection.23.6.3}%
-\contentsline {subsubsection}{\numberline {23.6.4}The First Derivative Test (Theorem~\ref *{source:proof:first-derivative-test})}{83}{subsubsection.23.6.4}%
-\contentsline {subsubsection}{\numberline {23.6.5}The Second Derivative Test (Theorem~\ref *{source:proof:second-derivative-test})}{83}{subsubsection.23.6.5}%
+\contentsline {subsubsection}{\numberline {23.6.3}The Mean Value Theorem (Theorem~\ref *{source:proof:mean-value})}{84}{subsubsection.23.6.3}%
+\contentsline {subsubsection}{\numberline {23.6.4}The First Derivative Test (Theorem~\ref *{source:proof:first-derivative-test})}{84}{subsubsection.23.6.4}%
+\contentsline {subsubsection}{\numberline {23.6.5}The Second Derivative Test (Theorem~\ref *{source:proof:second-derivative-test})}{84}{subsubsection.23.6.5}%
 \contentsline {subsubsection}{\numberline {23.6.6}L'H\^opital's Rule (Theorem~\ref *{source:proof:lhopital})}{84}{subsubsection.23.6.6}%
-\contentsline {subsection}{\numberline {23.7}Proofs from Chapter \ref *{sec:definite-integral}: The Definite Integral}{85}{subsection.23.7}%
-\contentsline {subsubsection}{\numberline {23.7.1}Rectangle Sums and Signed Area}{85}{subsubsection.23.7.1}%
-\contentsline {subsubsection}{\numberline {23.7.2}Convergence of Riemann Sums (Theorem~\ref *{source:proof:riemann-sums})}{85}{subsubsection.23.7.2}%
-\contentsline {subsubsection}{\numberline {23.7.3}Polynomial Sum Identities}{85}{subsubsection.23.7.3}%
-\contentsline {subsubsection}{\numberline {23.7.4}The Finite Geometric Sum}{86}{subsubsection.23.7.4}%
-\contentsline {subsubsection}{\numberline {23.7.5}Why Continuous Functions Are Integrable}{86}{subsubsection.23.7.5}%
-\contentsline {subsubsection}{\numberline {23.7.6}The Fundamental Theorem of Calculus (Theorem~\ref *{source:proof:fundamental-theorem})}{87}{subsubsection.23.7.6}%
-\contentsline {subsection}{\numberline {23.8}Proofs from Chapter \ref *{sec:indefinite-integral}: The Indefinite Integral}{87}{subsection.23.8}%
-\contentsline {subsubsection}{\numberline {23.8.1}Integration by Parts}{87}{subsubsection.23.8.1}%
-\contentsline {subsubsection}{\numberline {23.8.2}$u$-Substitution}{88}{subsubsection.23.8.2}%
-\contentsline {subsection}{\numberline {23.9}Proofs from Chapter \ref *{sec:more-definite-integrals}: More Definite Integrals}{88}{subsection.23.9}%
-\contentsline {subsubsection}{\numberline {23.9.1}Comparison of Integrals (Theorem~\ref *{source:proof:integral-comparison})}{88}{subsubsection.23.9.1}%
+\contentsline {subsection}{\numberline {23.7}Proofs from Chapter \ref *{sec:definite-integral}: The Definite Integral}{86}{subsection.23.7}%
+\contentsline {subsubsection}{\numberline {23.7.1}Rectangle Sums and Signed Area}{86}{subsubsection.23.7.1}%
+\contentsline {subsubsection}{\numberline {23.7.2}Convergence of Riemann Sums (Theorem~\ref *{source:proof:riemann-sums})}{86}{subsubsection.23.7.2}%
+\contentsline {subsubsection}{\numberline {23.7.3}Polynomial Sum Identities}{86}{subsubsection.23.7.3}%
+\contentsline {subsubsection}{\numberline {23.7.4}The Finite Geometric Sum}{87}{subsubsection.23.7.4}%
+\contentsline {subsubsection}{\numberline {23.7.5}Why Continuous Functions Are Integrable}{87}{subsubsection.23.7.5}%
+\contentsline {subsubsection}{\numberline {23.7.6}The Fundamental Theorem of Calculus (Theorem~\ref *{source:proof:fundamental-theorem})}{88}{subsubsection.23.7.6}%
+\contentsline {subsection}{\numberline {23.8}Proofs from Chapter \ref *{sec:indefinite-integral}: The Indefinite Integral}{88}{subsection.23.8}%
+\contentsline {subsubsection}{\numberline {23.8.1}Integration by Parts}{88}{subsubsection.23.8.1}%
+\contentsline {subsubsection}{\numberline {23.8.2}$u$-Substitution}{89}{subsubsection.23.8.2}%
+\contentsline {subsection}{\numberline {23.9}Proofs from Chapter \ref *{sec:more-definite-integrals}: More Definite Integrals}{89}{subsection.23.9}%
+\contentsline {subsubsection}{\numberline {23.9.1}Comparison of Integrals (Theorem~\ref *{source:proof:integral-comparison})}{89}{subsubsection.23.9.1}%
 \contentsline {subsubsection}{\numberline {23.9.2}Splitting an Integral and Reversing Its Bounds (Theorem~\ref *{source:proof:integral-additivity})}{89}{subsubsection.23.9.2}%
-\contentsline {subsection}{\numberline {23.10}Proofs from Chapter \ref *{sec:series}: Series}{89}{subsection.23.10}%
-\contentsline {subsubsection}{\numberline {23.10.1}The Geometric Series}{89}{subsubsection.23.10.1}%
-\contentsline {subsubsection}{\numberline {23.10.2}The Divergence Test (Theorem~\ref *{source:proof:divergence-test})}{89}{subsubsection.23.10.2}%
-\contentsline {subsubsection}{\numberline {23.10.3}The Integral Test (Theorem~\ref *{source:proof:integral-test})}{89}{subsubsection.23.10.3}%
-\contentsline {subsubsection}{\numberline {23.10.4}The $p$-Series Test (Theorem~\ref *{source:proof:p-series-test})}{90}{subsubsection.23.10.4}%
-\contentsline {subsubsection}{\numberline {23.10.5}The Comparison Test (Theorem~\ref *{source:proof:series-comparison})}{90}{subsubsection.23.10.5}%
-\contentsline {subsubsection}{\numberline {23.10.6}The Limit Comparison Test (Theorem~\ref *{source:proof:limit-comparison})}{90}{subsubsection.23.10.6}%
-\contentsline {subsubsection}{\numberline {23.10.7}The Alternating Series Test (Theorem~\ref *{source:proof:alternating-test})}{90}{subsubsection.23.10.7}%
+\contentsline {subsection}{\numberline {23.10}Proofs from Chapter \ref *{sec:series}: Series}{90}{subsection.23.10}%
+\contentsline {subsubsection}{\numberline {23.10.1}The Geometric Series}{90}{subsubsection.23.10.1}%
+\contentsline {subsubsection}{\numberline {23.10.2}The Divergence Test (Theorem~\ref *{source:proof:divergence-test})}{90}{subsubsection.23.10.2}%
+\contentsline {subsubsection}{\numberline {23.10.3}The Integral Test (Theorem~\ref *{source:proof:integral-test})}{90}{subsubsection.23.10.3}%
+\contentsline {subsubsection}{\numberline {23.10.4}The $p$-Series Test (Theorem~\ref *{source:proof:p-series-test})}{91}{subsubsection.23.10.4}%
+\contentsline {subsubsection}{\numberline {23.10.5}The Comparison Test (Theorem~\ref *{source:proof:series-comparison})}{91}{subsubsection.23.10.5}%
+\contentsline {subsubsection}{\numberline {23.10.6}The Limit Comparison Test (Theorem~\ref *{source:proof:limit-comparison})}{91}{subsubsection.23.10.6}%
+\contentsline {subsubsection}{\numberline {23.10.7}The Alternating Series Test (Theorem~\ref *{source:proof:alternating-test})}{91}{subsubsection.23.10.7}%
 \contentsline {subsubsection}{\numberline {23.10.8}The Absolute Convergence Test (Theorem~\ref *{source:proof:absolute-convergence})}{91}{subsubsection.23.10.8}%
-\contentsline {subsubsection}{\numberline {23.10.9}The Ratio Test (Theorem~\ref *{source:proof:ratio-test})}{91}{subsubsection.23.10.9}%
-\contentsline {subsubsection}{\numberline {23.10.10}The Root Test (Theorem~\ref *{source:proof:root-test})}{91}{subsubsection.23.10.10}%
-\contentsline {subsubsection}{\numberline {23.10.11}The Integral-Test Error Bounds (Theorem~\ref *{source:proof:integral-error})}{91}{subsubsection.23.10.11}%
+\contentsline {subsubsection}{\numberline {23.10.9}The Ratio Test (Theorem~\ref *{source:proof:ratio-test})}{92}{subsubsection.23.10.9}%
+\contentsline {subsubsection}{\numberline {23.10.10}The Root Test (Theorem~\ref *{source:proof:root-test})}{92}{subsubsection.23.10.10}%
+\contentsline {subsubsection}{\numberline {23.10.11}The Integral-Test Error Bounds (Theorem~\ref *{source:proof:integral-error})}{92}{subsubsection.23.10.11}%
 \contentsline {subsubsection}{\numberline {23.10.12}The Alternating-Series Error Bound (Theorem~\ref *{source:proof:alternating-error})}{92}{subsubsection.23.10.12}%
-\contentsline {subsection}{\numberline {23.11}Proofs from Chapter \ref *{sec:power-series}: Power Series}{92}{subsection.23.11}%
-\contentsline {subsubsection}{\numberline {23.11.1}Taylor's Inequality (Theorem~\ref *{source:proof:taylor-inequality})}{92}{subsubsection.23.11.1}%
-\contentsline {subsection}{\numberline {23.12}Proofs from Chapter \ref *{sec:solving-odes}: Solving ODEs}{92}{subsection.23.12}%
-\contentsline {subsubsection}{\numberline {23.12.1}Linear Combinations of Homogeneous Solutions (Theorem~\ref *{source:proof:homogeneous-solutions})}{92}{subsubsection.23.12.1}%
+\contentsline {subsection}{\numberline {23.11}Proofs from Chapter \ref *{sec:power-series}: Power Series}{93}{subsection.23.11}%
+\contentsline {subsubsection}{\numberline {23.11.1}Taylor's Inequality (Theorem~\ref *{source:proof:taylor-inequality})}{93}{subsubsection.23.11.1}%
+\contentsline {subsection}{\numberline {23.12}Proofs from Chapter \ref *{sec:solving-odes}: Solving ODEs}{93}{subsection.23.12}%
+\contentsline {subsubsection}{\numberline {23.12.1}Linear Combinations of Homogeneous Solutions (Theorem~\ref *{source:proof:homogeneous-solutions})}{93}{subsubsection.23.12.1}%

@@ -7,6 +7,83 @@ sums are explained below before they are used.
 
 \subsection{Proofs from Chapter \ref*{sec:trigonometry}: Trigonometry}
 
+\proofheading{The Sine Angle-Sum Formulas}{proof:sine-angle-sum}
+
+\begin{proof}
+Choose $OP=1$ and draw $PQ\perp OQ$. The tilted right triangle $OPQ$
+gives $OQ=\cos B$ and $PQ=\sin B$.
+\begin{center}
+\begin{tikzpicture}[scale=5.4, line cap=round, line join=round,
+                    every node/.style={font=\small, inner sep=1pt}]
+\coordinate (O) at (0,0);
+\coordinate (P) at (55:1);
+\coordinate (Q) at (30:{cos(25)});
+\coordinate (R) at (Q |- O);
+\coordinate (S) at (P |- O);
+\coordinate (T) at (P |- Q);
+\draw (O)--(R);
+\draw (O)--node[midway,sloped,above=4pt] {$1$} (P);
+\draw (O)--node[midway,sloped,below=3pt] {$\cos B$} (Q);
+\draw (P)--node[midway,sloped,above=3pt] {$\sin B$} (Q);
+\draw[dashed,gray] (T)--(Q);
+\draw[blue!70!black,line width=1.15pt]
+  (R)--node[midway,right=4pt] {$h_1$} (Q);
+\draw[blue!70!black,line width=1.15pt]
+  (S)--node[pos=.25,left=4pt] {$h_1$} (T);
+\draw[orange!85!black,line width=1.15pt]
+  (T)--node[midway,left=4pt] {$h_2$} (P);
+\draw[gray] (R) ++(-.035,0)--++(0,.035)--++(.035,0);
+\draw[gray] (S) ++(-.035,0)--++(0,.035)--++(.035,0);
+\draw[gray] (T) ++(0,.035)--++(.035,0)--++(0,-.035);
+\draw[gray] (Q) ++(210:.035)--++(120:.035)--++(30:.035);
+\draw (.13,0) arc[start angle=0,end angle=30,radius=.13];
+\node at (15:.185) {$A$};
+\draw (30:.235) arc[start angle=30,end angle=55,radius=.235];
+\node at (42.5:.30) {$B$};
+\draw (P) ++(270:.105)
+  arc[start angle=270,end angle=300,radius=.105];
+\path (P) ++(285:.175) node {$A$};
+\node[below left=2pt] at (O) {$O$};
+\node[above=3pt] at (P) {$P$};
+\node[above right=2pt] at (Q) {$Q$};
+\node[below right=2pt] at (R) {$R$};
+\node[below=3pt] at (S) {$S$};
+\node[left=3pt] at (T) {$T$};
+\end{tikzpicture}
+\end{center}
+Since $TQ$ is horizontal, the two blue segments have the same height.
+Also, $PQ\perp OQ$ makes the angle at $P$ equal to $A$. Thus
+\begin{align*}
+h_1&=OQ\sin A=\sin A\cos B,\\
+h_2&=PQ\cos A=\cos A\sin B.
+\end{align*}
+The total height is the blue height plus the orange height:
+$$\sin(A+B)=PS=h_1+h_2=\sin A\cos B+\cos A\sin B.$$
+
+The picture has $A,B>0$ and $A+B<\pi/2$; for other angles use signed
+lengths. Along the direction at $A$ and its counterclockwise perpendicular,
+$OP$ has components $\cos B$ and $\sin B$, whose vertical changes are
+the same two terms above.
+Finally, replace $B$ by $-B$ and use the evenness of cosine and oddness
+of sine:
+$$\sin(A-B)=\sin A\cos B-\cos A\sin B.$$
+\end{proof}
+
+\proofheading{The Cosine Angle-Sum Formulas}{proof:cosine-angle-sum}
+
+\begin{proof}
+Use $\cos\theta=\sin(\pi/2-\theta)$ and the sine addition formula
+just proved:
+\begin{align*}
+\cos(A-B)
+&=\sin\bigl((\pi/2-A)+B\bigr)\\
+&=\sin(\pi/2-A)\cos B+\cos(\pi/2-A)\sin B\\
+&=\cos A\cos B+\sin A\sin B.
+\end{align*}
+Replace $B$ by $-B$ to obtain
+$$\cos(A+B)=\cos A\cos B-\sin A\sin B.$$
+\end{proof}
+
 \proofheading{The Law of Sines (Theorem~\ref*{source:proof:law-of-sines})}{proof:law-of-sines}
 
 \begin{proof}
