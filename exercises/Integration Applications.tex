@@ -34,23 +34,39 @@
 \subsection{Kinematics}
 \begin{enumerate}
 \item If a particle's position at time $t$ is $x(t)=\cos(t)\sin(t)$, what is the total distance it travels from $t=0$ to $t=2\pi$?
+\item A cart's velocity is $v(t)=(t-1)(t-3)$ meters per second. Find its displacement and the total distance it travels during the first four seconds.
+\item A particle moves on a line with acceleration $a(t)=6t$ meters per second squared. Its initial velocity is $-3$ meters per second, and its initial position is $2$ meters. When does it reverse direction, and where is it then?
+\item Two cyclists start side by side on a straight road. For the first eight seconds, one rides at $6$ meters per second while the other's velocity is $v(t)=2t$ meters per second. When does the second cyclist catch the first, and how far has each traveled?
 \end{enumerate}
 
 
 \subsection{Average Values}
 \begin{enumerate}
 \item Find the average value of the function $f(x) = \cos^3(x)$ on the interval $[0,\pi]$.
+\item The temperature in a greenhouse is $T(t)=18+6\sin(\pi t/12)$ degrees Celsius, where $t$ is the number of hours after sunrise. Find the average temperature during the first six hours after sunrise.
+\item Find the average value of $f(x)=x^2$ on $[-2,2]$. At which points of the interval does the function equal its average value?
+\item For what $b>0$ does $f(x)=1/(1+x)^2$ have average value $1/4$ on $[0,b]$?
 
 \end{enumerate}
 
 \subsection{Probability}
 
 \begin{enumerate}
+\item A random variable $X$ has density $p(x)=kx(4-x)$ for $0\leq x\leq 4$ and zero elsewhere. Find $k$, then find $P(1\leq X\leq 3)$.
+\item A waiting time $T$, measured in minutes, has density $p(t)=\tfrac{1}{10}e^{-t/10}$ for $t\geq 0$ and zero elsewhere. Find the probability of waiting more than $15$ minutes and the expected waiting time.
+\item A random variable has CDF $F(x)=x^2/9$ on $[0,3]$, with $F(x)=0$ for $x<0$ and $F(x)=1$ for $x>3$. Find its density and its median.
 \item Prove that the Cauchy distribution 
 $$c(x)=\frac{1}{\pi\gamma\left(1+\left(\frac{x-x_0}{\gamma}\right)^2\right)}$$
 is a PDF for any $x_0$ and any $\gamma>0$. Find its CDF. Then prove that its expected value and variance do not exist.
 \end{enumerate}
 
+
+\subsection{Areas Between Curves}
+\begin{enumerate}
+\item Find the total area enclosed by $y=x^3$ and $y=4x$, counting both bounded regions.
+\item Find the area between $x=y^2-2$ and $x=y$ using horizontal slices.
+\item Find the area between $y=\sin x$ and $y=\cos x$ from $x=0$ to $x=\pi/2$. Where do the curves switch order?
+\end{enumerate}
 
 \subsection{Volumes and Surface Area}
 \begin{enumerate}
@@ -62,6 +78,9 @@ is a PDF for any $x_0$ and any $\gamma>0$. Find its CDF. Then prove that its exp
 \item What is the volume of the solid obtained by rotating the region enclosed by $x^2-x$ and $2x^2$ around the line $y=2$.
 \item Derive the volume of a hemisphere.
 \item What is the largest volume of solid with a (2,1)-elliptical base and whose cross sections are squares?
+\item The base of a solid is bounded by $y=4-x^2$ and the $x$-axis. Each cross section perpendicular to the $x$-axis is a semicircle whose diameter spans the base. Find the volume.
+\item Rotate the region between $y=\sqrt{x}$ and $y=x$ on $[0,1]$ about $y=2$. Find the volume using washers.
+\item The arc $y=\sqrt{2x+1}$ for $0\leq x\leq 4$ is rotated about the $x$-axis. Find the area of the surface swept out by the arc.
 \end{enumerate}
 
 
@@ -71,6 +90,9 @@ is a PDF for any $x_0$ and any $\gamma>0$. Find its CDF. Then prove that its exp
 \begin{enumerate}
 \item Find the length of the parameterized curve in the plane given by $x=t^2$ and $y=\frac{2}{3}t^3$ with $t\in[0,1]$.
 \item Find the length of the curve given by the equation $9y^2=4(x+1)^3$ and the constraints $0 \leq x \leq 1$, $y \geq 0$.
+\item Find the exact length of $y=\dfrac{x^3}{6}+\dfrac{1}{2x}$ from $x=1$ to $x=2$.
+\item A point follows the path $x(t)=\cos t+t\sin t$, $y(t)=\sin t-t\cos t$ for $0\leq t\leq\pi$. Find its speed and the length of the path.
+\item Set up an integral for the length of $y=\sin x$ from $x=0$ to $x=\pi$. Use symmetry to write it as an integral over $[0,\pi/2]$.
 \end{enumerate}
 
 
@@ -78,6 +100,9 @@ is a PDF for any $x_0$ and any $\gamma>0$. Find its CDF. Then prove that its exp
 
 \begin{enumerate}
 \item Find the centroid of the finite region bounded by the functions $f(x)=x^2$ and $g(x)=x$.
+\item A rod extends from $x=0$ to $x=3$ meters and has linear density $\lambda(x)=2+x^2$ kilograms per meter. Find its mass and its center of mass.
+\item Find the centroid of the region under $y=\sin x$ and above the $x$-axis on $[0,\pi]$. Which coordinate can you predict from symmetry?
+\item A uniform rectangular plate occupies $0\leq x\leq 6$, $0\leq y\leq 4$. A disk of radius $1$ centered at $(4,2)$ is cut out. Find the centroid of the remaining plate.
 \end{enumerate}
 
 
@@ -85,9 +110,8 @@ is a PDF for any $x_0$ and any $\gamma>0$. Find its CDF. Then prove that its exp
 
 \begin{enumerate}
  \item A 10m-long metal chain of total mass 20 kilograms is lying flat on the floor. How much work would be done if someone grabbed one end of the chain and lifted it 5 meters above the floor? Assume that the acceleration due to gravity is  9.8m/sec$^2$, and that the lifted portion of the chain always hangs vertically.
-
-
-
-
+\item A force of $12$ newtons holds a spring $0.20$ meters beyond its natural length. Assuming Hooke's law, find the work needed to stretch it from $0.10$ to $0.30$ meters beyond its natural length.
+\item A bucket is lifted $8$ meters at a constant speed. After it has risen $y$ meters, the bucket and its remaining water have a combined mass of $12-y/2$ kilograms. Find the work done against gravity. Use $g=9.8$ meters per second squared.
+\item An inverted conical tank is $4$ meters deep and has radius $2$ meters at the rim. Water fills the bottom $2$ meters. Find the work needed to pump all the water to a spout $1$ meter above the rim. Use a weight density of $9800$ newtons per cubic meter.
 \end{enumerate}
 \end{document}
