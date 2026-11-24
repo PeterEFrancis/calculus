@@ -1,11 +1,13 @@
-\section{Moments and Centroids}
+\subsection{Moments and Centroids}
+\label{sec:moments-centroids}
 
 
 Consider a mass-less rod that is balanced on a fulcrum. If we place a block with mass $m$ a distance of $2l$ to the right of the fulcrum, intuitively, the rod will rotate clockwise. If we want to balance the rod, laws of Physics tell us that we can place two blocks on the left side, a distance $l$ from the fulcrum.
 
 \vspace{0.5cm}
 
-\begin{center}
+\begin{figure}[H]
+\centering
 \resizebox{3in}{!}{
 \tikzset{every picture/.style={line width=0.75pt}}
 \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
@@ -39,7 +41,8 @@ Consider a mass-less rod that is balanced on a fulcrum. If we place a block with
 
 
 \end{tikzpicture}}
-\end{center}
+\caption{Two masses at distance $l$ balance one at distance $2l$.}
+\end{figure}
 
 % \vspace{0.5cm}
 
@@ -117,9 +120,11 @@ This method is interesting in a discrete system with finitely many masses, but w
 Suppose we are given two plotted functions $f$ and $g$ that enclose an area (mass distribution) $A$ in the plane, and we wish to find the center of mass along the $x$-axis.
 
 
-\begin{center}
-\includegraphics[width=3in]{img/moments_plot1.png}
-\end{center}
+\begin{figure}[H]
+\centering
+\input{content/figures/moments_vertical_slice.tex}
+\caption{A vertical strip has area $(f(x)-g(x))\,dx$ and moment arm $x$.}
+\end{figure}
 
 As is illustrated in the figure, we can divide the mass area into infinitesimal slices between the endpoints $a$ and $b$, and sum them up. As before, each term is weighted with the signed distance along the moment arm ($x-axis$) to the origin $x$, and has the infinitesimal area (``mass'')
 $$\underbrace{(f(x)-g(x))}_\text{height}\ \underbrace{dx}_\text{width}.$$
@@ -138,9 +143,11 @@ $$
 See the figure below for a visual:
 
 
-\begin{center}
-\includegraphics[width=3in]{img/moments_plot2.png}
-\end{center}
+\begin{figure}[H]
+\centering
+\input{content/figures/moments_horizontal_slice.tex}
+\caption{A horizontal strip has width $p(y)-q(y)$ and moment arm $y$.}
+\end{figure}
 
 
 Keep in mind that $p$ and $q$ are functions in terms of a $y$ variable. If it is difficult to express a function in terms of its $y$ variable, you can still find $\overline{y}$, but you have to be a bit more clever! Here is how:
@@ -152,9 +159,11 @@ We can keep the slices from the $\overline{x}$ sum, we just have to notice that 
 $$y=\frac{f(x)+g(x)}{2},$$
 the midpoint between the `top' and `bottom' functions. In other words, the midpoint of the area slice is where the mass from the slice is applied to the $y$-axis moment arm. See the figure below for a visual.
 
-\begin{center}
-\includegraphics[width=3in]{img/moments_plot3.png}
-\end{center}
+\begin{figure}[H]
+\centering
+\input{content/figures/moments_slice_midpoint.tex}
+\caption{The midpoint of a vertical strip is at height $(f(x)+g(x))/2$.}
+\end{figure}
 
 That means that we can write an integral to find $\overline{y}$ without an integration along the $y$-axis!
 $$

@@ -1,0 +1,33 @@
+\begin{tikzpicture}[line width=.7pt,
+  every node/.style={font=\small,inner sep=2pt},
+  declare function={
+    mp(\t)=2.05+.16*(\t-.7)+.5*(\t-.7)*(3.7-\t);
+    mq(\t)=2.05+.16*(\t-.7)-.22*(\t-.7)*(3.7-\t);
+  }]
+\fill[gray!10]
+  plot[domain=.7:3.7,samples=61] ({mp(\x)},\x)
+  --plot[domain=3.7:.7,samples=61] ({mq(\x)},\x)--cycle;
+\filldraw[fill=figureblue!20,draw=black!65]
+  plot[domain=2.1:2.3,samples=9] ({mp(\x)},\x)
+  --plot[domain=2.3:2.1,samples=9] ({mq(\x)},\x)--cycle;
+\draw[domain=.7:3.7,samples=61] plot ({mp(\x)},\x);
+\draw[domain=.7:3.7,samples=61] plot ({mq(\x)},\x);
+\node[above left] at (1.7,2.9) {$q(y)$};
+\node[right] at (3.4,2.85) {$p(y)$};
+\draw[->] (-.2,0)--(5,0) node[right] {$x$};
+\draw[->] (0,-.2)--(0,4.2) node[above] {$y$};
+\node[below left] at (0,0) {$0$};
+\draw[dashed,black!45] (0,.7)--(2.05,.7) (0,3.7)--(2.53,3.7)
+  (0,2.2)--(1.795,2.2);
+\draw (.06,.7)--(-.06,.7) node[left] {$c$};
+\draw (.06,3.7)--(-.06,3.7) node[left] {$d$};
+\draw[dashed,black!45] (-.1,0)--(-.85,0) (0,2.2)--(-.85,2.2);
+\draw[<->] (-.75,0)--(-.75,2.2) node[midway,left] {$y$};
+\draw[black!45] (1.795,2.2)--(1.795,1.6)
+  (3.415,2.2)--(3.415,1.6);
+\draw[<->] (1.795,1.7)--(3.415,1.7)
+  node[midway,below,fill=white] {$p(y)-q(y)$};
+\draw[black!45] ({mp(2.1)},2.1)--(4,2.1)
+  ({mp(2.3)},2.3)--(4,2.3);
+\draw[|-|] (3.9,2.1)--(3.9,2.3) node[midway,right] {$dy$};
+\end{tikzpicture}

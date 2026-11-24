@@ -1,0 +1,8 @@
+Use case: historical-scene.
+Asset type: a decorative illustration for a printed mathematics book's epigraph page, beneath a quote about monsters beyond the edge of a map.
+Primary request: one black-and-white sea monster that could appear on a sixteenth-century nautical map.
+Subject: a single fantastical sea serpent, with a dragonlike head, expressive eye, toothed mouth, a long coherent scaled body forming two graceful humps above the water, a spiny dorsal ridge, small fins, and a curling tail. A few stylized engraved wave strokes surround its body. It should feel strange, lively, and slightly menacing, like an authentic old cartographic sea creature.
+Style/medium: traditional black ink woodcut and copperplate engraving, crisp irregular hand-drawn contours, fine hatching and crosshatching, white negative space, elegant antique linework readable when printed about four inches wide.
+Composition: complete creature entirely visible, centered in a horizontal composition, generous breathing room around all edges. Transparent background; no paper rectangle or scene backdrop.
+Color palette: black ink and transparent/white negative space only. No color or sepia.
+Constraints: one continuous creature with understandable anatomy; no extra heads or detached body parts; no map, compass, ships, borders, lettering, captions, watermarks, shadows, gradients, or photographic effects.

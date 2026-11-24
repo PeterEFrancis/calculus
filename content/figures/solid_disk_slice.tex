@@ -1,0 +1,39 @@
+\begin{tikzpicture}[line width=.7pt,
+  every node/.style={font=\small,inner sep=2pt}]
+\pgfmathsetmacro{\coneangle}{acos(-.5/5.3)}
+\coordinate (coneupper) at ({5.3+.5*cos(\coneangle)},{1.5*sin(\coneangle)});
+\coordinate (conelower) at ({5.3+.5*cos(\coneangle)},{-1.5*sin(\coneangle)});
+\fill[gray!10] (0,0)--(coneupper)
+  arc[start angle=\coneangle,end angle=-\coneangle,
+      x radius=.5,y radius=1.5]--cycle;
+\draw[gray!70] (0,0)--(coneupper) (0,0)--(conelower);
+\filldraw[fill=gray!5,draw=gray!70]
+  (5.3,0) ellipse[x radius=.5,y radius=1.5];
+\draw[dashed,gray] (0,0)--(5.3,0);
+\filldraw[fill=figureblue!12,draw=figureaccent]
+  ({5.3*.58},0) ellipse[x radius={.5*.58},y radius={1.5*.58}];
+\fill[figureblue!22]
+  ({.58*(5.3+.5*cos(\coneangle))},{.58*1.5*sin(\coneangle)})
+  --({.64*(5.3+.5*cos(\coneangle))},{.64*1.5*sin(\coneangle)})
+  arc[start angle=\coneangle,end angle=-\coneangle,
+      x radius={.5*.64},y radius={1.5*.64}]
+  --({.58*(5.3+.5*cos(\coneangle))},{-.58*1.5*sin(\coneangle)})
+  arc[start angle=-\coneangle,end angle=\coneangle,
+      x radius={.5*.58},y radius={1.5*.58}]--cycle;
+\filldraw[fill=figureblue!28,draw=figureaccent]
+  ({5.3*.64},0) ellipse[x radius={.5*.64},y radius={1.5*.64}];
+\foreach \sgn in {-1,1}{
+  \draw[figureaccent]
+    ({.58*(5.3+.5*cos(\coneangle))},{\sgn*.58*1.5*sin(\coneangle)})
+    --({.64*(5.3+.5*cos(\coneangle))},{\sgn*.64*1.5*sin(\coneangle)});
+}
+\draw[->,dashed,gray] (-.25,0)--(6.15,0) node[right,text=black] {$x$};
+\node[below left] at (0,0) {$0$};
+\draw[->,figureaccent] ({5.3*.64},0)--({5.3*.64},{1.5*.64})
+  node[pos=.65,right=12pt] {$f(x)$};
+\draw[dashed,gray]
+  ({5.3*.58},{-1.5*.58})--({5.3*.58},-1.45)
+  ({5.3*.64},{-1.5*.64})--({5.3*.64},-1.45);
+\draw[<->] ({5.3*.58},-1.32)--({5.3*.64},-1.32)
+  node[midway,below=4pt] {$dx$};
+\end{tikzpicture}

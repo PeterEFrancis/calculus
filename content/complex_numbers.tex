@@ -1,11 +1,11 @@
-\clearpage
 \section{Complex Numbers}
+\label{sec:complex-numbers}
 
 A \textbf{complex number} is of the form $a+bi$, where $a$ and $b$ are real numbers and $i=\sqrt{-1}$ is the complex unit (so $i^2=-1$).\mar{Why are all real numbers actually complex numbers?} \mar{What is $i^n$ for $n=0,1,2,3,4,\dots$?} Similar to the way that real numbers can be visualized on a line, a complex number $x+yi$ can be visualized as the point $(x,y)$ on a plane.
 
 \begin{figure}[H]
   \begin{center}
-    \fbox{\resizebox{!}{2in}{
+    \resizebox{!}{2in}{
         \tikzset{every picture/.style={line width=0.75pt}}
       \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
         %uncomment if require: \path (0,444); %set diagram left start at 0, and has height of 444
@@ -13,15 +13,15 @@ A \textbf{complex number} is of the form $a+bi$, where $a$ and $b$ are real numb
         %Shape: Axis 2D [id:dp7259116322173234]
         \draw  (270.5,209) -- (455,209)(307.5,66) -- (307.5,246) (448,204) -- (455,209) -- (448,214) (302.5,73) -- (307.5,66) -- (312.5,73)  ;
         %Straight Lines [id:da9147059998992291]
-        \draw  [dash pattern={on 0.84pt off 2.51pt}]  (393,209.6) -- (393,131.6) ;
-        \draw [shift={(393,131.6)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+        \draw  [gray,dash pattern={on 0.84pt off 2.51pt}]  (393,209.6) -- (393,131.6) ;
+        \draw [shift={(393,131.6)}, rotate = 270] [color=figureblue][fill=figureblue][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
 
         %Straight Lines [id:da605780494745993]
-        \draw  [dash pattern={on 0.84pt off 2.51pt}]  (307.3,131.6) -- (393,131.6) ;
+        \draw  [gray,dash pattern={on 0.84pt off 2.51pt}]  (307.3,131.6) -- (393,131.6) ;
 
 
         %Straight Lines [id:da26964787119937217]
-        \draw    (393,131.6) -- (306.91,209.79) ;
+        \draw[figureblue,line width=.9pt] (393,131.6) -- (306.91,209.79) ;
 
 
 
@@ -30,10 +30,10 @@ A \textbf{complex number} is of the form $a+bi$, where $a$ and $b$ are real numb
         % Text Node
         \draw (298,131.6) node   {$y$};
         % Text Node
-        \draw (431,116.6) node   {$z=x+iy$};
+        \draw (431,116.6) node[text=figureaccent] {$z=x+iy$};
 
       \end{tikzpicture}
-    }}
+    }
   \end{center}
   \caption{Plotting a Complex Number}
 \end{figure}
@@ -67,12 +67,27 @@ For an arbitrary $z=x+iy$, it is always true that\mar{Show that $\frac{z_1}{z_2}
 $$z^*\cdot z =(x+iy)(x-iy) = x^2+y^2=|z|^2.$$
 \mar{What is $(z^*)^*$ for any complex $z$? What is $z^*$ for any real $z$?}
 
-We can also write complex numbers using a polar representation.
+To connect complex numbers with exponentials, we use \textbf{Euler's
+formula} (Theorem~\ref{thm:eulers-formula}). For any real angle $\theta$
+measured in radians,
+$$e^{i\theta}=\cos\theta+i\sin\theta.$$
+We will derive this formula using
+\hyperref[sec:euler-formula-series]{power series}.
+
+Notice what happens when $\theta=\pi$:
+$$e^{i\pi}=\cos\pi+i\sin\pi=-1.$$
+Adding $1$ gives \textbf{Euler's identity},
+$$e^{i\pi}+1=0.$$
+Euler's identity is this special case of Euler's formula.
+
+The formula also gives us a compact polar representation of a complex
+number. For $z\ne0$, let $\theta$ be its angle from the positive real
+axis and let $r=|z|$. Then $x=r\cos\theta$ and $y=r\sin\theta$.
 
 
 \begin{figure}[H]
   \centering
-    \resizebox{!}{2in}{\fbox{
+    \resizebox{!}{2in}{
 
         \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
 
@@ -82,37 +97,32 @@ We can also write complex numbers using a polar representation.
         %Shape: Axis 2D [id:dp7259116322173234]
         \draw  (270.5,209) -- (455,209)(307.5,66) -- (307.5,246) (448,204) -- (455,209) -- (448,214) (302.5,73) -- (307.5,66) -- (312.5,73)  ;
         %Straight Lines [id:da9147059998992291]
-        \draw  [dash pattern={on 0.84pt off 2.51pt}]  (393,209.6) -- (393,131.6) ;
-        \draw [shift={(393,131.6)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
+        \draw [shift={(393,131.6)}, rotate = 270] [color=figureblue][fill=figureblue][line width=0.75]      (0, 0) circle [x radius= 3.35, y radius= 3.35]   ;
 
         %Straight Lines [id:da605780494745993]
-        \draw  [dash pattern={on 0.84pt off 2.51pt}]  (307.3,131.6) -- (393,131.6) ;
 
 
         %Straight Lines [id:da26964787119937217]
-        \draw    (393,131.6) -- (306.91,209.79) ;
+        \draw[figureblue,line width=.9pt] (393,131.6) -- (306.91,209.79) ;
 
 
 
         % Text Node
-        \draw (393,216.6) node   {$x$};
-        % Text Node
-        \draw (298,131.6) node   {$y$};
-        % Text Node
-        \draw (431,116.6) node   {$z=x+iy$};
+        \draw (431,116.6) node[text=figureaccent] {$z=re^{i\theta}$};
         % Text Node
         \draw (330,199) node   {$\theta $};
         % Text Node
-        \draw (343,158) node   {$|z|$};
+        \draw (343,158) node[text=figureaccent] {$|z|$};
 
 
       \end{tikzpicture}
-    }}
+    }
   \caption{Polar Representation of Complex Numbers}
 \end{figure}
 
- If $\theta$ is the angle between the complex `vector', $z$, and the real axis and $r=|z|$, then $x=r\cos\theta$ and $y=r\sin\theta$. Then we can use Euler's formula to write
+Multiplying Euler's formula by $r$ now gives
 $$z=x+iy=r\cos\theta+ir\sin\theta = r(\cos\theta+i\sin\theta)=re^{i\theta}.$$
+For $z=0$, the same expression works with $r=0$ and any angle $\theta$.
 
 
 % \begin{tcolorbox}

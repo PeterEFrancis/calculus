@@ -16,6 +16,11 @@
 \usepackage{mathtools}
 \usepackage{stmaryrd}
 
+% Shared figure palette: volume-diagram blue, a darker comparison, and neutrals.
+\colorlet{figureblue}{blue}
+\colorlet{figureaccent}{figureblue!70!black}
+\colorlet{figuresecondary}{figureblue!35!black}
+
 \usepackage{pgf, latexsym, float, soul, array, booktabs, dsfont, gensymb, wasysym, multicol, tcolorbox, tabularx, enumitem}
 \tcbuselibrary{skins,breakable}
 
@@ -282,6 +287,10 @@ Stony Brook, NY 11794, USA, Earth\\
 \input{content/applications_of_integrals.tex}
 
 \clearpage
+\part{Differential Equations}
+\input{content/differential_equations.tex}
+
+\clearpage
 \part{Sequences and Series}
 \input{content/sequences.tex}
 \clearpage
@@ -290,18 +299,31 @@ Stony Brook, NY 11794, USA, Earth\\
 \input{content/power_series.tex}
 
 \clearpage
-\part{Differential Equations}
-\input{content/differential_equations.tex}
-
-
-\clearpage
 
 \part{Appendix}
 \appendix
-\input{content/moments_and_centroids.tex}
 \input{content/complex_numbers.tex}
 \clearpage
 \input{content/slanted_asymptotes.tex}
+\clearpage
+\fancypagestyle{epigraph}{%
+  \fancyhead{}%
+  \renewcommand{\headrulewidth}{0pt}}
+\thispagestyle{epigraph}
+\null
+\begin{tikzpicture}[remember picture,overlay]
+\node[align=center,text width=5.2in,inner sep=0pt]
+  at (current page.center) {%
+  {\Large\itshape
+  ``You're off the edge of the map, mate.\\[.35em]
+  Here there be monsters.''\par}
+  \vspace{1em}
+  {\large ---Hector Barbossa\par}
+  \vspace{1.5em}
+  \includegraphics[width=4.2in,height=3in,keepaspectratio]
+    {content/figures/map-sea-monster.png}
+};
+\end{tikzpicture}
 \clearpage
 \part{Proofs}
 \input{content/proofs.tex}

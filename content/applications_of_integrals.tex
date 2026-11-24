@@ -33,7 +33,7 @@ Imagine water is sloshing around in a tank and the height of the water at a part
 %Straight Lines [id:da5673860317913473] 
 \draw    (137.55,30.33) -- (137.55,150.03) ;
 %Shape: Polygon Curved [id:ds7088187846595497] 
-\draw  [fill={rgb, 255:red, 222; green, 222; blue, 222 }  ,fill opacity=1 ] (179.85,61.03) .. controls (196.34,55.58) and (185.98,94.48) .. (206.35,97.55) .. controls (226.71,100.62) and (241.59,71.86) .. (267.7,71.77) .. controls (293.81,71.67) and (299.9,91.52) .. (315.11,97.55) .. controls (330.32,103.59) and (328.57,82.06) .. (348.09,94.95) .. controls (347.87,101.17) and (348.41,132.15) .. (348.11,150.03) .. controls (249.57,150.34) and (179.85,150.34) .. (137.55,150.03) .. controls (138,133) and (137,104) .. (137.55,90.18) .. controls (158,83) and (163.37,66.47) .. (179.85,61.03) -- cycle ;
+\draw  [fill=figureblue!20 ] (179.85,61.03) .. controls (196.34,55.58) and (185.98,94.48) .. (206.35,97.55) .. controls (226.71,100.62) and (241.59,71.86) .. (267.7,71.77) .. controls (293.81,71.67) and (299.9,91.52) .. (315.11,97.55) .. controls (330.32,103.59) and (328.57,82.06) .. (348.09,94.95) .. controls (347.87,101.17) and (348.41,132.15) .. (348.11,150.03) .. controls (249.57,150.34) and (179.85,150.34) .. (137.55,150.03) .. controls (138,133) and (137,104) .. (137.55,90.18) .. controls (158,83) and (163.37,66.47) .. (179.85,61.03) -- cycle ;
 %Straight Lines [id:da25646989795162733] 
 \draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ]   (348.11,30.33) -- (348.11,150.03) ;
 
@@ -50,6 +50,7 @@ Imagine water is sloshing around in a tank and the height of the water at a part
 
 \phantom{}
 
+\caption{Water height before the surface settles.}
 \end{figure}
 
 The average value of $f(x)$ on $[a,b]$ is the height of the water once it settles. To find this height, find the area of the water $\left(\displaystyle\int_a^bf(x)\ dx\right)$ and divide by the width of the tank ($b-a$).
@@ -88,7 +89,7 @@ $$A=\int dA = \int_a^b(f(x)-g(x))\ dx.$$
 %Curve Lines [id:da13490737944947462] 
 \draw    (112,105) .. controls (130.83,90.88) and (170.53,145.9) .. (225,136) .. controls (279.47,126.1) and (366,103) .. (388,132) ;
 %Shape: Rectangle [id:dp8230016382923657] 
-\draw  [fill={rgb, 255:red, 222; green, 222; blue, 222 }  ,fill opacity=1 ] (250,67) -- (259,67) -- (259,130) -- (250,130) -- cycle ;
+\draw  [fill=figureblue!20 ] (250,67) -- (259,67) -- (259,130) -- (250,130) -- cycle ;
 
 % Text Node
 \draw (394,42.4) node [anchor=north west][inner sep=0.75pt]    {$f( x)$};
@@ -101,6 +102,7 @@ $$A=\int dA = \int_a^b(f(x)-g(x))\ dx.$$
 
 \end{tikzpicture}
 
+\caption{A thin strip between the upper and lower curves.}
 \end{figure}
 
 
@@ -129,7 +131,8 @@ $$L=\int_a^b\sqrt{1+f'(x)^2}\ dx.$$
 %Curve Lines [id:da05101594018896982] 
 \draw    (149,184) .. controls (167.83,169.88) and (219.53,162.9) .. (274,153) .. controls (328.47,143.1) and (319,63) .. (410,75) ;
 %Shape: Triangle [id:dp7671239003370118] 
-\draw  [line width=1.5]  (333,101) -- (333,133) -- (308,133) -- cycle ;
+\draw[black!50] (333,101)--(333,133)--(308,133);
+\draw[figureblue,line width=1.5] (308,133)--(333,101);
 
 % Text Node
 \draw (414,62.4) node [anchor=north west][inner sep=0.75pt]    {$f( x)$};
@@ -147,6 +150,7 @@ $$L=\int_a^b\sqrt{1+f'(x)^2}\ dx.$$
 
 \end{tikzpicture}
 
+\caption{A short arc is approximated by a straight segment of length $dL$.}
 \end{figure}
 
 
@@ -232,7 +236,7 @@ $$\sigma^2 = \int_{0}^\infty \left(x-1\right)^2e^{-x}\ dx=1.$$
 \subsection{Volumes and Surface Area}
 
 The same idea we used for area works for volume: cut a solid into thin
-pieces, find the volume of one piece, and add them up!
+pieces, find the volume of one piece, and add them up.
 
 \subsubsection{Cross Sections}
 
@@ -250,7 +254,7 @@ or something else.
   every node/.style={font=\small,inner sep=2pt}]
 \fill[gray!15] (0,0)--(1,1)
   plot[domain=1:0,samples=45] (\x,{\x*\x})--cycle;
-\fill[gray!45] (.58,{.58*.58})--(.58,.58)--(.62,.62)
+\fill[figureblue!20] (.58,{.58*.58})--(.58,.58)--(.62,.62)
   --(.62,{.62*.62})--cycle;
 \draw[->] (-.06,0)--(1.15,0) node[right] {$x$};
 \draw[->] (0,-.06)--(0,1.15) node[above] {$y$};
@@ -271,7 +275,8 @@ or something else.
 \begin{exampleblock}
 Let the base of a solid be the region between $y=x$ and $y=x^2$ on
 $[0,1]$, shown in Figure~\ref{fig:volume-base}. Suppose its cross sections
-perpendicular to the $x$-axis are squares. Each square has side length
+perpendicular to the $x$-axis are squares, as in
+Figure~\ref{fig:square-cross-sections}. Each square has side length
 $x-x^2$, so
 $$\begin{aligned}
 V&=\int_0^1(x-x^2)^2\ dx\\
@@ -279,6 +284,13 @@ V&=\int_0^1(x-x^2)^2\ dx\\
  &=\frac13-\frac12+\frac15=\frac1{30}.
 \end{aligned}$$
 \end{exampleblock}
+
+\begin{figure}[H]
+\centering
+\input{content/figures/solid_square_slice.tex}
+\caption{The solid with square cross sections. A thin slice has volume $A(x)\,dx$.}
+\label{fig:square-cross-sections}
+\end{figure}
 
 \subsubsection{Disks and Washers}
 
@@ -289,6 +301,13 @@ $$dV=\pi f(x)^2\ dx
 \qquad\Longrightarrow\qquad
 V=\pi\int_a^b f(x)^2\ dx.$$
 
+\begin{figure}[H]
+\centering
+\input{content/figures/solid_disk_slice.tex}
+\caption{Rotating the region under $y=x$ on $[0,1]$ around the $x$-axis makes a cone. The blue slice is a disk with thickness $dx$.}
+\label{fig:disk-slice}
+\end{figure}
+
 If there is a hole, the cross section is a \textbf{washer}: a big disk
 with a smaller disk removed. Let $R(x)$ be the outer radius and $r(x)$
 the inner radius, with $R(x)\geq r(x)\geq0$. Then
@@ -297,9 +316,16 @@ Both radii are distances from the axis of rotation. Notice that we
 subtract the \textit{squares} of the radii, rather than squaring their
 difference.
 
-\begin{exampleblock}
+\begin{exampleblock}[breakable]
 Rotate the region in Figure~\ref{fig:volume-base} around the $x$-axis.
 The outer radius is $R(x)=x$, and the inner radius is $r(x)=x^2$.
+\begin{figure}[H]
+\centering
+\input{content/figures/solid_washer_slice.tex}
+\caption{Figure~\ref{fig:volume-base} rotated around the $x$-axis, with part cut away to show a blue washer of thickness $dx$.}
+\label{fig:washer-slice}
+\end{figure}
+
 Therefore,
 $$\begin{aligned}
 V&=\pi\int_0^1(x^2-x^4)\ dx\\
@@ -324,8 +350,15 @@ $$V=2\pi\int_a^b x\bigl(f(x)-g(x)\bigr)\ dx.$$
 For washers, slice perpendicular to the axis. For shells, slice parallel
 to it. Horizontal slices work the same way, using $dy$.
 
-\begin{exampleblock}
+\begin{exampleblock}[breakable]
 Now rotate the region in Figure~\ref{fig:volume-base} around the $y$-axis.
+\begin{figure}[H]
+\centering
+\input{content/figures/solid_shell_slice.tex}
+\caption{Figure~\ref{fig:volume-base} rotated around the $y$-axis, with part cut away to show a blue shell of radial thickness $dx$.}
+\label{fig:cylindrical-shell}
+\end{figure}
+
 Each shell has radius $x$ and height $x-x^2$, so
 $$\begin{aligned}
 V&=2\pi\int_0^1x(x-x^2)\ dx\\
@@ -333,6 +366,7 @@ V&=2\pi\int_0^1x(x-x^2)\ dx\\
 \end{aligned}$$
 The axis changed, so this is a different solid from the washer example.
 \end{exampleblock}
+\mar{What changes if the same region is rotated around the line $x=-1$?}
 
 \subsubsection{Surface Area}
 
@@ -415,27 +449,7 @@ use water density $\rho=1000$ kilograms per cubic meter.
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[x=.9cm,y=.9cm,line width=.75pt,
-  every node/.style={font=\small,inner sep=2pt}]
-\fill[gray!12] (0,0) rectangle (2,2);
-\fill[blue!20] (0,.8) rectangle (2,.94);
-\draw (0,2)--(0,0) arc[start angle=180,end angle=360,
-  x radius=1,y radius=.18]--(2,2);
-\draw (1,2) ellipse[x radius=1,y radius=.18];
-\draw[dashed] (0,0) arc[start angle=180,end angle=0,
-  x radius=1,y radius=.18];
-\draw (0,.8)--(2,.8) (0,.94)--(2,.94);
-\draw[->] (2,2)--(2.4,2)--(2.4,3)--(3.15,3);
-\draw[dashed,gray] (-.4,3)--(3.4,3);
-\draw[->] (-.55,-.2)--(-.55,3.4);
-\node[above] at (-.55,3.4) {$y$};
-\foreach \h in {0,2,3}
-  \draw (-.62,\h)--(-.48,\h) node[left=3pt] {$\h$};
-\draw (-.62,.87)--(-.48,.87) node[left=3pt] {$y$};
-\draw[<->] (2.85,.87)--(2.85,3)
-  node[midway,right] {$3-y$};
-\draw[dashed,gray] (2,.87)--(2.85,.87);
-\end{tikzpicture}
+\input{content/figures/pumping_water.tex}
 \caption{A layer at height $y$ must be lifted $3-y$ meters.}
 \label{fig:pumping-water}
 \end{figure}
@@ -452,3 +466,5 @@ W&=\int_0^2 9800\pi(3-y)\ dy\\
 The lifting distance depends on the layer's height, even though every
 layer has the same cross-sectional area.
 \end{exampleblock}
+
+\input{content/moments_and_centroids.tex}

@@ -3,20 +3,33 @@
 \contentsline {figure}{\numberline {3}{\ignorespaces The Unit Circle}}{9}{figure.3}%
 \contentsline {figure}{\numberline {4}{\ignorespaces Similar Triangles}}{10}{figure.4}%
 \contentsline {figure}{\numberline {5}{\ignorespaces Circumscribed Triangle}}{12}{figure.5}%
-\contentsline {figure}{\numberline {6}{\ignorespaces A Surjection, a Bijection, and an Injection}}{15}{figure.6}%
+\contentsline {figure}{\numberline {6}{\ignorespaces A Surjection, a Bijection, and an Injection}}{14}{figure.6}%
 \contentsline {figure}{\numberline {7}{\ignorespaces Two functions with the same limits}}{18}{figure.7}%
 \contentsline {figure}{\numberline {8}{\ignorespaces A cartoon of the $\varepsilon -\delta $ definition of a limit}}{20}{figure.8}%
 \contentsline {figure}{\numberline {9}{\ignorespaces A Cartoon of the Intermediate Value Theorem}}{24}{figure.9}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Flowchart for evaluating limits}}{25}{figure.10}%
-\contentsline {figure}{\numberline {11}{\ignorespaces The four cases of vertical asymptotes}}{26}{figure.11}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Linear Approximation}}{37}{figure.12}%
-\contentsline {figure}{\numberline {13}{\ignorespaces The Geometric Definition of the Definite Integral}}{43}{figure.13}%
-\contentsline {figure}{\numberline {14}{\ignorespaces A Right Riemann Sum}}{44}{figure.14}%
-\contentsline {figure}{\numberline {15}{\ignorespaces A vertical strip between $y=x$ and $y=x^2$ has height $x-x^2$.}}{57}{figure.15}%
-\contentsline {figure}{\numberline {16}{\ignorespaces A layer at height $y$ must be lifted $3-y$ meters.}}{60}{figure.16}%
-\contentsline {figure}{\numberline {17}{\ignorespaces The slope field $y'=x+y$.}}{73}{figure.17}%
-\contentsline {figure}{\numberline {18}{\ignorespaces The logistic solution $P(t)=1000/(1+9e^{-t/2})$.}}{78}{figure.18}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Here $y(t)>0$, so the spring pulls the mass to the left.}}{78}{figure.19}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Numerically estimated populations for the example with $x(0)=40$ and $y(0)=5$.}}{80}{figure.20}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Plotting a Complex Number}}{85}{figure.21}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Polar Representation of Complex Numbers}}{86}{figure.22}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Flowchart for evaluating limits}}{26}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces The four cases of vertical asymptotes}}{27}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces A Right Triangle for Inverse Sine}}{38}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Linear Approximation}}{39}{figure.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces The Geometric Definition of the Definite Integral}}{45}{figure.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces A Right Riemann Sum}}{46}{figure.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Water height before the surface settles.}}{55}{figure.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces A thin strip between the upper and lower curves.}}{56}{figure.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces A short arc is approximated by a straight segment of length $dL$.}}{57}{figure.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces A vertical strip between $y=x$ and $y=x^2$ has height $x-x^2$.}}{59}{figure.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces The solid with square cross sections. A thin slice has volume $A(x)\,dx$.}}{60}{figure.20}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Rotating the region under $y=x$ on $[0,1]$ around the $x$-axis makes a cone. The blue slice is a disk with thickness $dx$.}}{60}{figure.21}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Figure~\ref {fig:volume-base} rotated around the $x$-axis, with part cut away to show a blue washer of thickness $dx$.}}{61}{figure.22}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Figure~\ref {fig:volume-base} rotated around the $y$-axis, with part cut away to show a blue shell of radial thickness $dx$.}}{62}{figure.23}%
+\contentsline {figure}{\numberline {24}{\ignorespaces A layer at height $y$ must be lifted $3-y$ meters.}}{64}{figure.24}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Two masses at distance $l$ balance one at distance $2l$.}}{64}{figure.25}%
+\contentsline {figure}{\numberline {26}{\ignorespaces A vertical strip has area $(f(x)-g(x))\,dx$ and moment arm $x$.}}{66}{figure.26}%
+\contentsline {figure}{\numberline {27}{\ignorespaces A horizontal strip has width $p(y)-q(y)$ and moment arm $y$.}}{66}{figure.27}%
+\contentsline {figure}{\numberline {28}{\ignorespaces The midpoint of a vertical strip is at height $(f(x)+g(x))/2$.}}{67}{figure.28}%
+\contentsline {figure}{\numberline {29}{\ignorespaces The slope field $y'=x+y$.}}{70}{figure.29}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Euler estimates with step sizes 1 (dashed) and $1/2$ (solid), compared with the actual solution in black.}}{71}{figure.30}%
+\contentsline {figure}{\numberline {31}{\ignorespaces The logistic solution $P(t)=1000/(1+9e^{-t/2})$.}}{75}{figure.31}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Here $y(t)>0$, so the spring pulls the mass to the left.}}{75}{figure.32}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Numerically estimated populations for the example with $x(0)=40$ and $y(0)=5$: rabbits solid and foxes dashed.}}{77}{figure.33}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Plotting a Complex Number}}{88}{figure.34}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Polar Representation of Complex Numbers}}{89}{figure.35}%

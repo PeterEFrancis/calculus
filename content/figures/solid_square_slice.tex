@@ -1,0 +1,89 @@
+\begin{tikzpicture}[
+  x={(4cm,-1.5cm)},y={(3cm,2.5cm)},z={(0cm,4cm)},
+  line width=.65pt,
+  every node/.style={font=\small,inner sep=2pt}]
+% The square at t has y in [t^2,t] and z in [0,t-t^2].
+% Ghost the portion beyond the slice so its interior square face is visible.
+\def\cutleft{.55}
+\def\cutright{.65}
+\foreach \c/\i in {\cutleft/0,\cutright/1}{
+  \coordinate (A\i) at (\c,{\c*\c},0);
+  \coordinate (B\i) at (\c,\c,0);
+  \coordinate (C\i) at (\c,\c,{\c-\c*\c});
+  \coordinate (D\i) at (\c,{\c*\c},{\c-\c*\c});
+  \coordinate (X\i) at (\c,0,0);
+}
+\draw[->,gray] (0,0,0)--(1.15,0,0)
+  node[below right,text=black] {$x$};
+\draw[->,gray] (0,0,0)--(0,1.15,0)
+  node[above,text=black] {$y$};
+\draw[dashed,gray!70] (X0)--(A0) (X1)--(A1);
+\coordinate (DX0) at ([xshift=-3pt,yshift=-8pt]X0);
+\coordinate (DX1) at ([xshift=-3pt,yshift=-8pt]X1);
+\draw[gray] (X0)--(DX0) (X1)--(DX1);
+\draw[<->] (DX0)--(DX1)
+  node[midway,below left=3pt] {$dx$};
+% The full solid continues to the pinched endpoint at x=1.
+\fill[gray!7]
+  plot[domain=\cutright:1,samples=35,variable=\t] ({\t},{\t*\t},0)
+  -- plot[domain=1:\cutright,samples=35,variable=\t]
+    ({\t},{\t*\t},{\t-\t*\t})--cycle;
+\fill[gray!11]
+  plot[domain=\cutright:1,samples=35,variable=\t]
+    ({\t},{\t*\t},{\t-\t*\t})
+  -- plot[domain=1:\cutright,samples=35,variable=\t]
+    ({\t},{\t},{\t-\t*\t})--cycle;
+\foreach \edge in {0,1,2}{
+  \draw[dashed,gray!65,line width=.5pt]
+    plot[domain=\cutright:1,samples=35,variable=\t]
+      ({\t},{ifthenelse(\edge==2,\t,\t*\t)},
+        {ifthenelse(\edge==0,0,\t-\t*\t)});
+}
+\draw[dashed,gray!40,line width=.45pt] (B1)--(1,1,0);
+% Opaque near and top surfaces before the highlighted layer.
+\fill[gray!16]
+  plot[domain=0:\cutleft,samples=45,variable=\t] ({\t},{\t*\t},0)
+  -- plot[domain=\cutleft:0,samples=45,variable=\t]
+    ({\t},{\t*\t},{\t-\t*\t})--cycle;
+\fill[gray!26]
+  plot[domain=0:\cutleft,samples=45,variable=\t]
+    ({\t},{\t*\t},{\t-\t*\t})
+  -- plot[domain=\cutleft:0,samples=45,variable=\t]
+    ({\t},{\t},{\t-\t*\t})--cycle;
+\foreach \edge in {0,1,2}{
+  \draw[gray!80]
+    plot[domain=0:\cutleft,samples=45,variable=\t]
+      ({\t},{ifthenelse(\edge==2,\t,\t*\t)},
+        {ifthenelse(\edge==0,0,\t-\t*\t)});
+}
+% These side boundaries follow the actual curves, rather than frustum edges.
+\fill[figureblue!40]
+  plot[domain=\cutleft:\cutright,samples=18,variable=\t]
+    ({\t},{\t*\t},0)
+  -- plot[domain=\cutright:\cutleft,samples=18,variable=\t]
+    ({\t},{\t*\t},{\t-\t*\t})--cycle;
+\fill[figureblue!25]
+  plot[domain=\cutleft:\cutright,samples=18,variable=\t]
+    ({\t},{\t*\t},{\t-\t*\t})
+  -- plot[domain=\cutright:\cutleft,samples=18,variable=\t]
+    ({\t},{\t},{\t-\t*\t})--cycle;
+\filldraw[fill=figureblue!17,draw=figureaccent,line width=.85pt]
+  (A1)--(B1)--(C1)--(D1)--cycle;
+\draw[figureaccent] (A0)--(D0)--(C0);
+\foreach \edge in {0,1,2}{
+  \draw[figureaccent]
+    plot[domain=\cutleft:\cutright,samples=18,variable=\t]
+      ({\t},{ifthenelse(\edge==2,\t,\t*\t)},
+        {ifthenelse(\edge==0,0,\t-\t*\t)});
+}
+\coordinate (facecenter) at
+  (\cutright,{(\cutright*\cutright+\cutright)/2},
+    {(\cutright-\cutright*\cutright)/2});
+\draw[figureaccent,<-] (facecenter)--(5.1cm,2.05cm)
+  node[above] {$A(x)$};
+\node[font=\scriptsize,text=gray!80,below] at (5.9cm,-.15cm)
+  {transparent view};
+\node[below left] at (0,0,0) {$0$};
+\draw[gray] (1,0,0) ++(0cm,-2pt)--++(0cm,4pt);
+\node[below=3pt] at (1,0,0) {$1$};
+\end{tikzpicture}

@@ -5,12 +5,15 @@
 
 Let $(a_n)$ be a sequence, and define a new sequence $(s_k)$ of ``partial sums'' by
 $$s_k=\sum_{n=1}^k a_n = a_1 + \cdots + a_k.$$
-We write 
+The expression $\sum_{n=1}^{\infty}a_n$ is called a \textbf{series}.
+When its partial sums have a limit, we write
 $$\lim _{k \to \infty} s_{k}=\lim _{k \to \infty} \sum_{n=1}^{k} a_{n}=\sum_{n=1}^{\infty} a_{n}=\sum a_n$$
-if this limit exists, and call $\sum a_n$ a \textbf{series}. We are interested in when this quantity is finite:
+We are interested in whether this limit is finite:
 \begin{itemize}
     \item If $\displaystyle\lim _{k \to \infty} s_{k}$ is finite, we say that $\sum a_n$ is \textbf{convergent} (or that $\sum a_n$ converges).
-    \item  When $\displaystyle\lim _{k \to \infty} s_{k}$ is infinite, we say that $\sum a_n$ is \textbf{divergent} (or that $\sum a_n$ diverges).
+    \item If the partial sums do not approach a finite number, we say that
+    $\sum a_n$ is \textbf{divergent} (or that $\sum a_n$ diverges).
+    They might grow without bound, or they might never settle to a limit.
 \end{itemize}
 \Needspace{7\baselineskip}
 There are two special cases when we can actually find the value of a series:
@@ -165,9 +168,10 @@ $\displaystyle \sum_{n=1}^\infty \frac{(-1)^n}{n^2}$ converges since $\displayst
 
 \begin{thm}[Ratio Test]
 \proofref{proof:ratio-test}
-Suppose we have the series $\sum a_{n}$. Define,
-$$L=\lim _{n \to \infty} \left|\frac{a_{n+1}}{a_{n}}\right|.$$
-Then,
+Suppose we have the series $\sum a_n$, with $a_n\ne0$ after the first
+few terms so that the following ratios are defined. Suppose the limit
+$$L=\lim _{n \to \infty} \left|\frac{a_{n+1}}{a_{n}}\right|$$
+exists, possibly as $\infty$. Then,
 \begin{enumerate}[leftmargin=1em]
     \item if $L<1$ the series is absolutely convergent (and hence convergent).
     \item if $L>1$ the series is divergent.

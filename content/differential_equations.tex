@@ -76,7 +76,7 @@ In this case, we can draw a \textbf{slope field}, where at each point $(x,y)$ we
 
 \begin{figure}[H]
 \centering
-\fbox{\includegraphics[width=3in]{img/slope_field.png}}
+\input{content/figures/slope_field.tex}
 \caption{The slope field $y'=x+y$.}
 \end{figure}
 
@@ -132,10 +132,13 @@ $1$ & $49/16$ & $65/16$ & $65/32$\\
 \end{multicols}
 
 
-Here is a graph of the points in these two tables ($\Delta x = 1$ in red and $\Delta x = 1/2$ in blue). In addition, the actual solution to this ODE ($y=e^{x+1}-(x+1)$) is graphed in black.
-\begin{center}
-\includegraphics[width=3in]{img/eulers_method.png}
-\end{center}
+Here is a graph of the points in these two tables ($\Delta x = 1$ dashed and $\Delta x = 1/2$ solid), continuing the half-step estimates a few more steps. In addition, the actual solution to this ODE ($y=e^{x+1}-(x+1)$) is graphed in black.
+\begin{figure}[H]
+\centering
+\input{content/figures/eulers_method.tex}
+\caption{Euler estimates with step sizes 1 (dashed) and $1/2$ (solid), compared with the actual solution in black.}
+\label{fig:eulers-method}
+\end{figure}
 As you can see, the smaller step size gave a better approximation.
 \end{exampleblock}
 
@@ -169,6 +172,24 @@ $$a\lambda^2 + b\lambda + c = 0,$$
 which is called the \textbf{characteristic equation}.
 This is because plugging $y=e^{\lambda x}$ into the ODE and dividing by $e^{\lambda x}$ gives this equation. \mar{Plug $y=e^{\lambda x}$ into the ODE and get this quadratic equation.} The root(s) in question are
 $$\lambda = \frac{-b \pm \sqrt{b^2-4ac}}{2a}.$$
+
+When the discriminant is negative, the roots involve $i$, where
+$i^2=-1$. A number $u+iv$, with $u,v$ real, is called a
+\textbf{complex number}; see the
+\hyperref[sec:complex-numbers]{complex numbers appendix} for more background.
+The exponential function extends to complex inputs using the power
+series we will study in Chapter~\ref{sec:power-series}. The following
+formula lets us express those exponentials using real functions.
+
+\begin{thm}[Euler's Formula]
+\label{thm:eulers-formula}
+\proofref{proof:eulers-formula}
+For any real angle $\theta$, measured in radians,
+$$e^{i\theta}=\cos\theta+i\sin\theta.$$
+More generally, for real $u,v$,
+$$e^{u+iv}=e^u(\cos v+i\sin v).$$
+\end{thm}
+
 Write $\Delta=b^2-4ac$. There are three cases:
 \begin{enumerate}
 \item If $\Delta>0$, there are two distinct real roots $\lambda_1$ and $\lambda_2$. The solutions are of the form
@@ -181,7 +202,7 @@ for any real numbers $p$ and $q$.
 $$\alpha=-\frac{b}{2a}\quad\text{and}\quad \beta=\frac{\sqrt{4ac-b^2}}{2|a|}.$$
 The real-valued solutions are of the form
 $$y=e^{\alpha x}\bigl(p\cos(\beta x)+q\sin(\beta x)\bigr)$$
-for any real numbers $p$ and $q$. \mar{Use Euler's identity to verify this real-valued form.}
+for any real numbers $p$ and $q$. \mar{Use Euler's formula (Theorem~\ref{thm:eulers-formula}) to verify this real-valued form.}
 \end{enumerate}
 
 An interesting and useful fact is given in this theorem:
@@ -261,10 +282,10 @@ We can see this leveling off in Figure~\ref{fig:logistic-population}.
 \node[below left] at (0,0) {$0$};
 \draw[dashed,gray] (0,1000)--(14,1000)
   node[right,text=black] {$K=1000$};
-\draw[blue!70!black,thick,domain=0:14,samples=100]
+\draw[figureaccent,thick,domain=0:14,samples=100]
   plot (\x,{1000/(1+9*exp(-\x/2))});
-\fill[blue!70!black] (0,100) circle[radius=1.5pt];
-\fill[blue!70!black] ({2*ln(9)},500) circle[radius=1.5pt]
+\fill[figureaccent] (0,100) circle[radius=1.5pt];
+\fill[figureaccent] ({2*ln(9)},500) circle[radius=1.5pt]
   node[above left,text=black] {$(2\ln9,500)$};
 \end{tikzpicture}
 \caption{The logistic solution $P(t)=1000/(1+9e^{-t/2})$.}
@@ -286,7 +307,6 @@ Figure~\ref{fig:simple-harmonic-oscillator}.
 
 \begin{figure}[h!]
 \centering
-\fbox{
 \begin{tikzpicture}[x=1cm,y=1cm,line width=.75pt,
                     every node/.style={font=\small,inner sep=2pt}]
 \fill[gray!30] (-.18,0) rectangle (0,1.6);
@@ -300,13 +320,12 @@ Figure~\ref{fig:simple-harmonic-oscillator}.
 \node at (2.4,1.0) {$k$};
 \filldraw[fill=gray!12] (5.6,0) rectangle (6.8,1.1);
 \node at (6.2,.55) {$m$};
-\draw[->,red!75!black,line width=1pt]
+\draw[->,figuresecondary,dashed,line width=1pt]
   (6.2,1.45)--node[midway,above=3pt] {$F=-ky(t)$} (4.6,1.45);
-\draw[->,blue!70!black,line width=1pt]
+\draw[->,figureaccent,line width=1pt]
   (3.6,-.45)--node[midway,below=3pt] {$y(t)>0$} (6.2,-.45);
 \node[below=2pt] at (3.6,-.7) {$y=0$};
 \end{tikzpicture}
-}
 \caption{Here $y(t)>0$, so the spring pulls the mass to the left.}
 \label{fig:simple-harmonic-oscillator}
 \end{figure}
@@ -422,15 +441,15 @@ population!
 \foreach \p in {10,20,...,50}
   \draw (0,\p)--(-.12,\p) node[left] {$\p$};
 \node[below left] at (0,0) {$0$};
-\draw[blue!70!black,thick] plot[smooth]
+\draw[figureaccent,thick] plot[smooth]
   file {img/predator_prey_rabbits.dat} node[right] {$x(t)$ (rabbits)};
-\draw[red!75!black,thick] plot[smooth]
+\draw[figuresecondary,dashed,thick] plot[smooth]
   file {img/predator_prey_foxes.dat} node[right] {$y(t)$ (foxes)};
-\fill[blue!70!black] (0,40) circle[radius=1.5pt];
-\fill[red!75!black] (0,5) circle[radius=1.5pt];
+\fill[figureaccent] (0,40) circle[radius=1.5pt];
+\fill[figuresecondary] (0,5) circle[radius=1.5pt];
 \end{tikzpicture}
 \caption{Numerically estimated populations for the example with
-$x(0)=40$ and $y(0)=5$.}
+$x(0)=40$ and $y(0)=5$: rabbits solid and foxes dashed.}
 \label{fig:predator-prey-populations}
 \end{figure}
 \end{exampleblock}

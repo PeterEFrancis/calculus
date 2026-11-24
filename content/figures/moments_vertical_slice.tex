@@ -1,0 +1,32 @@
+\begin{tikzpicture}[line width=.7pt,
+  every node/.style={font=\small,inner sep=2pt},
+  declare function={
+    mf(\t)=1.1+.25*(\t-.8)+.3*(\t-.8)*(4.8-\t);
+    mg(\t)=1.1+.25*(\t-.8)-.12*(\t-.8)*(4.8-\t);
+  }]
+\fill[gray!10]
+  plot[domain=.8:4.8,samples=61] (\x,{mf(\x)})
+  --plot[domain=4.8:.8,samples=61] (\x,{mg(\x)})--cycle;
+\filldraw[fill=figureblue!20,draw=black!65]
+  plot[domain=2.7:2.9,samples=9] (\x,{mf(\x)})
+  --plot[domain=2.9:2.7,samples=9] (\x,{mg(\x)})--cycle;
+\draw[domain=.8:4.8,samples=61] plot (\x,{mf(\x)});
+\draw[domain=.8:4.8,samples=61] plot (\x,{mg(\x)});
+\node[above] at (4,2.9) {$f(x)$};
+\node[below] at (4.1,1.45) {$g(x)$};
+\draw[->] (-.2,0)--(5.8,0) node[right] {$x$};
+\draw[->] (0,-.2)--(0,3.6) node[above] {$y$};
+\node[below left] at (0,0) {$0$};
+\draw[dashed,black!45] (.8,0)--(.8,1.1) (4.8,0)--(4.8,2.1)
+  (2.8,0)--(2.8,1.12);
+\draw (.8,.06)--(.8,-.06) node[below] {$a$};
+\draw (4.8,.06)--(4.8,-.06) node[below] {$b$};
+\draw[dashed,black!45] (0,-.1)--(0,-.65) (2.8,0)--(2.8,-.65);
+\draw[<->] (0,-.55)--(2.8,-.55) node[midway,below] {$x$};
+\draw[<->] (3.15,1.12)--(3.15,2.8)
+  node[midway,right=3pt,fill=white] {$f(x)-g(x)$};
+\draw[black!45] (2.8,1.12)--(3.22,1.12) (2.8,2.8)--(3.22,2.8);
+\draw[black!45] (2.7,{mg(2.7)})--(2.7,.7)
+  (2.9,{mg(2.9)})--(2.9,.7);
+\draw[|-|] (2.7,.78)--(2.9,.78) node[midway,below] {$dx$};
+\end{tikzpicture}

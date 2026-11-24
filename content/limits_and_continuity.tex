@@ -8,7 +8,7 @@ The following two functions' graphs are exactly the same, except at $x=1$.
 \begin{figure}[H]
     \centering
     \resizebox{\linewidth}{!}{%
-    \fbox{%
+    %
 
 
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
@@ -57,7 +57,7 @@ The following two functions' graphs are exactly the same, except at $x=1$.
 
 \end{tikzpicture}
 
-    }}
+    }
     \caption{Two functions with the same limits}
 \end{figure}
 
@@ -128,7 +128,7 @@ $$\text{for all } \varepsilon > 0, \text{ there is some } \delta > 0, \text{ suc
 
 \begin{figure}[h!]
 \centering
-\fbox{
+
 \tikzset{every picture/.style={line width=0.75pt}}
 \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
 %uncomment if require: \path (0,428); %set diagram left start at 0, and has height of 428
@@ -359,7 +359,7 @@ $$\text{for all } \varepsilon > 0, \text{ there is some } \delta > 0, \text{ suc
 
 
 \end{tikzpicture}
-}
+
 \caption{A cartoon of the $\varepsilon-\delta$ definition of a limit}
 \label{epsilon-cartoon}
 \end{figure}
@@ -433,7 +433,7 @@ Not every number outside the domain is a discontinuity: the condition that $f$ b
 \proofref{proof:limit-laws}
 There are several \textit{limit laws} that will be useful for computing limits. They can all be proven using the $\varepsilon-\delta$ definition of the limit, but you can just believe them.
 
-Suppose $\displaystyle\lim _{x \to a} f(x)=L$ and $\displaystyle\lim _{x \to a} g(x)=M$, let $c$ be a constant, and let $n$ be a positive integer.
+Suppose $\displaystyle\lim _{x \to a} f(x)=L$ and $\displaystyle\lim _{x \to a} g(x)=M$, let $c$ and $p$ be real constants, and let $n$ be a positive integer.
 
 \begin{center}
 \def\arraystretch{2}
@@ -446,12 +446,15 @@ Suppose $\displaystyle\lim _{x \to a} f(x)=L$ and $\displaystyle\lim _{x \to a} 
 \textbf{Constant Multiple law} & $\displaystyle\lim _{x \rightarrow a} c f(x)=c \cdot \lim _{x \rightarrow a} f(x)=c L$ \\
 \textbf{Product law} & $\displaystyle\lim _{x \rightarrow a}(f(x) \cdot g(x))=\lim _{x \rightarrow a} f(x) \cdot \lim _{x \rightarrow a} g(x)=L \cdot M$ \\
 \textbf{Quotient law} & $\displaystyle\lim _{x \rightarrow a} \frac{f(x)}{g(x)}=\frac{\displaystyle\lim _{x \rightarrow a} f(x)}{\displaystyle\lim _{x \rightarrow a} g(x)}=\frac{L}{M}$ for $M \neq 0$ \\
-\textbf{Power law} & $\displaystyle\lim _{x \rightarrow a}(f(x))^{n}=\left(\lim _{x \rightarrow a} f(x)\right)^{n}=L^{n}$\\
+\textbf{Power law} & $\displaystyle\lim _{x \rightarrow a}(f(x))^{p}=\left(\lim _{x \rightarrow a} f(x)\right)^{p}=L^{p}$\\
 \textbf{Root law} & $\displaystyle\lim _{x \rightarrow a} \sqrt[n]{f(x)}=\sqrt[n]{\lim _{x \rightarrow a} f(x)}=\sqrt[n]{L}$ for all $L$ if $n$ is odd,\\
 & and for $L \geq 0$ if $n$ is even and $f(x) \geq 0 .$ \\
 \bottomrule[0.4mm]
 \end{tabular}
 \end{center}
+For the Power Law, $f(x)^p$ must be real and defined near $a$, and
+$L^p$ must also be real and defined. In particular, $L=0$ is allowed
+only when $p>0$.
 \mar{Write out what each limit law means in plain English.}
 
 
@@ -524,7 +527,7 @@ Let $f$ be continuous over a closed, bounded interval $[a, b]$. If $z$ is any re
 
 \begin{figure}[h!]
 \centering
-\fbox{
+
 \tikzset{every picture/.style={line width=0.75pt}}
 \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
 %uncomment if require: \path (0,374); %set diagram left start at 0, and has height of 374
@@ -563,7 +566,7 @@ Let $f$ be continuous over a closed, bounded interval $[a, b]$. If $z$ is any re
 
 
 \end{tikzpicture}
-}
+
 \caption{A Cartoon of the Intermediate Value Theorem}
 \end{figure}
 
@@ -584,7 +587,7 @@ The process of evaluating both types are the same, except for at boundary points
 
 \begin{figure}[H]
     \centering
-    \fbox{
+
             
         
 
@@ -617,7 +620,7 @@ The process of evaluating both types are the same, except for at boundary points
 \draw[->] (indeterminate.south) -- (indeterminate-result.north);
 \draw[->] (undefined.south) -- (undefined-result.north);
 \end{tikzpicture}
-    }
+
     \caption{Flowchart for evaluating limits}
     \label{fig:flowchart}
 \end{figure}
@@ -650,7 +653,7 @@ If $f$ is an ACCF and attempting to evaluate $f(a)$ results in a non-zero number
 
 \begin{figure}[h]
     \centering
-    \fbox{
+
         \resizebox{4.25in}{!}{
         \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
         
@@ -749,7 +752,7 @@ If $f$ is an ACCF and attempting to evaluate $f(a)$ results in a non-zero number
         % \end{tikzpicture}
         % }
         }
-    }
+
     \caption{The four cases of vertical asymptotes}
     \label{fig:four-cases}
 \end{figure}
@@ -834,7 +837,13 @@ $$\begin{aligned}
 \item Use a special-case limit. Here angles are measured in radians and $a>0$:
 $$\lim_{x\to0}\frac{\sin(x)}{x}=1.\hbox{\proofref{proof:sine-limit}}$$
 $$\lim_{x\to0}\frac{\cos(x)-1}{x}=0.\hbox{\proofref{proof:cosine-limit}}$$
+We can now make our earlier description of
+\hyperref[def:eulers-number]{Euler's number} precise. Its definition is
+$$e=\lim_{n\to\infty}\left(1+\frac1n\right)^n,
+\qquad n=1,2,3,\ldots.$$
+The same limit holds when the input can be any positive real number:
 $$\lim_{x\to\infty}\left(1+\frac1x\right)^x=e.\hbox{\proofref{proof:euler-limit}}$$
+We also have the exponential limit
 $$\lim_{x\to0}\frac{a^x-1}{x}=\ln(a).\hbox{\proofref{proof:exponential-limit}}$$
 
 \begin{exampleblock}

@@ -293,10 +293,11 @@ Over the real numbers, this method assumes that $f(x)>0$ on the interval under c
 % Thus $x^x$ is treated on $x>0$, while $\sin(x)^x$ is treated only on intervals where $\sin(x)>0$. A negative base with a variable real exponent is generally not real-valued.
 \end{remark}
 
-\mar{Work these examples out.}
 \begin{exampleblock}
 $[x^x]'=x^x(\ln(x)+1)=\ln(x^{x^x})+x^x$. (Here $f(x)=g(x)=x$).
 \end{exampleblock}
+\mar{Work these examples out.}
+
 \begin{exampleblock}
 $[\sin(x)^x]'=\sin(x)^x(\ln(\sin(x))+x\cot(x))$. (Here $f(x)=\sin(x)$ and $g(x)=x$).
 \end{exampleblock}
@@ -351,6 +352,7 @@ The rule says that $[\sin^{-1}(x)]'=\frac{1}{\cos(\sin^{-1}(x))}$, but we should
 
 
 \end{tikzpicture}
+\caption{A Right Triangle for Inverse Sine}
 \end{figure}
 
 If a (non-right) angle of a right triangle (with hypotenuse 1) is $\sin^{-1}(x)$, the leg opposite $\sin^{-1}(x)$ has length $x$. Then $\cos(\sin^{-1}(x))$ is the length of the other leg of the triangle, so $\cos(\sin^{-1}(x))=\sqrt{1-x^2}$ by the Pythagorean theorem. Therefore,

@@ -1,0 +1,53 @@
+\begin{tikzpicture}[x=1.15cm,y=1cm,line width=.7pt,
+  every node/.style={font=\small,inner sep=2pt}]
+\draw[gray!15,line width=.25pt,step=1] (-2.35,0) grid (3.25,6);
+\begin{scope}
+\clip (-2.35,0) rectangle (3.25,6);
+% Short segments have slope x+y in these (unequally scaled) axes.
+\foreach \a in {-2.25,-1.75,...,3.25}{
+  \foreach \b in {.25,.75,...,5.75}{
+    \pgfmathsetmacro{\slope}{\a+\b}
+    \pgfmathsetmacro{\run}{.1/sqrt(1+(\slope/1.15)^2)}
+    \pgfmathsetmacro{\rise}{\slope*\run}
+    \draw[gray!35,line width=.35pt]
+      ({\a-\run},{\b-\rise})--({\a+\run},{\b+\rise});
+  }
+}
+% Every dashed-curve point appears in the step-size-one table.
+\draw[figuresecondary,dashed,line width=.9pt]
+  (-1,1)--(0,1)--(1,2)--(2,5)--(3,12);
+\foreach \a/\b in {-1/1,0/1,1/2,2/5,3/12}
+  \fill[figuresecondary] (\a,\b) circle[radius=1.5pt];
+% The half-step recurrence is continued beyond the table to x=5/2.
+\draw[figureaccent,line width=.9pt]
+  (-1,1)--(-.5,1)--(0,1.25)--(.5,1.875)--(1,3.0625)
+  --(1.5,5.09375)--(2,8.390625)--(2.5,13.5859375);
+\foreach \a/\b in {-1/1,-.5/1,0/1.25,.5/1.875,1/3.0625,
+  1.5/5.09375,2/8.390625,2.5/13.5859375}
+  \fill[figureaccent] (\a,\b) circle[radius=1.5pt];
+\draw[->,black,line width=.9pt]
+  plot[domain=-2.35:1.09,samples=100] (\x,{exp(\x+1)-(\x+1)});
+\fill (-1,1) circle[radius=1.5pt];
+\end{scope}
+\draw[->] (-2.35,0)--(3.4,0);
+\draw[->] (0,-.25)--(0,6.35);
+\node[right] at (3.4,0) {$x$};
+\node[above] at (0,6.35) {$y$};
+\foreach \a in {-2,-1,1,2,3}{
+  \draw (\a,-.045)--(\a,.045);
+  \node[below=3pt] at (\a,0) {$\a$};
+}
+\foreach \b in {1,2,...,6}{
+  \draw (-.035,\b)--(.035,\b);
+  \node[left=3pt,fill=white,inner sep=1pt] at (0,\b) {$\b$};
+}
+\node[below left=2pt] at (0,0) {$0$};
+% A small legend sits in the unused upper left corner.
+\fill[white] (-2.3,4.1) rectangle (-.3,5.95);
+\draw[black,line width=.9pt] (-2.15,5.6)--(-1.85,5.6);
+\node[right,fill=white] at (-1.85,5.6) {actual solution};
+\draw[figuresecondary,dashed,line width=.9pt] (-2.15,5)--(-1.85,5);
+\node[right] at (-1.85,5) {$\Delta x=1$};
+\draw[figureaccent,line width=.9pt] (-2.15,4.4)--(-1.85,4.4);
+\node[right] at (-1.85,4.4) {$\Delta x=\frac12$};
+\end{tikzpicture}

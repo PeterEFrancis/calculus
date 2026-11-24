@@ -11,14 +11,13 @@ and is defined to be the \textit{signed} area between the graph of $f$ and the $
 
 \begin{figure}[h!]
 \centering
-\fbox{
 \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
 \path (150,50);
 
 %Shape: Polygon Curved [id:ds707129257032501] 
-\draw  [fill={rgb, 255:red, 0; green, 255; blue, 0 }  ,fill opacity=0.5 ] (217,162) .. controls (217,162) and (217,138) .. (217,138) .. controls (217,138) and (222,134) .. (236,132) .. controls (250,130) and (269,136) .. (278,142) .. controls (287,148) and (288.41,149.01) .. (293,153) .. controls (297.59,156.99) and (302,162) .. (302,162) .. controls (302,162) and (217,162) .. (217,162) -- cycle ;
+\draw  [fill=figureblue!20] (217,162) .. controls (217,162) and (217,138) .. (217,138) .. controls (217,138) and (222,134) .. (236,132) .. controls (250,130) and (269,136) .. (278,142) .. controls (287,148) and (288.41,149.01) .. (293,153) .. controls (297.59,156.99) and (302,162) .. (302,162) .. controls (302,162) and (217,162) .. (217,162) -- cycle ;
 %Shape: Polygon Curved [id:ds12696670726714787] 
-\draw  [fill={rgb, 255:red, 255; green, 0; blue, 0 }  ,fill opacity=0.5 ] (370,162) .. controls (370,162) and (370,201) .. (370,201) .. controls (370,201) and (355,203) .. (345,200) .. controls (335,197) and (322,187) .. (316,178) .. controls (310,169) and (302,162) .. (302,162) .. controls (302,162) and (370,162) .. (370,162) -- cycle ;
+\draw  [fill=figuresecondary!20] (370,162) .. controls (370,162) and (370,201) .. (370,201) .. controls (370,201) and (355,203) .. (345,200) .. controls (335,197) and (322,187) .. (316,178) .. controls (310,169) and (302,162) .. (302,162) .. controls (302,162) and (370,162) .. (370,162) -- cycle ;
 %Straight Lines [id:da2259128899132099] 
 \draw    (150,161.8) -- (508,162) ;
 %Straight Lines [id:da519801972092973] 
@@ -28,7 +27,7 @@ and is defined to be the \textit{signed} area between the graph of $f$ and the $
 %Straight Lines [id:da8858936847665124] 
 \draw    (217,138) -- (217,162) ;
 %Straight Lines [id:da05784827822991523] 
-\draw    (370,162) -- (370,201) ;
+% \draw    (370,162) -- (370,201) ;
 
 % Text Node
 \draw (211,166.4) node [anchor=north west][inner sep=0.75pt]    {$a$};
@@ -41,7 +40,6 @@ and is defined to be the \textit{signed} area between the graph of $f$ and the $
 % Text Node
 \draw (340,176.4) node [anchor=north west][inner sep=0.75pt]    {$-$};
 \end{tikzpicture}
-}
 
 \caption{The Geometric Definition of the Definite Integral}
 \end{figure}
@@ -57,7 +55,6 @@ The first way that we will attempt to compute definite integrals is with a limit
 
 \begin{figure}[h!]
 \centering
-\fbox{    
 
 
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
@@ -66,25 +63,25 @@ The first way that we will attempt to compute definite integrals is with a limit
 %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
 
 %Shape: Rectangle [id:dp7232780056512873] 
-\draw  [fill={rgb, 255:red, 222; green, 222; blue, 222 }  ,fill opacity=1 ] (217,145.67) -- (238,145.67) -- (238,169) -- (217,169) -- cycle ;
+\draw  [fill=figureblue!20 ] (217,145.67) -- (238,145.67) -- (238,169) -- (217,169) -- cycle ;
 %Shape: Rectangle [id:dp9564785112393279] 
-\draw  [fill={rgb, 255:red, 222; green, 222; blue, 222 }  ,fill opacity=1 ] (238,142.67) -- (259,142.67) -- (259,169) -- (238,169) -- cycle ;
+\draw  [fill=figureblue!20 ] (238,142.67) -- (259,142.67) -- (259,169) -- (238,169) -- cycle ;
 %Shape: Rectangle [id:dp3339762801991184] 
-\draw  [fill={rgb, 255:red, 222; green, 222; blue, 222 }  ,fill opacity=1 ] (259,137.67) -- (280,137.67) -- (280,169) -- (259,169) -- cycle ;
+\draw  [fill=figureblue!20 ] (259,137.67) -- (280,137.67) -- (280,169) -- (259,169) -- cycle ;
 %Shape: Rectangle [id:dp8735502353012137] 
-\draw  [fill={rgb, 255:red, 222; green, 222; blue, 222 }  ,fill opacity=1 ] (280,126.67) -- (301,126.67) -- (301,169) -- (280,169) -- cycle ;
+\draw  [fill=figureblue!20 ] (280,126.67) -- (301,126.67) -- (301,169) -- (280,169) -- cycle ;
 %Shape: Rectangle [id:dp9736947359557422] 
-\draw  [fill={rgb, 255:red, 222; green, 222; blue, 222 }  ,fill opacity=1 ] (301,105.67) -- (322,105.67) -- (322,169) -- (301,169) -- cycle ;
+\draw  [fill=figureblue!20 ] (301,105.67) -- (322,105.67) -- (322,169) -- (301,169) -- cycle ;
 %Shape: Rectangle [id:dp462370433249887] 
-\draw  [fill={rgb, 255:red, 222; green, 222; blue, 222 }  ,fill opacity=1 ] (322,73.67) -- (343,73.67) -- (343,169) -- (322,169) -- cycle ;
+\draw  [fill=figureblue!20 ] (322,73.67) -- (343,73.67) -- (343,169) -- (322,169) -- cycle ;
 %Shape: Rectangle [id:dp30050179546388955] 
-\draw  [fill={rgb, 255:red, 222; green, 222; blue, 222 }  ,fill opacity=1 ] (343,67.67) -- (364,67.67) -- (364,169) -- (343,169) -- cycle ;
+\draw  [fill=figureblue!20 ] (343,67.67) -- (364,67.67) -- (364,169) -- (343,169) -- cycle ;
 %Shape: Rectangle [id:dp5888931362167766] 
-\draw  [fill={rgb, 255:red, 222; green, 222; blue, 222 }  ,fill opacity=1 ] (364,81.67) -- (385,81.67) -- (385,169) -- (364,169) -- cycle ;
+\draw  [fill=figureblue!20 ] (364,81.67) -- (385,81.67) -- (385,169) -- (364,169) -- cycle ;
 %Shape: Rectangle [id:dp23162244325779224] 
-\draw  [fill={rgb, 255:red, 222; green, 222; blue, 222 }  ,fill opacity=1 ] (385,101.67) -- (406,101.67) -- (406,169) -- (385,169) -- cycle ;
+\draw  [fill=figureblue!20 ] (385,101.67) -- (406,101.67) -- (406,169) -- (385,169) -- cycle ;
 %Shape: Rectangle [id:dp5505196011593232] 
-\draw  [fill={rgb, 255:red, 222; green, 222; blue, 222 }  ,fill opacity=1 ] (406,119.67) -- (427,119.67) -- (427,169) -- (406,169) -- cycle ;
+\draw  [fill=figureblue!20 ] (406,119.67) -- (427,119.67) -- (427,169) -- (406,169) -- cycle ;
 %Straight Lines [id:da015408719112721014] 
 \draw    (151,168.8) -- (509,169) ;
 %Straight Lines [id:da7870970100056962] 
@@ -119,8 +116,6 @@ The first way that we will attempt to compute definite integrals is with a limit
 
 
 \end{tikzpicture}
-
-}
 \caption{A Right Riemann Sum}
 \end{figure}
 
@@ -133,6 +128,13 @@ $$L_n=\sum_{k=1}^{n}f\left(a+(k-1)\frac{b-a}{n}\right)\frac{b-a}{n}.$$
 If instead we use trapezoids above each sub-interval, we get the \textbf{$n$th Trapezoid Riemann Sum}: \mar{Draw a picture of $T_n$.}
 $$T_n=\sum_{k=1}^{n}\frac{f\left(a+(k-1)\frac{b-a}{n}\right)+f\left(a+k\frac{b-a}{n}\right)}{2}\frac{b-a}{n}=\frac{R_n+L_n}{2},$$
 where the $k$th trapezoid has width $\Delta x$ and heights determined by the left and right endpoints of the $k$th sub-interval. (Remember that a trapezoid with width $w$ and heights $h_1$ and $h_2$ has area $A=\frac{h_1+h_2}{2}w$. \mar{When are $R_n$, $L_n$, and $T_n$ overestimates? Underestimates?}
+
+Continuity is enough to make sure the integral exists:
+\begin{thm}[Continuous Functions Are Integrable]
+\proofref{proof:continuous-integrability}
+If $f$ is continuous on a closed, bounded interval $[a,b]$, then $f$ is
+Riemann integrable on $[a,b]$.
+\end{thm}
 
 In practice, it doesn't matter which you choose to compute because of the following theorem:
 \begin{thm}

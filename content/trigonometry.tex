@@ -13,7 +13,6 @@ You should think about trigonometry in two ways:
 The \textbf{unit circle} is the circle with (unit) radius 1, centered at the origin, $(0,0)$. When we draw a radius of the unit circle, it forms an angle $\theta$ with the positive side of the horizontal axis.
 
 \begin{figure}[h!]
-\label{sin-cos-coordinates}
 \centering
 \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
 %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
@@ -42,6 +41,7 @@ The \textbf{unit circle} is the circle with (unit) radius 1, centered at the ori
 \draw (385,98) node [anchor=north west][inner sep=0.75pt]    {$1$};
 \end{tikzpicture}
 \caption{$\sin\theta$ and $\cos\theta$ are coordinates}
+\label{sin-cos-coordinates}
 \end{figure}
 
 This line segment always has length 1, and connects the origin to some point on the circle. We define $\cos\theta$ and $\sin\theta$ to be the $x$ and $y$ coordinates of this point. In other words, $\cos\theta$ is defined to be the (signed) length of the horizontal leg of the right triangle and similarly, $\sin\theta$ is defined to be the (signed) length of the vertical leg.
@@ -53,7 +53,7 @@ $$\sec \theta = \frac{1}{\cos\theta}, \quad \quad \csc\theta=\frac{1}{\sin\theta
 These functions also have visual representations on the unit circle.
 \begin{figure}[h!]
 \centering
-\fbox{
+
 \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
 %uncomment if require: \path (0,434); %set diagram left start at 0, and has height of 434
 
@@ -107,7 +107,7 @@ These functions also have visual representations on the unit circle.
 
 
 \end{tikzpicture}
-}
+
 \caption{The six common trig functions on the unit circle}
 \label{6trig}
 \end{figure}
@@ -123,10 +123,10 @@ There are several angles $\theta$ for which you should be able to compute $\sin\
 Below is a diagram of all of the angles whose $\sin$ and $\cos$ you should be familiar with.
 
 \begin{figure}[h!]
-\label{the-unit-circle}
 \centering
-\fbox{\includegraphics[width=4in]{img/unit-circle.png}}
+\input{content/figures/unit_circle.tex}
 \caption{The Unit Circle}
+\label{the-unit-circle}
 \end{figure}
 
 
@@ -204,7 +204,7 @@ Let's say you have a right triangle with hypotenuse 8 and one a $30\degree$ angl
 \begin{figure}[H]
 \centering
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
-\resizebox{\linewidth}{!}{\fbox{\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+\resizebox{\linewidth}{!}{\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
 %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
 
 %Shape: Right Triangle [id:dp06753223391248242]
@@ -243,7 +243,7 @@ Let's say you have a right triangle with hypotenuse 8 and one a $30\degree$ angl
 \draw (301,42) node [anchor=north west][inner sep=0.75pt]    {$\div 8$};
 
 
-\end{tikzpicture}}}
+\end{tikzpicture}}
 \caption{Similar Triangles}
 \end{figure}
 
@@ -286,7 +286,6 @@ The two very common laws of trigonometry that involve non-right triangles are th
 
 \begin{figure}[!h]
 \centering
-\label{circumscribed-triangle}
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
 
 \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
@@ -317,6 +316,7 @@ The two very common laws of trigonometry that involve non-right triangles are th
 
 \end{tikzpicture}
 \caption{Circumscribed Triangle}
+\label{circumscribed-triangle}
 \end{figure}
 
 Figure \ref{circumscribed-triangle} shows a triangle with internal angles $A$, $B$, and $C$, and respective opposite side lengths $a$, $b$, and $c$. The triangle is \textbf{circumscribed} in a circle, meaning its vertices lie on the circle's boundary. It turns out that the circle has radius
