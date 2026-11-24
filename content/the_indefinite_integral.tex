@@ -13,7 +13,11 @@ Unfortunately, such a function $F$ does not always exist. \mar{Check out this \h
 
 
 
-The first thing to understand is that unlike derivatives, anti-derivatives are not unique! This is because constant terms are always killed by differentiation. For example, the derivative of $x^2$ and $x^2+1$ are both $2x$, so both are worthy anti-derivatives for $2x$. To solve this problem, we consider \textit{the} anti-derivative of $f$ to be the collection of \textit{all} functions whose derivative is $f$. These functions only differ by a constant so we write ``$+C$'' at the end of \textit{an} anti-derivative to denote \textit{the} anti-derivative. For example, $\int 2x\ dx = x^2+C$.
+The first thing to understand is that unlike derivatives, anti-derivatives are not unique! This is because constant terms are always killed by differentiation. To solve this problem, we consider \textit{the} anti-derivative of $f$ to be the collection of \textit{all} functions whose derivative is $f$. These functions only differ by a constant so we write ``$+C$'' at the end of \textit{an} anti-derivative to denote \textit{the} anti-derivative.
+
+\begin{exampleblock}
+The derivative of $x^2$ and $x^2+1$ are both $2x$, so both are worthy anti-derivatives for $2x$. We write $\int 2x\ dx = x^2+C$.
+\end{exampleblock}
 
 Similarly to differentiation, we will build up a two-part collection of tools to tackle integration problems.
 
@@ -72,13 +76,14 @@ Each of the integration rules are true because of a corresponding rule for deriv
 The main idea of $u$-substitution is ``change the variable to make the integral easier.''
 
 
-Some examples:
-\begin{itemize}
-    \item By setting $u=\sin(x)$, we get $du=\cos(x)\ dx$, so
+\begin{exampleblock}
+    By setting $u=\sin(x)$, we get $du=\cos(x)\ dx$, so
     $$\int \sin^2(x)\cos(x)\ dx= \int u^2\ du.$$
-    \item By setting $u=x+1$, $du=dx$, so
+\end{exampleblock}
+\begin{exampleblock}
+    By setting $u=x+1$, $du=dx$, so
     $$\int x\sqrt{x+1}=\int(u-1)\sqrt{u}\ du.$$
-\end{itemize}
+\end{exampleblock}
 
 
 \subsection{Partial Fraction Decomposition}
@@ -139,8 +144,9 @@ absolute values from the square-root simplifications.
     \end{tabular}
 \end{center}
 
-\begin{itemize}
-\item As an example, consider $\int\sqrt{1-x^2}\ dx$. Set $x=\sin\theta$, so $dx=\cos\theta\ d\theta$. Then we can do the change of variables:
+\mar{Draw the triangles for the other two examples.}
+\begin{exampleblock}
+Consider $\int\sqrt{1-x^2}\ dx$. Set $x=\sin\theta$, so $dx=\cos\theta\ d\theta$. Then we can do the change of variables:
 $$\int\sqrt{1-x^2}\ dx
 =\int\sqrt{1-(\sin\theta)^2}\cos\theta\ d\theta
 =\int\cos^2\theta\ d\theta.$$
@@ -167,5 +173,4 @@ This is explained geometrically by drawing the following triangle.
 \draw (275,162.4) node [anchor=north west][inner sep=0.75pt]    {$\theta $};
 \end{tikzpicture}
 \end{center}
-\mar{Draw the triangles for the other two examples.}
-\end{itemize}
+\end{exampleblock}

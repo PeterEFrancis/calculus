@@ -14,9 +14,9 @@ The tool we use to find the interval of convergence is the ratio test: define
 $$L(x)=\lim \left|\frac{a_{n+1}(x-c)^{n+1}}{a_{n}(x-c)^n}\right|=|x-c|\cdot\lim \left|\frac{a_{n+1}}{a_{n}}\right|.$$
 We know that the power series converges at the values of $x$ for which $L(x) < 1$ and diverges when $L(x) > 1$. That is, the domain of $f$ contains every value of $x$ for which
 $$|x-c|<\lim\left|\frac{a_{n}}{a_{n+1}}\right|.$$\mar{Write out this inequality as an interval. I.e. $$x\in(\dots).$$}
-The value $c$ is called the \textbf{center}, and $\lim\left|\frac{a_{n}}{a_{n+1}}\right|$ is called the \textbf{radius of convergence}. Since the ratio test doesn't say anything about when $L(x)=1$ (the endpoints of the interval of convergence), we will need to test those cases separately. Here are some examples:
-\begin{itemize}[leftmargin=0em]
-\item $\displaystyle\sum_{n=1}^\infty \frac{(-1)^n}{n}(x-1)^n$
+The value $c$ is called the \textbf{center}, and $\lim\left|\frac{a_{n}}{a_{n+1}}\right|$ is called the \textbf{radius of convergence}. Since the ratio test doesn't say anything about when $L(x)=1$ (the endpoints of the interval of convergence), we will need to test those cases separately.
+\begin{exampleblock}
+$\displaystyle\sum_{n=1}^\infty \frac{(-1)^n}{n}(x-1)^n$
 
 Use the ratio test and compute
 $$L(x)=|x-1|\cdot\lim\left|\frac{(-1)^{n+1}}{n+1}\frac{n}{(-1)^n}\right|=|x-1|.$$
@@ -25,20 +25,22 @@ $$\sum_{n=0}^\infty \frac{(-1)^n}{n}(0-1)^n=\sum_{n=0}^\infty1$$
 diverges, and
 $$\sum_{n=0}^\infty \frac{(-1)^n}{n}(2-1)^n=\sum_{n=0}^\infty \frac{(-1)^n}{n}$$
 converges. Therefore $x=2$ is included in the interval of convergence, but $x=0$ is not. The interval of convergence is $(0,2]$, the radius of convergence is $1$ and the center is $x=1$.
+\end{exampleblock}
 
-\item $\displaystyle\sum_{n=0}^\infty \frac{x^n}{n!}$.
+\begin{exampleblock}
+$\displaystyle\sum_{n=0}^\infty \frac{x^n}{n!}$.
 
 Compute
 $$L(x)=|x|\cdot\lim\left|\frac{1}{(n+1)!}\frac{n!}{1}\right|=|x|\cdot\lim\left|\frac{1}{n+1}\right|=0.$$
 Then $L(x)<1$ (the series converges) for all $x\in R$. Therefore, the interval of convergence is $(-\infty,\infty)$, the radius of convergence is $\infty$ and the center is $x=0$.
+\end{exampleblock}
 
-\item $f(x)=\displaystyle\sum_{n=0}^\infty n! x^n$.
+\begin{exampleblock}
+$f(x)=\displaystyle\sum_{n=0}^\infty n! x^n$.
 Compute
 $$L(x)=|x|\cdot\lim\left|\frac{(n+1)!}{n!}\right|=|x|\cdot\lim\left|n+1\right|.$$
 Then $L(0)=0<1$ and $L(x)=\infty$ (the series diverges) for all $x\neq 0$. Therefore, the interval of convergence is $(0,0)=\{0\}$, the radius of convergence is $0$ and the center is $x=0$.
-
-
-\end{itemize}
+\end{exampleblock}
 
 
 \subsection{Taylor Series}

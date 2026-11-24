@@ -221,7 +221,9 @@ Suppose $f$ is differentiable on an open interval symmetric about 0.
 \item If $f$ is odd, then $f'$ is even: $f'(-x)=f'(x)$.
 \end{itemize}
 \end{thm}
+\begin{exampleblock}
 You can see this in $[x^2]'=2x$ and $[\sin(x)]'=\cos(x)$.
+\end{exampleblock}
 
 At the center of an even function's symmetry, there is another useful fact:
 \begin{thm}[An Even Function at the Origin]
@@ -229,7 +231,9 @@ At the center of an even function's symmetry, there is another useful fact:
 If $f$ is even and $f'(0)$ exists, then $f'(0)=0$.
 \end{thm}
 In other words, differentiability at 0 forces a horizontal tangent there.
+\begin{exampleblock}
 The hypothesis matters: $f(x)=|x|$ is even, but $f'(0)$ does not exist.
+\end{exampleblock}
 \mar{Why is the same not true for odd functions?}
 
 
@@ -249,9 +253,8 @@ Other notation is sometimes used: if $y=f(x)$, $\frac{dy}{dx}=\frac{d}{dx}[f(x)]
 
 When you solve for $y'$, it is possible that the expression will consist of both $y$ and $x$ variables. That is because the formula for $y'$ is not a function of just $x$, it is a function of both $x$ and $y$!
 
-Let's do an example:
-\begin{itemize}
-\item The curve of points satisfying the equation $y^{3}=x^{2}-xy-1$ is not a function, since it does not pass the vertical line test: both $(-1,-1)$ and $(-1,1)$ are solutions. However, we can still find the derivative at each point on this curve! Start by taking the ($x$) derivative of both sides.
+\begin{exampleblock}
+The curve of points satisfying the equation $y^{3}=x^{2}-xy-1$ is not a function, since it does not pass the vertical line test: both $(-1,-1)$ and $(-1,1)$ are solutions. However, we can still find the derivative at each point on this curve! Start by taking the ($x$) derivative of both sides.
 
 On the left, the $x$ derivative of $y^3$ is $3y^2y'$, by the power rule (and the chain rule). The derivative of $x^2$ is $2x$, the derivative of $xy$ is $y+xy'$ by the product rule (and chain rule), and the derivative of $1$ is 0, of course. Comparing the derivatives of each side of the equation, we get
 $$3y^2y'=2x-(y+xy'),$$
@@ -259,7 +262,7 @@ so solving for $y'$, we have
 $$y'=\frac{2x-y}{3y^2+x}.$$
 At $(-1,1)$, $y'=\frac{-3}{2}$, and at $(-1,-1)$, $y'=\frac{-1}{2}$. The tangent line to the curve at the point $(-1,1)$ is $y=\frac{-3}{2}(x+1)+1$
 
-\end{itemize}
+\end{exampleblock}
 
 \subsection{Parametric Curves}
 
@@ -267,12 +270,11 @@ A \textbf{parametric curve} is a curve defined by two coordinate functions $(x(t
 
 To find the slope (AKA derivative) of a parametric curve at time $t$, simply compute
 $$\frac{dy}{dx}=\frac{y'(t)}{x'(t)}.$$
-An example:
-\begin{itemize}
-    \item The derivative of the curve $(x,y)=(\sin(t), t^2)$ is
+\begin{exampleblock}
+    The derivative of the curve $(x,y)=(\sin(t), t^2)$ is
     $$\frac{y'(t)}{x'(t)}=\frac{2t}{\cos(t)}.$$
     The equation of the tangent line at $t=\pi$ is $y=\pi^2+\frac{2\pi}{-1}(x-0).$
-\end{itemize}
+\end{exampleblock}
 
 \subsection{Logarithmic Differentiation}
 
@@ -291,11 +293,13 @@ Over the real numbers, this method assumes that $f(x)>0$ on the interval under c
 % Thus $x^x$ is treated on $x>0$, while $\sin(x)^x$ is treated only on intervals where $\sin(x)>0$. A negative base with a variable real exponent is generally not real-valued.
 \end{remark}
 
-Here are some examples:
-\begin{itemize}
-\item $[x^x]'=x^x(\ln(x)+1)=\ln(x^{x^x})+x^x$. (Here $f(x)=g(x)=x$).
-\item $[\sin(x)^x]'=\sin(x)^x(\ln(\sin(x))+x\cot(x))$. (Here $f(x)=\sin(x)$ and $g(x)=x$). \mar{Work these examples out.}
-\end{itemize}
+\mar{Work these examples out.}
+\begin{exampleblock}
+$[x^x]'=x^x(\ln(x)+1)=\ln(x^{x^x})+x^x$. (Here $f(x)=g(x)=x$).
+\end{exampleblock}
+\begin{exampleblock}
+$[\sin(x)^x]'=\sin(x)^x(\ln(\sin(x))+x\cot(x))$. (Here $f(x)=\sin(x)$ and $g(x)=x$).
+\end{exampleblock}
 
 I don't recommend that you memorize the formula for $[f(x)^{g(x)}]'$. Instead, remember the procedure and re-create when you need it.
 
@@ -318,9 +322,8 @@ It is easy to see where this formula comes from:
 
 \mar{Use this rule to find the derivative of $\log_a(x)$.}
 
-Let's use this rule to find the derivative of inverse trig functions:
-\begin{itemize}
-\item The rule says that $[\sin^{-1}(x)]'=\frac{1}{\cos(\sin^{-1}(x))}$, but we should be able to simplify this expression using the unit circle.
+Let's use this rule to find the derivative of inverse trig functions.
+The rule says that $[\sin^{-1}(x)]'=\frac{1}{\cos(\sin^{-1}(x))}$, but we should be able to simplify this expression using the unit circle.
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
@@ -350,10 +353,10 @@ Let's use this rule to find the derivative of inverse trig functions:
 \end{tikzpicture}
 \end{figure}
 
+If a (non-right) angle of a right triangle (with hypotenuse 1) is $\sin^{-1}(x)$, the leg opposite $\sin^{-1}(x)$ has length $x$. Then $\cos(\sin^{-1}(x))$ is the length of the other leg of the triangle, so $\cos(\sin^{-1}(x))=\sqrt{1-x^2}$ by the Pythagorean theorem. Therefore,
+$$[\sin^{-1}(x)]'=\frac{1}{\cos(\sin^{-1}(x))}=\frac{1}{\sqrt{1-x^2}}.$$
 \mar{Argue this using the Pythagorean identitiy ($\sin^2\theta+\cos^2\theta = 1$) instead.}
-
-if a (non-right) angle of a right triangle (with hypotenuse 1) is $\sin^{-1}(x)$, the leg opposite $\sin^{-1}(x)$ has length $x$. Then $\cos(\sin^{-1}(x))$ is the length of the other leg of the triangle, so $\cos(\sin^{-1}(x))=\sqrt{1-x^2}$ by the Pythagorean theorem. Therefore,
-$$[\sin^{-1}(x)]'=\frac{1}{\cos(\sin^{-1}(x))}=\frac{1}{\sqrt{1-x^2}}.$$\item The derivatives of the other inverse trig functions are
+The derivatives of the other inverse trig functions are
 \mar{Figure these equations out by yourself using the same method as for $\sin^{-1}$. Hint: refer to Figure \ref{6trig}}
 \begin{align*}
 [\cos^{-1}(x)]' & =\frac{-1}{\sqrt{1-x^2}} \\
@@ -362,7 +365,6 @@ $$[\sin^{-1}(x)]'=\frac{1}{\cos(\sin^{-1}(x))}=\frac{1}{\sqrt{1-x^2}}.$$\item Th
 [\tan^{-1}(x)]' & =\frac{1}{1+x^2} \\
 [\cot^{-1}(x)]' & =\frac{-1}{1+x^2}
 \end{align*}
-\end{itemize}
 
 % \subsection{Summary}
 

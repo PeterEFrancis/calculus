@@ -1,29 +1,73 @@
 
 \section{Introduction}
 
-In algebra, the solution to an equation is a number (or numbers), but the solution to a differential equations is a function (or functions). We will only be dealing with \textbf{ordinary differential equations} (ODEs) whose solutions are functions of only one variable. Believe it or not, you have seen a differential equation already! The anti-derivative
+In algebra, the solution to an equation is a number (or numbers), but the
+solution to a differential equation is a function (or functions). We will
+only be dealing with \textbf{ordinary differential equations} (ODEs):
+equations involving a function of one variable and its derivatives.
+
+\subsection{General Solutions and Initial Conditions}
+
+Believe it or not, you have seen an ODE already! The anti-derivative
 $$\int f(x)\ dx = F(x)+C$$
 could be rewritten as the ODE
 $$y' = f(x)$$
-whose solution set is the family of functions $y=F(x)+C$. Of course, this means that differential equations can be more difficult to solve than antiderivatives, but this should give you this intuition of why differential equations can have a family of solutions. However, much like antiderivatives, if you specify an ``initial condition,'' a single solution for a differential equation can be determined. Here is a short example of a differential equation and its solution:
-\begin{itemize}
-\item The differential equation
+whose solutions are the family of functions $y=F(x)+C$. Different choices
+of $C$ give different functions that all satisfy the same equation,
+since differentiating kills the constant. A formula describing a family
+of solutions is called a \textbf{general solution}. Solving an ODE can
+be more difficult than finding an anti-derivative, but the constants
+serve the same purpose: they keep track of which member of the family
+we have.
+
+An ODE describes how a function changes, but we may still need to say
+where it starts. An \textbf{initial condition}, like $y(0)=1$, gives us
+that extra information. Plug it into the general solution, and we get an
+equation for the constants. Each independent constant is a \textbf{degree
+of freedom}: a choice that is still up to us. In the examples below,
+each independent initial condition removes one degree of freedom.
+
+\mar{What does it mean algebraically for a function to be a solution to an ODE?}
+\begin{exampleblock}
+The differential equation
 $$y' + y = 2x$$
-has solution 
+has general solution
 $$y(x) = C e^{-x} + 2 x - 2$$
-for any $C$, since if we plug $y$ in we get\mar{What does it mean algebraically for a function to be a solution to an ODE.}
+for any $C$, since if we plug $y$ in we get
 $$
 \left[C e^{-x} + 2 x - 2\right]'+\left(C e^{-x} + 2 x - 2\right)=
 -C e^{-x} + 2+ C e^{-x} + 2 x - 2 = 2x.
 $$
 Now if we specify the initial condition $y(0)=1$, we get
 $$ 1=y(0)=C e^{-0} + 2 (0) - 2 = C - 2,$$
-so $C=3$.
-\end{itemize}
+so $C=3$. This fixes the constant and gives the particular solution
+$$y(x)=3e^{-x}+2x-2.$$
+\end{exampleblock}
 
-In the rest of this section you will learn techniques for solving two types of ODEs (separable and second order), and you will learn a way to approximate solutions (Euler's method). Afterwards, you will see some specific differential equations and their relation to different areas in science.
+\begin{exampleblock}
+For $y''=0$, integrating twice gives
+$$y'=p,\qquad y=px+q.$$
+This family has two independent constants: the slope and the intercept.
+If we specify $y(0)=2$, then $q=2$, but $p$ is still free:
+$$y=px+2.$$
+We have narrowed the family down to all the lines through $(0,2)$, but
+we haven't picked just one! If we also specify $y'(0)=3$, then $p=3$,
+and the solution is
+$$y=3x+2.$$
+The first condition removed one degree of freedom, and the second
+removed the other.
+\end{exampleblock}
+\mar{For $y=px+q$, suppose we only know $y(1)=5$. What equation does this give for $p$ and $q$? How many degrees of freedom remain?}
+
+The conditions need to be independent: repeating the same condition
+doesn't give us any new information.
+
+In the next few chapters, we'll learn to approximate solutions with
+Euler's method, solve separable and certain second order ODEs by hand,
+and see how these equations show up in science.
 
 
+\clearpage
 \section{Slope Fields and Euler's Method}
 
 Some differential equations are of the form 
@@ -45,11 +89,13 @@ The main idea in Euler's method is to use the slope at a point to determine a di
 
 In general, to do Euler's method you need to pick a step size for the $x$ direction: $\Delta x$. Then if you start at the point $(x_0, y_0)$, the next point will be
 $$(x_1,y_1) = (x_0 + \Delta x, y_0 + \Delta y),$$
-Where $\Delta y = \Delta x\cdot f(x_0, y_0)$. This formula comes from using the line at $(x_0, y_0)$ with slope $f(x_0, y_0)$. \mar{Do the algebra to see this.} The step size should be as small as possible for the approximation to be good, but in practice you will most likely use $1$, $\frac12$, $\frac1{10}$, or something else easy for computation. Here is an example:
-\begin{itemize}[leftmargin=1em]
-\item For the ODE $y'=x+y$, we'll do Euler's method with $\Delta x = 1$, and then again with $\Delta x = \frac{1}{2}$. For both we'll use $(x_0,y_0)=(-1,1)$. The easiest way to do these computations is in a table, computing row by row, using the $\Delta y$ in the previous row to increment to the next value of $y$.
+Where $\Delta y = \Delta x\cdot f(x_0, y_0)$. This formula comes from using the line at $(x_0, y_0)$ with slope $f(x_0, y_0)$. \mar{Do the algebra to see this.} The step size should be as small as possible for the approximation to be good, but in practice you will most likely use $1$, $\frac12$, $\frac1{10}$, or something else easy for computation.
+\mar{Make a table for $\Delta x = 1/4$ and graph the points.}
+\begin{exampleblock}[breakable]
+For the ODE $y'=x+y$, we'll do Euler's method with $\Delta x = 1$, and then again with $\Delta x = \frac{1}{2}$. For both we'll use $(x_0,y_0)=(-1,1)$. The easiest way to do these computations is in a table, computing row by row, using the $\Delta y$ in the previous row to increment to the next value of $y$.
 
 \begin{multicols}{2}
+\setlength{\tabcolsep}{4pt}
 \begin{center}
 \def\arraystretch{1.2}
 \begin{tabular}{@{}cccc@{}}
@@ -85,15 +131,16 @@ $1$ & $49/16$ & $65/16$ & $65/32$\\
 \end{center}
 \end{multicols}
 
-\mar{Make a table for $\Delta x = 1/4$ and graph the points.}
+
 Here is a graph of the points in these two tables ($\Delta x = 1$ in red and $\Delta x = 1/2$ in blue). In addition, the actual solution to this ODE ($y=e^{x+1}-(x+1)$) is graphed in black.
 \begin{center}
 \includegraphics[width=3in]{img/eulers_method.png}
 \end{center}
 As you can see, the smaller step size gave a better approximation.
-\end{itemize}
+\end{exampleblock}
 
 
+\clearpage
 \section{Solving ODEs}
 \label{sec:solving-odes}
 \subsection{Separable ODEs}
@@ -101,14 +148,15 @@ The first kind of ODE that you can solve by hand is on expressible as one or two
 $$y'=f(x)g(y) \quad\quad\text{or}\quad\quad \frac{dy}{dx}=f(x)g(y)$$
 and can be rewritten as
 $$\frac{1}{g(y)}\ dy = f(x)\ dx.$$
-Both sides of this equation can be differentiated (the left with respect to $y$ and the right with respect to $x$). The resulting equation is the solution. Here is an example:
-\begin{itemize}
-\item For the ODE $\frac{dy}{dx} = xy$, rewrite as
+Both sides of this equation can be differentiated (the left with respect to $y$ and the right with respect to $x$). The resulting equation is the solution.
+\mar{Why is it ok that there is a constant only on one side?}
+\begin{exampleblock}
+For the ODE $\frac{dy}{dx} = xy$, rewrite as
 $$\frac{1}{y}\ dy = x\ dx.$$
 Integrating both sides gives
-$$\ln|y| = \frac{x^2}{2} + C.$$\mar{Why is it ok that there is a constant only on one side?}
+$$\ln|y| = \frac{x^2}{2} + C.$$
 Thus for any $C$, the curve defined be the equation above is a solution. You do not need to solve for $y$.
-\end{itemize}
+\end{exampleblock}
 
 \subsection{Second Order Differential Equations}
 
@@ -144,7 +192,246 @@ If $y_1$ and $y_2$ are solutions to the same homogeneous linear ODE, then so is 
  
 Sometimes it is considered ``good form'' to express solutions to an ODE using only real numbers. If that is desired, use this theorem to take linear combinations of solutions you have to generate those with only real numbers.
 
+\clearpage
 \section{Applications}
+
+Now that we have a few ways to solve differential equations, let's see
+where some of them come from. The main idea is to describe how something
+changes, write down an equation for that rate of change, and then use the
+solution to understand what happens over time.
+
 \subsection{The Logistic Equation}
+
+Imagine a population with plenty of food and space. A simple assumption
+is that its rate of growth is proportional to its current size:
+$$P'=rP,$$
+where $P(t)$ is the population at time $t$ and $r>0$ is a growth constant.
+We know how to solve this one: $P(t)=P(0)e^{rt}$. But a population can't
+usually keep growing like this forever!
+
+To account for limited resources, introduce a \textbf{carrying capacity}
+$K>0$, the population that the environment can support. The
+\textbf{logistic equation}
+$$P'=rP\left(1-\frac{P}{K}\right)$$
+describes how the carrying capacity affects the population. When $P$ is small compared to $K$, the factor $1-P/K$ is close to 1, so $P'\approx rP$, hence
+the growth is almost exponential. As $P$ gets closer to $K$, the growth
+slows down. If $P>K$, the factor is negative, so the population decreases.
+\mar{At what population is the growth rate largest? Think of $P'$ as a function of $P$.}
+
+Before separating variables, notice that $P=0$ and $P=K$ are constant
+solutions. These are called \textbf{equilibrium solutions}: if the
+population starts at either value, it stays there.
+For the other solutions, separate variables and use partial fractions:
+$$\frac{1}{P(1-P/K)}\,dP=r\,dt,$$
+$$\left(\frac1P+\frac1{K-P}\right)dP=r\,dt.$$
+Integrating gives
+$$\ln|P|-\ln|K-P|=rt+C.$$
+Exponentiate and solve for $P$, collecting the constants into a new
+constant $A$:
+$$P(t)=\frac{K}{1+Ae^{-rt}}.$$
+If $P(0)=P_0>0$, plugging in $t=0$ gives
+$$P_0=\frac{K}{1+A}
+\quad\Longrightarrow\quad A=\frac{K-P_0}{P_0}.$$
+This also includes $P=K$ when $A=0$; if $P_0=0$, use the constant
+solution $P=0$. For every positive initial population, $e^{-rt}\to0$
+as $t\to\infty$, so $P(t)\to K$.
+
+\begin{exampleblock}[breakable]
+Suppose a population starts with 100 animals, has carrying capacity
+1000, and follows the logistic equation with $r=1/2$ when time is measured
+in years. Then $A=(1000-100)/100=9$, so
+$$P(t)=\frac{1000}{1+9e^{-t/2}}.$$
+How long does it take to reach 500 animals? Set $P(t)=500$:
+$$500=\frac{1000}{1+9e^{-t/2}}
+\quad\Longrightarrow\quad e^{-t/2}=\frac19.$$
+Thus $t=2\ln(9)\approx4.39$ years. The population keeps growing, but
+approaches 1000 instead of growing without bound.
+
+We can see this leveling off in Figure~\ref{fig:logistic-population}.
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[x=.5cm,y=.0032cm,
+  every node/.style={font=\small,inner sep=2pt}]
+\draw[->] (0,0)--(14.8,0) node[right] {$t$ (years)};
+\draw[->] (0,0)--(0,1130) node[above] {$P(t)$};
+\foreach \t in {2,4,...,14}
+  \draw (\t,0)--(\t,-20) node[below] {$\t$};
+\foreach \p in {250,500,750,1000}
+  \draw (0,\p)--(-.12,\p) node[left] {$\p$};
+\node[below left] at (0,0) {$0$};
+\draw[dashed,gray] (0,1000)--(14,1000)
+  node[right,text=black] {$K=1000$};
+\draw[blue!70!black,thick,domain=0:14,samples=100]
+  plot (\x,{1000/(1+9*exp(-\x/2))});
+\fill[blue!70!black] (0,100) circle[radius=1.5pt];
+\fill[blue!70!black] ({2*ln(9)},500) circle[radius=1.5pt]
+  node[above left,text=black] {$(2\ln9,500)$};
+\end{tikzpicture}
+\caption{The logistic solution $P(t)=1000/(1+9e^{-t/2})$.}
+\label{fig:logistic-population}
+\end{figure}
+\end{exampleblock}
+
 \subsection{Simple Harmonic Oscillator}
+
+Imagine a mass attached to a spring on a horizontal surface, and ignore
+friction. Let $y(t)$ be its displacement from the spring's resting
+position. If we pull the mass to the right, the spring pulls it back to
+the left. If we push it to the left, the spring pushes it back to the
+right. We describe this with \textbf{Hooke's law}:
+$$F=-ky,$$
+where $k>0$ measures the stiffness of the spring. The minus sign makes
+the force point back toward the resting position, as in
+Figure~\ref{fig:simple-harmonic-oscillator}.
+
+\begin{figure}[h!]
+\centering
+\fbox{
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.75pt,
+                    every node/.style={font=\small,inner sep=2pt}]
+\fill[gray!30] (-.18,0) rectangle (0,1.6);
+\draw (0,0)--(0,1.6);
+\draw (-.18,0)--(7.7,0);
+\draw[dashed,gray] (3.6,-.7)--(3.6,1.25);
+\draw[dashed,gray] (6.2,-.7)--(6.2,0);
+\draw[decorate,decoration={coil,aspect=.85,segment length=14pt,
+  amplitude=6pt,pre length=11pt,post length=14pt}]
+  (0,.55)--(5.6,.55);
+\node at (2.4,1.0) {$k$};
+\filldraw[fill=gray!12] (5.6,0) rectangle (6.8,1.1);
+\node at (6.2,.55) {$m$};
+\draw[->,red!75!black,line width=1pt]
+  (6.2,1.45)--node[midway,above=3pt] {$F=-ky(t)$} (4.6,1.45);
+\draw[->,blue!70!black,line width=1pt]
+  (3.6,-.45)--node[midway,below=3pt] {$y(t)>0$} (6.2,-.45);
+\node[below=2pt] at (3.6,-.7) {$y=0$};
+\end{tikzpicture}
+}
+\caption{Here $y(t)>0$, so the spring pulls the mass to the left.}
+\label{fig:simple-harmonic-oscillator}
+\end{figure}
+
+Newton's law says that force is mass times acceleration. From kinematics,
+the acceleration is $y''(t)$, so a mass $m>0$ satisfies
+$$my''=-ky
+\quad\Longrightarrow\quad y''+\frac{k}{m}y=0.$$
+This is exactly the kind of second order ODE we already know how to
+solve! Write $\omega=\sqrt{k/m}$. The characteristic equation is
+$$\lambda^2+\omega^2=0,$$
+with roots $\lambda=\pm i\omega$. Therefore,
+$$y(t)=p\cos(\omega t)+q\sin(\omega t).$$
+This motion is called \textbf{simple harmonic motion}.
+
+Since there are two constants, we need two initial conditions: an initial
+position and an initial velocity. Differentiating gives
+$$y'(t)=-p\omega\sin(\omega t)+q\omega\cos(\omega t),$$
+so $y(0)=p$ and $y'(0)=q\omega$. In other words, if $y(0)=y_0$ and
+$y'(0)=v_0$, then
+$$y(t)=y_0\cos(\omega t)+\frac{v_0}{\omega}\sin(\omega t).$$
+For a nonzero solution, the sine and cosine repeat when $\omega t$
+increases by $2\pi$, so one full back-and-forth takes
+$$T=\frac{2\pi}{\omega}=2\pi\sqrt{\frac{m}{k}}.$$
+This is the \textbf{period}. A stiffer spring makes the motion faster;
+a heavier mass makes it slower.
+
+\begin{exampleblock}
+Take $m=1$, $k=4$, and initial conditions $y(0)=3$, $y'(0)=0$.
+This describes pulling the mass to one side and letting go from rest.
+Here $\omega=2$, $p=3$, and $q=0$, so
+$$y(t)=3\cos(2t).$$
+The mass moves between $y=-3$ and $y=3$, returning to its starting
+position after $T=\pi$ units of time.
+\end{exampleblock}
+\mar{Keep the same initial position, but give the mass initial velocity $y'(0)=2$. What is the new solution? Does its period change?}
+
 \subsection{Predator-Prey}
+
+Now let's let two populations interact. Imagine a population of rabbits
+and a population of foxes. More rabbits means more food for the foxes,
+but more foxes means more rabbits get eaten. Let $x(t)$ be the rabbit
+population and $y(t)$ be the fox population.
+
+To keep things simple, suppose that without foxes the rabbits grow
+exponentially, and without rabbits the foxes die off. More rabbits and
+more foxes mean more encounters, so we use a term proportional to $xy$.
+This gives
+$$
+\begin{cases}
+x'=ax-bxy=x(a-by),\\
+y'=-cy+dxy=y(dx-c),
+\end{cases}
+$$
+where $a,b,c,d$ are positive constants. The encounter terms decrease
+the rabbits' rate of growth and increase the foxes' rate of growth.
+This is a \textbf{system of differential equations}: we need two functions
+that satisfy both equations at once. Both functions depend on the same
+variable, time.
+
+We can learn quite a bit without solving the system. When both
+populations are positive:
+\begin{itemize}
+\item The rabbits increase when $y<a/b$ and decrease when $y>a/b$.
+\item The foxes increase when $x>c/d$ and decrease when $x<c/d$.
+\end{itemize}
+So enough rabbits make the foxes increase, and enough foxes make the
+rabbits decrease.
+
+As before, an equilibrium means the populations stay constant. Setting
+both derivatives equal to 0 gives
+$$x(a-by)=0,\qquad y(dx-c)=0.$$
+The equilibria are
+$$ (x,y)=(0,0)\quad\text{and}\quad(x,y)=\left(\frac cd,\frac ab\right).$$
+The first describes no animals at all. At the second, births and deaths
+balance for both populations.
+
+We can also use Euler's method, just updating two numbers instead of one:
+\begin{exampleblock}[breakable]
+Suppose our model is
+$$
+\begin{cases}
+x'=x(1-y/10),\\
+y'=y(x/20-1),
+\end{cases}
+$$
+with $x(0)=40$ and $y(0)=5$. The positive equilibrium is $(20,10)$,
+but our populations aren't there. Their initial rates of change are
+\begin{align*}
+x'(0)&=40\left(1-\frac5{10}\right)=20,\\
+y'(0)&=5\left(\frac{40}{20}-1\right)=5.
+\end{align*}
+With $\Delta t=1/10$, the next Euler estimates are
+$$x(1/10)\approx40+\frac1{10}(20)=42,$$
+$$y(1/10)\approx5+\frac1{10}(5)=5.5.$$
+Use the old populations in \textit{both} derivative calculations before
+updating either one. A fractional population is fine here: remember that
+these are continuous approximations.
+
+Figure~\ref{fig:predator-prey-populations} shows how these populations
+change over time. More rabbits means more food, so the fox population
+grows too. But more foxes means fewer rabbits, and then the foxes have
+less to eat. Notice that the fox population peaks after the rabbit
+population!
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[x=.5cm,y=.065cm,
+  every node/.style={font=\small,inner sep=2pt}]
+\draw[->] (0,0)--(14.8,0) node[right] {$t$};
+\draw[->] (0,0)--(0,55) node[above] {Population};
+\foreach \t in {2,4,...,14}
+  \draw (\t,0)--(\t,-1) node[below] {$\t$};
+\foreach \p in {10,20,...,50}
+  \draw (0,\p)--(-.12,\p) node[left] {$\p$};
+\node[below left] at (0,0) {$0$};
+\draw[blue!70!black,thick] plot[smooth]
+  file {img/predator_prey_rabbits.dat} node[right] {$x(t)$ (rabbits)};
+\draw[red!75!black,thick] plot[smooth]
+  file {img/predator_prey_foxes.dat} node[right] {$y(t)$ (foxes)};
+\fill[blue!70!black] (0,40) circle[radius=1.5pt];
+\fill[red!75!black] (0,5) circle[radius=1.5pt];
+\end{tikzpicture}
+\caption{Numerically estimated populations for the example with
+$x(0)=40$ and $y(0)=5$.}
+\label{fig:predator-prey-populations}
+\end{figure}
+\end{exampleblock}
+\mar{Take one more Euler step using $(42,5.5)$. Are both populations still increasing?}

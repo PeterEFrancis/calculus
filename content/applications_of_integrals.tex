@@ -184,9 +184,8 @@ The variance of a PDF (if it exists) is the average squared distance of an outco
 $$\sigma^2 = \int_{-\infty}^\infty (x-\mu)^2f(x)\ dx.$$
 The square root of the variance is called the \textbf{standard deviation}.
 
-Here are some examples:
-\begin{itemize}
-\item The ``uniform'' PDF on $(0,1)$ is defined as
+\begin{exampleblock}[breakable]
+The ``uniform'' PDF on $(0,1)$ is defined as
 $$f(x)=\begin{cases}0 & x < 0\\ 1 & 0\leq x\leq 1\\ 0 & x>1\end{cases}
 \quad\quad\text{ and } \quad\quad
 F(x)=\begin{cases}0 & x < 0\\ x & 0\leq x\leq 1\\ 1 & x>1\end{cases}$$
@@ -206,8 +205,10 @@ The expected value of the uniform PDF is
 $$\mu=\int_{0}^1 x\ dx=\frac{1}{2},$$
 and the variance is
 $$\sigma^2 = \int_{0}^1 \left(x-\frac{1}{2}\right)^2\ dx=\frac{1}{12}.$$
+\end{exampleblock}
 
-\item  The ``exponential'' PDF is defined as
+\begin{exampleblock}
+The ``exponential'' PDF is defined as
 $$f(x)=\begin{cases}0 & x < 0\\ e^{-x} & x\geq 0\end{cases}
 \quad\quad\text{ and } \quad\quad
 F(x)=\begin{cases}0 & x < 0\\1- e^{-x} & x\geq 0\end{cases}$$
@@ -221,7 +222,7 @@ $$\mu=\int_{0}^\infty xe^{-x}\ dx=1,$$
 and the variance is
 $$\sigma^2 = \int_{0}^\infty \left(x-1\right)^2e^{-x}\ dx=1.$$
 
-\end{itemize}
+\end{exampleblock}
 
 
 \mar{Draw a picture of these PDFs and CDFs.}
@@ -230,5 +231,224 @@ $$\sigma^2 = \int_{0}^\infty \left(x-1\right)^2e^{-x}\ dx=1.$$
 
 \subsection{Volumes and Surface Area}
 
+The same idea we used for area works for volume: cut a solid into thin
+pieces, find the volume of one piece, and add them up!
+
+\subsubsection{Cross Sections}
+
+Suppose a solid extends from $x=a$ to $x=b$, and a slice perpendicular to
+the $x$-axis has area $A(x)$. If $A$ is continuous, a thin slice of width
+$dx$ has volume $dV=A(x)\ dx$, so
+$$V=\int_a^b A(x)\ dx.$$
+The important thing is to find the \textit{area} of each cross section,
+not just its height. The slices might be squares, circles, triangles,
+or something else.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[x=3.4cm,y=3.4cm,line width=.75pt,
+  every node/.style={font=\small,inner sep=2pt}]
+\fill[gray!15] (0,0)--(1,1)
+  plot[domain=1:0,samples=45] (\x,{\x*\x})--cycle;
+\fill[gray!45] (.58,{.58*.58})--(.58,.58)--(.62,.62)
+  --(.62,{.62*.62})--cycle;
+\draw[->] (-.06,0)--(1.15,0) node[right] {$x$};
+\draw[->] (0,-.06)--(0,1.15) node[above] {$y$};
+\draw (0,0)--(1,1);
+\draw[domain=0:1,samples=45] plot (\x,{\x*\x});
+\draw[dashed,gray] (.6,0)--(.6,.36);
+\draw[<->] (.68,.36)--(.68,.6) node[midway,right] {$x-x^2$};
+\node at (.38,.65) {$y=x$};
+\node at (.86,.24) {$y=x^2$};
+\node[below left] at (0,0) {$0$};
+\node[below] at (.6,0) {$x$};
+\node[below] at (1,0) {$1$};
+\end{tikzpicture}
+\caption{A vertical strip between $y=x$ and $y=x^2$ has height $x-x^2$.}
+\label{fig:volume-base}
+\end{figure}
+
+\begin{exampleblock}
+Let the base of a solid be the region between $y=x$ and $y=x^2$ on
+$[0,1]$, shown in Figure~\ref{fig:volume-base}. Suppose its cross sections
+perpendicular to the $x$-axis are squares. Each square has side length
+$x-x^2$, so
+$$\begin{aligned}
+V&=\int_0^1(x-x^2)^2\ dx\\
+ &=\int_0^1(x^2-2x^3+x^4)\ dx\\
+ &=\frac13-\frac12+\frac15=\frac1{30}.
+\end{aligned}$$
+\end{exampleblock}
+
+\subsubsection{Disks and Washers}
+
+A \textbf{solid of revolution} is made by rotating a plane region around
+a line. If we rotate the region under a nonnegative function $f$ around
+the $x$-axis, each vertical slice becomes a disk of radius $f(x)$. Thus
+$$dV=\pi f(x)^2\ dx
+\qquad\Longrightarrow\qquad
+V=\pi\int_a^b f(x)^2\ dx.$$
+
+If there is a hole, the cross section is a \textbf{washer}: a big disk
+with a smaller disk removed. Let $R(x)$ be the outer radius and $r(x)$
+the inner radius, with $R(x)\geq r(x)\geq0$. Then
+$$V=\pi\int_a^b\bigl(R(x)^2-r(x)^2\bigr)\ dx.$$
+Both radii are distances from the axis of rotation. Notice that we
+subtract the \textit{squares} of the radii, rather than squaring their
+difference.
+
+\begin{exampleblock}
+Rotate the region in Figure~\ref{fig:volume-base} around the $x$-axis.
+The outer radius is $R(x)=x$, and the inner radius is $r(x)=x^2$.
+Therefore,
+$$\begin{aligned}
+V&=\pi\int_0^1(x^2-x^4)\ dx\\
+ &=\pi\left[\frac{x^3}{3}-\frac{x^5}{5}\right]_0^1
+ =\frac{2\pi}{15}.
+\end{aligned}$$
+\end{exampleblock}
+\mar{What changes if the same region is rotated around the line $y=-1$?}
+
+\subsubsection{Cylindrical Shells}
+
+Sometimes it is easier to use slices \textit{parallel} to the axis of
+rotation. A vertical strip rotated around the $y$-axis makes a thin
+\textbf{cylindrical shell}. Its volume is approximately its circumference
+times its height times its thickness:
+$$dV=2\pi(\text{radius})(\text{height})\ dx.$$
+
+Suppose $f(x)\geq g(x)$ on $[a,b]$, with $0\leq a<b$. Rotating the region
+between them around the $y$-axis gives shells of radius $x$ and height
+$f(x)-g(x)$, so
+$$V=2\pi\int_a^b x\bigl(f(x)-g(x)\bigr)\ dx.$$
+For washers, slice perpendicular to the axis. For shells, slice parallel
+to it. Horizontal slices work the same way, using $dy$.
+
+\begin{exampleblock}
+Now rotate the region in Figure~\ref{fig:volume-base} around the $y$-axis.
+Each shell has radius $x$ and height $x-x^2$, so
+$$\begin{aligned}
+V&=2\pi\int_0^1x(x-x^2)\ dx\\
+ &=2\pi\left(\frac13-\frac14\right)=\frac{\pi}{6}.
+\end{aligned}$$
+The axis changed, so this is a different solid from the washer example.
+\end{exampleblock}
+
+\subsubsection{Surface Area}
+
+To find the area of a surface of revolution, use the arc length idea
+from earlier. A short piece of the curve, of length $dL$, sweeps out a
+thin band. Its area is circumference times slanted length:
+$$dS=2\pi(\text{radius})\ dL.$$
+
+If $f\geq0$ has a continuous derivative on $[a,b]$, rotating its graph
+around the $x$-axis gives
+$$S=2\pi\int_a^b f(x)\sqrt{1+f'(x)^2}\ dx.$$
+Here $f(x)$ is the radius, and $\sqrt{1+f'(x)^2}\ dx$ is the arc length
+piece. Around the $y$-axis, when $x\geq0$, replace the radius $f(x)$ by
+$x$. These formulas give the surface swept out by the curve; add any
+flat end caps separately.
+
+\begin{exampleblock}
+Rotate $y=x$ on $[0,1]$ around the $x$-axis. Since $f'(x)=1$,
+$$S=2\pi\int_0^1x\sqrt{1+1^2}\ dx=\pi\sqrt2.$$
+This is the slanted surface of a cone. To include its circular base,
+add $\pi$, giving total surface area $\pi(1+\sqrt2)$.
+\end{exampleblock}
 
 \subsection{Work}
+
+If a constant force moves an object in the direction of the force, the
+\textbf{work} done is force times distance. What if the force changes
+as the object moves? Break the motion into short distances, just as we
+broke a region into thin strips.
+
+Suppose the object moves along a line from $x=a$ to $x=b$, with $a<b$,
+and let $F(x)$ be the component of the force in the direction of
+increasing $x$. Over a small displacement $dx$, the work is
+$dW=F(x)\ dx$. Adding these contributions gives
+$$W=\int_a^b F(x)\ dx.$$
+A force acting with the motion does positive work; a force opposing it
+does negative work. For motion in the other direction, reverse the
+bounds. When force is measured in newtons and distance in meters, work
+is measured in \textbf{joules}: one joule is one newton-meter.
+
+\subsubsection{Stretching a Spring}
+
+A spring gets harder to stretch as we pull it farther from its natural
+length. \textbf{Hooke's law} says that the force needed to stretch it
+slowly by a distance $x\geq0$ is $F(x)=kx$, where $k>0$ measures the
+stiffness of the spring. The spring itself pulls in the opposite
+direction, with force $-kx$.
+
+\begin{exampleblock}
+Suppose it takes 10 newtons to hold a spring stretched 0.2 meters beyond
+its natural length. Then
+$$10=k(0.2)\qquad\Longrightarrow\qquad k=50.$$
+To stretch it from 0.2 meters to 0.5 meters beyond its natural length,
+we do work
+$$\begin{aligned}
+W&=\int_{0.2}^{0.5}50x\ dx
+  =\left[25x^2\right]_{0.2}^{0.5}\\
+ &=25(0.25-0.04)=5.25\text{ joules}.
+\end{aligned}$$
+We start the integral at 0.2 because the spring is already stretched
+that far.
+\end{exampleblock}
+\mar{How much work is needed to stretch this spring from its natural length to 0.2 meters beyond it?}
+
+\subsubsection{Pumping Water}
+
+When we pump water out of a tank, different layers travel different
+distances. Near Earth's surface, a mass $m$ has weight $mg$, where
+$g\approx9.8$ meters per second squared. If a thin layer has volume
+$dV$ and the fluid has mass density $\rho$, its weight is $\rho g\ dV$.
+Therefore,
+$$dW=(\text{weight of a layer})(\text{distance it is lifted}).$$
+Find these two quantities before setting up the integral.
+
+\begin{exampleblock}[breakable]
+A cylindrical tank of radius 1 meter and depth 2 meters is full of
+water. How much work is needed to empty it through an outlet 3 meters
+above the bottom? Ignore friction and changes in kinetic energy, and
+use water density $\rho=1000$ kilograms per cubic meter.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[x=.9cm,y=.9cm,line width=.75pt,
+  every node/.style={font=\small,inner sep=2pt}]
+\fill[gray!12] (0,0) rectangle (2,2);
+\fill[blue!20] (0,.8) rectangle (2,.94);
+\draw (0,2)--(0,0) arc[start angle=180,end angle=360,
+  x radius=1,y radius=.18]--(2,2);
+\draw (1,2) ellipse[x radius=1,y radius=.18];
+\draw[dashed] (0,0) arc[start angle=180,end angle=0,
+  x radius=1,y radius=.18];
+\draw (0,.8)--(2,.8) (0,.94)--(2,.94);
+\draw[->] (2,2)--(2.4,2)--(2.4,3)--(3.15,3);
+\draw[dashed,gray] (-.4,3)--(3.4,3);
+\draw[->] (-.55,-.2)--(-.55,3.4);
+\node[above] at (-.55,3.4) {$y$};
+\foreach \h in {0,2,3}
+  \draw (-.62,\h)--(-.48,\h) node[left=3pt] {$\h$};
+\draw (-.62,.87)--(-.48,.87) node[left=3pt] {$y$};
+\draw[<->] (2.85,.87)--(2.85,3)
+  node[midway,right] {$3-y$};
+\draw[dashed,gray] (2,.87)--(2.85,.87);
+\end{tikzpicture}
+\caption{A layer at height $y$ must be lifted $3-y$ meters.}
+\label{fig:pumping-water}
+\end{figure}
+
+Measure $y$ upward from the bottom. A horizontal layer has volume
+$dV=\pi(1)^2\ dy=\pi\ dy$, so its weight is $9800\pi\ dy$ newtons.
+Its lifting distance is $3-y$, and the water occupies $0\leq y\leq2$.
+Thus
+$$\begin{aligned}
+W&=\int_0^2 9800\pi(3-y)\ dy\\
+ &=9800\pi\left[3y-\frac{y^2}{2}\right]_0^2\\
+ &=39200\pi\text{ joules}.
+\end{aligned}$$
+The lifting distance depends on the layer's height, even though every
+layer has the same cross-sectional area.
+\end{exampleblock}

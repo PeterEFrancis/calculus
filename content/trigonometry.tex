@@ -197,13 +197,14 @@ and
 
 So, how do we use trigonometry to help solve problems? The main way that trigonometry is useful for you as a calculus student is two-fold. One is as a source of nice function examples to play around with (once we start taking limits and derivatives). The other is as a means to fill in missing information (this is the ``SOH-CAH-TOA'' you might remember).
 
+\begin{exampleblock}[breakable]
 Let's say you have a right triangle with hypotenuse 8 and one a $30\degree$ angle.
 
 
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
-\fbox{\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+\resizebox{\linewidth}{!}{\fbox{\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
 %uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
 
 %Shape: Right Triangle [id:dp06753223391248242]
@@ -242,7 +243,7 @@ Let's say you have a right triangle with hypotenuse 8 and one a $30\degree$ angl
 \draw (301,42) node [anchor=north west][inner sep=0.75pt]    {$\div 8$};
 
 
-\end{tikzpicture}}
+\end{tikzpicture}}}
 \caption{Similar Triangles}
 \end{figure}
 
@@ -250,9 +251,12 @@ If you want to know what the other side lengths are, this is how you can use tri
 $$\sin 30\degree = \frac{y}{8}\quad\quad\text{and}\quad\quad\cos 30\degree=\frac{x}{8},$$
 so we can solve for $x$ and $y$:
 $$y = 8\sin 30\degree = 4\quad\quad\text{and}\quad\quad x= 8\cos 30\degree= 4\sqrt{3}.$$
-The mnemonic device ``SOH-CAH-TOA'' reminds us that \underline{S}in of $30\degree$ is the \underline{O}pposite leg ($y$) over the \underline{H}ypotenuse (8), and \underline{C}os of $30\degree$ is the \underline{A}djacent leg ($x$) over the \underline{H}ypotenuse (8). \mar{What does the ``TOA'' part say? What situation would it help you figure something out about a triangle?}
+The mnemonic device ``SOH-CAH-TOA'' reminds us that \underline{S}in of $30\degree$ is the \underline{O}pposite leg ($y$) over the \underline{H}ypotenuse (8), and \underline{C}os of $30\degree$ is the \underline{A}djacent leg ($x$) over the \underline{H}ypotenuse (8).
+\end{exampleblock}
+\mar{What does the ``TOA'' part say? What situation would it help you figure something out about a triangle?}
 
-The identities that we learned about also have many applications, but mostly are in simplifying calculuations. You should keep them in mind so you recognize when they might be helpful in simplifying an expression. Here is a cool example:
+The identities that we learned about also have many applications, but mostly are in simplifying calculuations. You should keep them in mind so you recognize when they might be helpful in simplifying an expression.
+\begin{exampleblock}
 \begin{align*}
 \sin\left(2\theta\right)\left(\frac{\tan \theta+\cot \theta}{2}\right)
 & = 2\sin\theta\cos\theta\left(\frac{\frac{\sin\theta}{\cos\theta}+\frac{\cos\theta}{\sin\theta}}{2}\right)\\
@@ -260,15 +264,18 @@ The identities that we learned about also have many applications, but mostly are
 & = \sin^2\theta+\cos^2\theta\\
 & = 1.
 \end{align*}
+\end{exampleblock}
 
 
-Trig identities can also be a computationally useful tool: if you need to know the Sine (or Cosine, etc.) of an angle you are not familiar with, write the angle as a sum or difference of angles you know and use the angle sum formulas. For example,
+Trig identities can also be a computationally useful tool: if you need to know the Sine (or Cosine, etc.) of an angle you are not familiar with, write the angle as a sum or difference of angles you know and use the angle sum formulas.
+\begin{exampleblock}
 \begin{align*}
 \cos(15\degree) & = \cos(45\degree-30\degree) \\
                 & = \cos(45\degree)\cos(30\degree)+\sin(45\degree)\sin(30\degree) \\
                 & = \frac{\sqrt{2}}{2}\frac{\sqrt{3}}{2} + \frac{\sqrt{2}}{2}\frac{1}{2} \\
                 & = \frac{\sqrt{6}+\sqrt{2}}{4}.
 \end{align*}
+\end{exampleblock}
 \mar{Can you compute $\tan(75\degree)$?}
 
 \subsection{There's Always More Trigonometry...}

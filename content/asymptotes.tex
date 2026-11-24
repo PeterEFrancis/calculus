@@ -16,9 +16,8 @@ where $L$ is a finite number. So, to find horizontal asymptotes, compute
 these two limits separately. The left and right ends of the graph might
 approach different heights, or one end might have no horizontal asymptote.
 
-For example:
-\begin{itemize}
-\item Remember that $\sqrt{x^2}=|x|$. For $x\ne0$,
+\begin{exampleblock}
+Remember that $\sqrt{x^2}=|x|$. For $x\ne0$,
 $$\frac{x}{\sqrt{x^2+1}}=
 \frac{x/|x|}{\sqrt{1+1/x^2}}.$$
 The numerator on the right is 1 for $x>0$ and $-1$ for $x<0$, so
@@ -27,7 +26,7 @@ $$\lim_{x\to\infty}\frac{x}{\sqrt{x^2+1}}=1,
 \lim_{x\to-\infty}\frac{x}{\sqrt{x^2+1}}=-1.$$
 This graph has two horizontal asymptotes: $y=1$ on the right and $y=-1$
 on the left.
-\end{itemize}
+\end{exampleblock}
 
 A horizontal asymptote is not a barrier: the graph can cross it.
 The limit only describes what happens far out, not at every input.
@@ -47,9 +46,8 @@ and cancel common factors first (away from the excluded inputs), then
 check the remaining denominator zeros. A zero in the original denominator
 is only a candidate, not a guarantee!
 
-Here are some examples:
-\begin{itemize}
-\item Let
+\begin{exampleblock}
+Let
 $$f(x)=\frac{x^2-1}{(x-1)(x-2)}=\frac{x+1}{x-2}
 \qquad(x\ne1,2).$$
 There are two candidates, but
@@ -60,9 +58,11 @@ the right. Thus
 $$\lim_{x\to2^-}f(x)=-\infty,\qquad
 \lim_{x\to2^+}f(x)=\infty,$$
 and $x=2$ is a vertical asymptote.
+\end{exampleblock}
 
-\item Not every vertical asymptote comes from a denominator. For instance,
+\begin{exampleblock}
+Not every vertical asymptote comes from a denominator:
 $$\lim_{x\to0^+}\ln(x)=-\infty,$$
 so $x=0$ is a vertical asymptote of $\ln(x)$, even though there is no
 left-hand side of its domain near 0.
-\end{itemize}
+\end{exampleblock}

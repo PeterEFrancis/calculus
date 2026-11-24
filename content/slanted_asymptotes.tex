@@ -24,33 +24,34 @@ Check $x\to-\infty$ separately; it need not give the same line.
 For rational functions, polynomial division often does the work for us.
 In general, a rational function has a slanted asymptote when the
 numerator's degree is exactly one more than the denominator's: divide,
-and keep the linear quotient. Here are some examples:
-\begin{itemize}
-\item Polynomial division gives
+and keep the linear quotient.
+\begin{exampleblock}
+Polynomial division gives
 $$f(x)=\frac{x^2+1}{x-1}=x+1+\frac{2}{x-1}.$$
 Since
 $$\lim_{x\to\pm\infty}\bigl(f(x)-(x+1)\bigr)
 =\lim_{x\to\pm\infty}\frac{2}{x-1}=0,$$
 the slanted asymptote is $y=x+1$ in both directions.
+\end{exampleblock}
 
-\item Finding a slope is not enough. If $f(x)=x+\sqrt{x}$, then
+\begin{exampleblock}
+Finding a slope is not enough. If $f(x)=x+\sqrt{x}$, then
 $$\lim_{x\to\infty}\frac{f(x)}x=1,\qquad
 \lim_{x\to\infty}\bigl(f(x)-x\bigr)=\infty.$$
 So there is no finite intercept $b$, and no slanted asymptote.
-\end{itemize}
+\end{exampleblock}
 
 \subsection{Other Asymptotics}
 
 We can also look for a simple curve $y=g(x)$ such that
 $$\lim_{x\to\infty}\bigl(f(x)-g(x)\bigr)=0.$$
-For example:
-\begin{itemize}
-\item Polynomial division gives
+\begin{exampleblock}
+Polynomial division gives
 $$\frac{x^3+1}{x-1}=x^2+x+1+\frac{2}{x-1}.$$
 The last term approaches 0 as $x\to\pm\infty$, so the graph approaches
 the parabola $y=x^2+x+1$. This is sometimes called a
 \textbf{polynomial asymptote}.
-\end{itemize}
+\end{exampleblock}
 
 Sometimes we only want to compare a function's leading growth. We write
 $$f(x)\sim g(x)\quad\text{as }x\to\infty
@@ -58,9 +59,8 @@ $$f(x)\sim g(x)\quad\text{as }x\to\infty
 \lim_{x\to\infty}\frac{f(x)}{g(x)}=1,$$
 where $g(x)\ne0$ for all sufficiently large $x$. This says that the
 \textit{relative} error goes to 0, not necessarily the vertical gap.
-For example:
-\begin{itemize}
-\item $x+\sqrt{x}\sim x$, even though their difference grows without bound.
-\end{itemize}
+\begin{exampleblock}
+$x+\sqrt{x}\sim x$, even though their difference grows without bound.
+\end{exampleblock}
 Keep the two tests straight: use a difference to check
 whether the graphs get close, and a ratio to compare their leading growth.

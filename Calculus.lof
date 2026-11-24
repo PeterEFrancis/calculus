@@ -6,12 +6,17 @@
 \contentsline {figure}{\numberline {6}{\ignorespaces A Surjection, a Bijection, and an Injection}}{15}{figure.6}%
 \contentsline {figure}{\numberline {7}{\ignorespaces Two functions with the same limits}}{18}{figure.7}%
 \contentsline {figure}{\numberline {8}{\ignorespaces A cartoon of the $\varepsilon -\delta $ definition of a limit}}{20}{figure.8}%
-\contentsline {figure}{\numberline {9}{\ignorespaces A Cartoon of the Intermediate Value Theorem}}{23}{figure.9}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Flowchart for evaluating limits}}{24}{figure.10}%
-\contentsline {figure}{\numberline {11}{\ignorespaces The four cases of vertical asymptotes}}{25}{figure.11}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Linear Approximation}}{35}{figure.12}%
-\contentsline {figure}{\numberline {13}{\ignorespaces The Geometric Definition of the Definite Integral}}{41}{figure.13}%
-\contentsline {figure}{\numberline {14}{\ignorespaces A Right Riemann Sum}}{42}{figure.14}%
-\contentsline {figure}{\numberline {15}{\ignorespaces The slope field $y'=x+y$.}}{64}{figure.15}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Plotting a Complex Number}}{71}{figure.16}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Polar Representation of Complex Numbers}}{72}{figure.17}%
+\contentsline {figure}{\numberline {9}{\ignorespaces A Cartoon of the Intermediate Value Theorem}}{24}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Flowchart for evaluating limits}}{25}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces The four cases of vertical asymptotes}}{26}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Linear Approximation}}{37}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces The Geometric Definition of the Definite Integral}}{43}{figure.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces A Right Riemann Sum}}{44}{figure.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces A vertical strip between $y=x$ and $y=x^2$ has height $x-x^2$.}}{57}{figure.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces A layer at height $y$ must be lifted $3-y$ meters.}}{60}{figure.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces The slope field $y'=x+y$.}}{73}{figure.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces The logistic solution $P(t)=1000/(1+9e^{-t/2})$.}}{78}{figure.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Here $y(t)>0$, so the spring pulls the mass to the left.}}{78}{figure.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Numerically estimated populations for the example with $x(0)=40$ and $y(0)=5$.}}{80}{figure.20}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Plotting a Complex Number}}{85}{figure.21}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Polar Representation of Complex Numbers}}{86}{figure.22}%

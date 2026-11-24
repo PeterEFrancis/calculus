@@ -156,22 +156,23 @@ For exponential functions we can use the \textbf{finite geometric sum}:
 $$\sum_{k=1}^n r^k=\frac{r(1-r^n)}{1-r}\qquad(r\ne1).\hbox{\proofref{proof:finite-geometric-sum}}$$
 If $r=1$, the sum is just $n$.
 
-Here are some examples:
-\begin{itemize}
-    \item To compute $\int_{0}^{1}x^2+x\ dx$, first find $R_n$:
+\mar{Compute $$\int_{0}^1x^3\ dx$$ using the method of Riemann Sums.}
+\begin{exampleblock}
+    To compute $\int_{0}^{1}x^2+x\ dx$, first find $R_n$:
     \begin{align*}
         R_n
         & = \sum_{k=1}^{n}f\left(a+k\frac{b-a}{n}\right)\frac{b-a}{n}\\ 
         & = \sum_{k=1}^n\left(\left(0+k\frac{1-0}{n}\right)^2 + \left(0+k\frac{1-0}{n}\right)\right)\frac{1-0}{n}&&&\text{(plug in)}\\
-        & = \sum_{k=1}^n\left(\frac{k^2}{n^2} + \frac{k}{n}\right)\frac{1}{n} &&&\text{(expand and simplify)}\\
+        & = \sum_{k=1}^n\left(\frac{k^2}{n^2} + \frac{k}{n}\right)\frac{1}{n} &&&\text{\shortstack[l]{(expand and\\simplify)}}\\
         & = \frac{1}{n^3}\sum_{k=1}^nk^2+\frac{1}{n^2}\sum_{k=1}^nk &&& \text{(factor)}\\
-        & = \frac{1}{n^3}\frac{n(n+1)(2n+1)}{6}+\frac{1}{n^2}\frac{n(n+1)}{2} &&&\text{(use sum identities)}
+        & = \frac{1}{n^3}\frac{n(n+1)(2n+1)}{6}+\frac{1}{n^2}\frac{n(n+1)}{2} &&&\text{\shortstack[l]{(use sum\\identities)}}
     \end{align*}
     Then take the limit:
     $$\lim_{n\to\infty}R_n=\lim_{n\to\infty} \frac{1}{n^3}\frac{n(n+1)(2n+1)}{6}+\frac{1}{n^2}\frac{n(n+1)}{2} = \frac{2}{6} + \frac{1}{2} = \frac{5}{6}.$$
-    \mar{Compute $$\int_{0}^1x^3\ dx$$ using the method of Riemann Sums.}
+\end{exampleblock}
 
-    \item To compute $\int_0^1 2^x\ dx$, use $\Delta x=1/n$ and the right endpoints $x_k=k/n$. Write $r=2^{1/n}$, so $r^n=2$.
+\begin{exampleblock}
+    To compute $\int_0^1 2^x\ dx$, use $\Delta x=1/n$ and the right endpoints $x_k=k/n$. Write $r=2^{1/n}$, so $r^n=2$.
     \begin{align*}
         R_n
         & = \sum_{k=1}^n 2^{k/n}\frac{1}{n} &&& \text{(plug in)}\\
@@ -187,7 +188,7 @@ Here are some examples:
         & = \lim_{h\to0^+}\frac{1}{2^h\ln(2)} &&& \text{(L'H\^opital's rule)}\\
         & = \frac{1}{\ln(2)}. &&& \text{(evaluate)}
     \end{align*}
-\end{itemize}
+\end{exampleblock}
 
 \subsection{The Fundamental Theorem of Calculus}
 

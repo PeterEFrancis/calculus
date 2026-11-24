@@ -1,11 +1,10 @@
-\section{Proofs by Chapter}
 \label{sec:selected-proofs}
 
 These arguments use the definitions and results in the book, together with
 ordinary algebra and geometry. Supporting facts about bounds and rectangle
 sums are explained below before they are used.
 
-\subsection{Proofs from Chapter \ref*{sec:trigonometry}: Trigonometry}
+\proofchapter{Proofs from Chapter \ref*{sec:trigonometry}: Trigonometry}
 
 \proofheading{The Sine Angle-Sum Formulas}{proof:sine-angle-sum}
 
@@ -84,7 +83,7 @@ Replace $B$ by $-B$ to obtain
 $$\cos(A+B)=\cos A\cos B-\sin A\sin B.$$
 \end{proof}
 
-\proofheading{The Law of Sines (Theorem~\ref*{source:proof:law-of-sines})}{proof:law-of-sines}
+\proofheading{Theorem~\ref*{source:proof:law-of-sines}}{proof:law-of-sines}
 
 \begin{proof}
 The area of the triangle can be computed using any side as the base:
@@ -108,7 +107,7 @@ If $A$ is a right angle, the chord is a diameter, so $a=2R$.
 Thus $a/\sin A=2R$.
 \end{proof}
 
-\proofheading{The Law of Cosines (Theorem~\ref*{source:proof:law-of-cosines})}{proof:law-of-cosines}
+\proofheading{Theorem~\ref*{source:proof:law-of-cosines}}{proof:law-of-cosines}
 
 \begin{proof}
 Place the vertex with angle $C$ at $(0,0)$, and place the other two vertices
@@ -121,7 +120,7 @@ c^2&=(b-a\cos C)^2+(a\sin C)^2\\
 Rearranging gives $a^2+b^2=c^2+2ab\cos C$.
 \end{proof}
 
-\proofheading{Heron's Formula (Theorem~\ref*{source:proof:heron})}{proof:heron}
+\proofheading{Theorem~\ref*{source:proof:heron}}{proof:heron}
 
 \begin{proof}
 Since $\Delta=ab\sin C/2$, use the Law of Cosines to eliminate the angle:
@@ -136,9 +135,9 @@ Since $\Delta=ab\sin C/2$, use the Law of Cosines to eliminate the angle:
 where $s=(a+b+c)/2$. Divide by 16 and take the nonnegative square root.
 \end{proof}
 
-\subsection{Proofs from Chapter \ref*{sec:real-functions}: Functions on the Real Line}
+\proofchapter{Proofs from Chapter \ref*{sec:real-functions}: Functions on the Real Line}
 
-\subsubsection{Shrinking Intervals and Bounds}
+\subsection*{Shrinking Intervals and Bounds}
 \label{sec:real-number-tools}
 
 Repeatedly keeping a closed half of an interval picks out a real number
@@ -162,19 +161,15 @@ Therefore some $s\in S$ exceeds $M-\varepsilon$. So $M$ bounds $S$, and
 no smaller number does. Negating the numbers gives the corresponding
 \textbf{greatest lower bound}.
 
-This also explains why bounded increasing sequences converge.
-Let $M$ be the least upper bound of their terms. Some term exceeds
-$M-\varepsilon$, and every later term stays between $M-\varepsilon$ and
-$M$, so the limit is $M$. For a decreasing sequence, negate its terms.
-
-The same argument works for increasing functions with an upper bound.
-For example, if $q(t)$ increases and stays bounded as $t\to\infty$,
+We will also need the corresponding fact for monotone functions.
+If $q(t)$ increases and stays bounded as $t\to\infty$,
+let $M$ be the least upper bound of its values. Given $\varepsilon>0$,
 choose $t_0$ with $q(t_0)>M-\varepsilon$. Then
 $M-\varepsilon<q(t)\leq M$ for $t\geq t_0$, so $q(t)\to M$.
 For a finite endpoint choose $t_0$ before that endpoint; reverse signs
 or the direction of approach for the other monotone cases.
 
-\proofheading{Invertibility and Bijectivity (Theorem~\ref*{source:proof:invertibility})}{proof:invertibility}
+\proofheading{Theorem~\ref*{source:proof:invertibility}}{proof:invertibility}
 
 \begin{proof}
 Suppose $f:A\to B$ has an inverse $g:B\to A$. If $f(x_1)=f(x_2)$, applying
@@ -203,7 +198,7 @@ $f^{-1}(y)\to x_0$ as $y\to y_0$. At an endpoint use only the available
 side; for a decreasing function reverse the inequalities.
 \end{proof}
 
-\subsection{Proofs from Chapter \ref*{sec:limit-properties}: Properties of Limits}
+\proofchapter{Proofs from Chapter \ref*{sec:limit-properties}: Properties of Limits}
 
 \proofheading{The Limit Laws}{proof:limit-laws}
 
@@ -235,12 +230,12 @@ Law proves the Power Law for positive integer powers.
 
 Finally, $t\mapsto t^n$ is continuous and strictly increasing on $\R$ when
 $n$ is odd, and on $[0,\infty)$ when $n$ is even. Its inverse is therefore
-continuous by Section \ref{sec:inverse-continuity-proof}. Applying this
+continuous by \hyperref[sec:inverse-continuity-proof]{Continuity of a Monotone Inverse}. Applying this
 continuity to $f(x)\to L$ gives the Root Law, with nonnegative inputs
 required for even roots.
 \end{proof}
 
-\proofheading{The Composite Function Theorem (Theorem~\ref*{source:proof:composite-limit})}{proof:composite-limit}
+\proofheading{Theorem~\ref*{source:proof:composite-limit}}{proof:composite-limit}
 
 \begin{proof}
 Suppose $g(x)\to L$, $f$ is continuous at $L$, and the composition is
@@ -256,7 +251,7 @@ that $g(x)=L$ causes no problem: the outer function is continuous there.
 The same argument works for one-sided limits and limits at infinity.
 \end{proof}
 
-\proofheading{Continuity of Algebraic Combinations (Theorem~\ref*{source:proof:algebraic-continuity})}{proof:algebraic-continuity}
+\proofheading{Theorem~\ref*{source:proof:algebraic-continuity}}{proof:algebraic-continuity}
 
 \begin{proof}
 At a point where $f$ and $g$ are continuous, their limits equal their
@@ -281,7 +276,7 @@ Repeating these steps handles any finite combination. At domain endpoints,
 take limits through the allowed inputs.
 \end{proof}
 
-\proofheading{The Intermediate Value Theorem (Theorem~\ref*{source:proof:intermediate-value})}{proof:intermediate-value}
+\proofheading{Theorem~\ref*{source:proof:intermediate-value}}{proof:intermediate-value}
 
 \begin{proof}
 The endpoint values themselves are already attained. Suppose
@@ -290,7 +285,7 @@ otherwise keep the half whose endpoint values lie on opposite sides of
 $z$, and repeat.
 
 The shrinking closed intervals have a common point $c$, by the argument
-in Section~\ref{sec:real-number-tools}. If $f(c)<z$, continuity makes
+in \hyperref[sec:real-number-tools]{Shrinking Intervals and Bounds}. If $f(c)<z$, continuity makes
 $f(t)<z$ throughout some neighborhood of $c$ in $[a,b]$. Eventually a
 retained interval lies entirely in that neighborhood, contradicting its
 endpoint value above $z$. The case $f(c)>z$ gives the opposite
@@ -298,10 +293,10 @@ contradiction. Therefore $f(c)=z$. If $f(a)>f(b)$, apply the same argument
 to $-f$ and $-z$.
 \end{proof}
 
-\subsection{Proofs from Chapter \ref*{sec:evaluating-limits}: Evaluating Limits}
+\proofchapter{Proofs from Chapter \ref*{sec:evaluating-limits}: Evaluating Limits}
 \label{sec:special-case-proofs}
 
-\proofheading{The Squeeze Theorem (Theorem~\ref*{source:proof:squeeze})}{proof:squeeze}
+\proofheading{Theorem~\ref*{source:proof:squeeze}}{proof:squeeze}
 
 \begin{proof}
 Suppose $g(x)\leq f(x)\leq h(x)$ near $a$ and both bounding functions
@@ -406,7 +401,7 @@ $$
 =3-\frac1{2^{n-1}}<3.
 $$
 The bounded increasing sequence therefore has a limit, by
-Section~\ref{sec:real-number-tools}. This limit defines $e$; the natural
+\hyperref[sec:real-number-tools]{Shrinking Intervals and Bounds}. This limit defines $e$; the natural
 logarithm $\ln$ is the logarithm with this base.
 
 For real $x\to\infty$, choose the integer $n$ with $n\leq x<n+1$.
@@ -469,10 +464,10 @@ If $a=1$, the quotient is zero for every $x\ne0$, as required.
 
 
 
-\subsection{Proofs from Chapter \ref*{sec:the-derivative}: The Derivative}
+\proofchapter{Proofs from Chapter \ref*{sec:the-derivative}: The Derivative}
 \label{sec:derivative-proofs}
 
-\proofheading{Differentiability Implies Continuity (Theorem~\ref*{source:proof:differentiability-continuity})}{proof:differentiability-continuity}
+\proofheading{Theorem~\ref*{source:proof:differentiability-continuity}}{proof:differentiability-continuity}
 
 \begin{proof}
 If $f$ is differentiable at $a$, then for $h\ne0$,
@@ -578,7 +573,7 @@ The case $r=0$ is the constant function $1$, with derivative $0$;
 negative powers are undefined at $0$.
 \end{proof}
 
-\proofheading{Derivatives of Even and Odd Functions (Theorem~\ref*{source:proof:even-odd-derivatives})}{proof:even-odd-derivatives}
+\proofheading{Theorem~\ref*{source:proof:even-odd-derivatives}}{proof:even-odd-derivatives}
 
 \begin{proof}
 The Chain Rule gives $[f(-x)]'=-f'(-x)$. If $f$ is even, differentiate
@@ -589,7 +584,7 @@ $$-f'(-x)=-f'(x),\qquad\text{so}\qquad f'(-x)=f'(x).$$
 Thus $f'$ is even.
 \end{proof}
 
-\proofheading{An Even Function at the Origin (Theorem~\ref*{source:proof:even-derivative-zero})}{proof:even-derivative-zero}
+\proofheading{Theorem~\ref*{source:proof:even-derivative-zero}}{proof:even-derivative-zero}
 
 \begin{proof}
 For $h\ne0$ sufficiently close to 0, evenness gives
@@ -599,17 +594,17 @@ approaches $-f'(0)$. Since this derivative exists, $f'(0)=-f'(0)$,
 so $f'(0)=0$.
 \end{proof}
 
-\subsection{Proofs from Chapter \ref*{sec:applications-of-derivatives}: Applications of Derivatives}
+\proofchapter{Proofs from Chapter \ref*{sec:applications-of-derivatives}: Applications of Derivatives}
 \label{sec:derivative-applications-proofs}
 
-\proofheading{The Extreme Value Theorem (Theorem~\ref*{source:proof:extreme-value})}{proof:extreme-value}
+\proofheading{Theorem~\ref*{source:proof:extreme-value}}{proof:extreme-value}
 
 \begin{proof}
 First show that $f$ is bounded on $[a,b]$. If it were unbounded, at least
 one closed half would also be unbounded: otherwise the larger of two
 bounds would bound the whole interval. Keep an unbounded half and repeat.
 The retained intervals shrink to a common point $c$, by
-Section~\ref{sec:real-number-tools}. Continuity gives
+\hyperref[sec:real-number-tools]{Shrinking Intervals and Bounds}. Continuity gives
 $|f(t)-f(c)|<1$ for all $t$ sufficiently close to $c$ in $[a,b]$.
 A short enough retained interval lies there, so
 $|f(t)|\leq|f(c)|+1$ on it, a contradiction.
@@ -626,7 +621,7 @@ $(f(c)+M)/2<M$. This contradicts its values arbitrarily close to $M$.
 Thus $f(c)=M$. Apply the same argument to $-f$ to obtain a minimum.
 \end{proof}
 
-\proofheading{Fermat's Theorem (Theorem~\ref*{source:proof:critical-numbers})}{proof:critical-numbers}
+\proofheading{Theorem~\ref*{source:proof:critical-numbers}}{proof:critical-numbers}
 
 \begin{proof}
 Suppose $f$ has a local maximum at $a$ and $f'(a)$ exists. For sufficiently
@@ -639,7 +634,7 @@ Both one-sided limits equal $f'(a)$, so $f'(a)\leq0$ and $f'(a)\geq0$.
 Thus $f'(a)=0$. For a local minimum reverse the inequalities.
 \end{proof}
 
-\proofheading{The Mean Value Theorem (Theorem~\ref*{source:proof:mean-value})}{proof:mean-value}
+\proofheading{Theorem~\ref*{source:proof:mean-value}}{proof:mean-value}
 
 \begin{proof}
 Suppose $f$ is continuous on $[a,b]$ and differentiable on $(a,b)$. Subtract
@@ -657,7 +652,7 @@ $$
 which is the desired result. When $f(a)=f(b)$, this is Rolle's theorem.
 \end{proof}
 
-\proofheading{The First Derivative Test (Theorem~\ref*{source:proof:first-derivative-test})}{proof:first-derivative-test}
+\proofheading{Theorem~\ref*{source:proof:first-derivative-test}}{proof:first-derivative-test}
 
 \begin{proof}
 Suppose $f$ is continuous at $a$ and differentiable on each side nearby.
@@ -674,7 +669,7 @@ has opposite signs on the two sides: nearby values lie both above and
 below $f(a)$, so there is no local extremum.
 \end{proof}
 
-\proofheading{The Second Derivative Test (Theorem~\ref*{source:proof:second-derivative-test})}{proof:second-derivative-test}
+\proofheading{Theorem~\ref*{source:proof:second-derivative-test}}{proof:second-derivative-test}
 
 \begin{proof}
 Suppose $f'(a)=0$, $f''$ is continuous at $a$, and $f''(a)>0$. Then $f''$
@@ -688,7 +683,7 @@ Derivative Test gives a local minimum. If $f''(a)<0$, all signs reverse
 and we get a local maximum.
 \end{proof}
 
-\proofheading{L'H\^opital's Rule (Theorem~\ref*{source:proof:lhopital})}{proof:lhopital}
+\proofheading{Theorem~\ref*{source:proof:lhopital}}{proof:lhopital}
 \label{sec:lhopital-proof}
 
 \begin{proof}
@@ -776,9 +771,9 @@ is exactly the desired limit $f(x)/g(x)\to L$ at infinity.
 \end{proof}
 
 
-\subsection{Proofs from Chapter \ref*{sec:definite-integral}: The Definite Integral}
+\proofchapter{Proofs from Chapter \ref*{sec:definite-integral}: The Definite Integral}
 
-\subsubsection{Rectangle Sums and Signed Area}
+\subsection*{Rectangle Sums and Signed Area}
 \label{sec:rectangle-sum-tools}
 
 Here is a precise rectangle version of signed area. A \textbf{partition}
@@ -786,7 +781,7 @@ $P$ cuts $[a,b]$ into finitely many subintervals. For a bounded function,
 use the greatest lower bound of its heights on each subinterval for a
 \textbf{lower sum} $L_P$, and the least upper bound for an
 \textbf{upper sum} $U_P$. These bounds exist by
-Section~\ref{sec:real-number-tools}.
+\hyperref[sec:real-number-tools]{Shrinking Intervals and Bounds}.
 
 Adding dividing points can only increase $L_P$ and decrease $U_P$.
 Any lower sum is at most any upper sum: insert the dividing points from
@@ -797,7 +792,7 @@ for every $P$. If $U_P-L_P$ can be made arbitrarily small, these bounds
 determine just one number. This is the \textbf{Riemann integral}: the
 number squeezed between the lower and upper rectangle approximations.
 
-\proofheading{Convergence of Riemann Sums (Theorem~\ref*{source:proof:riemann-sums})}{proof:riemann-sums}
+\proofheading{Theorem~\ref*{source:proof:riemann-sums}}{proof:riemann-sums}
 
 \begin{proof}
 For an integrable function, the upper and lower sums just described can
@@ -875,7 +870,7 @@ $$\sum_{k=1}^n r^k=\frac{r(1-r^n)}{1-r}.$$
 If $r=1$, there are $n$ copies of 1, so the sum is $n$.
 \end{proof}
 
-\subsubsection{Why Continuous Functions Are Integrable}
+\subsection*{Why Continuous Functions Are Integrable}
 \label{sec:continuous-integrability}
 
 The Extreme Value Theorem makes a continuous $f$ bounded on $[a,b]$.
@@ -909,7 +904,7 @@ $\left|\int_u^v g(t)\,dt\right|\leq M|v-u|.$
 A constant $C$ integrates to $C(v-u)$ because every rectangle sum
 already has that value.
 
-\proofheading{The Fundamental Theorem of Calculus (Theorem~\ref*{source:proof:fundamental-theorem})}{proof:fundamental-theorem}
+\proofheading{Theorem~\ref*{source:proof:fundamental-theorem}}{proof:fundamental-theorem}
 
 \begin{proof}
 Suppose $f$ is continuous on $[a,b]$.
@@ -944,7 +939,7 @@ F(b)-F(a)=\int_a^b f(x)\,dx.
 $$
 \end{proof}
 
-\subsection{Proofs from Chapter \ref*{sec:indefinite-integral}: The Indefinite Integral}
+\proofchapter{Proofs from Chapter \ref*{sec:indefinite-integral}: The Indefinite Integral}
 
 \proofheading{Integration by Parts}{proof:integration-by-parts}
 
@@ -986,9 +981,9 @@ $$\int_a^b f'(g(x))g'(x)\,dx
 =\int_{g(a)}^{g(b)}f'(u)\,du.$$
 \end{proof}
 
-\subsection{Proofs from Chapter \ref*{sec:more-definite-integrals}: More Definite Integrals}
+\proofchapter{Proofs from Chapter \ref*{sec:more-definite-integrals}: More Definite Integrals}
 
-\proofheading{Comparison of Integrals (Theorem~\ref*{source:proof:integral-comparison})}{proof:integral-comparison}
+\proofheading{Theorem~\ref*{source:proof:integral-comparison}}{proof:integral-comparison}
 
 \begin{proof}
 First work on a closed interval where both functions are integrable. If
@@ -1004,14 +999,14 @@ $$
 $$
 Both truncated integrals increase as $t$ increases. If the integral of
 $g$ converges, the integral of $f$ is increasing and bounded above.
-The monotone-function argument in Section~\ref{sec:real-number-tools}
+The monotone-function argument in \hyperref[sec:real-number-tools]{Shrinking Intervals and Bounds}
 therefore gives a finite limit. If the integral of $f$ diverges, it increases without
 bound, forcing the integral of $g$ to do the same. At a finite singularity
 use the corresponding one-sided endpoint limit; split at interior
 singularities and apply the argument to each piece.
 \end{proof}
 
-\proofheading{Splitting an Integral and Reversing Its Bounds (Theorem~\ref*{source:proof:integral-additivity})}{proof:integral-additivity}
+\proofheading{Theorem~\ref*{source:proof:integral-additivity}}{proof:integral-additivity}
 
 \begin{proof}
 For $a<b<c$, choose partitions of $[a,b]$ and $[b,c]$. Joining them gives
@@ -1031,15 +1026,22 @@ and then take the relevant limits. The assumption that all the integrals
 are finite prevents any invalid cancellation of infinities.
 \end{proof}
 
-\subsection{Proofs from Chapter \ref*{sec:series}: Series}
+\proofchapter{Proofs from Chapter \ref*{sec:sequences}: Sequences}
 
-\phantomsection\label{proof:monotone-sequences}
-\proofsource{proof:monotone-sequences}
-We will use the bounded monotone limit argument explained in
-Section~\ref{sec:real-number-tools}. A bounded increasing sequence
-converges to the least upper bound $S$ of its terms: eventually all terms
-lie between $S-\varepsilon$ and $S$. For a decreasing sequence, negate
-its terms.
+\proofheading{Theorem~\ref*{source:proof:monotone-sequences}}{proof:monotone-sequences}
+
+\begin{proof}
+Suppose $(a_n)$ is bounded and increasing. Its terms have a least upper
+bound $S$ by the \hyperref[sec:real-number-tools]{bounds argument} above.
+For any $\varepsilon>0$, some term
+satisfies $a_N>S-\varepsilon$. Since the sequence is increasing, every
+later term satisfies
+$$S-\varepsilon<a_N\leq a_n\leq S\qquad(n\geq N).$$
+Thus $a_n\to S$. If $(a_n)$ is decreasing, apply the same argument to
+the bounded increasing sequence $(-a_n)$, then negate its limit.
+\end{proof}
+
+\proofchapter{Proofs from Chapter \ref*{sec:series}: Series}
 
 \proofheading{The Geometric Series}{proof:geometric-series}
 
@@ -1056,7 +1058,7 @@ Difference Law. But those differences are $r^n$, which do not approach
 zero when $|r|\geq1$. So the series diverges in that case.
 \end{proof}
 
-\proofheading{The Divergence Test (Theorem~\ref*{source:proof:divergence-test})}{proof:divergence-test}
+\proofheading{Theorem~\ref*{source:proof:divergence-test}}{proof:divergence-test}
 
 \begin{proof}
 Suppose $\sum a_n$ converges, and let $S_n$ be its partial sums. Then both
@@ -1068,7 +1070,7 @@ Therefore, if the terms fail to approach zero, including when their limit
 does not exist, the series cannot converge.
 \end{proof}
 
-\proofheading{The Integral Test (Theorem~\ref*{source:proof:integral-test})}{proof:integral-test}
+\proofheading{Theorem~\ref*{source:proof:integral-test}}{proof:integral-test}
 
 \begin{proof}
 Suppose $f$ is positive, continuous, and decreasing on $[k,\infty)$,
@@ -1088,7 +1090,7 @@ truncated integrals are increasing and bounded above, so the integral
 converges. This proves both directions.
 \end{proof}
 
-\proofheading{The \texorpdfstring{$p$}{p}-Series Test (Theorem~\ref*{source:proof:p-series-test})}{proof:p-series-test}
+\proofheading{Theorem~\ref*{source:proof:p-series-test}}{proof:p-series-test}
 
 \begin{proof}
 For $p>0$, the function $x^{-p}$ is positive and decreasing. If $p\ne1$,
@@ -1101,7 +1103,7 @@ the corresponding conclusions for the series. If $p\leq0$, the terms
 $1/n^p$ do not approach zero, so the Divergence Test applies.
 \end{proof}
 
-\proofheading{The Comparison Test (Theorem~\ref*{source:proof:series-comparison})}{proof:series-comparison}
+\proofheading{Theorem~\ref*{source:proof:series-comparison}}{proof:series-comparison}
 
 \begin{proof}
 Suppose $0\leq a_n\leq b_n$ and $\sum b_n$ converges to $B$. Then the
@@ -1115,7 +1117,7 @@ Changing finitely many initial terms does not affect convergence, so an
 eventual comparison is enough.
 \end{proof}
 
-\proofheading{The Limit Comparison Test (Theorem~\ref*{source:proof:limit-comparison})}{proof:limit-comparison}
+\proofheading{Theorem~\ref*{source:proof:limit-comparison}}{proof:limit-comparison}
 
 \begin{proof}
 Suppose $a_n\geq0$, $b_n>0$, and $a_n/b_n\to c$ with $0<c<\infty$.
@@ -1130,7 +1132,7 @@ If $\sum a_n$ converges, the lower bound makes $\sum b_n$ converge.
 Thus the two series have the same convergence behavior.
 \end{proof}
 
-\proofheading{The Alternating Series Test (Theorem~\ref*{source:proof:alternating-test})}{proof:alternating-test}
+\proofheading{Theorem~\ref*{source:proof:alternating-test}}{proof:alternating-test}
 
 \begin{proof}
 Consider $b_1-b_2+b_3-b_4+\cdots$, where $b_n\geq0$ decreases to zero.
@@ -1150,7 +1152,7 @@ whole sequence of partial sums converges. Starting with a negative term
 just multiplies all partial sums by $-1$.
 \end{proof}
 
-\proofheading{The Absolute Convergence Test (Theorem~\ref*{source:proof:absolute-convergence})}{proof:absolute-convergence}
+\proofheading{Theorem~\ref*{source:proof:absolute-convergence}}{proof:absolute-convergence}
 
 \begin{proof}
 Split each term into its positive and negative parts:
@@ -1164,7 +1166,7 @@ Since $a_n=a_n^+-a_n^-$, subtracting their convergent partial sums proves
 that $\sum a_n$ converges.
 \end{proof}
 
-\proofheading{The Ratio Test (Theorem~\ref*{source:proof:ratio-test})}{proof:ratio-test}
+\proofheading{Theorem~\ref*{source:proof:ratio-test}}{proof:ratio-test}
 
 \begin{proof}
 Assume the terms are eventually nonzero so that the ratios are defined.
@@ -1185,7 +1187,7 @@ $\sum(-1)^{n+1}/n$ converges conditionally, and $\sum1/n^2$ converges
 absolutely, but the absolute ratios in all three cases approach $1$.
 \end{proof}
 
-\proofheading{The Root Test (Theorem~\ref*{source:proof:root-test})}{proof:root-test}
+\proofheading{Theorem~\ref*{source:proof:root-test}}{proof:root-test}
 
 \begin{proof}
 If $\sqrt[n]{|a_n|}\to L<1$, choose $q$ with $L<q<1$. For large $n$,
@@ -1201,7 +1203,7 @@ $\lim_{x\to\infty}\frac{\ln(x)}x
 =\lim_{x\to\infty}\frac{1/x}{1}=0.$
 \end{proof}
 
-\proofheading{The Integral-Test Error Bounds (Theorem~\ref*{source:proof:integral-error})}{proof:integral-error}
+\proofheading{Theorem~\ref*{source:proof:integral-error}}{proof:integral-error}
 
 \begin{proof}
 For a positive, continuous, decreasing $f$ with $a_n=f(n)$, apply the rectangle
@@ -1221,7 +1223,7 @@ diverges, the inequalities still hold with value $+\infty$, but they no
 longer give a finite approximation error.
 \end{proof}
 
-\proofheading{The Alternating-Series Error Bound (Theorem~\ref*{source:proof:alternating-error})}{proof:alternating-error}
+\proofheading{Theorem~\ref*{source:proof:alternating-error}}{proof:alternating-error}
 
 \begin{proof}
 Under the Alternating Series Test hypotheses, the sum lies between any
@@ -1236,9 +1238,9 @@ For a series starting with $-b_1$, the odd partial sums are the lower
 bounds and the even partial sums are the upper bounds, as in the chapter.
 \end{proof}
 
-\subsection{Proofs from Chapter \ref*{sec:power-series}: Power Series}
+\proofchapter{Proofs from Chapter \ref*{sec:power-series}: Power Series}
 
-\proofheading{Taylor's Inequality (Theorem~\ref*{source:proof:taylor-inequality})}{proof:taylor-inequality}
+\proofheading{Theorem~\ref*{source:proof:taylor-inequality}}{proof:taylor-inequality}
 
 \begin{proof}
 Let $k$ be a nonnegative integer, and suppose the derivatives through
@@ -1270,9 +1272,9 @@ $$
 At $x=a$ the error is zero, so the inequality holds there too.
 \end{proof}
 
-\subsection{Proofs from Chapter \ref*{sec:solving-odes}: Solving ODEs}
+\proofchapter{Proofs from Chapter \ref*{sec:solving-odes}: Solving ODEs}
 
-\proofheading{Linear Combinations of Homogeneous Solutions (Theorem~\ref*{source:proof:homogeneous-solutions})}{proof:homogeneous-solutions}
+\proofheading{Theorem~\ref*{source:proof:homogeneous-solutions}}{proof:homogeneous-solutions}
 
 \begin{proof}
 For the equation $ay''+by'+cy=0$, suppose $y_1$ and $y_2$ are solutions

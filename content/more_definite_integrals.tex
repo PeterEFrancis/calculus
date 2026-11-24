@@ -14,27 +14,27 @@ To evaluate an improper integral, rewrite the integral as a limit of a proper in
 
 If the value of the improper integral is a finite quantity, we say the integral \textbf{converges}. If the value is an infinite quantity or the limit DNE, then we say the integral is \textbf{divergent}. Sometimes you might be asked the nature of the divergence (i.e. is the limit equal to $\pm\infty$ or non-existent).
 
-Here's an example of each type:
-
-\begin{itemize}%[leftmargin=1em]
-    \item $\displaystyle \int_1^\infty \frac{1}{x^2}\ dx
+\begin{exampleblock}
+    $\displaystyle \int_1^\infty \frac{1}{x^2}\ dx
      = \lim_{a\to \infty}\int_1^a \frac{1}{x^2}\ dx 
      = \lim_{a\to \infty}\left[\frac{-1}{x}\right]_1^a 
      = \lim_{a\to \infty} \left(1-\frac{1}{a}\right)
     =1.$
-    \item $\displaystyle\int_{0}^{1}\frac{1}{x^{2}}\ dx 
+\end{exampleblock}
+\begin{exampleblock}
+    $\displaystyle\int_{0}^{1}\frac{1}{x^{2}}\ dx
      = \lim_{a\to 0^+} \int_{a}^{1}\frac{1}{x^{2}}\ dx 
      = \lim_{a\to 0^+}\left[\frac{-1}{x}\right]_a^1 
      = \lim_{a\to 0^+}\left(\frac{1}{a}-1\right)
      = \infty.$
-\end{itemize}
+\end{exampleblock}
 
 \mar{For what values of $p$ does $$\int_0^1 x^p \ dx$$ converge?}
 
-Many times, a vertical asymptote won't be one of the endpoints of the interval. When this happens, split the integral in two, so the VA now lies on the endpoints of the intervals. Here is an example:
-\begin{itemize}
-	\item $\displaystyle \int_0^3 \frac{1}{x-1} \ dx = \int_0^1 \frac{1}{x-1} \ dx + \int_1^3 \frac{1}{x-1} \ dx$.
-\end{itemize}
+Many times, a vertical asymptote won't be one of the endpoints of the interval. When this happens, split the integral in two, so the VA now lies on the endpoints of the intervals.
+\begin{exampleblock}
+	$\displaystyle \int_0^3 \frac{1}{x-1} \ dx = \int_0^1 \frac{1}{x-1} \ dx + \int_1^3 \frac{1}{x-1} \ dx$.
+\end{exampleblock}
 
 
 When the convergence of an integral is all you care about, the following theorem can be helpful.
@@ -68,8 +68,9 @@ $$\int_{-a}^af(x)\ dx = 0$$
 since the areas bounded by $f$ to the left and right of $x=0$ differ only in sign. Similarly, if $f$ is even,
 $$\int_{-a}^af(x)\ dx = 2\int_{0}^af(x)\ dx$$
 since the areas bounded by $f$ to the left and right of $x=0$ are the same.
-Here are some examples:
-\begin{itemize}
-\item $\int_{-1}^1\sin(x)\ dx = 0$ since $\sin(-x)=-\sin(x)$.
-\item $\int_{-1}^1\cos(x)\ dx = 2\int_0^1\cos(x)\ dx$ since $\cos(-x)=\cos(x)$.
-\end{itemize}
+\begin{exampleblock}
+$\int_{-1}^1\sin(x)\ dx = 0$ since $\sin(-x)=-\sin(x)$.
+\end{exampleblock}
+\begin{exampleblock}
+$\int_{-1}^1\cos(x)\ dx = 2\int_0^1\cos(x)\ dx$ since $\cos(-x)=\cos(x)$.
+\end{exampleblock}

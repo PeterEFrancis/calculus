@@ -61,7 +61,8 @@ All of the subsets of $\R$ that you'll want to use in this course can be written
 \item The \textbf{union} of two sets is the set that contains the elements in \textit{either} set and is denoted with the ``cup'' symbol, $\cup$.
 \item The \textbf{intersection} of two sets is the set that contains the elements in \textit{both} sets and is denoted with the ``cap'' symbol, $\cap$.
 \end{itemize}
-Here are some examples:
+\mar{Draw a picture of each of these examples. Does \textit{Venn diagram} ring any bells?}
+\begin{exampleblock}
 \begin{center}
 \renewcommand{\arraystretch}{1.1}
 \begin{tabular}{@{}l l l l @{}}
@@ -77,8 +78,8 @@ $(1,5)$ & $(3, 7)$ & $(1,7)$ & $(3,5)$ \\
 $(1,8)$ & $(3, 4)$ & $(1,8)$ & $(3,4)$ \\
 \bottomrule
 \end{tabular}
-\mar{Draw a picture of each of these examples. Does \textit{Venn diagram} ring any bells?}
 \end{center}
+\end{exampleblock}
 
 \subsection{Defining Functions}
 
@@ -94,14 +95,15 @@ The \textbf{range} of $f$ is the set of all outputs of $f$ and is denoted $f(A)$
 \item If a function is both surjective and injective, then it is called \textbf{bijective}.
 \end{itemize}
 
-The figure below is a cartoon of three functions. From left to right, (1) a surjection that is not injective, (2) a bijection, and (3) an injection that is not surjective. \mar{Write down the domain, codomain, and range of each of these functions.}
+\mar{Write down the domain, codomain, and range of each of these functions.}
+The figure below is a cartoon of three functions. From left to right, (1) a surjection that is not injective, (2) a bijection, and (3) an injection that is not surjective.
 
 
 
 \begin{figure}[H]
 \label{three-functions}
 \centering
-\fbox{\includegraphics[width=4in]{img/three-functions.png}}
+\fbox{\includegraphics[width=\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax]{img/three-functions.png}}
 \caption{A Surjection, a Bijection, and an Injection}
 \end{figure}
 
@@ -142,12 +144,16 @@ Rational & $\frac{p(x)}{q(x)}$ \hspace{3in} ($p$, $q$ are polynomials) & $\{x\in
 
 
 
-Let's do some concrete examples:
-\begin{itemize}
-\item The function $f$ given by $f(x)=\frac{1}{x}$ does not have 0 in its domain, since we can't divide by 0. Also, $f$ does not have 0 in its range, since there is no real number $x$ for which $\frac{1}{x}=0$. Therefore the domain and range of $f$ are both $(-\infty,0)\cup(0,\infty)$.
-\item Similarly, $\tan$ is undefined at every odd multiple of $\pi/2$, since $\cos\left(\frac{(2n+1)\pi}{2}\right)=0$ for every integer $n$. Equivalently, its domain is $\R\setminus\left\{\frac{(2n+1)\pi}{2}:n\in\mathbb{Z}\right\}$. The range of $\tan$ is all of $\R$.
-\item The function $f$ given by $f(x)=x^2$ has domain $\R$ and range $[0,\infty)$. \mar{What is the domain and range of $f$ given by $f(x)=n^n$ where $n$ is a positive integer ($n=1, 2, 3, \dots$)?}
-\end{itemize}
+\begin{exampleblock}
+The function $f$ given by $f(x)=\frac{1}{x}$ does not have 0 in its domain, since we can't divide by 0. Also, $f$ does not have 0 in its range, since there is no real number $x$ for which $\frac{1}{x}=0$. Therefore the domain and range of $f$ are both $(-\infty,0)\cup(0,\infty)$.
+\end{exampleblock}
+\begin{exampleblock}
+Similarly, $\tan$ is undefined at every odd multiple of $\pi/2$, since $\cos\left(\frac{(2n+1)\pi}{2}\right)=0$ for every integer $n$. Equivalently, its domain is $\R\setminus\left\{\frac{(2n+1)\pi}{2}:n\in\mathbb{Z}\right\}$. The range of $\tan$ is all of $\R$.
+\end{exampleblock}
+\begin{exampleblock}
+The function $f$ given by $f(x)=x^2$ has domain $\R$ and range $[0,\infty)$.
+\end{exampleblock}
+\mar{What is the domain and range of $f$ given by $f(x)=n^n$ where $n$ is a positive integer ($n=1, 2, 3, \dots$)?}
 
 
 
@@ -159,27 +165,34 @@ A function $f:A\to B$ is \textbf{invertible} if there is some function $g:B\to A
 \item[(i)] for all $a$ in $A$, $g(f(a))=a$;
 \item[(ii)] for all $b$ in $B$, $f(g(b))=b$.
 \end{enumerate}
-In this case, we call $g$ the \textbf{inverse} of $f$ and write $f^{-1}=g$. In other words, a function is \textbf{invertible} if it is reversible as a mapping: if $f$ maps $x$ to $y:=f(x)$, then its inverse $f^{-1}$ must map $y$ to $x$. \mar{Look abck at Figure \ref{three-functions}. Which of these functions are invertible? On any function that is invertible, draw the arrows for the inverse function.}
+In this case, we call $g$ the \textbf{inverse} of $f$ and write $f^{-1}=g$. In other words, a function is \textbf{invertible} if it is reversible as a mapping: if $f$ maps $x$ to $y:=f(x)$, then its inverse $f^{-1}$ must map $y$ to $x$. \mar{Look back at Figure \ref{three-functions}. Which of these functions are invertible? On any function that is invertible, draw the arrows for the inverse function.}
 
 You might wonder: \textit{when is a function invertible?} It turns out that we already understand exactly what we want:
 \begin{thm}
 \proofref{proof:invertibility}
 A function is invertible exactly when it is bijective.
 \end{thm}
+\begin{exampleblock}
 Lets think through this: looking back at Figure \ref{three-functions}, the first function is not invertible because it is not injective. Both 1 and 3 map to 6, but condition (i) says that we must have $f^{-1}(f(1))=1$ and $f^{-1}(f(3))=3$. Since $f(1)$ and $f(3)$ are both equal to $6$, we must have that $1=f^{-1}(6)=3$, crazy talk!
+\end{exampleblock}
 
+\begin{exampleblock}
 The third function in Figure \ref{three-functions} is not invertible because it is not surjective. This is a problem: since the element 4 in the codomain is not mapped to by eny element of the domain, no matter what we might chose $f^{-1}(4)$ to be, $f(f^{-1}(4))\neq 4$, which violates condition (ii).
+\end{exampleblock}
 
 The condition that invertible functions must be injective is sometimes called the \textbf{horizontal line test} for real functions: the graph of an invertible real function cannot intersect any horizontal line more than once (i.e. if a horizontal line intersects the graph of a function more than once, then the function cannot be invertible). \mar{Draw the graph of a non-invertible function failing the horizontal line test.}
 
 \proofref[Inverse continuity]{proof:inverse-continuity}
 The general strategy for finding a functions inverse is to switch the place of $x$ and $y$ in the equation, and then solve for $y$. The result, if it exists, will give you an inverse for the original function (on a possibly smaller domain). Graphically, the inverse of a function is a reflection of the function across the line $y=x$. If a function is not bijective, we can ``fix'' it by making its domain or codomain smaller. For any function there are several ways to do this, but there are some agreed upon conventions that I'll outline below.
 
-\begin{itemize}
-\item The function $f$ defined by $f(x)=x^2$ has domain $\R$, but is not invertible: the line $y=4$ intersects the graph in two places, $(-2,4)$ and $(2,4)$. However, we can can change both its domain and codomain to be $[0,\infty)$. To find its inverse, solve the equation $x=y^2$ for $y$. We get $y=\pm\sqrt{x}$, but since we are changing the domain of $f$ to only the non-negative real numbers, we forget about the negative square root. Then the inverse of $f$ is given by $f^{-1}(x)=\sqrt{x}$. For any $x\in[0,\infty)$,
+\begin{exampleblock}
+The function $f$ defined by $f(x)=x^2$ has domain $\R$, but is not invertible: the line $y=4$ intersects the graph in two places, $(-2,4)$ and $(2,4)$. However, we can can change both its domain and codomain to be $[0,\infty)$. To find its inverse, solve the equation $x=y^2$ for $y$. We get $y=\pm\sqrt{x}$, but since we are changing the domain of $f$ to only the non-negative real numbers, we forget about the negative square root. Then the inverse of $f$ is given by $f^{-1}(x)=\sqrt{x}$. For any $x\in[0,\infty)$,
 $$f^{-1}(f(x))=\sqrt{x^2}=x,$$
 and for any $y\in[0,\infty)$,
 $$f(f^{-1}(y))=f(\sqrt{y})=(\sqrt{y})^2=y.$$
-\item The function $\sin$ has domain $\R$ and range $[-1,1]$ but is \textbf{periodic} (meaning its values cyclically repeat) so cannot be invertible without an adjustment to its domain. The smaller domain we choose is $[-\pi/2,\pi/2]$ and the modified codomain is its range, $[-1,1]$. The inverse of $\sin$ is called $\arcsin$ or $\sin^{-1}$ and has domain $[-1,1]$ and range $[-\pi/2,\pi/2]$. \mar{Look up the modified domains and codomains for the other inverse trig functions.}
-\item The function $f(x)=e^x$ has domain $\R$ and range $(0,\infty)$. If we shrink the codomain $\R$ to be equal to the range, then its inverse is given by $f^{-1}(x)=\ln(x)$ and domain $(0,\infty)$ and range $\R$.
-\end{itemize}
+\end{exampleblock}
+The function $\sin$ has domain $\R$ and range $[-1,1]$ but is \textbf{periodic} (meaning its values cyclically repeat) so cannot be invertible without an adjustment to its domain. The smaller domain we choose is $[-\pi/2,\pi/2]$ and the modified codomain is its range, $[-1,1]$. The inverse of $\sin$ is called $\arcsin$ or $\sin^{-1}$ and has domain $[-1,1]$ and range $[-\pi/2,\pi/2]$.
+\mar{Look up the modified domains and codomains for the other inverse trig functions.}
+\begin{exampleblock}
+The function $f(x)=e^x$ has domain $\R$ and range $(0,\infty)$. If we shrink the codomain $\R$ to be equal to the range, then its inverse is given by $f^{-1}(x)=\ln(x)$ and domain $(0,\infty)$ and range $\R$.
+\end{exampleblock}

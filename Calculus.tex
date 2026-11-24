@@ -7,14 +7,17 @@
 \usepackage{amsfonts}
 \usepackage{graphics}
 \usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing}
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{enumerate}
+\usepackage{needspace}
 \usepackage{color}
 \usepackage{mathtools}
 \usepackage{stmaryrd}
 
 \usepackage{pgf, latexsym, float, soul, array, booktabs, dsfont, gensymb, wasysym, multicol, tcolorbox, tabularx, enumitem}
+\tcbuselibrary{skins,breakable}
 
 \usepackage{ marvosym }
 
@@ -69,6 +72,25 @@
 \newcommand{\eu}{\text{e}}
 \newcommand{\bs}{\blacksquare}
 \newcommand{\di}{\diamond}
+\newcommand{\exampletag}{%
+\node[anchor=north east, inner sep=0pt, outer sep=0pt,
+  font=\normalfont\scriptsize, text=black!55]
+  at ([xshift=-4pt,yshift=-1pt]frame.north west) {EX};}
+\newtcolorbox{exampleblock}[1][]{enhanced, frame hidden, colback=black!3,
+  sharp corners, left skip=24pt, right skip=0pt,
+  boxrule=0pt, boxsep=0pt, left=8pt, right=8pt, top=8pt, bottom=8pt,
+  before skip=7pt, after skip=7pt,
+  before upper={\setlength{\parindent}{0pt}},
+  overlay unbroken={\exampletag\draw[black!55,line width=.65pt]
+    ([xshift=6pt]frame.north west)--(frame.north west)
+    --(frame.south west)--([xshift=6pt]frame.south west);},
+  overlay first={\exampletag\draw[black!55,line width=.65pt]
+    ([xshift=6pt]frame.north west)--(frame.north west)--(frame.south west);},
+  overlay middle={\draw[black!55,line width=.65pt]
+    (frame.north west)--(frame.south west);},
+  overlay last={\draw[black!55,line width=.65pt]
+    (frame.north west)--(frame.south west)--([xshift=6pt]frame.south west);},
+  #1}
 \newcommand{\lb}{\left\lbrace}
 \newcommand{\rb}{\right\rbrace}
 \newcommand{\on}[1]{\operatorname{#1}}
@@ -114,9 +136,16 @@
 \proofmarginbox{\hyperref[source:#1]{Page~\pageref*{source:#1}}}}
 
 \newcommand{\proofheading}[2]{%
-\subsubsection[#1]{\texorpdfstring{\protect\proofsource{#2}}{}#1}%
+\subsection*{\texorpdfstring{\protect\proofsource{#2}}{}#1}%
 \label{#2}}
 
+\newif\iffirstproofchapter
+\firstproofchaptertrue
+\newcommand{\proofchapter}[1]{%
+\iffirstproofchapter\firstproofchapterfalse\else\clearpage\fi
+\section*{#1}%
+\addcontentsline{toc}{section}{#1}%
+\markboth{Proofs}{#1}}
 
 
 
@@ -199,7 +228,7 @@ Stony Brook, NY 11794, USA, Earth\\
 
 \noindent peter.e.francis@stonybrook.edu
 
-\newpage
+\clearpage
 
 \begingroup
 \setcounter{tocdepth}{2}
@@ -210,68 +239,71 @@ Stony Brook, NY 11794, USA, Earth\\
 \tableofcontents
 \endgroup
 
-\newpage
+\clearpage
 \listoffigures
 
-\newpage
+\clearpage
 
 
 \input{content/a_note_to_students.tex}
 
-\newpage
+\clearpage
 \part{Pre-Calculus}
 \input{content/trigonometry.tex}
-\newpage
+\clearpage
 \input{content/functions_on_the_real_line.tex}
 
 
-\newpage
+\clearpage
 \part{Limits and Continuity}
 \input{content/limits_and_continuity.tex}
 % \input{content/limits.tex}
-% \newpage
+% \clearpage
 % \input{content/continuity.tex}
 
-\newpage
+\clearpage
 \input{content/asymptotes.tex}
 
 
-\newpage
+\clearpage
 \part{Derivatives and Applications}
 \input{content/the_derivative.tex}
-\newpage
+\clearpage
 \input{content/applications_of_derivatives.tex}
 
-\newpage
+\clearpage
 \part{Integration and Applications}
 \input{content/the_definite_integral.tex}
-\newpage
+\clearpage
 \input{content/the_indefinite_integral.tex}
-\newpage
+\clearpage
 \input{content/more_definite_integrals.tex}
-\newpage
+\clearpage
 \input{content/applications_of_integrals.tex}
 
-\newpage
+\clearpage
 \part{Sequences and Series}
 \input{content/sequences.tex}
+\clearpage
 \input{content/series}
-\newpage
+\clearpage
 \input{content/power_series.tex}
 
-\newpage
+\clearpage
 \part{Differential Equations}
 \input{content/differential_equations.tex}
 
 
-\newpage
+\clearpage
 
 \part{Appendix}
+\appendix
 \input{content/moments_and_centroids.tex}
 \input{content/complex_numbers.tex}
-\newpage
+\clearpage
 \input{content/slanted_asymptotes.tex}
-\newpage
+\clearpage
+\part{Proofs}
 \input{content/proofs.tex}
 
 

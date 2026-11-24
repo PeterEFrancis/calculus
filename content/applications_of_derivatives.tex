@@ -63,11 +63,14 @@ The right side of this approximation is exactly the tangent line of $f$ at $a$, 
 \caption{Linear Approximation}
 \end{figure}
 
+\mar{Estimate $\sqrt{3.9}$ and compare to the actual value.}
+\begin{exampleblock}
 Let's pretend we don't have a calculator, and try to estimate $\sqrt{4.1}$. In this case $f(x)=\sqrt{x}$, and we should set $a=4$, since $4.1\approx 4$ and we can figure out $f(4)$ and $f'(4)$. By the power rule, $f'(x)=\frac{1}{2}x^{-1/2}$, so $f'(4)=\frac12(4^{-1/2})=\frac14$, and of course $f(4)=\sqrt{4}=2$. Using the formula above,
 $$\sqrt{4.1}=f(4.1)\approx f(4)+f'(4)(4.1-4)=2+\frac14(0.1)=2.025.$$
 If we check a calculator for a better approximation, we find that
 $$\sqrt{4.1}\approx 2.02484567313,$$
-so we weren't that far off! \mar{Estimate $\sqrt{3.9}$ and compare to the actual value.}
+so we weren't that far off!
+\end{exampleblock}
 
 \subsection{Kinematics}
 
@@ -75,7 +78,10 @@ Kinematics is the study of motion. In this section, we'll concern ourselves with
 
 Suppose the position of an object at time $t$ is given by $x(t)$. The object's \textbf{velocity} at time $t$ is given by $$v(t)=x'(t)$$ since velocity is the rate at which position is changing. Similarly, the object's \textbf{acceleration} at time $t$ is given by $$a(t)=v'(t)=x''(t),$$ since acceleration is the rate at which velocity is changing.
 
-How do we interpret these quantities? One way is to think about \textbf{speed}, which is the absolute value of velocity. In other words, if you are moving backward at 2 m/s, then your velocity is $-$2 m/s and you speed is 2 m/s, but if you are moving forward at the speed 2 m/s, then your speed and velocity are both 2 m/s.
+How do we interpret these quantities? One way is to think about \textbf{speed}, which is the absolute value of velocity.
+\begin{exampleblock}
+If you are moving backward at 2 m/s, then your velocity is $-$2 m/s and you speed is 2 m/s, but if you are moving forward at the speed 2 m/s, then your speed and velocity are both 2 m/s.
+\end{exampleblock}
 
 
 \mar{What is an example of a position function whose velocity is positive?}
@@ -115,7 +121,11 @@ $$f(a)\geq f(x)\qquad\text{for every }x\text{ in the domain of }f.$$
 A \textbf{global minimum} is defined in the same way, with $f(a)\leq f(x)$.
 When one of these conditions holds, $a$ is a location of an extremum, $f(a)$ is the corresponding \textbf{extremal value}, and $(a,f(a))$ is the corresponding \textbf{extremal point} on the graph of $f$.
 
-A global maximum or minimum value, if it exists, is unique, but it may occur at more than one input. For example, $\sin(x)$ has a global maximum value of $1$, even though this value occurs infinitely many times on the domain of $\sin(x)$. Every global extremum is also a local extremum.
+A global maximum or minimum value, if it exists, is unique, but it may occur at more than one input.
+\begin{exampleblock}
+$\sin(x)$ has a global maximum value of $1$, even though this value occurs infinitely many times on the domain of $\sin(x)$.
+\end{exampleblock}
+Every global extremum is also a local extremum.
 
 \begin{thm}[The Extreme Value Theorem]
 \proofref{proof:extreme-value}
@@ -243,41 +253,43 @@ $$\lim_{x\to a}\frac{f(x)}{g(x)}=L.$$
 
 What this means for you: if you are trying to take the limit of a rational function and after plugging in you get $\frac{0}{0}$ or $\frac{\infty}{\infty}$, then take the derivative of the numerator and the denominator, and try to evaluate the limit again.
 
-It is possible that one use of L'H\^optial's rule won't be enough: you may have to use it multiple times. Here are some examples:
-\begin{itemize}
-\item $\displaystyle \lim_{x\to 0}\frac{\sin(x)}{x}\overset{\text{LH}}{=}\lim_{x\to 0}\frac{\cos(x)}{1}=1.$
-\item $\displaystyle \lim_{x\to \infty}\frac{3x^2+1}{4x^2+3x}\overset{\text{LH}}{=}\lim_{x\to\infty}\frac{6x}{8x+3}\overset{\text{LH}}{=}\lim_{x\to\infty}\frac{6}{8}=\frac{3}{4}$.
-\end{itemize}
+It is possible that one use of L'H\^optial's rule won't be enough: you may have to use it multiple times.
+\begin{exampleblock}
+$$\lim_{x\to 0}\frac{\sin(x)}{x}\overset{\text{LH}}{=}\lim_{x\to 0}\frac{\cos(x)}{1}=1.$$
+\end{exampleblock}
+\begin{exampleblock}
+$$\lim_{x\to \infty}\frac{3x^2+1}{4x^2+3x}\overset{\text{LH}}{=}\lim_{x\to\infty}\frac{6x}{8x+3}\overset{\text{LH}}{=}\lim_{x\to\infty}\frac{6}{8}=\frac{3}{4}.$$
+\end{exampleblock}
 
-Sometimes you will encounter an indeterminate form that is not $\frac00$ or $\frac\infty\infty$, and in these cases, we can transform it into the form $\frac00$ or $\frac\infty\infty$ and then use L'H\^optial's rule. Here are some illustriative examples:
-
-\begin{itemize}
-
-\item
-$\displaystyle \lim_{x\to1} \frac{1}{x-1} - \frac{1}{\ln(x)}
-= \lim_{x\to1} \frac{\ln\left(x\right)-x+1}{(x-1)\ln\left(x\right)}
-\overset{\text{LH}}{=} \lim_{x\to1}\frac{{1}/{x}-1}{\ln\left(x\right)+1-\frac{1}{x}}$\\
-\phantom{} \hspace{1.01in}$\overset{\text{LH}}{=}\lim_{x\to1} \frac{-{1}/{x^{2}}}{{1}/{x}+{1}/{x^{2}}}
-=-\frac12$.
-
-\item
-$\displaystyle \lim_{x\to 0^+} x\ln(x) =\lim_{x\to 0^+} \frac{\ln(x)}{1/x} \overset{\text{LH}}{=}\lim_{x\to0^+}\frac{1/x}{-1/x^2}=\lim_{x\to0^+}-x=0$.
-
-\item $\displaystyle\lim_{x\to 0^+} x^x =\lim_{x\to0^+}e^{\ln(x^x)}=e^{\displaystyle\lim_{x\to0^+}\ln(x^x)}=e^{\displaystyle\lim_{x\to 0^+}x\ln(x)} = e^0 = 1.$
-
-
+Sometimes you will encounter an indeterminate form that is not $\frac00$ or $\frac\infty\infty$, and in these cases, we can transform it into the form $\frac00$ or $\frac\infty\infty$ and then use L'H\^optial's rule.
 \mar{Label each of these examples with original and trasnsformed type of indeterminate forms they demonstrate.}
-
+\begin{exampleblock}
+$$\begin{aligned}
+\lim_{x\to1}\left(\frac{1}{x-1}-\frac{1}{\ln(x)}\right)
+&=\lim_{x\to1}\frac{\ln(x)-x+1}{(x-1)\ln(x)}\\
+&\overset{\text{LH}}{=}\lim_{x\to1}\frac{1/x-1}{\ln(x)+1-1/x}\\
+&\overset{\text{LH}}{=}\lim_{x\to1}\frac{-1/x^2}{1/x+1/x^2}=-\frac12.
+\end{aligned}$$
+\end{exampleblock}
+\begin{exampleblock}
+$$\begin{aligned}
+\lim_{x\to0^+}x\ln(x)&=\lim_{x\to0^+}\frac{\ln(x)}{1/x}\\
+&\overset{\text{LH}}{=}\lim_{x\to0^+}\frac{1/x}{-1/x^2}
+=\lim_{x\to0^+}-x=0.
+\end{aligned}$$
+\end{exampleblock}
+\begin{exampleblock}
+$$\begin{aligned}
+\lim_{x\to0^+}x^x
+&=\lim_{x\to0^+}e^{\ln(x^x)}\\
+&=e^{\displaystyle\lim_{x\to0^+}\ln(x^x)}
+=e^{\displaystyle\lim_{x\to0^+}x\ln(x)}=e^0=1.
+\end{aligned}$$
+\end{exampleblock}
 
 % \item $\displaystyle\lim_{x\to\infty}\left(1+\frac{1}{x}\right)^x = e^{\displaystyle\lim_{x\to\infty}\textstyle\frac{\ln\left(1+\frac{1}{x}\right)}{1/x}}\overset{\text{LH}}{=}e^{\displaystyle\lim_{x\to\infty}\textstyle \frac{(-1/x^2)/(1+1/x)}{-1/x^2}}=e^{\displaystyle\lim_{x\to\infty}\textstyle \frac{1}{1+1/x}}= e$.
 
 % \item ($\infty ^ 0$)
-
-\end{itemize}
-
-
-
-
 
 \subsection{Optimization}
 

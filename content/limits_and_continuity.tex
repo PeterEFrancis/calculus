@@ -2,12 +2,13 @@ Limits are important in calculus since we need very small quantities to effectiv
 
 We study limits for many reasons. One of them is to study functions at points where they are only ``close'' to being defined. Another is to make quantities very (arbitrarily) small, without making them 0.
 
-Here is an example of a practical use of limits. The following two functions' graphs are exactly the same, except at $x=1$.
+\begin{exampleblock}
+The following two functions' graphs are exactly the same, except at $x=1$.
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
-    \fbox{
-    \resizebox{4in}{!}{
+    \resizebox{\linewidth}{!}{%
+    \fbox{%
 
 
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
@@ -61,9 +62,11 @@ Here is an example of a practical use of limits. The following two functions' gr
 \end{figure}
 
 The first function is defined at $x=1$, while the second function is not. However, the values of the second function are near 10 when $x$ is near 1. There is still something useful we can say about the second function at 1: ``the \textit{limit} at 1 is 10.''
+\end{exampleblock}
 
 
 
+\clearpage
 \section{Definitions}
 
 \subsection{The Limit}
@@ -370,7 +373,8 @@ Figure \ref{epsilon-cartoon} is the classic picture you should try to commit to 
 
 While the function graphed in the top two plots has a limit at $a$, the function that is graphed in the bottom two plots does not. For this function the first value of $\varepsilon$ (graph on the left) is not small enough to detect the jump discontinuity, but on the second (graph on the right), the $\varepsilon$ given is so small that no value of $\delta$ can be big enough to ignore jump.
 
-It may be helpful to think about the definition of a limit as a game/conversation between two people, Alex and Blake. Alex is trying to claim that the limit of $f$ as $x\to a$ is L, and Blake is doing their best job to contest it. Here is how their conversation might go:
+It may be helpful to think about the definition of a limit as a game/conversation between two people, Alex and Blake. Alex is trying to claim that the limit of $f$ as $x\to a$ is L, and Blake is doing their best job to contest it.
+\begin{exampleblock}
 \begin{itemize}
 \item[A:] I think the limit of $f(x)=3x+1$ as $x$ approaches $2$ is 7.
 \item[B:] Well if you think so, can you ensure that $|f(x)-7|<\frac{1}{10}$?
@@ -379,6 +383,7 @@ $$|f(x)-7|=|3x + 1 - 7| = |3x-6| = 3|x-2| < 3(1/30) = 1/10.$$
 \end{itemize}
 In this example, $\varepsilon = 1/10$ and $\delta = 1/30$. However, if we want to really prove that the limit is 7, we let $\varepsilon>0$ be arbitrary, and take $\delta = \varepsilon/3$. Then for any $x$ such that $|x-2|<\delta$,
 $$|f(x)-7|=|3x + 1 - 7| = |3x-6| = 3|x-2| < 3(\varepsilon/3) = \varepsilon.$$
+\end{exampleblock}
 
 \mar{Prove that the limit of $x^2+1$ at $1$ is $2$.\\
 Hint: let $\delta=\min(\varepsilon/3, 1/10)$.}
@@ -411,11 +416,14 @@ Here are three types of discontinuities that you may encounter:
 \end{enumerate}
 \mar{Draw a picture of each kind of discontinuity.}
 
-For example, $\frac{x^2-9}{x-3}$ has a removable discontinuity at $3$, while $\frac{1}{x}$ has an infinite discontinuity at $0$, even though neither function is defined at the indicated number.
+\begin{exampleblock}
+$\frac{x^2-9}{x-3}$ has a removable discontinuity at $3$, while $\frac{1}{x}$ has an infinite discontinuity at $0$, even though neither function is defined at the indicated number.
+\end{exampleblock}
 
 Not every number outside the domain is a discontinuity: the condition that $f$ be defined near $a$ rules out unrelated numbers and missing domain endpoints.
 
 
+\clearpage
 \section{Properties of Limits}
 \label{sec:limit-properties}
 
@@ -562,13 +570,14 @@ Let $f$ be continuous over a closed, bounded interval $[a, b]$. If $z$ is any re
 Phrased properly, the Intermediate Value Theorem is very intuitive. If you imagine the $x$-axis is time and the $y$-axis is position, the theorem says if you start at location $f(a)$ and end at location $f(b)$, then for any location $z$ between $f(a)$ and $f(b)$, there must have been some time that you were at $z$ (as long as you can't teleport!).
 
 
+\clearpage
 \section{Evaluating Limits}
 \label{sec:evaluating-limits}
 
 Now that you understand the definitions and some properties of limits, we will focus on how to evaluate a limit (algebraically) when you come across one:
 $$\lim_{x\to a}f(x).$$
 
-There are two main types of functions that you might be asked to evaluate limits for. The first is an algebraic combination of continuous functions (ACCF). This means any sum, product, composition, etc. of simple functions like trig, exponential, polynomial, etc. The second type is a piece-wise function composed of type 1 functions.
+There are two main types of functions of which you might be asked to evaluate limits. The first is an algebraic combination of continuous functions (ACCF). This means any sum, product, composition, etc. of simple functions like trig, exponential, polynomial, etc. The second type is a piece-wise function composed of ACCFs.
 
 
 The process of evaluating both types are the same, except for at boundary points of the piece-wise components. At these points, you must compare right- and left-sided limits. For every other point (and also any point for an ACCF) use the flow chart in figure \ref{fig:flowchart}. The following sections will explain the four possible outcomes.
@@ -618,6 +627,22 @@ The process of evaluating both types are the same, except for at boundary points
 If $f$ is an ACCF and $f(a)$ is a number, then $a$ is in the domain of $f$. Since any ACCF is continuous on its domain,
 $$\lim_{x\to a}f(x)=f(a)$$
 by the definition of continuity. \mar{Re-read this until you understand it!}
+\begin{exampleblock}
+Since $x^2+3x$ is continuous at $2$, just plug in:
+$$\lim_{x\to2}(x^2+3x)=2^2+3(2)=10.$$
+\end{exampleblock}
+
+For a piece-wise function, use the appropriate piece on each side
+of a boundary point.
+
+\begin{exampleblock}
+Let
+$$f(x)=\begin{cases}x+1,&x<1,\\x^2,&x\geq1.\end{cases}$$
+Then
+$$\lim_{x\to1^-}f(x)=2,\qquad\lim_{x\to1^+}f(x)=1.$$
+The one-sided limits are different, so $\displaystyle\lim_{x\to1}f(x)$
+does not exist.
+\end{exampleblock}
 
 \subsection{A (non-zero) Number over Zero or \texorpdfstring{$\ln(0^+)$}{ln(0+)}}
 
@@ -731,8 +756,8 @@ If $f$ is an ACCF and attempting to evaluate $f(a)$ results in a non-zero number
 
 Therefore, the only possibilities for the value of these limits are $\infty$, $-\infty$, and DNE. \mar{Label each function in figure \ref{fig:four-cases} with its respective limit.} To figure it out which one it is, evaluate both of the two sided limits. For each, find the sign by imagining $x$ is slightly smaller or larger than $a$. If the result is positive, the sided limit is positive infinity, and if the result is negative, negative infinity.
 
-\begin{samepage}
-For example, consider
+\begin{exampleblock}
+Consider
 $$\lim_{x\to1}\frac{x-3}{x(x-1)^2}.$$
 Plugging in gives a non-zero number over 0. To determine the sign of the limit, evaluate the sign of each part near $x=1$:
 $$
@@ -745,19 +770,20 @@ x\to1^+ & - & + & + & -
 $$
 The denominator approaches 0 and the quotient is negative from both sides, so
 $$\lim_{x\to1}\frac{x-3}{x(x-1)^2}=-\infty.$$
-\end{samepage}
+\end{exampleblock}
 
 Another way that a function could have a vertical asymptote is $\ln(0^+)$, meaning that the input of the logarithm approaches 0 through positive values. Since
 $$\lim_{u\to0^+}\ln(u)=-\infty,$$
 if $g(x)\to0^+$, then $\ln(g(x))\to-\infty$.
 
-\begin{samepage}
-For example, consider
+\begin{exampleblock}
+Consider
 $$\lim_{x\to2^+}\ln(x^2-4).$$
 Plugging in gives $\ln(0)$. To the right of 2, $x^2-4$ is positive, so as $x\to2^+$ its value approaches $0^+$. Therefore,
 $$\lim_{x\to2^+}\ln(x^2-4)=-\infty.$$
-\end{samepage}
+\end{exampleblock}
 
+\Needspace{9\baselineskip}
 \subsection{Indeterminate Form}
 
 There are seven indeterminate forms:
@@ -780,21 +806,50 @@ $\infty^0$
 
 \vspace{1em}
 
-They are called \textbf{indeterminate} because in this form, we cannot be sure of its value (or even if its value makes sense). Take $0^0$ for example: zero raised to any power should be 0, but anything raised to the power of $0$ should be 1... so which is it? 
+They are called \textbf{indeterminate} because in this form, we cannot be sure of its value (or even if its value makes sense). Take $0^0$: zero raised to any power should be 0, but anything raised to the power of $0$ should be 1... so which is it?
 
 When we get an indeterminate form after trying to evaluate $f(a)$, we need to do more work. There are several things you can try: \mar{Write out similar question for the other 6 indeterminate forms.}
 
 
 \begin{itemize}
-\item Simplify. If the function is rational and has common factor in its numerator and denominator, by ``canceling'' the term, the resulting function is not the same: the original function has a hole at the point where the factored term is 0. For example, $f(x)=\frac{x(x-1)}{(x-1)}$ has a hole at $x=1$, but everywhere else is the line $y=x$. However, this cancellation does not change the value of the limit.
+\item Simplify. If the function is rational and has common factor in its numerator and denominator, by ``canceling'' the term, the resulting function is not the same: the original function has a hole at the point where the factored term is 0. However, this cancellation does not change the value of the limit.
+\begin{exampleblock}
+The function $f(x)=\frac{x(x-1)}{x-1}$ has a hole at $x=1$,
+but everywhere else is the line $y=x$. Therefore,
+$$\lim_{x\to1}\frac{x(x-1)}{x-1}=\lim_{x\to1}x=1.$$
+\end{exampleblock}
+
 \item Multiply the numerator and denominator of a rational function by the conjugate of the denominator or the numerator (the \textbf{conjugate} of a binomial $a+b$ is $a-b$).
+\begin{exampleblock}
+Plugging $0$ into $\frac{\sqrt{1+x}-1}{x}$ gives $0/0$.
+Multiply by the conjugate of the numerator:
+$$\begin{aligned}
+\lim_{x\to0}\frac{\sqrt{1+x}-1}{x}
+&=\lim_{x\to0}\frac{(\sqrt{1+x}-1)(\sqrt{1+x}+1)}
+                        {x(\sqrt{1+x}+1)}\\
+&=\lim_{x\to0}\frac{1}{\sqrt{1+x}+1}=\frac12.
+\end{aligned}$$
+\end{exampleblock}
+
 \item Use a special-case limit. Here angles are measured in radians and $a>0$:
 $$\lim_{x\to0}\frac{\sin(x)}{x}=1.\hbox{\proofref{proof:sine-limit}}$$
 $$\lim_{x\to0}\frac{\cos(x)-1}{x}=0.\hbox{\proofref{proof:cosine-limit}}$$
 $$\lim_{x\to\infty}\left(1+\frac1x\right)^x=e.\hbox{\proofref{proof:euler-limit}}$$
 $$\lim_{x\to0}\frac{a^x-1}{x}=\ln(a).\hbox{\proofref{proof:exponential-limit}}$$
 
+\begin{exampleblock}
+To use the sine limit, make the denominator match the angle:
+$$\lim_{x\to0}\frac{\sin(5x)}{2x}
+=\frac52\lim_{x\to0}\frac{\sin(5x)}{5x}=\frac52.$$
+Here $5x\to0$ as $x\to0$.
+\end{exampleblock}
+
 \item In the case of $x\to\pm\infty$ for a rational function, divide the numerator and denominator by the highest degree term of the denominator.
+\begin{exampleblock}
+For this limit, divide by $x^2$:
+$$\lim_{x\to\infty}\frac{3x^2+2x}{x^2-4}
+=\lim_{x\to\infty}\frac{3+2/x}{1-4/x^2}=3.$$
+\end{exampleblock}
 \end{itemize}
 
 Later, we will learn a trick called L'H\^opital's Rule to more easily compute limits with indeterminate forms. But first we need to learn about derivatives!
@@ -812,12 +867,27 @@ Sometimes plugging $a$ into $f$ is undefined without producing a non-zero number
 Let $f$, $g$, and $h$ be functions with $g(x)\leq f(x)\leq h(x)$ for all $x$ in some interval around $a$ (except possibly at $a$). If $$\lim_{x\to a}g(x)=L=\lim_{x\to a} h(x),$$ then $$\lim_{x\to a} f(x)=L$$
 as well.
 \end{thm}
-For example, since $\left|\cos(1/x)\right|\leq 1$,
+\begin{exampleblock}
+Since $\left|\cos(1/x)\right|\leq 1$,
 $$-|x|\leq x\cos(1/x)\leq |x|,$$
 so the Squeeze Theorem gives $\displaystyle\lim_{x\to0}x\cos(1/x)=0$.
+\end{exampleblock}
 
 \item Make a change of variables to turn the limit into a more familiar one. Be sure to determine what the new variable approaches.
+\begin{exampleblock}
+To find $\displaystyle\lim_{x\to\infty}\frac{\cos x}{x}$,
+let $u=1/x$. Then $u\to0^+$ as $x\to\infty$, so
+$$\lim_{x\to\infty}\frac{\cos x}{x}
+=\lim_{u\to0^+}u\cos(1/u)=0.$$
+This is the same limit we just found with the Squeeze Theorem, approached
+from the right.
+\end{exampleblock}
 
 \item Find the limit of the inner expression first, then use the Composite Function Theorem if the outer function is continuous at that limit.
+\begin{exampleblock}
+We already know that $x\cos(1/x)\to0$ as $x\to0$.
+Since cosine is continuous at $0$,
+$$\lim_{x\to0}\cos\bigl(x\cos(1/x)\bigr)=\cos(0)=1.$$
+\end{exampleblock}
 
 \end{itemize}
