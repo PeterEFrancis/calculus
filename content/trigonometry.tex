@@ -150,6 +150,25 @@ In this table, I wrote the numbers in an ``un-simplified'' way so you can see th
 
 You can also see that the values for other angles are the same number, but with a different sign (according to the quadrant they are in), and that the unit circle is symmetric, reflecting over the $x$ and $y$ axis.
 
+\subsection{Domains, Ranges, and Inverses}
+
+Both $\sin$ and $\cos$ have domain $\R$ and range $[-1,1]$. The other
+trig functions involve division, so we need to leave out inputs that
+make their denominators zero.
+
+\begin{exampleblock}
+The function $\tan$ is undefined at every odd multiple of $\pi/2$, since $\cos\left(\frac{(2n+1)\pi}{2}\right)=0$ for every integer $n$. Equivalently, its domain is $\R\setminus\left\{\frac{(2n+1)\pi}{2}:n\in\mathbb{Z}\right\}$. The range of $\tan$ is all of $\R$.
+\end{exampleblock}
+
+Remember from Chapter~\ref{sec:real-functions} that a function must be
+bijective to have an inverse. The function $\sin$ is \textbf{periodic}
+(meaning its values cyclically repeat), so it isn't injective on
+$\R$. The smaller domain we choose is $[-\pi/2,\pi/2]$, and the
+modified codomain is its range, $[-1,1]$. The inverse of this restricted
+function is called $\arcsin$ or $\sin^{-1}$ and has domain $[-1,1]$
+and range $[-\pi/2,\pi/2]$.
+\mar{Look up the modified domains and codomains for the other inverse trig functions.}
+
 \subsection{The Pythagorean and Other Identities}
 
 Remember the Pythagorean Theorem, $a^2 + b^2 = c^2$? Well, since $\sin\theta$ and $\cos\theta$ are the lengths of a right triangle with hypotenuse 1, we have the following \textbf{Pythagorean identity}:

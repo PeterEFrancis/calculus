@@ -106,6 +106,10 @@ inconsistency. Keep changes focused and preserve the surrounding voice.
 - Put Differential Equations after Integration and Applications, followed by
   Sequences and Series. Keep sequences, series, and power series together in
   that order.
+- Order the Pre-Calculus chapters as Functions on the Real Line, Algebra,
+  then Trigonometry. Algebra covers properties of logarithms, the Binomial
+  Theorem, and completing the square. Call the logarithm identities
+  **properties**, rather than rules.
 - Include Moments and Centroids in Applications of Integrals.
 - Keep the separate **Proofs** part at the end, outside the lettered Appendix.
   Background facts come first; chapter groups follow the book's order.
