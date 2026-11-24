@@ -5,6 +5,49 @@ Calculus will give us new things to do with functions, but we'll still
 need our algebra. This chapter collects a few tools we'll use along
 the way.
 
+\subsection{Properties of Exponents}
+\label{sec:exponent-properties}
+
+Exponents let us write repeated multiplication without writing every
+factor. When we multiply powers with the same base, we add their
+exponents. When we raise a power to another power, we multiply the
+exponents. For positive bases $a$ and $b$ and real numbers $r$ and $s$,
+\begin{align*}
+a^ra^s&=a^{r+s},
+&\frac{a^r}{a^s}&=a^{r-s},\\
+(a^r)^s&=a^{rs},
+&(ab)^r&=a^rb^r,\\
+\left(\frac ab\right)^r&=\frac{a^r}{b^r},
+&a^{-r}&=\frac1{a^r}.
+\end{align*}
+Also, $a^0=1$. A negative exponent tells us to take a reciprocal;
+it doesn't make the answer negative.
+
+Fractional exponents tell us to take roots. For an integer $m$ and
+a positive integer $n$,
+$$a^{m/n}=\left(\sqrt[n]{a}\right)^m=\sqrt[n]{a^m}.$$
+We used positive bases so all of these expressions make sense for
+real exponents. Negative bases need more care, since some roots
+aren't real.
+
+\begin{exampleblock}
+For $x,y>0$, let's simplify an expression with several powers:
+\begin{align*}
+\frac{(x^2y^{-1})^3}{x^{-1}y^2}
+&=\frac{x^6y^{-3}}{x^{-1}y^2}
+&&\text{(multiply the exponents)},\\
+&=x^{6-(-1)}y^{-3-2}
+&&\text{(subtract the exponents)},\\
+&=\frac{x^7}{y^5}
+&&\text{(use positive exponents)}.
+\end{align*}
+\end{exampleblock}
+
+\begin{exampleblock}
+We can evaluate $16^{-3/4}$ without a calculator:
+$$16^{-3/4}=\frac1{(\sqrt[4]{16})^3}=\frac1{2^3}=\frac18.$$
+\end{exampleblock}
+
 \subsection{Properties of Logarithms}
 
 Remember that a logarithm tells us an exponent. For $b>0$, $b\ne1$,
@@ -14,11 +57,8 @@ In other words, logarithms and exponentials undo each other:
 $$b^{\log_b(u)}=u,\qquad \log_b(b^s)=s.$$
 In particular, $\log_b(1)=0$ and $\log_b(b)=1$.
 
-The properties of logarithms come from the exponent rules. For a positive base
-$b$ and real numbers $s$ and $t$, remember that
-$$b^sb^t=b^{s+t},\qquad
-\frac{b^s}{b^t}=b^{s-t},\qquad
-(b^s)^t=b^{st}.$$
+The properties of logarithms come from the
+\hyperref[sec:exponent-properties]{properties of exponents}.
 Multiplying powers adds their exponents, so taking the logarithm of
 a product should give us a sum.
 
