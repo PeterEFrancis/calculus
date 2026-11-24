@@ -23,7 +23,7 @@ a:focus-visible { outline: 3px solid #b04c10; outline-offset: 4px; }
 .bar, .section-head, .foot { justify-content: space-between; }
 .bar { min-height: 4.5rem; gap: 1rem; }
 .author { gap: .7rem; font: 600 1.2rem var(--serif); }
-.mark { display: grid; place-items: center; width: 2rem; height: 2rem; border-radius: 50%; background: var(--ink); color: var(--paper); font: italic 1.5rem/1 var(--serif); }
+.mark { width: 2rem; height: 2rem; }
 nav { gap: clamp(1rem, 3vw, 2.1rem); font-size: .94rem; }
 nav a, .foot a { padding-block: .45rem; }
 nav a:hover, .foot a:hover { text-decoration: underline; text-underline-offset: .25em; }
