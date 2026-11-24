@@ -1,0 +1,8 @@
+\begin{tikzpicture}[x=9mm,y=5mm,every node/.style={font=\small}]
+\foreach \n/\entries in {0/{1},1/{1,1},2/{1,2,1},3/{1,3,3,1},
+                         4/{1,4,6,4,1},5/{1,5,10,10,5,1}} {
+  \node[anchor=east,text=black!65] at (-3.4,-\n) {$n=\n$};
+  \foreach \entry [count=\k from 0] in \entries
+    \node at ({\k-\n/2},-\n) {$\entry$};
+}
+\end{tikzpicture}

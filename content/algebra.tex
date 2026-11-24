@@ -133,6 +133,19 @@ $$(a+b)^n=\sum_{k=0}^n\binom nk a^{n-k}b^k.$$
 As $k$ goes from 0 to $n$, the power of $a$ goes down and the power
 of $b$ goes up. The sum of their exponents is always $n$.
 
+A quick way to get the coefficients is \textbf{Pascal's triangle}.
+Start with a 1 at the top. Each new row begins and ends with 1;
+every number in between is the sum of the two numbers just above it.
+Count the top row as $n=0$. Row $n$ gives the coefficients of
+$(a+b)^n$, in order.
+
+\begin{figure}[H]
+\centering
+\input{content/figures/pascal_triangle.tex}
+\caption{Pascal's Triangle}
+\label{fig:pascal-triangle}
+\end{figure} \mar{Make sure you understand where the 6 comes from. Then add the $n=6$ row.}
+
 \begin{exampleblock}
 To expand $(1+x)^4$, use $a=1$, $b=x$, and $n=4$:
 \begin{align*}
@@ -142,6 +155,8 @@ To expand $(1+x)^4$, use $a=1$, $b=x$, and $n=4$:
 \end{align*}
 For instance, the coefficient of $x^2$ is
 $\binom42=4!/(2!2!)=6$.
+We can also read all five coefficients, $1,4,6,4,1$, directly from
+row $n=4$ of Pascal's triangle in Figure~\ref{fig:pascal-triangle}.
 \end{exampleblock}
 
 \subsection{Completing the Square}
