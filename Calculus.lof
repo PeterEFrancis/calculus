@@ -1,35 +1,35 @@
 \contentsline {figure}{\numberline {1}{\ignorespaces A Surjection, a Bijection, and an Injection}}{10}{figure.1}%
-\contentsline {figure}{\numberline {2}{\ignorespaces $\sin \theta $ and $\cos \theta $ are coordinates}}{16}{figure.2}%
-\contentsline {figure}{\numberline {3}{\ignorespaces The six common trig functions on the unit circle}}{17}{figure.3}%
-\contentsline {figure}{\numberline {4}{\ignorespaces The Unit Circle}}{18}{figure.4}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Similar Triangles}}{20}{figure.5}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Circumscribed Triangle}}{21}{figure.6}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Two functions with the same limits}}{23}{figure.7}%
-\contentsline {figure}{\numberline {8}{\ignorespaces A cartoon of the $\varepsilon -\delta $ definition of a limit}}{25}{figure.8}%
-\contentsline {figure}{\numberline {9}{\ignorespaces A Cartoon of the Intermediate Value Theorem}}{29}{figure.9}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Flowchart for evaluating limits}}{31}{figure.10}%
-\contentsline {figure}{\numberline {11}{\ignorespaces The four cases of vertical asymptotes}}{32}{figure.11}%
-\contentsline {figure}{\numberline {12}{\ignorespaces A Right Triangle for Inverse Sine}}{43}{figure.12}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Linear Approximation}}{44}{figure.13}%
-\contentsline {figure}{\numberline {14}{\ignorespaces The Geometric Definition of the Definite Integral}}{50}{figure.14}%
-\contentsline {figure}{\numberline {15}{\ignorespaces A Right Riemann Sum}}{51}{figure.15}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Water height before the surface settles.}}{60}{figure.16}%
-\contentsline {figure}{\numberline {17}{\ignorespaces A thin strip between the upper and lower curves.}}{61}{figure.17}%
-\contentsline {figure}{\numberline {18}{\ignorespaces A short arc is approximated by a straight segment of length $dL$.}}{62}{figure.18}%
-\contentsline {figure}{\numberline {19}{\ignorespaces A vertical strip between $y=x$ and $y=x^2$ has height $x-x^2$.}}{64}{figure.19}%
-\contentsline {figure}{\numberline {20}{\ignorespaces The solid with square cross sections. A thin slice has volume $A(x)\,dx$.}}{65}{figure.20}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Rotating the region under $y=x$ on $[0,1]$ around the $x$-axis makes a cone. The blue slice is a disk with thickness $dx$.}}{65}{figure.21}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Figure~\ref {fig:volume-base} rotated around the $x$-axis, with part cut away to show a blue washer of thickness $dx$.}}{66}{figure.22}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Figure~\ref {fig:volume-base} rotated around the $y$-axis, with part cut away to show a blue shell of radial thickness $dx$.}}{67}{figure.23}%
-\contentsline {figure}{\numberline {24}{\ignorespaces A layer at height $y$ must be lifted $3-y$ meters.}}{69}{figure.24}%
-\contentsline {figure}{\numberline {25}{\ignorespaces Two masses at distance $l$ balance one at distance $2l$.}}{69}{figure.25}%
-\contentsline {figure}{\numberline {26}{\ignorespaces A vertical strip has area $(f(x)-g(x))\,dx$ and moment arm $x$.}}{71}{figure.26}%
-\contentsline {figure}{\numberline {27}{\ignorespaces A horizontal strip has width $p(y)-q(y)$ and moment arm $y$.}}{71}{figure.27}%
-\contentsline {figure}{\numberline {28}{\ignorespaces The midpoint of a vertical strip is at height $(f(x)+g(x))/2$.}}{72}{figure.28}%
-\contentsline {figure}{\numberline {29}{\ignorespaces The slope field $y'=x+y$.}}{75}{figure.29}%
-\contentsline {figure}{\numberline {30}{\ignorespaces Euler estimates with step sizes 1 (dashed) and $1/2$ (solid), compared with the actual solution in black.}}{76}{figure.30}%
-\contentsline {figure}{\numberline {31}{\ignorespaces The logistic solution $P(t)=1000/(1+9e^{-t/2})$.}}{80}{figure.31}%
-\contentsline {figure}{\numberline {32}{\ignorespaces Here $y(t)>0$, so the spring pulls the mass to the left.}}{80}{figure.32}%
-\contentsline {figure}{\numberline {33}{\ignorespaces Numerically estimated populations for the example with $x(0)=40$ and $y(0)=5$: rabbits solid and foxes dashed.}}{82}{figure.33}%
-\contentsline {figure}{\numberline {34}{\ignorespaces Plotting a Complex Number}}{93}{figure.34}%
-\contentsline {figure}{\numberline {35}{\ignorespaces Polar Representation of Complex Numbers}}{94}{figure.35}%
+\contentsline {figure}{\numberline {2}{\ignorespaces $\sin \theta $ and $\cos \theta $ are coordinates}}{17}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces The six common trig functions on the unit circle}}{18}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces The Unit Circle}}{19}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Similar Triangles}}{21}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Circumscribed Triangle}}{22}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Two functions with the same limits}}{24}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces A cartoon of the $\varepsilon -\delta $ definition of a limit}}{26}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces A Cartoon of the Intermediate Value Theorem}}{30}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Flowchart for evaluating limits}}{32}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces The four cases of vertical asymptotes}}{33}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces A Right Triangle for Inverse Sine}}{44}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Linear Approximation}}{45}{figure.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces The Geometric Definition of the Definite Integral}}{51}{figure.14}%
+\contentsline {figure}{\numberline {15}{\ignorespaces A Right Riemann Sum}}{52}{figure.15}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Water height before the surface settles.}}{61}{figure.16}%
+\contentsline {figure}{\numberline {17}{\ignorespaces A thin strip between the upper and lower curves.}}{62}{figure.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces A short arc is approximated by a straight segment of length $dL$.}}{63}{figure.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces A vertical strip between $y=x$ and $y=x^2$ has height $x-x^2$.}}{65}{figure.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces The solid with square cross sections. A thin slice has volume $A(x)\,dx$.}}{66}{figure.20}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Rotating the region under $y=x$ on $[0,1]$ around the $x$-axis makes a cone. The blue slice is a disk with thickness $dx$.}}{66}{figure.21}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Figure~\ref {fig:volume-base} rotated around the $x$-axis, with part cut away to show a blue washer of thickness $dx$.}}{67}{figure.22}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Figure~\ref {fig:volume-base} rotated around the $y$-axis, with part cut away to show a blue shell of radial thickness $dx$.}}{68}{figure.23}%
+\contentsline {figure}{\numberline {24}{\ignorespaces A layer at height $y$ must be lifted $3-y$ meters.}}{70}{figure.24}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Two masses at distance $l$ balance one at distance $2l$.}}{70}{figure.25}%
+\contentsline {figure}{\numberline {26}{\ignorespaces A vertical strip has area $(f(x)-g(x))\,dx$ and moment arm $x$.}}{72}{figure.26}%
+\contentsline {figure}{\numberline {27}{\ignorespaces A horizontal strip has width $p(y)-q(y)$ and moment arm $y$.}}{72}{figure.27}%
+\contentsline {figure}{\numberline {28}{\ignorespaces The midpoint of a vertical strip is at height $(f(x)+g(x))/2$.}}{73}{figure.28}%
+\contentsline {figure}{\numberline {29}{\ignorespaces The slope field $y'=x+y$.}}{76}{figure.29}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Euler estimates with step sizes 1 (dashed) and $1/2$ (solid), compared with the actual solution in black.}}{77}{figure.30}%
+\contentsline {figure}{\numberline {31}{\ignorespaces The logistic solution $P(t)=1000/(1+9e^{-t/2})$.}}{81}{figure.31}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Here $y(t)>0$, so the spring pulls the mass to the left.}}{81}{figure.32}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Numerically estimated populations for the example with $x(0)=40$ and $y(0)=5$: rabbits solid and foxes dashed.}}{83}{figure.33}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Plotting a Complex Number}}{94}{figure.34}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Polar Representation of Complex Numbers}}{95}{figure.35}%

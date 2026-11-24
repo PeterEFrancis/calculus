@@ -6,120 +6,121 @@
 \contentsline {subsection}{\numberline {1.4}More Domains and Ranges}{10}{subsection.1.4}%
 \contentsline {subsection}{\numberline {1.5}Inverses}{11}{subsection.1.5}%
 \contentsline {section}{\numberline {2}Algebra}{13}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Properties of Logarithms}{13}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}The Binomial Theorem}{14}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Completing the Square}{14}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Trigonometry}{16}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Basic Definitions}{16}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Values on the Unit Circle}{17}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Domains, Ranges, and Inverses}{18}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}The Pythagorean and Other Identities}{18}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Applications}{19}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}There's Always More Trigonometry...}{21}{subsection.3.6}%
-\contentsline {part}{II\hspace {1em}Limits and Continuity}{23}{part.2}%
-\contentsline {section}{\numberline {4}Definitions}{24}{section.4}%
-\contentsline {subsection}{\numberline {4.1}The Limit}{24}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Infinite Limits}{24}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Optional: The $\varepsilon -\delta $ Definition}{25}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Continuity}{26}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Properties of Limits}{28}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Limit Laws}{28}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Composite Function Theorem and Change of Variables}{28}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Using Continuity}{29}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Evaluating Limits}{31}{section.6}%
-\contentsline {subsection}{\numberline {6.1}A Number}{31}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}A (non-zero) Number over Zero or $\ln (0^+)$}{32}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Indeterminate Form}{33}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Undefined for Another Reason}{34}{subsection.6.4}%
-\contentsline {section}{\numberline {7}Asymptotes}{36}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Horizontal Asymptotes}{36}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Vertical Asymptotes}{36}{subsection.7.2}%
-\contentsline {part}{III\hspace {1em}Derivatives and Applications}{38}{part.3}%
-\contentsline {section}{\numberline {8}The Derivative}{38}{section.8}%
-\contentsline {subsection}{\numberline {8.1}The Limit Definition}{38}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}The Two Part ``Program'' for Finding Derivatives}{39}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Even and Odd Functions}{40}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}Implicit Differentiation}{40}{subsection.8.4}%
-\contentsline {subsection}{\numberline {8.5}Parametric Curves}{41}{subsection.8.5}%
-\contentsline {subsection}{\numberline {8.6}Logarithmic Differentiation}{41}{subsection.8.6}%
-\contentsline {subsection}{\numberline {8.7}Using The Inverse Rule}{42}{subsection.8.7}%
-\contentsline {section}{\numberline {9}Applications of Derivatives}{44}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Linear Approximation}{44}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Kinematics}{44}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Related Rates}{45}{subsection.9.3}%
-\contentsline {subsection}{\numberline {9.4}Extrema and Critical Numbers}{45}{subsection.9.4}%
-\contentsline {subsection}{\numberline {9.5}Qualities of Graphs}{46}{subsection.9.5}%
-\contentsline {subsection}{\numberline {9.6}L'H\^opital's Rule}{47}{subsection.9.6}%
-\contentsline {subsection}{\numberline {9.7}Optimization}{48}{subsection.9.7}%
-\contentsline {subsection}{\numberline {9.8}Newton's Method for Finding Roots}{48}{subsection.9.8}%
-\contentsline {part}{IV\hspace {1em}Integration and Applications}{50}{part.4}%
-\contentsline {section}{\numberline {10}The Definite Integral}{50}{section.10}%
-\contentsline {subsection}{\numberline {10.1}The Definite Integral}{50}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Riemann Sums}{50}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}The Fundamental Theorem of Calculus}{53}{subsection.10.3}%
-\contentsline {section}{\numberline {11}The Indefinite Integral}{55}{section.11}%
-\contentsline {subsection}{\numberline {11.1}Anti-differentiation}{55}{subsection.11.1}%
-\contentsline {subsection}{\numberline {11.2}Partial Fraction Decomposition}{56}{subsection.11.2}%
-\contentsline {subsection}{\numberline {11.3}Trigonometric Substitution}{56}{subsection.11.3}%
-\contentsline {section}{\numberline {12}More Definite Integrals}{58}{section.12}%
-\contentsline {subsection}{\numberline {12.1}Improper Integrals}{58}{subsection.12.1}%
-\contentsline {subsection}{\numberline {12.2}Even and Odd Functions}{59}{subsection.12.2}%
-\contentsline {section}{\numberline {13}Applications of Integrals}{60}{section.13}%
-\contentsline {subsection}{\numberline {13.1}Average Values}{60}{subsection.13.1}%
-\contentsline {subsubsection}{\numberline {13.1.1}Water in a tank}{60}{subsubsection.13.1.1}%
-\contentsline {subsubsection}{\numberline {13.1.2}Using the FTC and Average Slope}{60}{subsubsection.13.1.2}%
-\contentsline {subsection}{\numberline {13.2}Areas}{61}{subsection.13.2}%
-\contentsline {subsection}{\numberline {13.3}Arc Length}{61}{subsection.13.3}%
-\contentsline {subsection}{\numberline {13.4}Probability}{62}{subsection.13.4}%
-\contentsline {subsection}{\numberline {13.5}Volumes and Surface Area}{64}{subsection.13.5}%
-\contentsline {subsubsection}{\numberline {13.5.1}Cross Sections}{64}{subsubsection.13.5.1}%
-\contentsline {subsubsection}{\numberline {13.5.2}Disks and Washers}{65}{subsubsection.13.5.2}%
-\contentsline {subsubsection}{\numberline {13.5.3}Cylindrical Shells}{66}{subsubsection.13.5.3}%
-\contentsline {subsubsection}{\numberline {13.5.4}Surface Area}{67}{subsubsection.13.5.4}%
-\contentsline {subsection}{\numberline {13.6}Work}{67}{subsection.13.6}%
-\contentsline {subsubsection}{\numberline {13.6.1}Stretching a Spring}{68}{subsubsection.13.6.1}%
-\contentsline {subsubsection}{\numberline {13.6.2}Pumping Water}{68}{subsubsection.13.6.2}%
-\contentsline {subsection}{\numberline {13.7}Moments and Centroids}{69}{subsection.13.7}%
-\contentsline {part}{V\hspace {1em}Differential Equations}{73}{part.5}%
-\contentsline {section}{\numberline {14}Introduction}{73}{section.14}%
-\contentsline {subsection}{\numberline {14.1}General Solutions and Initial Conditions}{73}{subsection.14.1}%
-\contentsline {section}{\numberline {15}Slope Fields and Euler's Method}{75}{section.15}%
-\contentsline {section}{\numberline {16}Solving ODEs}{77}{section.16}%
-\contentsline {subsection}{\numberline {16.1}Separable ODEs}{77}{subsection.16.1}%
-\contentsline {subsection}{\numberline {16.2}Second Order Differential Equations}{77}{subsection.16.2}%
-\contentsline {section}{\numberline {17}Applications}{79}{section.17}%
-\contentsline {subsection}{\numberline {17.1}The Logistic Equation}{79}{subsection.17.1}%
-\contentsline {subsection}{\numberline {17.2}Simple Harmonic Oscillator}{80}{subsection.17.2}%
-\contentsline {subsection}{\numberline {17.3}Predator-Prey}{81}{subsection.17.3}%
-\contentsline {part}{VI\hspace {1em}Sequences and Series}{83}{part.6}%
-\contentsline {section}{\numberline {18}Sequences}{83}{section.18}%
-\contentsline {section}{\numberline {19}Series}{84}{section.19}%
-\contentsline {subsection}{\numberline {19.1}Introduction}{84}{subsection.19.1}%
-\contentsline {subsection}{\numberline {19.2}Tests for Convergence and Divergence}{84}{subsection.19.2}%
-\contentsline {subsection}{\numberline {19.3}Estimating Sums}{88}{subsection.19.3}%
-\contentsline {section}{\numberline {20}Power Series}{89}{section.20}%
-\contentsline {subsection}{\numberline {20.1}General Power Series}{89}{subsection.20.1}%
-\contentsline {subsection}{\numberline {20.2}Taylor Series}{90}{subsection.20.2}%
-\contentsline {subsection}{\numberline {20.3}Estimating Error: Taylor's Inequality}{91}{subsection.20.3}%
-\contentsline {subsection}{\numberline {20.4}Euler's Formula}{92}{subsection.20.4}%
-\contentsline {part}{VII\hspace {1em}Appendix}{93}{part.7}%
-\contentsline {section}{\numberline {A}Complex Numbers}{93}{appendix.A}%
-\contentsline {section}{\numberline {B}Slanted Asymptotes and Other Asymptotics}{95}{appendix.B}%
-\contentsline {subsection}{\numberline {B.1}Slanted Asymptotes}{95}{subsection.B.1}%
-\contentsline {subsection}{\numberline {B.2}Other Asymptotics}{95}{subsection.B.2}%
-\contentsline {part}{VIII\hspace {1em}Proofs}{98}{part.8}%
-\contentsline {section}{Background for the Proofs}{98}{section*.63}%
-\contentsline {section}{Proofs from Chapter \ref *{sec:real-functions}: Functions on the Real Line}{100}{section*.67}%
-\contentsline {section}{Proofs from Chapter \ref *{sec:algebra}: Algebra}{101}{section*.70}%
-\contentsline {section}{Proofs from Chapter \ref *{sec:trigonometry}: Trigonometry}{102}{section*.73}%
-\contentsline {section}{Proofs from Chapter \ref *{sec:limit-properties}: Properties of Limits}{104}{section*.79}%
-\contentsline {section}{Proofs from Chapter \ref *{sec:evaluating-limits}: Evaluating Limits}{107}{section*.84}%
-\contentsline {section}{Proofs from Chapter \ref *{sec:the-derivative}: The Derivative}{111}{section*.90}%
-\contentsline {section}{Proofs from Chapter \ref *{sec:applications-of-derivatives}: Applications of Derivatives}{114}{section*.97}%
-\contentsline {section}{Proofs from Chapter \ref *{sec:definite-integral}: The Definite Integral}{119}{section*.104}%
-\contentsline {section}{Proofs from Chapter \ref *{sec:indefinite-integral}: The Indefinite Integral}{124}{section*.112}%
-\contentsline {section}{Proofs from Chapter \ref *{sec:more-definite-integrals}: More Definite Integrals}{125}{section*.115}%
-\contentsline {section}{Proofs from Chapter \ref *{sec:solving-odes}: Solving ODEs}{126}{section*.118}%
-\contentsline {section}{Proofs from Chapter \ref *{sec:sequences}: Sequences}{128}{section*.121}%
-\contentsline {section}{Proofs from Chapter \ref *{sec:series}: Series}{129}{section*.123}%
-\contentsline {section}{Proofs from Chapter \ref *{sec:power-series}: Power Series}{134}{section*.136}%
+\contentsline {subsection}{\numberline {2.1}Properties of Exponents}{13}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Properties of Logarithms}{13}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}The Binomial Theorem}{14}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Completing the Square}{15}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Trigonometry}{17}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Basic Definitions}{17}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Values on the Unit Circle}{18}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Domains, Ranges, and Inverses}{19}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}The Pythagorean and Other Identities}{19}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Applications}{20}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}There's Always More Trigonometry...}{22}{subsection.3.6}%
+\contentsline {part}{II\hspace {1em}Limits and Continuity}{24}{part.2}%
+\contentsline {section}{\numberline {4}Definitions}{25}{section.4}%
+\contentsline {subsection}{\numberline {4.1}The Limit}{25}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Infinite Limits}{25}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Optional: The $\varepsilon -\delta $ Definition}{26}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Continuity}{27}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Properties of Limits}{29}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Limit Laws}{29}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Composite Function Theorem and Change of Variables}{29}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Using Continuity}{30}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Evaluating Limits}{32}{section.6}%
+\contentsline {subsection}{\numberline {6.1}A Number}{32}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}A (non-zero) Number over Zero or $\ln (0^+)$}{33}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Indeterminate Form}{34}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Undefined for Another Reason}{35}{subsection.6.4}%
+\contentsline {section}{\numberline {7}Asymptotes}{37}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Horizontal Asymptotes}{37}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Vertical Asymptotes}{37}{subsection.7.2}%
+\contentsline {part}{III\hspace {1em}Derivatives and Applications}{39}{part.3}%
+\contentsline {section}{\numberline {8}The Derivative}{39}{section.8}%
+\contentsline {subsection}{\numberline {8.1}The Limit Definition}{39}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}The Two Part ``Program'' for Finding Derivatives}{40}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Even and Odd Functions}{41}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Implicit Differentiation}{41}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Parametric Curves}{42}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}Logarithmic Differentiation}{42}{subsection.8.6}%
+\contentsline {subsection}{\numberline {8.7}Using The Inverse Rule}{43}{subsection.8.7}%
+\contentsline {section}{\numberline {9}Applications of Derivatives}{45}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Linear Approximation}{45}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Kinematics}{45}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Related Rates}{46}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Extrema and Critical Numbers}{46}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9.5}Qualities of Graphs}{47}{subsection.9.5}%
+\contentsline {subsection}{\numberline {9.6}L'H\^opital's Rule}{48}{subsection.9.6}%
+\contentsline {subsection}{\numberline {9.7}Optimization}{49}{subsection.9.7}%
+\contentsline {subsection}{\numberline {9.8}Newton's Method for Finding Roots}{49}{subsection.9.8}%
+\contentsline {part}{IV\hspace {1em}Integration and Applications}{51}{part.4}%
+\contentsline {section}{\numberline {10}The Definite Integral}{51}{section.10}%
+\contentsline {subsection}{\numberline {10.1}The Definite Integral}{51}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Riemann Sums}{51}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}The Fundamental Theorem of Calculus}{54}{subsection.10.3}%
+\contentsline {section}{\numberline {11}The Indefinite Integral}{56}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Anti-differentiation}{56}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Partial Fraction Decomposition}{57}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Trigonometric Substitution}{57}{subsection.11.3}%
+\contentsline {section}{\numberline {12}More Definite Integrals}{59}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Improper Integrals}{59}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}Even and Odd Functions}{60}{subsection.12.2}%
+\contentsline {section}{\numberline {13}Applications of Integrals}{61}{section.13}%
+\contentsline {subsection}{\numberline {13.1}Average Values}{61}{subsection.13.1}%
+\contentsline {subsubsection}{\numberline {13.1.1}Water in a tank}{61}{subsubsection.13.1.1}%
+\contentsline {subsubsection}{\numberline {13.1.2}Using the FTC and Average Slope}{61}{subsubsection.13.1.2}%
+\contentsline {subsection}{\numberline {13.2}Areas}{62}{subsection.13.2}%
+\contentsline {subsection}{\numberline {13.3}Arc Length}{62}{subsection.13.3}%
+\contentsline {subsection}{\numberline {13.4}Probability}{63}{subsection.13.4}%
+\contentsline {subsection}{\numberline {13.5}Volumes and Surface Area}{65}{subsection.13.5}%
+\contentsline {subsubsection}{\numberline {13.5.1}Cross Sections}{65}{subsubsection.13.5.1}%
+\contentsline {subsubsection}{\numberline {13.5.2}Disks and Washers}{66}{subsubsection.13.5.2}%
+\contentsline {subsubsection}{\numberline {13.5.3}Cylindrical Shells}{67}{subsubsection.13.5.3}%
+\contentsline {subsubsection}{\numberline {13.5.4}Surface Area}{68}{subsubsection.13.5.4}%
+\contentsline {subsection}{\numberline {13.6}Work}{68}{subsection.13.6}%
+\contentsline {subsubsection}{\numberline {13.6.1}Stretching a Spring}{69}{subsubsection.13.6.1}%
+\contentsline {subsubsection}{\numberline {13.6.2}Pumping Water}{69}{subsubsection.13.6.2}%
+\contentsline {subsection}{\numberline {13.7}Moments and Centroids}{70}{subsection.13.7}%
+\contentsline {part}{V\hspace {1em}Differential Equations}{74}{part.5}%
+\contentsline {section}{\numberline {14}Introduction}{74}{section.14}%
+\contentsline {subsection}{\numberline {14.1}General Solutions and Initial Conditions}{74}{subsection.14.1}%
+\contentsline {section}{\numberline {15}Slope Fields and Euler's Method}{76}{section.15}%
+\contentsline {section}{\numberline {16}Solving ODEs}{78}{section.16}%
+\contentsline {subsection}{\numberline {16.1}Separable ODEs}{78}{subsection.16.1}%
+\contentsline {subsection}{\numberline {16.2}Second Order Differential Equations}{78}{subsection.16.2}%
+\contentsline {section}{\numberline {17}Applications}{80}{section.17}%
+\contentsline {subsection}{\numberline {17.1}The Logistic Equation}{80}{subsection.17.1}%
+\contentsline {subsection}{\numberline {17.2}Simple Harmonic Oscillator}{81}{subsection.17.2}%
+\contentsline {subsection}{\numberline {17.3}Predator-Prey}{82}{subsection.17.3}%
+\contentsline {part}{VI\hspace {1em}Sequences and Series}{84}{part.6}%
+\contentsline {section}{\numberline {18}Sequences}{84}{section.18}%
+\contentsline {section}{\numberline {19}Series}{85}{section.19}%
+\contentsline {subsection}{\numberline {19.1}Introduction}{85}{subsection.19.1}%
+\contentsline {subsection}{\numberline {19.2}Tests for Convergence and Divergence}{85}{subsection.19.2}%
+\contentsline {subsection}{\numberline {19.3}Estimating Sums}{89}{subsection.19.3}%
+\contentsline {section}{\numberline {20}Power Series}{90}{section.20}%
+\contentsline {subsection}{\numberline {20.1}General Power Series}{90}{subsection.20.1}%
+\contentsline {subsection}{\numberline {20.2}Taylor Series}{91}{subsection.20.2}%
+\contentsline {subsection}{\numberline {20.3}Estimating Error: Taylor's Inequality}{92}{subsection.20.3}%
+\contentsline {subsection}{\numberline {20.4}Euler's Formula}{93}{subsection.20.4}%
+\contentsline {part}{VII\hspace {1em}Appendix}{94}{part.7}%
+\contentsline {section}{\numberline {A}Complex Numbers}{94}{appendix.A}%
+\contentsline {section}{\numberline {B}Slanted Asymptotes and Other Asymptotics}{96}{appendix.B}%
+\contentsline {subsection}{\numberline {B.1}Slanted Asymptotes}{96}{subsection.B.1}%
+\contentsline {subsection}{\numberline {B.2}Other Asymptotics}{96}{subsection.B.2}%
+\contentsline {part}{VIII\hspace {1em}Proofs}{99}{part.8}%
+\contentsline {section}{Background for the Proofs}{99}{section*.63}%
+\contentsline {section}{Proofs from Chapter \ref *{sec:real-functions}: Functions on the Real Line}{101}{section*.67}%
+\contentsline {section}{Proofs from Chapter \ref *{sec:algebra}: Algebra}{102}{section*.70}%
+\contentsline {section}{Proofs from Chapter \ref *{sec:trigonometry}: Trigonometry}{103}{section*.73}%
+\contentsline {section}{Proofs from Chapter \ref *{sec:limit-properties}: Properties of Limits}{105}{section*.79}%
+\contentsline {section}{Proofs from Chapter \ref *{sec:evaluating-limits}: Evaluating Limits}{108}{section*.84}%
+\contentsline {section}{Proofs from Chapter \ref *{sec:the-derivative}: The Derivative}{112}{section*.90}%
+\contentsline {section}{Proofs from Chapter \ref *{sec:applications-of-derivatives}: Applications of Derivatives}{115}{section*.97}%
+\contentsline {section}{Proofs from Chapter \ref *{sec:definite-integral}: The Definite Integral}{120}{section*.104}%
+\contentsline {section}{Proofs from Chapter \ref *{sec:indefinite-integral}: The Indefinite Integral}{125}{section*.112}%
+\contentsline {section}{Proofs from Chapter \ref *{sec:more-definite-integrals}: More Definite Integrals}{126}{section*.115}%
+\contentsline {section}{Proofs from Chapter \ref *{sec:solving-odes}: Solving ODEs}{127}{section*.118}%
+\contentsline {section}{Proofs from Chapter \ref *{sec:sequences}: Sequences}{129}{section*.121}%
+\contentsline {section}{Proofs from Chapter \ref *{sec:series}: Series}{130}{section*.123}%
+\contentsline {section}{Proofs from Chapter \ref *{sec:power-series}: Power Series}{135}{section*.136}%
