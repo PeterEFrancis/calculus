@@ -66,21 +66,21 @@
 \contentsline {subsection}{\numberline {12.1}Improper Integrals}{59}{subsection.12.1}%
 \contentsline {subsection}{\numberline {12.2}Even and Odd Functions}{60}{subsection.12.2}%
 \contentsline {section}{\numberline {13}Applications of Integrals}{61}{section.13}%
-\contentsline {subsection}{\numberline {13.1}Average Values}{61}{subsection.13.1}%
-\contentsline {subsubsection}{\numberline {13.1.1}Water in a tank}{61}{subsubsection.13.1.1}%
-\contentsline {subsubsection}{\numberline {13.1.2}Using the FTC and Average Slope}{61}{subsubsection.13.1.2}%
-\contentsline {subsection}{\numberline {13.2}Areas}{62}{subsection.13.2}%
-\contentsline {subsection}{\numberline {13.3}Arc Length}{62}{subsection.13.3}%
-\contentsline {subsection}{\numberline {13.4}Probability}{63}{subsection.13.4}%
-\contentsline {subsection}{\numberline {13.5}Volumes and Surface Area}{65}{subsection.13.5}%
-\contentsline {subsubsection}{\numberline {13.5.1}Cross Sections}{65}{subsubsection.13.5.1}%
-\contentsline {subsubsection}{\numberline {13.5.2}Disks and Washers}{66}{subsubsection.13.5.2}%
-\contentsline {subsubsection}{\numberline {13.5.3}Cylindrical Shells}{67}{subsubsection.13.5.3}%
-\contentsline {subsubsection}{\numberline {13.5.4}Surface Area}{68}{subsubsection.13.5.4}%
-\contentsline {subsection}{\numberline {13.6}Work}{68}{subsection.13.6}%
-\contentsline {subsubsection}{\numberline {13.6.1}Stretching a Spring}{69}{subsubsection.13.6.1}%
-\contentsline {subsubsection}{\numberline {13.6.2}Pumping Water}{69}{subsubsection.13.6.2}%
-\contentsline {subsection}{\numberline {13.7}Moments and Centroids}{70}{subsection.13.7}%
+\contentsline {subsection}{\numberline {13.1}Areas}{61}{subsection.13.1}%
+\contentsline {subsection}{\numberline {13.2}Arc Length}{61}{subsection.13.2}%
+\contentsline {subsection}{\numberline {13.3}Volumes and Surface Area}{62}{subsection.13.3}%
+\contentsline {subsubsection}{\numberline {13.3.1}Cross Sections}{62}{subsubsection.13.3.1}%
+\contentsline {subsubsection}{\numberline {13.3.2}Disks and Washers}{63}{subsubsection.13.3.2}%
+\contentsline {subsubsection}{\numberline {13.3.3}Cylindrical Shells}{64}{subsubsection.13.3.3}%
+\contentsline {subsubsection}{\numberline {13.3.4}Surface Area}{65}{subsubsection.13.3.4}%
+\contentsline {subsection}{\numberline {13.4}Average Values}{66}{subsection.13.4}%
+\contentsline {subsubsection}{\numberline {13.4.1}Water in a tank}{66}{subsubsection.13.4.1}%
+\contentsline {subsubsection}{\numberline {13.4.2}Using the FTC and Average Slope}{66}{subsubsection.13.4.2}%
+\contentsline {subsection}{\numberline {13.5}Moments and Centroids}{66}{subsection.13.5}%
+\contentsline {subsection}{\numberline {13.6}Work}{70}{subsection.13.6}%
+\contentsline {subsubsection}{\numberline {13.6.1}Stretching a Spring}{70}{subsubsection.13.6.1}%
+\contentsline {subsubsection}{\numberline {13.6.2}Pumping Water}{70}{subsubsection.13.6.2}%
+\contentsline {subsection}{\numberline {13.7}Probability}{71}{subsection.13.7}%
 \contentsline {part}{V\hspace {1em}Differential Equations}{74}{part.5}%
 \contentsline {section}{\numberline {14}Introduction}{74}{section.14}%
 \contentsline {subsection}{\numberline {14.1}General Solutions and Initial Conditions}{74}{subsection.14.1}%

@@ -1,17 +1,21 @@
 % Tank radius 1, bottom y=0, rim y=2, outlet y=3.
 \begin{tikzpicture}[x=1.35cm,y=1.1cm,line width=.7pt,
+  line cap=round,line join=round,
   every node/.style={font=\small,inner sep=2pt}]
 % A transparent cylindrical tank, including its curved bottom.
-\fill[figureblue!5] (-1,2)--(-1,0)
+\fill[figureblue,fill opacity=.05] (-1,2)--(-1,0)
   arc[start angle=180,end angle=360,x radius=1,y radius=.22]
   --(1,2) arc[start angle=0,end angle=180,x radius=1,y radius=.22];
 \draw[gray,dashed] (-1,0)
   arc[start angle=180,end angle=0,x radius=1,y radius=.22];
-% The selected layer is a thin circular disk, not a rectangular strip.
-\fill[figureblue!28] (-1,.95)
+% Both sides of the thin circular layer show through its translucent top.
+\fill[figureblue,fill opacity=.10] (-1,.95)
+  arc[start angle=180,end angle=0,x radius=1,y radius=.22]
+  --(1,.85) arc[start angle=0,end angle=180,x radius=1,y radius=.22]--cycle;
+\fill[figureblue,fill opacity=.22] (-1,.95)
   arc[start angle=180,end angle=360,x radius=1,y radius=.22]
   --(1,.85) arc[start angle=0,end angle=-180,x radius=1,y radius=.22]--cycle;
-\filldraw[fill=figureblue!15,draw=figureaccent]
+\filldraw[fill=figureblue,fill opacity=.14,draw=figureaccent]
   (0,.95) ellipse[x radius=1,y radius=.22];
 \draw[figureaccent,dashed] (-1,.85)
   arc[start angle=180,end angle=0,x radius=1,y radius=.22];

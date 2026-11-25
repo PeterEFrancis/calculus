@@ -14,19 +14,19 @@
 \contentsline {figure}{\numberline {14}{\ignorespaces Linear Approximation}}{45}{figure.14}%
 \contentsline {figure}{\numberline {15}{\ignorespaces The Geometric Definition of the Definite Integral}}{51}{figure.15}%
 \contentsline {figure}{\numberline {16}{\ignorespaces A Right Riemann Sum}}{52}{figure.16}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Water height before the surface settles.}}{61}{figure.17}%
-\contentsline {figure}{\numberline {18}{\ignorespaces A thin strip between the upper and lower curves.}}{62}{figure.18}%
-\contentsline {figure}{\numberline {19}{\ignorespaces A short arc is approximated by a straight segment of length $dL$.}}{63}{figure.19}%
-\contentsline {figure}{\numberline {20}{\ignorespaces A vertical strip between $y=x$ and $y=x^2$ has height $x-x^2$.}}{65}{figure.20}%
-\contentsline {figure}{\numberline {21}{\ignorespaces The solid with square cross sections. A thin slice has volume $A(x)\,dx$.}}{66}{figure.21}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Rotating the region under $y=x$ on $[0,1]$ around the $x$-axis makes a cone. The blue slice is a disk with thickness $dx$.}}{66}{figure.22}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Figure~\ref {fig:volume-base} rotated around the $x$-axis, with part cut away to show a blue washer of thickness $dx$.}}{67}{figure.23}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Figure~\ref {fig:volume-base} rotated around the $y$-axis, with part cut away to show a blue shell of radial thickness $dx$.}}{68}{figure.24}%
-\contentsline {figure}{\numberline {25}{\ignorespaces A layer at height $y$ must be lifted $3-y$ meters.}}{70}{figure.25}%
-\contentsline {figure}{\numberline {26}{\ignorespaces Two masses at distance $l$ balance one at distance $2l$.}}{70}{figure.26}%
-\contentsline {figure}{\numberline {27}{\ignorespaces A vertical strip has area $(f(x)-g(x))\,dx$ and moment arm $x$.}}{72}{figure.27}%
-\contentsline {figure}{\numberline {28}{\ignorespaces A horizontal strip has width $p(y)-q(y)$ and moment arm $y$.}}{72}{figure.28}%
-\contentsline {figure}{\numberline {29}{\ignorespaces The midpoint of a vertical strip is at height $(f(x)+g(x))/2$.}}{73}{figure.29}%
+\contentsline {figure}{\numberline {17}{\ignorespaces A thin strip between the upper and lower curves.}}{61}{figure.17}%
+\contentsline {figure}{\numberline {18}{\ignorespaces A short arc is approximated by a straight segment of length $dL$.}}{62}{figure.18}%
+\contentsline {figure}{\numberline {19}{\ignorespaces A vertical strip between $y=x$ and $y=x^2$ has height $x-x^2$.}}{62}{figure.19}%
+\contentsline {figure}{\numberline {20}{\ignorespaces The solid with square cross sections. A thin slice has volume $A(x)\,dx$.}}{63}{figure.20}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Rotating the region under $y=x$ on $[0,1]$ around the $x$-axis makes a cone. The blue slice is a disk with thickness $dx$.}}{63}{figure.21}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Figure~\ref {fig:volume-base} rotated around the $x$-axis, with part cut away to show a blue washer of thickness $dx$.}}{64}{figure.22}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Figure~\ref {fig:volume-base} rotated around the $y$-axis, with part cut away to show a blue shell of radial thickness $dx$.}}{65}{figure.23}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Water height before the surface settles.}}{66}{figure.24}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Two masses at distance $l$ balance one at distance $2l$.}}{67}{figure.25}%
+\contentsline {figure}{\numberline {26}{\ignorespaces A vertical strip has area $(f(x)-g(x))\,dx$ and moment arm $x$.}}{68}{figure.26}%
+\contentsline {figure}{\numberline {27}{\ignorespaces A horizontal strip has width $p(y)-q(y)$ and moment arm $y$.}}{69}{figure.27}%
+\contentsline {figure}{\numberline {28}{\ignorespaces The midpoint of a vertical strip is at height $(f(x)+g(x))/2$.}}{69}{figure.28}%
+\contentsline {figure}{\numberline {29}{\ignorespaces A layer at height $y$ must be lifted $3-y$ meters.}}{71}{figure.29}%
 \contentsline {figure}{\numberline {30}{\ignorespaces The slope field $y'=x+y$.}}{76}{figure.30}%
 \contentsline {figure}{\numberline {31}{\ignorespaces Euler estimates with step sizes 1 (dashed) and $1/2$ (solid), compared with the actual solution in black.}}{77}{figure.31}%
 \contentsline {figure}{\numberline {32}{\ignorespaces The logistic solution $P(t)=1000/(1+9e^{-t/2})$.}}{81}{figure.32}%

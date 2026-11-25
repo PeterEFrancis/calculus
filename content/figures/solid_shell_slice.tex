@@ -1,7 +1,7 @@
 % Figure 15 revolved about the y-axis: r^2 <= y <= r, 0 <= r <= 1.
 % The front half of the solid is cut away; the blue shell is retained.
 % Projection: (r,theta,y) -> (2.5 r cos(theta), 3.2 y + .65 r sin(theta)).
-\begin{tikzpicture}[line width=.65pt,
+\begin{tikzpicture}[line width=.65pt,line cap=round,line join=round,
   every node/.style={font=\small,inner sep=2pt}]
 % The visible conical surface slopes down from the rim to the origin.
 \fill[gray!12] (0,0)--(2.5,3.2)--
@@ -21,38 +21,65 @@
   \draw[gray!40,line width=.4pt] (0,0)--
     ({2.5*cos(\a)},{3.2+.65*sin(\a)});
 }
-% A real radial band x <= r <= x+dx, here x=.58 and dx=.04.
-\fill[figureblue!24]
-  plot[domain=180:360,samples=73]
-    ({2.5*.62*cos(\x)},{3.2*.62+.65*.62*sin(\x)})--
-  plot[domain=360:180,samples=73]
-    ({2.5*.62*cos(\x)},{3.2*.62*.62+.65*.62*sin(\x)})--cycle;
+% A complete translucent radial band x <= r <= x+dx.
+% Both cylindrical walls continue behind the shell as well as in front.
+\foreach \r/\alpha in {.58/.10,.62/.14}{
+  \fill[figureblue,fill opacity=\alpha]
+    plot[domain=0:180,samples=73]
+      ({2.5*\r*cos(\x)},{3.2*\r+.65*\r*sin(\x)})--
+    plot[domain=180:0,samples=73]
+      ({2.5*\r*cos(\x)},{3.2*\r*\r+.65*\r*sin(\x)})--cycle;
+}
+% Group each annular surface so the small patches don't leave dark seams.
+\begin{scope}[transparency group,opacity=.14]
 \foreach \a in {0,5,...,355}{
   \pgfmathsetmacro{\b}{\a+5}
-  \fill[figureblue!40]
+  \fill[figureblue]
+    ({2.5*.58*cos(\a)},{3.2*.58*.58+.65*.58*sin(\a)})--
+    ({2.5*.62*cos(\a)},{3.2*.62*.62+.65*.62*sin(\a)})--
+    ({2.5*.62*cos(\b)},{3.2*.62*.62+.65*.62*sin(\b)})--
+    ({2.5*.58*cos(\b)},{3.2*.58*.58+.65*.58*sin(\b)})--cycle;
+}
+\end{scope}
+\foreach \r/\alpha in {.58/.10,.62/.22}{
+  \fill[figureblue,fill opacity=\alpha]
+    plot[domain=180:360,samples=73]
+      ({2.5*\r*cos(\x)},{3.2*\r+.65*\r*sin(\x)})--
+    plot[domain=360:180,samples=73]
+      ({2.5*\r*cos(\x)},{3.2*\r*\r+.65*\r*sin(\x)})--cycle;
+}
+\begin{scope}[transparency group,opacity=.23]
+\foreach \a in {0,5,...,355}{
+  \pgfmathsetmacro{\b}{\a+5}
+  \fill[figureblue]
     ({2.5*.58*cos(\a)},{3.2*.58+.65*.58*sin(\a)})--
     ({2.5*.62*cos(\a)},{3.2*.62+.65*.62*sin(\a)})--
     ({2.5*.62*cos(\b)},{3.2*.62+.65*.62*sin(\b)})--
     ({2.5*.58*cos(\b)},{3.2*.58+.65*.58*sin(\b)})--cycle;
 }
-% Upper edges are visible; the rear lower edges are hidden in the solid.
+\end{scope}
+% Draw all four full rims: rear halves dashed, front halves solid.
+\begin{scope}[draw=figureaccent,line width=.75pt]
 \foreach \r in {.58,.62}{
-  \draw[figureaccent]
-    plot[domain=0:360,samples=73]
+  \draw[densely dashed,line width=.5pt]
+    plot[domain=0:180,samples=73]
       ({2.5*\r*cos(\x)},{3.2*\r+.65*\r*sin(\x)});
-  \draw[figureaccent,densely dashed,line width=.45pt]
+  \draw[densely dashed,line width=.5pt]
     plot[domain=0:180,samples=37]
       ({2.5*\r*cos(\x)},{3.2*\r*\r+.65*\r*sin(\x)});
+  \draw plot[domain=180:360,samples=73]
+    ({2.5*\r*cos(\x)},{3.2*\r+.65*\r*sin(\x)});
+  \draw plot[domain=180:360,samples=73]
+    ({2.5*\r*cos(\x)},{3.2*\r*\r+.65*\r*sin(\x)});
 }
-\draw[figureaccent]
-  plot[domain=180:360,samples=73]
-    ({2.5*.62*cos(\x)},{3.2*.62*.62+.65*.62*sin(\x)});
 \foreach \s in {-1,1}{
-  \draw[figureaccent] ({\s*1.55},{3.2*.62*.62})--
+  \draw ({\s*1.55},{3.2*.62*.62})--
     ({\s*1.55},{3.2*.62});
+  \draw ({\s*1.45},{3.2*.58*.58})--
+    ({\s*1.45},{3.2*.58});
 }
-% At the cut face the inner edge has exactly height f(x)-g(x).
-\draw[figureaccent] (1.45,{3.2*.58*.58})--(1.45,{3.2*.58});
+\end{scope}
+% At the right tangent the inner wall has exactly height f(x)-g(x).
 \draw[gray,densely dashed] (1.45,{3.2*.58*.58})--(2.95,{3.2*.58*.58})
   (1.45,{3.2*.58})--(2.95,{3.2*.58});
 \draw[<->,black,solid] (2.85,1.07648)--(2.85,1.856);

@@ -76,6 +76,12 @@ inconsistency. Keep changes focused and preserve the surrounding voice.
 
 - Use pale blue for selected slices or regions and gray for surrounding context.
   Preserve useful shading differences on three-dimensional solids.
+- For transparent solids and highlighted slices, use actual `fill opacity`
+  or an isolated transparency group for a surface made of many patches.
+  Include complete rear rims and edges so they show through the front faces;
+  draw hidden edges dashed and visible front edges solid.
+- Keep washer cross-section ellipses vertical. Use continuous shading across
+  each highlighted face so separate semicircle fills do not create a seam.
 - Distinguish comparisons with solid/dashed lines or markers as well as color.
   Keep legends and explanatory prose consistent with those line styles.
 - Use the book's math font, generally `\small` labels, and about `.7pt` lines.
@@ -111,6 +117,8 @@ inconsistency. Keep changes focused and preserve the surrounding voice.
   exponents, properties of logarithms, the Binomial Theorem, and completing
   the square. Call the logarithm identities **properties**, rather than rules.
 - Include Moments and Centroids in Applications of Integrals.
+- Order the integration applications as Areas, Arc Length, Volumes and
+  Surface Area, Average Values, Moments and Centroids, Work, then Probability.
 - Keep the separate **Proofs** part at the end, outside the lettered Appendix.
   Background facts come first; chapter groups follow the book's order.
 - Use `\proofchapter` for chapter groups and `\proofheading` for individual

@@ -166,9 +166,11 @@ the midpoint between the `top' and `bottom' functions. In other words, the midpo
 \end{figure}
 
 That means that we can write an integral to find $\overline{y}$ without an integration along the $y$-axis!
-$$
-\overline{y}=\frac{1}{A}\int_{x=a}^{x=b}\frac{f(x)+g(x)}{2}(f(x)-g(x))\ dx.
-$$
+\begin{align*}
+\overline{y}&=\frac{1}{A}\int_{x=a}^{x=b}\frac{f(x)+g(x)}{2}(f(x)-g(x))\ dx\\
+& =\frac{1}{2A}\int_{x=a}^{x=b}f(x)^2-g(x)^2\ dx.
+\end{align*}
+
 If you are interested in finding $\overline{y}$ for the area under a function, then $g(x)=0$, so
 $$
 \overline{y} = \frac{1}{A}\int_{x=a}^{x=b}\frac{f(x)^2}{2}\ dx.
@@ -176,5 +178,5 @@ $$
 
 The point $(\overline{x},\overline{y})$ is called the \textbf{centroid} of a figure in the plane, and is the point on which the figure could balance perfectly along both moment arms.
 
-It is important to know where these formulas come from, as opposed to simply memorizing them. A fundamental part of problem solving is understanding the system you are working in, and being comfortable with adapting methods to fit your needs.
+%It is important to know where these formulas come from, as opposed to simply memorizing them. A fundamental part of problem solving is understanding the system you are working in, and being comfortable with adapting methods to fit your needs.
 

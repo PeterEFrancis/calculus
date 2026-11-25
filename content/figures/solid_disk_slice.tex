@@ -1,18 +1,18 @@
-\begin{tikzpicture}[line width=.7pt,
+\begin{tikzpicture}[line width=.7pt,line cap=round,line join=round,
   every node/.style={font=\small,inner sep=2pt}]
 \pgfmathsetmacro{\coneangle}{acos(-.5/5.3)}
 \coordinate (coneupper) at ({5.3+.5*cos(\coneangle)},{1.5*sin(\coneangle)});
 \coordinate (conelower) at ({5.3+.5*cos(\coneangle)},{-1.5*sin(\coneangle)});
-\fill[gray!10] (0,0)--(coneupper)
+\fill[black,fill opacity=.08] (0,0)--(coneupper)
   arc[start angle=\coneangle,end angle=-\coneangle,
       x radius=.5,y radius=1.5]--cycle;
 \draw[gray!70] (0,0)--(coneupper) (0,0)--(conelower);
-\filldraw[fill=gray!5,draw=gray!70]
+\filldraw[fill=black,fill opacity=.04,draw=gray!70]
   (5.3,0) ellipse[x radius=.5,y radius=1.5];
 \draw[dashed,gray] (0,0)--(5.3,0);
-\filldraw[fill=figureblue!12,draw=figureaccent]
+\fill[figureblue,fill opacity=.12]
   ({5.3*.58},0) ellipse[x radius={.5*.58},y radius={1.5*.58}];
-\fill[figureblue!22]
+\fill[figureblue,fill opacity=.20]
   ({.58*(5.3+.5*cos(\coneangle))},{.58*1.5*sin(\coneangle)})
   --({.64*(5.3+.5*cos(\coneangle))},{.64*1.5*sin(\coneangle)})
   arc[start angle=\coneangle,end angle=-\coneangle,
@@ -20,10 +20,19 @@
   --({.58*(5.3+.5*cos(\coneangle))},{-.58*1.5*sin(\coneangle)})
   arc[start angle=-\coneangle,end angle=\coneangle,
       x radius={.5*.58},y radius={1.5*.58}]--cycle;
-\filldraw[fill=figureblue!28,draw=figureaccent]
+\fill[figureblue,fill opacity=.18]
   ({5.3*.64},0) ellipse[x radius={.5*.64},y radius={1.5*.64}];
+% Each rim has a solid front half and a dashed back half.
+\foreach \q in {.58,.64}{
+  \draw[figureaccent,line width=.8pt]
+    ({5.3*\q},{1.5*\q})
+    arc[start angle=90,end angle=270,x radius={.5*\q},y radius={1.5*\q}];
+  \draw[figureaccent,densely dashed,line width=.6pt]
+    ({5.3*\q},{-1.5*\q})
+    arc[start angle=-90,end angle=90,x radius={.5*\q},y radius={1.5*\q}];
+}
 \foreach \sgn in {-1,1}{
-  \draw[figureaccent]
+  \draw[figureaccent,line width=.8pt]
     ({.58*(5.3+.5*cos(\coneangle))},{\sgn*.58*1.5*sin(\coneangle)})
     --({.64*(5.3+.5*cos(\coneangle))},{\sgn*.64*1.5*sin(\coneangle)});
 }
